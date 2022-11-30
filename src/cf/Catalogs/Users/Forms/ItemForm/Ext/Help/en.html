@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>Use this form to describe user properties.</p>
+<p>To <a href="#1">enter or edit</a> user details, you need administrator rights or <a href="Catalog.Users/Help">user list</a> manager rights. </p>
+<p>Authorization of a user requires administrator's approval. </p>
+<p>A user list manager can edit the user list (to a limited degree), configure users prior to their authorization approval by administrator, edit the <strong>Users</strong> list and the <strong>User groups</strong> list, and edit user access rights.</p>
+<p>Other users are only allowed to view their personal data, change their <strong>Password</strong> (if not restricted by administrator), edit their contact information, and select application interface language.</p>
+<p>In a distributed infobase, authorization is configured for each infobase separately.</p>
+<h3>Setting and changing passwords</h3>
+<ul><li>
+<div>Users can view their profiles in the application.</div>
+</li><li>
+<div>An administrator or user can <a href="CommonForm.ChangePassword/Help">set a password</a> or change a password if necessary in case they have rights to do it.</div>
+</li><li>
+<div>by clicking <strong>Set password</strong>. If the password is already set, you can change it. To change a password, click <strong>Change password</strong> and enter the <a href="CommonForm.ChangePassword/Help">new password</a>.</div></li></ul><h3>Recommendations on creating passwords</h3>
+<p>A strong password:</p>
+<ul><li>Is not human-readable. 
+</li><li>Contains at least 8 characters. 
+</li><li>Includes: 
+<ul><li>Uppercase Latin letters. 
+</li><li>Lowercase Latin letters. 
+</li><li>numbers 
+</li><li>Special characters (such as underscore and parentheses). </li></ul></li></ul><p>Passwords that contain numbers only, human-readable words, or periodic character sequences, as well as passwords identical to usernames are not recommended. </p>
+<ul><li>Examples of strong passwords: <br>“nj7{jhjibq*Gfhjkm<br>F5”njnGhkmNj;t{HI 
+</li><li>Examples of weak passwords: <br>Smith <br>qwerty <br>12345678 <br>123123123</li></ul><h3><a name="1">Creating users</a> (for users with sufficient rights)</h3>
+<p>After a user list manager creates a user and specifies their username, a recommendation to approve their authorization settings is displayed to administrators in the user profile. Once an administrator approves authorization for this user, the recommendation is hidden and the manager is no longer able to change the authorization settings in any way, with the exception of revoking the authorization approval. To view the list of users that require approval, filter the user list by the <strong>Requires approval</strong> field. </p>
+<p>The user details window contains the following tabs: </p>
+<ul><li><strong>Main</strong> 
+<ul><li>Specify the <strong>Full name</strong> of the user. This name will be displayed in application lists and reports. 
+</li><li>The <strong>Invalid</strong> check box is cleared for all users by default. If a user no longer uses the application (for instance, due to resignation) yet cannot be deleted due to being referenced by other objects, it is recommended that you select the <strong>Invalid</strong> check box for them. An invalid user is not displayed in the user list, and they cannot be selected, for example, as task performer or person responsible for a document. To restore the user to a valid status (for example, they have been rehired), clear this check box. 
+</li><li><strong>Username</strong>. A short name used to sign in to the application. It can differ from the full name (a user can have username "JSmith" and full name "John Smith"). 
+</li><li><strong>1C:Enterprise authentication</strong>. This is the default option. 
+<ul><li>1C:Enterprise authentication status is displayed under the check box.</li></ul></li><li>To set a password, click <strong>Set Password</strong> and <a href="CommonForm.ChangePassword/Help">enter</a> it. Never leave this field blank as it compromises security. 
+<ul><li>If the user is not saved, you will be prompted to save it. Click <strong>Save</strong>. 
+</li><li>Once the password is set, the authentication status changes to <strong>The password is set</strong>.</li></ul></li><li><strong>Require to change a password when signed in</strong>. Select this check box to require the user to set a new password when they sign in for the first time. This check box is selected for all users by default. To ensure data security, it is recommended that all users change the passwords preset by administrators when they sign in for the first time. 
+</li><li><strong>Show in selection list</strong>. Indicates whether the username is added to the selection list displayed at the application startup. If any external users are registered in the application, it is recommended that you clear this check box. If this check box is cleared, the user will be hidden from the list displayed at the application startup. 
+</li><li><strong>User cannot change password</strong>. Select this check box to prohibit the user from changing their password. In this case only administrator can change the password. This makes the <strong>Set password</strong> and <strong>Change password</strong> buttons unavailable to the user. 
+</li><li><strong>OpenID authentication</strong>. Select this check box to allow the user to sign in using an OpenID account. This feature is used in 1C:Enterprise web client. If you select this check box, also select the <strong>1C:Enterprise authentication</strong> check box. Otherwise the application might work incorrectly. 
+</li><li><strong>OS authentication</strong>. Select this check box for quick and easy authorization. 
+<ul><li>In the <strong>User</strong> field, click <img src="StdPicture.InputFieldSelect"></img> and <a href="Catalog.Users.Form.SelectOperatingSystemUser/Help">select</a> the operating system username. The user will be able to sign in to the application with this username. If you select this check box, you can clear the <strong>1C:Enterprise authentication</strong> check box.</li></ul></li><li>If none of the <strong>Authentication</strong> check boxes are selected, the <strong>Can sign in</strong> check box is automatically cleared. 
+</li><li><strong>Run mode</strong>. The default value is <strong>Auto</strong>. This is the recommended <a href="v8help://frame/InformationEntryToForm">mode</a>.</li></ul></li><li><strong>Addresses and phones</strong> 
+<ul><li>Use this tab to store <a href="DataProcessor.ContactInformationInput/Help">contact information</a> of the user (for instance, phone number and email address).</li></ul></li><li><strong>Comment</strong> 
+<ul><li>Use this tab to store additional information about the user.</li></ul></li></ul><h3>Adding users to groups</h3>
+<p>If the application supports user groups, you can add users to one or several groups during the user creation procedure.</p>
+<ul><li>Click <strong>Groups</strong> on the navigation panel, and select the check boxes for one or several <a href="Catalog.UserGroups/Help">groups</a>. 
+</li><li>To clear all selections quickly, click <strong>Remove from all groups</strong>.</li></ul><h3>Access rights of users </h3>
+<p>Use one of the following options, provided that it is available in the application:</p>
+<ul><li>Click <strong>Access rights </strong>on the navigation panel to add a user to one or more <a href="Catalog.AccessGroups/Help">access groups</a>. Select the groups from the list. 
+</li><li>In the <strong>Allowed actions (roles)</strong> list, assign one or several roles to the user, thus defining their personal access rights settings. The roles can be linked to job duties of users or to smaller activities. 
+<ul><li>Select the check boxes for the roles you want to assign. 
+</li><li>To view selected roles only, click <strong>Show selected roles only</strong>. 
+</li><li>You can sort roles alphabetically or <strong>group them by subsystems</strong>.</li></ul></li></ul><h3><a name="2">Allowing authorization (for administrators only)</a></h3>
+<ul><li>
+<div>Select the <strong>Authorization allowed checkbox to allow a user to sign in to the application</strong> Then set the username, password, and other authentication parameters. </div>
+</li><li>
+<div>You can deny user access to the application manually by clearing the <strong>Allow authorization</strong> check box, or have the access denied automatically at the end of the specified period.</div>
+</li><li>
+<div>Open user sessions are closed automatically no longer than 25 minutes after the user access is denied.</div></li></ul><h3>Authorization restrictions</h3>
+<p>Follow the link to <strong>edit authentication restriction</strong>. Select one of the following:</p>
+<ul><li>
+<div><strong>Apply general authorization settings</strong>. This is the default option.</div>
+</li><li>
+<div><strong>No time limit</strong>.</div>
+</li><li>
+<div><strong>Allow authorization till</strong>. Enter the date or click <img src="StdPicture.InputFieldCalendar"></img> to select it from the calendar. To prevent unauthorized access to the application, you can set an <strong>Expiration date</strong>. Upon reaching this date, the user is denied access to the application.</div>
+</li><li>
+<div><strong>Deny authorization if no activity for</strong> (specify the number of days). If a user does not sign in for more than the specified number of days, they are denied access to the application. </div>
+<ul><li>
+<div>In this case the user has to contact the administrator to restore access to the application.</div></li></ul></li><li>
+<div>Restrictions are listed in user profiles. Restrictions for all users are also listed in the <a href="Report.UsersInfo/Help">User details</a> report.</div></li></ul><h3>Managing user settings</h3>
+<ul><li>
+<div>The application stores individual <a href="DataProcessor.UsersSettings.Form.UsersSettings/Help">settings</a> of each user for further use. To view, copy, or clear user settings, click <strong>Settings</strong> on the navigation panel. Clearing might be required when invalid settings affect normal operation of the application.</div></li></ul><h3>Application warnings</h3>
+<ul><li>
+<div>If application user properties differ from the properties of the matching <a href="Catalog.Users.Form.InfobaseUsers/Help">infobase user</a>, the application displays a warning including a list of differences. Then it prompts you to save the data in order to resolve the differences.</div></li></ul><h3>See also:</h3>
+<ul><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

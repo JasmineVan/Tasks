@@ -1,62 +1,62 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) 2019, ООО 1С-Софт
-// Все права защищены. Эта программа и сопроводительные материалы предоставляются 
-// в соответствии с условиями лицензии Attribution 4.0 International (CC BY 4.0)
-// Текст лицензии доступен по ссылке:
+// Copyright (c) 2019, 1C-Soft LLC
+// All Rights reserved. This application and supporting materials are provided under the terms of 
+// Attribution 4.0 International license (CC BY 4.0)
+// The license text is available at:
 // https://creativecommons.org/licenses/by/4.0/legalcode
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#Область ОписаниеПеременных
+#Region Variables
 
-// СтандартныеПодсистемы
+// StandardSubsystems
 
-// Хранилище глобальных переменных.
+// Storage of global variables.
 //
-// ПараметрыПриложения - Соответствие - хранилище переменных, где:
-//   * Ключ - Строка - имя переменной в формате "ИмяБиблиотеки.ИмяПеременной";
-//   * Значение - Произвольный - значение переменной.
+// ApplicationParameters - Map - value storage, where:
+//   * Key - String - a variable name in the format of  "LibraryName.VariableName";
+//   * Value - Arbitrary - a variable value.
 //
-// Инициализация (на примере СообщенияДляЖурналаРегистрации):
-//   ИмяПараметра = "СтандартныеПодсистемы.СообщенияДляЖурналаРегистрации";
-//   Если ПараметрыПриложения[ИмяПараметра] = Неопределено Тогда
-//     ПараметрыПриложения.Вставить(ИмяПараметра, Новый СписокЗначений);
-//   КонецЕсли;
+// Initialization (see the example of MessagesForEventLog):
+//   ParameterName = "StandardSubsystems.MessagesForEventLog";
+//   If ApplicationParameters[ParameterName] = Undefined Then
+//     ApplicationParameters.Insert(ParameterName, New ValueList);
+//   EndIf.
 //  
-// Использование (на примере СообщенияДляЖурналаРегистрации):
-//   ПараметрыПриложения["СтандартныеПодсистемы.СообщенияДляЖурналаРегистрации"].Добавить(...);
-//   ПараметрыПриложения["СтандартныеПодсистемы.СообщенияДляЖурналаРегистрации"] = ...;
-Перем ПараметрыПриложения Экспорт;
+// Usage (as illustrated by MessagesForEventLog):
+//   ApplicationParameters["StandardSubsystems.MessagesForEventLog"].Add(...);
+//   ApplicationParameters["StandardSubsystems.MessagesForEventLog"] = ...;
+Var ApplicationParameters Export;
 
-// Конец СтандартныеПодсистемы
+// End StandardSubsystems
 
-#КонецОбласти
+#EndRegion
 
-#Область ОбработчикиСобытий
+#Region EventHandlers
 
-Процедура ПередНачаломРаботыСистемы()
+Procedure BeforeStart()
 	
-	// СтандартныеПодсистемы
-	СтандартныеПодсистемыКлиент.ПередНачаломРаботыСистемы();
-	// Конец СтандартныеПодсистемы
+	// StandardSubsystems
+	StandardSubsystemsClient.BeforeStart();
+	// End StandardSubsystems
 	
 	
 	
-КонецПроцедуры
+EndProcedure
 
-Процедура ПриНачалеРаботыСистемы()
+Procedure OnStart()
 	
-	// СтандартныеПодсистемы
-	СтандартныеПодсистемыКлиент.ПриНачалеРаботыСистемы();
-	// Конец СтандартныеПодсистемы
-		
-КонецПроцедуры
+	// StandardSubsystems
+	StandardSubsystemsClient.OnStart();
+	// End StandardSubsystems
+	
+EndProcedure
 
-Процедура ПередЗавершениемРаботыСистемы(Отказ, ТекстПредупреждения)
+Procedure BeforeExit(Cancel, WarningText)
 	
-	// СтандартныеПодсистемы
-	СтандартныеПодсистемыКлиент.ПередЗавершениемРаботыСистемы(Отказ, ТекстПредупреждения);
-	// Конец СтандартныеПодсистемы
+	// StandardSubsystems
+	StandardSubsystemsClient.BeforeExit(Cancel, WarningText);
+	// End StandardSubsystems
 	
-КонецПроцедуры
+EndProcedure
 
-#КонецОбласти
+#EndRegion

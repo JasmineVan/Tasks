@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<ChildItems>
+		<InputField name="Number" id="1">
+			<DataPath>Object.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="NumberContextMenu" id="2"/>
+			<ExtendedTooltip name="NumberExtendedTooltip" id="3"/>
+		</InputField>
+		<InputField name="Date" id="4">
+			<DataPath>Object.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="DateContextMenu" id="5"/>
+			<ExtendedTooltip name="DateExtendedTooltip" id="6"/>
+		</InputField>
+		<InputField name="Warehouse" id="7">
+			<DataPath>Object.Warehouse</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="WarehouseContextMenu" id="8"/>
+			<ExtendedTooltip name="WarehouseExtendedTooltip" id="9"/>
+		</InputField>
+		<Table name="ListProduct" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Object.ListProduct</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ListProductContextMenu" id="11"/>
+			<AutoCommandBar name="ListProductCommandBar" id="12"/>
+			<ExtendedTooltip name="ListProductExtendedTooltip" id="13"/>
+			<SearchStringAddition name="ListProductSearchString" id="14">
+				<AdditionSource>
+					<Item>ListProduct</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ListProductSearchStringContextMenu" id="15"/>
+				<ExtendedTooltip name="ListProductSearchStringExtendedTooltip" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ListProductViewStatus" id="17">
+				<AdditionSource>
+					<Item>ListProduct</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ListProductViewStatusContextMenu" id="18"/>
+				<ExtendedTooltip name="ListProductViewStatusExtendedTooltip" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ListProductSearchControl" id="20">
+				<AdditionSource>
+					<Item>ListProduct</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ListProductSearchControlContextMenu" id="21"/>
+				<ExtendedTooltip name="ListProductSearchControlExtendedTooltip" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ListProductLineNumber" id="23">
+					<DataPath>Object.ListProduct.LineNumber</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Number</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ListProductLineNumberContextMenu" id="24"/>
+					<ExtendedTooltip name="ListProductLineNumberExtendedTooltip" id="25"/>
+				</LabelField>
+				<InputField name="ListProductProduct" id="26">
+					<DataPath>Object.ListProduct.Product</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ListProductProductContextMenu" id="27"/>
+					<ExtendedTooltip name="ListProductProductExtendedTooltip" id="28"/>
+				</InputField>
+				<InputField name="ListProductQuantity" id="29">
+					<DataPath>Object.ListProduct.Quantity</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ListProductQuantityContextMenu" id="30"/>
+					<ExtendedTooltip name="ListProductQuantityExtendedTooltip" id="31"/>
+				</InputField>
+				<InputField name="ListProductPrice" id="32">
+					<DataPath>Object.ListProduct.Price</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ListProductPriceContextMenu" id="33"/>
+					<ExtendedTooltip name="ListProductPriceExtendedTooltip" id="34"/>
+				</InputField>
+				<InputField name="ListProductTotal" id="35">
+					<DataPath>Object.ListProduct.Total</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ListProductTotalContextMenu" id="36"/>
+					<ExtendedTooltip name="ListProductTotalExtendedTooltip" id="37"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ImportProduct</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Object.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.BalanceOfProducts.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

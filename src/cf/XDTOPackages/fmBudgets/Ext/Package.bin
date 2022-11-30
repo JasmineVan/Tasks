@@ -1,0 +1,51 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.rarus.ru/ItemEng">
+	<valueType name="AmountType" base="xs:decimal" variety="Atomic" totalDigits="17" fractionDigits="2"/>
+	<valueType name="OperationTypes" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">IncomesAndExpenses</enumeration>
+		<enumeration xsi:type="xs:string">Cashflows</enumeration>
+		<enumeration xsi:type="xs:string">InternalSettlements</enumeration>
+	</valueType>
+	<valueType name="RecordTypes" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Incomes</enumeration>
+		<enumeration xsi:type="xs:string">Expenses</enumeration>
+		<enumeration xsi:type="xs:string">InnerIncomes</enumeration>
+		<enumeration xsi:type="xs:string">InnerExpenses</enumeration>
+		<enumeration xsi:type="xs:string">Inflow</enumeration>
+		<enumeration xsi:type="xs:string">Outflow</enumeration>
+	</valueType>
+	<objectType name="DB" ordered="true">
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="InputData" type="d3p1:InputData" lowerBound="0" upperBound="1"/>
+	</objectType>
+	<objectType name="InputData">
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="Document" type="d3p1:Document" upperBound="-1"/>
+	</objectType>
+	<objectType name="Document">
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="OperationType" type="d3p1:OperationTypes" form="Attribute"/>
+		<property name="BeginOfPeriod" type="xs:date" form="Attribute"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="Department" type="d3p1:CodeDescription" form="Element"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="Currency" type="d3p1:CodeDescription" form="Element"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="Project" type="d3p1:CodeDescription" lowerBound="0" nillable="true" form="Element"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="BudgetsData" type="d3p1:BudgetsData"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="Scenario" type="d3p1:CodeDescription" form="Element"/>
+	</objectType>
+	<objectType name="BudgetsData">
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="DocumentRow" type="d3p1:DocumentRow" lowerBound="1" upperBound="-1"/>
+	</objectType>
+	<objectType name="DocumentRow" ordered="false">
+		<property name="Period" type="xs:date" form="Attribute"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="RecordType" type="d3p1:RecordTypes" form="Attribute"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="Item" type="d3p1:CodeDescription" lowerBound="1" nillable="false"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="CorItem" type="d3p1:CodeDescription" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="CorDepartment" type="d3p1:CodeDescription" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="Amount" type="d3p1:AmountType" lowerBound="0" nillable="true" form="Attribute"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="Analytics1" type="d3p1:CodeDescription" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="Analytics2" type="d3p1:CodeDescription" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="Analytics3" type="d3p1:CodeDescription" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.rarus.ru/ItemEng" name="CorProject" type="d3p1:CodeDescription" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="CodeDescription">
+		<property name="Code" type="xs:string" form="Attribute"/>
+		<property name="Description" type="xs:string" form="Attribute"/>
+		<property name="UID" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+	</objectType>
+</package>

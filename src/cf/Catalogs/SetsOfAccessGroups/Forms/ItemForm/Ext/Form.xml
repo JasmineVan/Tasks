@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<ChildItems>
+			<Button name="FormEnableEditing" id="32">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.EnableEditing</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="FormEnableEditingExtendedTooltip" id="33"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Description" id="1">
+			<DataPath>Object.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="DescriptionContextMenu" id="2"/>
+			<ExtendedTooltip name="DescriptionExtendedTooltip" id="3"/>
+		</InputField>
+		<UsualGroup name="HorizontalGroup" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Горизонтальная группа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Horizontal group</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Pozioma grupa</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Horizontale Gruppe</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Grupul orizontal</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Yatay grup</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Grupo horizontal</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="HorizontalGroupExtendedTooltip" id="56"/>
+			<ChildItems>
+				<CheckBoxField name="NotUsedSince" id="4">
+					<DataPath>Object.NotUsedSince</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="NotUsedFromContextMenu" id="5"/>
+					<ExtendedTooltip name="NotUsedWithExtendedTooltip" id="6"/>
+				</CheckBoxField>
+				<CheckBoxField name="ForExternalUsers" id="52">
+					<DataPath>Object.ForExternalUsers</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ForExternalUsersContextMenu" id="53"/>
+					<ExtendedTooltip name="ForExternalUsersExtendedTooltip" id="54"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SetItemsTypeAndHashGroup" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип элементов набора и хеш</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Type of set items and hash</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Typ elementów zestawu i Hash</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Setzen Sie den Elementtyp und den Hash-Wert</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Tipul elementelor setului și hash-ul</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Küme ve karma elemanların tipi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Tipo de elementos de conjunto y hash</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="SetItemsTypeAndHashGroupExtendedTooltip" id="61"/>
+			<ChildItems>
+				<InputField name="SetItemsType" id="10">
+					<DataPath>Object.SetItemsType</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="SetItemsTypeContextMenu" id="11"/>
+					<ExtendedTooltip name="SetItemsTypeExtendedTooltip" id="12"/>
+					<Events>
+						<Event name="OnChange">SetItemsTypeOnChange</Event>
+					</Events>
+				</InputField>
+				<InputField name="Hash" id="57">
+					<DataPath>Object.Hash</DataPath>
+					<ContextMenu name="HashContextMenu" id="58"/>
+					<ExtendedTooltip name="HashExtendedTooltip" id="59"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="SetsAttributes" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты наборов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set attributes</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Ustaw atrybuty</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Attribute Sets</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Set atribute</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kümelerin özellikleri</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Requisitos de conjuntos</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="SetsAttributesExtendedTooltip" id="35"/>
+			<ChildItems>
+				<Page name="GroupsSetAttributes" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизиты набора групп</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group set attributes</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Grupuj atrybuty zestawu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Attribute Sets Gruppe</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Set atribute grup</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Grup kümesinin özellikleri</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Requisitos del conjunto de grupos</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="GroupsSetAttributesExtendedTooltip" id="37"/>
+					<ChildItems>
+						<Table name="Folders" id="13">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.Folders</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Groups</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Grupy</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Gruppen</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Grupuri</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Gruplar</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Grupos</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="GroupsContextMenu" id="14"/>
+							<AutoCommandBar name="GroupsCommandBar" id="15"/>
+							<ExtendedTooltip name="GroupsExtendedTooltip" id="16"/>
+							<SearchStringAddition name="GroupsSearchString" id="17">
+								<AdditionSource>
+									<Item>Folders</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="GroupsSearchStringContextMenu" id="18"/>
+								<ExtendedTooltip name="GroupsSearchStringExtendedTooltip" id="19"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="GroupsViewStatus" id="20">
+								<AdditionSource>
+									<Item>Folders</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="GroupsViewStatusContextMenu" id="21"/>
+								<ExtendedTooltip name="GroupsViewStatusExtendedTooltip" id="22"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="GroupsSearchControl" id="23">
+								<AdditionSource>
+									<Item>Folders</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="GroupsSearchControlContextMenu" id="24"/>
+								<ExtendedTooltip name="GroupsSearchControlExtendedTooltip" id="25"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="GroupsRowNumber" id="26">
+									<DataPath>Object.Folders.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="GroupsRowNumberContextMenu" id="27"/>
+									<ExtendedTooltip name="GroupsRowNumberExtendedTooltip" id="28"/>
+								</LabelField>
+								<InputField name="GroupsGroup" id="29">
+									<DataPath>Object.Folders.Folder</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="GroupsGroupContextMenu" id="30"/>
+									<ExtendedTooltip name="GroupsGroupExtendedTooltip" id="31"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="SingleUserSetAttributes" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизиты набора из одного пользователя</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Set attributes from one user</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Ustaw atrybuty od jednego użytkownika</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Attribute des Sets von einem Benutzer</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Set atribute pentru un utilizator</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Tek bir kullanıcıdan küme özellikleri</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Requisitos del conjunto de un usuario</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalSpacing>Double</VerticalSpacing>
+					<ExtendedTooltip name="SingleUserSetAttributesExtendedTooltip" id="39"/>
+					<ChildItems>
+						<InputField name="User" id="7">
+							<DataPath>Object.User</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="UserContextMenu" id="8"/>
+							<ExtendedTooltip name="UserExtendedTooltip" id="9"/>
+						</InputField>
+						<InputField name="AllowedAccessGroupsSet" id="40">
+							<DataPath>Object.AllowedAccessGroupsSet</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разрешенный набор
+групп доступа</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Allowed 
+access group set</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Dozwolony 
+zestaw grup dostępu</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Erlaubtes Set
+von Zugriffsgruppen</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Setarea grupului de acces 
+permisă</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Erişim grupların 
+izin verilen kümesi</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Conjunto permitido
+de grupos de acceso</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="AllowedAccessGroupsSetContextMenu" id="41"/>
+							<ExtendedTooltip name="AllowedAccessGroupsSetExtendedTooltip" id="42"/>
+						</InputField>
+						<InputField name="AllowedUserGroupsSet" id="43">
+							<DataPath>Object.AllowedUserGroupsSet</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разрешенный набор
+групп пользователей</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Allowed 
+user group set</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Dozwolony 
+zestaw grup użytkowników</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Erlaubtes Set
+von Benutzergruppen</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Setarea grupului de utilizatori 
+permisă</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Kullanıcı grupların 
+izin verilen kümesi</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Conjunto permitido
+de grupos de usuarios</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="AllowedUserGroupsSetContextMenu" id="44"/>
+							<ExtendedTooltip name="AllowedUserGroupsSetExtendedTooltip" id="45"/>
+						</InputField>
+						<InputField name="NewAccessGroupsSet" id="46">
+							<DataPath>Object.NewAccessGroupsSet</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Новый набор
+групп доступа</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>New 
+access group set</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Nowy 
+zestaw grup dostępu</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Neues Set
+von Zugriffsgruppen</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Set de grup nou 
+de acces</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Yeni erişim 
+grupların kümesi</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Conjunto nuevo
+de grupos de acceso</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="NewAccessGroupsSetContextMenu" id="47"/>
+							<ExtendedTooltip name="NewAccessGroupsSetExtendedTooltip" id="48"/>
+						</InputField>
+						<InputField name="NewUserGroupsSet" id="49">
+							<DataPath>Object.NewUserGroupsSet</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Новый набор
+групп пользователей</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>New 
+user group set</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Nowy 
+zestaw grup użytkowników</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Neues Set
+von Benutzergruppen</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Setarea unui nou 
+grup de utilizatori</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Yeni kullanıcı 
+grupların kümesi</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Conjunto nuevo
+de grupos de usuarios</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="NewUserGroupsSetContextMenu" id="50"/>
+							<ExtendedTooltip name="NewUserGroupsSetExtendedTooltip" id="51"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.SetsOfAccessGroups</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="EnableEditing" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Allow editing</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Udostępnij edycję</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bearbeitung aktivieren</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Permite editarea</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Düzenlemeyi etkinleştir</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Activar la edición</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования только для целей поиска неисправности (требуется углубленное понимание работы механизма)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Allow editing for troubleshooting. The feature is for advanced users only.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Włącz edycję tylko do wyszukiwania błędów (wymagana jest zaawansowana znajomość mechanizmu)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Aktivieren Sie die Bearbeitung, um nur nach Fehlern zu suchen (fortgeschrittene Kenntnisse des Mechanismus sind erforderlich)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Permiteți editarea pentru depanare. Caracteristica este numai pentru utilizatorii avansați.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sadece hataların aranması için düzenlemeyi etkinleştir (ileri düzeyde mekanizma bilgisi gerekir)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Activar la edición solo para buscar fallos (conocimientos avanzados del mecanismo requeridos)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>EnableEditing</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

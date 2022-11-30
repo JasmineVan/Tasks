@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<EventSubscription uuid="57069b56-f732-41c0-9a75-cbdb1e88556c">
+		<Properties>
+			<Name>FillInAccessValuesSetsOfInteractionDocumentsTabularSections</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить наборы значений доступа табличных частей документов взаимодействия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Fill in access value sets of tabular sections of interaction documents</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Fill in access value sets of tabular sections of interaction documents</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Fill in access value sets of tabular sections of interaction documents</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Fill in access value sets of tabular sections of interaction documents</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Fill in access value sets of tabular sections of interaction documents</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Fill in access value sets of tabular sections of interaction documents</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>The subscription is created while deploying the Access management subsystem to fill in the AccessValuesSets tabular section of the metadata objects where it was created for the #ByValuesSets template</Comment>
+			<Source>
+				<v8:Type>cfg:DocumentObject.Meeting</v8:Type>
+				<v8:Type>cfg:DocumentObject.IncomingEmail</v8:Type>
+				<v8:Type>cfg:DocumentObject.PlannedInteraction</v8:Type>
+				<v8:Type>cfg:DocumentObject.SMSMessage</v8:Type>
+				<v8:Type>cfg:DocumentObject.PhoneCall</v8:Type>
+				<v8:Type>cfg:DocumentObject.OutgoingEmail</v8:Type>
+			</Source>
+			<Event>BeforeWrite</Event>
+			<Handler>CommonModule.InteractionsEvents.FillAccessValuesSetsForTabularSections</Handler>
+		</Properties>
+	</EventSubscription>
+</MetaDataObject>

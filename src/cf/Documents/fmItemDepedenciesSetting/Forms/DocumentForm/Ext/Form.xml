@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">AfterWrite</Event>
+		<Event name="ChoiceProcessing">ChoiceProcessing</Event>
+		<Event name="NotificationProcessing">NotificationProcessing</Event>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="BeforeWriteAtServer">BeforeWriteAtServer</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupHeader" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Header Group</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Header Group</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupHeaderExtendedTooltip" id="66"/>
+			<ChildItems>
+				<UsualGroup name="GroupLeft" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Left Group</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Left Group</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupLeftExtendedTooltip" id="68"/>
+					<ChildItems>
+						<UsualGroup name="GroupNumberDate" id="95">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа номер дата</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Number date Group</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа номер дата</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Number date Group</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupNumberDateExtendedTooltip" id="96"/>
+							<ChildItems>
+								<InputField name="Number" id="1">
+									<DataPath>Object.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="NumberContextMenu" id="2"/>
+									<ExtendedTooltip name="NumberExtendedTooltip" id="3"/>
+								</InputField>
+								<InputField name="Date" id="92">
+									<DataPath>Object.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>dated</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="DateContextMenu" id="93"/>
+									<ExtendedTooltip name="DateExtendedTooltip" id="94"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="OperationType" id="89">
+							<DataPath>Object.OperationType</DataPath>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.fmDependenciesSettingOperationTypes.EnumValue.IncomesAndExpensesBudget</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.fmDependenciesSettingOperationTypes.EnumValue.CashflowBudget</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="OperationTypeContextMenu" id="90"/>
+							<ExtendedTooltip name="OperationTypeExtendedTooltip" id="91"/>
+							<Events>
+								<Event name="OnChange">OperationTypeOnChange</Event>
+							</Events>
+						</InputField>
+						<InputField name="Item" id="13">
+							<DataPath>Object.Item</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ItemContextMenu" id="14"/>
+							<ExtendedTooltip name="ItemExtendedTooltip" id="15"/>
+							<Events>
+								<Event name="OnChange">ItemOnChange</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="GroupFilterByAnalytics" id="76">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отбор по аналитикам</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Selection by dimensions Group</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отбор по аналитикам</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Selection by dimensions Group</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupFilterByAnalyticsExtendedTooltip" id="77"/>
+							<ChildItems>
+								<LabelDecoration name="LabelForFilter" id="78">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отбор по аналитикам:</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Filter by dimensions:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="LabelForFilterContextMenu" id="79"/>
+									<ExtendedTooltip name="LabelForFilterExtendedTooltip" id="80"/>
+								</LabelDecoration>
+								<LabelField name="AnalyticsURL" id="81">
+									<DataPath>AnalyticsURL</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Height>4</Height>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="AnalyticsURLContextMenu" id="82"/>
+									<ExtendedTooltip name="AnalyticsURLExtendedTooltip" id="83"/>
+									<Events>
+										<Event name="Click">AnalyticsURLClick</Event>
+									</Events>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="GroupCenter" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа центр</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Center Group</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа центр</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Center Group</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupCenterExtendedTooltip" id="70"/>
+					<ChildItems>
+						<InputField name="BalanceUnit" id="97">
+							<DataPath>Object.BalanceUnit</DataPath>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="BalanceUnitContextMenu" id="98"/>
+							<ExtendedTooltip name="BalanceUnitExtendedTooltip" id="99"/>
+						</InputField>
+						<InputField name="Department" id="10">
+							<DataPath>Object.Department</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="DepartmentContextMenu" id="11"/>
+							<ExtendedTooltip name="DepartmentExtendedTooltip" id="12"/>
+						</InputField>
+						<InputField name="Scenario" id="7">
+							<DataPath>Object.Scenario</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ScenarioContextMenu" id="8"/>
+							<ExtendedTooltip name="ScenarioExtendedTooltip" id="9"/>
+						</InputField>
+						<UsualGroup name="GroupRight" id="71">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа правая</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Right Group</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа правая</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Right Group</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupRightExtendedTooltip" id="72"/>
+							<ChildItems>
+								<LabelDecoration name="Label" id="73">
+									<Width>55</Width>
+									<TextColor>#4682B4</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если балансовая единица, подразделение или сценарий не указаны, то такая зависимость распространяется на все БалансоваяЕдиница, подразделения или сценарии соответственно.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>If a balance unit, department or scenario is not specified, this dependency covers all balance units, departments or scenarios, respectively.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="LabelContextMenu" id="74"/>
+									<ExtendedTooltip name="LabelExtendedTooltip" id="75"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="DependentItems" id="25">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Object.DependentItems</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="DependentItemsContextMenu" id="26"/>
+			<AutoCommandBar name="DependentItemsCommandBar" id="27"/>
+			<ExtendedTooltip name="DependentItemsExtendedTooltip" id="28"/>
+			<SearchStringAddition name="DependentItemsSearchString" id="29">
+				<AdditionSource>
+					<Item>DependentItems</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="DependentItemsSearchStringContextMenu" id="30"/>
+				<ExtendedTooltip name="DependentItemsSearchStringExtendedTooltip" id="31"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="DependentItemsViewStatus" id="32">
+				<AdditionSource>
+					<Item>DependentItems</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="DependentItemsViewStatusContextMenu" id="33"/>
+				<ExtendedTooltip name="DependentItemsViewStatusExtendedTooltip" id="34"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="DependentItemsSearchControl" id="35">
+				<AdditionSource>
+					<Item>DependentItems</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="DependentItemsSearchControlContextMenu" id="36"/>
+				<ExtendedTooltip name="DependentItemsSearchControlExtendedTooltip" id="37"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">DependentItemsSelection</Event>
+				<Event name="OnStartEdit">DependentItemsOnStartEdit</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="DependentItemsLineNumber" id="38">
+					<DataPath>Object.DependentItems.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="DependentItemsLineNumberContextMenu" id="39"/>
+					<ExtendedTooltip name="DependentItemsLineNumberExtendedTooltip" id="40"/>
+				</LabelField>
+				<ColumnGroup name="DependentItemsGroupItemType" id="116">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зависимые статьи группа статья вид</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dependent item group item type</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зависимые статьи группа статья вид</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dependent item group item type</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="DependentItemsGroupItemTypeExtendedTooltip" id="117"/>
+					<ChildItems>
+						<InputField name="DependentItemsItem" id="41">
+							<DataPath>Object.DependentItems.Item</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="DependentItemsItemContextMenu" id="42"/>
+							<ExtendedTooltip name="DependentItemsItemExtendedTooltip" id="43"/>
+							<Events>
+								<Event name="OnChange">DependentItemsItemOnChange</Event>
+							</Events>
+						</InputField>
+						<InputField name="DependentItemsMovementOperationType" id="113">
+							<DataPath>Object.DependentItems.MovementOperationType</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="DependentItemsMovementOperationTypeContextMenu" id="114"/>
+							<ExtendedTooltip name="DependentItemsMovementOperationTypeExtendedTooltip" id="115"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="DependentItemsFillingSetting" id="86">
+					<DataPath>Object.DependentItems.FillingSettings</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки заполнения аналитик</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dimension fill setting</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<CellHyperlink>true</CellHyperlink>
+					<AutoCellHeight>true</AutoCellHeight>
+					<ContextMenu name="DependentItemsFillingSettingContextMenu" id="87"/>
+					<ExtendedTooltip name="DependentItemsFillingSettingExtendedTooltip" id="88"/>
+				</InputField>
+				<ColumnGroup name="DependentItemsGroup" id="106">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зависимые статьи группа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dependent items Group</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зависимые статьи группа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dependent items Group</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="DependentItemsGroupExtendedTooltip" id="107"/>
+					<ChildItems>
+						<InputField name="DependentItemsPercent" id="44">
+							<DataPath>Object.DependentItems.Percent</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="DependentItemsPercentContextMenu" id="45"/>
+							<ExtendedTooltip name="DependentItemsPercentExtendedTooltip" id="46"/>
+						</InputField>
+						<InputField name="DependentItemsAlloctionByPeriodsProfile" id="103">
+							<DataPath>Object.DependentItems.AlloctionByPeriodsProfile</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="DependentItemsAlloctionByPeriodsProfileContextMenu" id="104"/>
+							<ExtendedTooltip name="DependentItemsAlloctionByPeriodsProfileExtendedTooltip" id="105"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="GroupFooter" id="111">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Footer Group</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Footer Group</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupFooterExtendedTooltip" id="112"/>
+			<ChildItems>
+				<InputField name="Comment" id="100">
+					<DataPath>Object.Comment</DataPath>
+					<ContextMenu name="CommentContextMenu" id="101"/>
+					<ExtendedTooltip name="CommentExtendedTooltip" id="102"/>
+				</InputField>
+				<InputField name="Responsible" id="108">
+					<DataPath>Object.Responsible</DataPath>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ResponsibleContextMenu" id="109"/>
+					<ExtendedTooltip name="ResponsibleExtendedTooltip" id="110"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Object</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentObject.fmItemDepedenciesSetting</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Object.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Object.DependentItems">
+					<Column name="FillingSettings" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Настройка заполнения</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Fill setting</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ItemsSettings" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки статей</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Item settings</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Item" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Item</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.fmIncomesAndExpensesItems</v8:Type>
+						<v8:Type>cfg:CatalogRef.fmCashflowItems</v8:Type>
+					</Type>
+				</Column>
+				<Column name="AnalyticsType1" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип аналитики 1</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dimension type 1</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:TypeDescription</v8:Type>
+					</Type>
+				</Column>
+				<Column name="AnalyticsType2" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип аналитики 2</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dimension type 2</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:TypeDescription</v8:Type>
+					</Type>
+				</Column>
+				<Column name="AnalyticsType3" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип аналитики 3</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dimension type 3</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:TypeDescription</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ItemAnalyticsCount" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество аналитик статьи</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Quantity of item dimensions</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="MovementOperationType" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид операции движений</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Records operation type </v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.fmBudgetFlowOperationTypes</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="AnalyticsURL" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гиперссылка аналитик</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dimension hyperlink</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

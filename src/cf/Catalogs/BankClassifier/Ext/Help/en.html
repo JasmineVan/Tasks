@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html xmlns:o="" dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p style="MARGIN-LEFT: 0px">The All-Russian Bank Classifier (the bank classifier; the classifier) stores bank data, which is used to fill in bank details for such program objects as billing statements and documents. </p>
+<p style="MARGIN-LEFT: 0px">The classifier can be filled in automatically using the All-Russian Bank Classifier. This option makes entering data significantly faster and easier. The user only needs to select the bank from the classifier, and all bank data will be imported and displayed instantly, which minimizes mistakes. More to this, the program automatically updates the classifier. </p>
+<p style="MARGIN-LEFT: 0px">The banks that ceased activities are displayed as inactive.</p>
+<p style="MARGIN-LEFT: 0px">To open it, execute the <strong>Banks</strong> command in the <strong>Catalog</strong> section.</p>
+<p style="MARGIN-LEFT: 0px">The classifier displays: </p>
+<ul><li>
+<div style="MARGIN-LEFT: 0px"><strong>Bank name</strong>, which is a full name of a <a href="Catalog.BankClassifier.Form.ItemForm/Help">bank</a>;</div>
+</li><li>
+<div style="MARGIN-LEFT: 0px"><strong>Branch ID</strong>, which is a bank's branch ID;</div>
+</li><li>
+<div style="MARGIN-LEFT: 0px"><strong>Correspondent account</strong>, which is a correspondent account;</div>
+</li><li>
+<div style="MARGIN-LEFT: 0px"><strong>City</strong>, which is a city a bank is situated in;</div>
+</li><li>
+<div style="MARGIN-LEFT: 0px">An <strong>Address</strong> field contains an address of a bank.</div></li></ul><p style="MARGIN-LEFT: 0px">Please note that addresses and phone numbers of banks are imported only from the 1C:ETS hard drive.</p>
+<p style="MARGIN-LEFT: 0px">To enter additional information, execute the <strong>More</strong><strong> - Edit the form</strong> command:</p>
+<ul><li>
+<div style="MARGIN-LEFT: 0px">The program accounts for inactive banks and automatically marks the <strong>Bank ceased activities</strong> check box for such banks. This check box can also be marked manually.</div>
+</li><li>
+<div style="MARGIN-LEFT: 0px"><strong>Bank group</strong>. The default value is the state where a bank is located. </div>
+</li><li>
+<div style="MARGIN-LEFT: 0px"><strong>SWIFT Branch ID</strong>;</div>
+</li><li>
+<div style="MARGIN-LEFT: 0px">Addresses and <strong>Phone numbers</strong> of banks can be imported only from the 1C:ETS hard drive.</div></li></ul><h3 style="MARGIN-LEFT: 0px">Grouping banks</h3>
+<ul><li>
+<div style="MARGIN-LEFT: 0px">By default, banks are grouped by states and the list displays only states. To view a list of banks, select a state. </div>
+</li><li>
+<div style="MARGIN-LEFT: 0px">You can add subgroups to the list. Click <strong>Create a group</strong>, enter its name, and drag any banks in it with a mouse. </div></li></ul><h3 style="MARGIN-LEFT: 0px">Import bank classifier</h3>
+<ul><li>
+<div style="MARGIN-LEFT: 0px">Every time the program is launched, it checks the bank classifier for updates. If it has not been updated for 30 days or more, the program displays a notification offering to update the bank classifier. Follow the <strong>Update the bank classifier</strong> link.</div>
+</li><li>
+<div style="MARGIN-LEFT: 0px">
+<p style="MARGIN-LEFT: 0px">Click the <strong>Import the classifier</strong> button to <a href="../idb7fae67e-bdbb-4cdf-a6fd-26265e48fddb/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">update</a> bank data.</p></div>
+</li><li>
+<div style="MARGIN-LEFT: 0px">To have the classifier updated automatically on schedule, create the "Bank classifier import" <a href="DataProcessor.ScheduledAndBackgroundJobs/Help">scheduled job</a>.</div>
+</li><li>
+<div style="MARGIN-LEFT: 0px">Not all information is imported to a bank card. The <strong>Address</strong> and <strong>Phone numbers</strong> fields remain empty if the classifier is imported from the 1C website.</div>
+</li><li>
+<div style="MARGIN-LEFT: 0px">When re-importing the classifier, only the altered data is being overwritten. Please note that if you alter a BIC number, the new bank record will be created. If you edit other fields, your changes will be overwritten (except for the <strong>Address</strong> and <strong>Phone numbers</strong> fields in case the classifier is re-imported from the 1C website).</div></li></ul><h3 style="MARGIN-LEFT: 0px">Creating a bank</h3>
+<ul><li>
+<div style="MARGIN-LEFT: 0px">Click <strong>Create</strong> to create a bank. Fill in the required <a href="Catalog.BankClassifier.Form.ItemForm/Help">parameters</a>.</div></li></ul><h3 style="MARGIN-LEFT: 0px">See also:</h3>
+<ul><li>
+<div style="MARGIN-LEFT: 0px"><a href="v8help://frame/form_common">Working with forms</a></div></li></ul></body></html>

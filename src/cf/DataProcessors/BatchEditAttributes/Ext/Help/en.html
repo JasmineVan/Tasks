@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<h1>Bulk attribute editing</h1>
+<p>Bulk editing of attributes can be performed in two cases:</p>
+<ul><li>by executing the <strong>Edit selected</strong> command in most lists of the program. 
+</li><li>
+<div>only for an administrator: by executing the <a href="#J">Bulk attribute editing</a> command in the <strong>Administration - Service - Data editing</strong> program section or by executing the <strong>Additional processing - Bulk attribute editing</strong> command in case of external data processing.</div></li></ul><h2><a name="#A1">Editing selected list items</a> </h2>
+<p>Editing values of attributes, as well as additional attributes and data, for selected items of the list.</p>
+<h3>Entering new attribute values for selected list items</h3>
+<ul><li>The fields of selected list items available for editing are displayed in the <strong>Attribute</strong> column. Can edit several attributes at once. 
+</li><li>To edit values of attributes, additional attributes, and data, fill in the <strong>New value</strong> in the rows. For some attributes, you can use <a href="DataProcessor.BatchEditAttributes.Form.FormulaEdit/Help">formula editor</a>. To open it, click <img src="StdPicture.InputFieldSelect"></img>. 
+</li><li>Double-click the row to edit it. You can: 
+<ul><li>enter a value to search in the list; 
+</li><li>execute the <strong>Show all</strong> command (<strong>F8</strong> button) and select the value from the list; 
+</li><li>execute the <strong>Create</strong> command to enter a new value to a list;</li></ul></li><li>When entering a new value, the <img src="StdPicture.Change"></img> check mark is being selected automatically. 
+</li><li>Click <strong>Edit attributes</strong>. </li></ul><h3>Clearing values of rows for the selected items in the list</h3>
+<ul><li>To clear the attribute value, select the <img src="StdPicture.Change"></img> check box in the row and do not fill in the <strong>New value</strong> column. 
+</li><li>Click <strong>Edit attributes</strong>.</li></ul><h3>Editing contains errors</h3>
+<ul><li>The list of unedited items of the list is displayed in a separate window. For each item, there is a comment to the occurred error. 
+</li><li>
+<div>Click <img src="StdPicture.Change" width="16" height="16"></img><strong>Open</strong> to view items that failed to be edited.</div>
+</li><li>
+<div>Click <strong>Retry editing</strong> to retry editing the items of the list with the same parameters.</div>
+</li><li>
+<div>To correct errors, you may need to edit values of attributes of the listed items.</div></li></ul><h3>Selecting previously saved settings for attribute changing</h3>
+<ul><li>Execute the <strong>Previously edited attributes</strong> command, 
+</li><li>Select the setting from the drop-down list. The list stores 20 most recent settings of attribute changes. </li></ul><h3>Changing blocked attributes</h3>
+<ul><li>The list may contain attributes that are uneditable by default. Such attributes are displayed in gray. 
+</li><li>Uneditable attributes are "key": editing them can affect other lists and documents of the program. For this reason they are locked. 
+</li><li>When trying to enter new values, the program offers to unlock them. In case there is indisputable need for editing them, confirm your choice by clicking <strong>Yes</strong>. </li></ul><h3>Aspects of editing posted documents</h3>
+<ul><li>
+<div>Once the previously posted document is edited, it needs to be reposted. </div></li></ul><h3>Setting attribute editing parameters</h3>
+<ul><li>The program uses default settings to edit attributes. Click <strong>Additional parameters</strong> to <a href="DataProcessor.BatchEditAttributes.Form.AdditionalParameters/Help">set the settings</a>. </li></ul><h2><a name="#J">Bulk attribute editing</a> (for administrators)</h2>
+<ul><li>Administrators can edit attributes of all catalogs and documents in the program, including tabular sections. You can also select the items more precisely and edit their attributes (<strong>Selecting items to edit</strong> table).</li></ul><h3>Selecting items to edit</h3>
+<ul><li>
+<div>In the <strong>Change</strong> field, select the document or the application catalog to change elements in. By default, you can edit <strong>All items</strong> of a catalog and all documents of a selected kind.</div>
+</li><li>
+<div>To view the items selected for editing, click <strong>All items</strong>.</div>
+</li><li>
+<div>Use the <strong>Add selection filter</strong> button to select one or more items possessing a certain characteristic. While using a filter, changes are being made only in the selected items.</div>
+</li><li>
+<div>Once a filter is set, the link displays how many items are selected for editing. </div>
+</li><li>
+<div>Once a catalog or a document kind is selected, you can view attributes available for editing, including the service ones, in the <strong>Attributes available for editing</strong> table. To show service attributes, click <a href="DataProcessor.BatchEditAttributes.Form.AdditionalParameters/Help">Additional parameters</a> and select the check box.</div></li></ul><h3>Enter new values</h3>
+<ul><li>
+<div>Once the attributes are selected, click the <strong>Enter new values</strong> button and execute <a href="#A1">standard commands</a> to edit them.</div></li></ul><h3>Execute custom algorithm</h3>
+<ul><li>
+<div>This option is only available when using a program locally on a pc. It is unavailable while working in an online application.</div>
+</li><li>
+<div>You can use an arbitrary algorithm to edit records. Yoou may need it in the following cases:</div>
+<ul><li>
+<div>Correcting irrelevant data in part on flexible condition;</div>
+</li><li>
+<div>Insufficient standard features for mass data transformation;</div>
+</li><li>
+<div>Editing or deleting other objects with consideration for current object's data.</div></li></ul></li><li>
+<div>Once the attributes are selected, click <strong>Execute an arbitrary algorithm</strong>.</div>
+</li><li>
+<div>In the <strong>Algorithm</strong> field, enter the name of the algorithm. The algorithm will be saved.</div>
+</li><li>
+<div>The left part of the window displays the algorithm code, and the right part – the attributes of the object being changed.</div>
+</li><li>
+<div>To enter the algorithm code quickly, simply drag attributes of the object from the attributes list to the algorithm field.</div>
+</li><li>
+<div>Use the <strong>Algorithms</strong> button to view the list of algorithms previously used for an object and use them. The program stores 20 latest executed algorithms for every object.</div>
+</li><li>
+<div>Use the <strong>Object is recorded</strong> radio button to set the way the object is to be recorded:</div>
+<ul><li>
+<div><strong>Automatically</strong>;</div>
+</li><li>
+<div><strong>In the algorithm code</strong> - in this case the algorithm must contain the row that enables recording of an object.</div></li></ul></li><li>
+<div>Use the <strong>Execution mode</strong> radio button to select the <strong>Safe</strong> or <strong>Unsafe</strong> execution mode. Unsafe execution mode is unavailable in a basic version.</div>
+</li><li>
+<div>To start an algorithm, click <strong>Execute</strong>.</div>
+</li><li>
+<div>If an algorithm contains an error, you can learn about it in the execution report.</div></li></ul><h3>See also:</h3>
+<ul><li>
+<div><a href="DataProcessor.BatchEditAttributes.Form.AdditionalParameters/Help">Additional parameters</a>.</div></li></ul></body></html>

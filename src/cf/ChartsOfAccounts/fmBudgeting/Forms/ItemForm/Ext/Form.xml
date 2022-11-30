@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupHeader" id="97">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Header Group</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Header Group</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>56</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="GroupHeaderExtendedTooltip" id="98"/>
+			<ChildItems>
+				<UsualGroup name="GroupCodeType" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа код вид</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Code type Group</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа код вид</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Code type Group</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupCodeTypeExtendedTooltip" id="54"/>
+					<ChildItems>
+						<InputField name="Code" id="2">
+							<DataPath>Object.Code</DataPath>
+							<ContextMenu name="CodeContextMenu" id="3"/>
+							<ExtendedTooltip name="CodeExtendedTooltip" id="55"/>
+						</InputField>
+						<InputField name="Type" id="12">
+							<DataPath>Object.Type</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид счета</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Account type</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="TypeContextMenu" id="13"/>
+							<ExtendedTooltip name="TypeExtendedTooltip" id="56"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Description" id="8">
+					<DataPath>Object.Description</DataPath>
+					<Width>55</Width>
+					<ContextMenu name="DescriptionContextMenu" id="9"/>
+					<ExtendedTooltip name="DescriptionExtendedTooltip" id="58"/>
+				</InputField>
+				<UsualGroup name="GroupChoiceCodeIsOwnedByAccount" id="95">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа код выбора подчинен счету</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Selection code subordinated to account Group</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа код выбора подчинен счету</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Selection code subordinated to account Group</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupChoiceCodeIsOwnedByAccountExtendedTooltip" id="96"/>
+					<ChildItems>
+						<InputField name="QuickChoiceCode" id="92">
+							<DataPath>Object.QuickChoiceCode</DataPath>
+							<ContextMenu name="QuickChoiceCodeContextMenu" id="93"/>
+							<ExtendedTooltip name="QuickChoiceCodeExtendedTooltip" id="94"/>
+						</InputField>
+						<InputField name="Parent" id="15">
+							<DataPath>Object.Parent</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подчинен счету</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Subordinated to account</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ParentContextMenu" id="16"/>
+							<ExtendedTooltip name="ParentExtendedTooltip" id="57"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="EnglishDescription" id="89">
+					<DataPath>Object.EnglishDescription</DataPath>
+					<Width>55</Width>
+					<ContextMenu name="EnglishDescriptionContextMenu" id="90"/>
+					<ExtendedTooltip name="EnglishDescriptionExtendedTooltip" id="91"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupAccountFlags" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Флаги счета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check boxes of account</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Флаги счета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check boxes of account</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupAccountFlagsExtendedTooltip" id="60"/>
+			<ChildItems>
+				<CheckBoxField name="OffBalance" id="23">
+					<DataPath>Object.OffBalance</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="OffBalanceContextMenu" id="24"/>
+					<ExtendedTooltip name="OffBalanceExtendedTooltip" id="63"/>
+				</CheckBoxField>
+				<CheckBoxField name="DenyUsingInEntries" id="25">
+					<DataPath>Object.DenyUsingInEntries</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет является группой и не выбирается в проводках</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>An account is a group and not selected in postings</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="DenyUsingInEntriesContextMenu" id="26"/>
+					<ExtendedTooltip name="DenyUsingInEntriesExtendedTooltip" id="64"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupAccountingTypes" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды учета по счету</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Accounting types by account</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды учета по счету</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Accounting types by account</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="GroupAccountingTypesExtendedTooltip" id="65"/>
+			<ChildItems>
+				<CheckBoxField name="Currency" id="31">
+					<DataPath>Object.Currency</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валютный</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Currency</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="CurrencyContextMenu" id="32"/>
+					<ExtendedTooltip name="CurrencyExtendedTooltip" id="68"/>
+					<Events>
+						<Event name="OnChange">CurrencyOnChange</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="FinancialResults" id="36">
+					<DataPath>Object.FinancialResults</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Финансовый результат</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Financial result</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Участвует в расчете финансового результата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Involved in the calculation of the financial result</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="FinancialResultsContextMenu" id="37"/>
+					<ExtendedTooltip name="FinancialResultsExtendedTooltip" id="71"/>
+				</CheckBoxField>
+				<CheckBoxField name="AccountingByProjects" id="99">
+					<DataPath>Object.AccountingByProjects</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="AccountingByProjectsContextMenu" id="100"/>
+					<ExtendedTooltip name="AccountingByProjectsExtendedTooltip" id="101"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupExtDimensionTypes" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды субконто</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Extra dimension types</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды субконто</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Extra dimension types</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="GroupExtDimensionTypesExtendedTooltip" id="73"/>
+			<ChildItems>
+				<Table name="ExtDimensionTypes" id="41">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Object.ExtDimensionTypes</DataPath>
+					<CommandSet>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ExtDimensionTypesContextMenu" id="42"/>
+					<AutoCommandBar name="ExtDimensionTypesCommandBar" id="43"/>
+					<ExtendedTooltip name="ExtDimensionTypesExtendedTooltip" id="74"/>
+					<SearchStringAddition name="ExtDimensionTypesSearchString" id="75">
+						<AdditionSource>
+							<Item>ExtDimensionTypes</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ExtDimensionTypesSearchStringContextMenu" id="76"/>
+						<ExtendedTooltip name="ExtDimensionTypesSearchStringExtendedTooltip" id="77"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ExtDimensionTypesViewStatus" id="78">
+						<AdditionSource>
+							<Item>ExtDimensionTypes</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ExtDimensionTypesViewStatusContextMenu" id="79"/>
+						<ExtendedTooltip name="ExtDimensionTypesViewStatusExtendedTooltip" id="80"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ExtDimensionTypesSearchControl" id="81">
+						<AdditionSource>
+							<Item>ExtDimensionTypes</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ExtDimensionTypesSearchControlContextMenu" id="82"/>
+						<ExtendedTooltip name="ExtDimensionTypesSearchControlExtendedTooltip" id="83"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnStartEdit">ExtDimensionTypesOnStartEdit</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ExtDimensionTypesExtDimensionType" id="44">
+							<DataPath>Object.ExtDimensionTypes.ExtDimensionType</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ExtDimensionTypesExtDimensionTypeContextMenu" id="45"/>
+							<ExtendedTooltip name="ExtDimensionTypesExtDimensionTypeExtendedTooltip" id="84"/>
+						</InputField>
+						<CheckBoxField name="ExtDimensionTypesTurnoversOnly" id="46">
+							<DataPath>Object.ExtDimensionTypes.TurnoversOnly</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ExtDimensionTypesTurnoversOnlyContextMenu" id="47"/>
+							<ExtendedTooltip name="ExtDimensionTypesTurnoversOnlyExtendedTooltip" id="85"/>
+						</CheckBoxField>
+						<CheckBoxField name="ExtDimensionTypesSum" id="48">
+							<DataPath>Object.ExtDimensionTypes.Sum</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ExtDimensionTypesSumContextMenu" id="49"/>
+							<ExtendedTooltip name="ExtDimensionTypesSumExtendedTooltip" id="86"/>
+						</CheckBoxField>
+						<CheckBoxField name="ExtDimensionTypesCurrency" id="52">
+							<DataPath>Object.ExtDimensionTypes.Currency</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ExtDimensionTypesCurrencyContextMenu" id="53"/>
+							<ExtendedTooltip name="ExtDimensionTypesCurrencyExtendedTooltip" id="88"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Object</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsObject.fmBudgeting</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

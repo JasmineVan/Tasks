@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.12">
+	<setForNewObjects>false</setForNewObjects>
+	<setForAttributesByDefault>true</setForAttributesByDefault>
+	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+	<object>
+		<name>Document.DogTracking</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Posting</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractivePosting</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Configuration.FinancialManagement</name>
+		<right>
+			<name>MainWindowModeNormal</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeEmbeddedWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeFullscreenWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeKiosk</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>AnalyticsSystemClient</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.Management</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<restrictionTemplate>
+		<name>ForObject(ObjectField)</name>
+		<condition>// ForObject(ObjectField = "")
+// The template is used to restrict reference items, documents, and
+// other object lists by the Reference field. Also, it is used to restrict items of dependent lists
+// of objects and register records by the owner object field.
+
+// Parameters:
+//  ObjectField - name of the field that stores reference to the object the list item depends on.
+//                Value "" (by default) is the same as the name of the Reference field.
+
+
+#If &amp;ListsWithReadRestrictionDisabled = "Undefined" #Then
+  // Infobase is locked for update.
+  WHERE FALSE
+
+#ElseIf Not StrContains(&amp;AccessRestrictionTemplatesVersions, ",ForRegister5,") #Then
+  Error: Template update to version supplied in the EditAccessGroupsMembers role required. Reason: Version 5 of the ForRegister access restriction template is obsolete. Object: #CurrentTableName. Right: #CurrentAccessRightName.
+
+#ElseIf &amp;ListsWithReadRestrictionDisabled = "All" #Then
+  // All access kinds are disabled for the user or
+  // restriction at the record level is not used.
+  WHERE TRUE
+
+#ElseIf StrContains(&amp;ListsWithReadRestrictionDisabled, #CurrentTableName) #Then
+  // Restriction for the current table is disabled for the user.
+  WHERE TRUE
+
+#ElseIf StrContains(&amp;AccessRestrictionTemplatesVersions, ",SessionRestartRequired,") #Then
+  Error. Application version is updated, restart the session. Object: #CurrentTableName, Right: #CurrentAccessRightName.
+
+#ElseIf #CurrentAccessRightName &lt;&gt; "Read" #Then
+  // Checking rights Insert, Update, and Delete BeforeWrite / OnWrite.
+  WHERE TRUE
+
+#ElseIf Not StrContains(&amp;ListsWithAccessGroupsAccessKeysRestriction,  #CurrentTableName + ":#ObjectField;")
+         AND Not StrContains(&amp;ListsWithUsersAccessKeysRestriction, #CurrentTableName + ":#ObjectField;") #Then
+
+  Error: Access restriction update required. Reason: Cannot get the access restriction option for ForObject template from the session parameters. Object: #CurrentTableName. Right: #CurrentAccessRightName.
+#Else
+
+CurrentTable WHERE TRUE IN
+ (
+  SELECT TOP 1 TRUE
+  FROM InformationRegister.AccessKeysForObjects AS AccessKeysForObjects
+  #If StrContains(&amp;ListsWithAccessGroupsAccessKeysRestriction, #CurrentTableName + ":#ObjectField;") #Then
+      LEFT JOIN InformationRegister.AccessGroupSetsAccessKeys AS AccessGroupSetsAccessKeys
+      ON
+      #If &amp;CurrentExternalUser = Value(Catalog.ExternalUsers.EmptyRef) #Then
+          AccessGroupSetsAccessKeys.AccessKey = AccessKeysForObjects.UsersAccessKey
+      #Else
+          AccessGroupSetsAccessKeys.AccessKey = AccessKeysForObjects.ExternalUsersAccessKey
+      #EndIf
+        AND AccessGroupSetsAccessKeys.AccessGroupsSet = &amp;AllowedAccessGroupsSet
+  #EndIf
+  #If StrContains(&amp;ListsWithAccessGroupsAccessKeysRestriction, #CurrentTableName + ":#ObjectField;*") #Then
+      
+      LEFT JOIN InformationRegister.AccessGroupSetsAccessKeys AS AccessKeysOfAllowedAccessGroupSet
+      ON
+      #If &amp;CurrentExternalUser = Value(Catalog.ExternalUsers.EmptyRef) #Then
+          AccessKeysOfAllowedAccessGroupSet.AccessKey = AccessKeysForObjects.UsersAccessKey
+      #Else
+          AccessKeysOfAllowedAccessGroupSet.AccessKey = AccessKeysForObjects.ExternalUsersAccessKey
+      #EndIf
+        AND AccessKeysOfAllowedAccessGroupSet.AccessGroupsSet = &amp;AllowedBlankAccessGroupsSet
+  #EndIf
+  #If StrContains(&amp;ListsWithUsersAccessKeysRestriction, #CurrentTableName + ":#ObjectField;") #Then
+      
+    #If &amp;CurrentExternalUser = Value(Catalog.ExternalUsers.EmptyRef) #Then
+      LEFT JOIN InformationRegister.UsersAccessKeys AS UsersAccessKeys
+      ON
+          UsersAccessKeys.AccessKey = AccessKeysForObjects.UsersAccessKey
+        AND UsersAccessKeys.User = &amp;AllowedUser
+    #Else
+      LEFT JOIN InformationRegister.ExternalUsersAccessKeys AS UsersAccessKeys
+      ON
+          UsersAccessKeys.AccessKey = AccessKeysForObjects.ExternalUsersAccessKey
+        AND UsersAccessKeys.ExternalUser = &amp;AllowedUser
+    #EndIf
+  #EndIf
+  #If StrContains(&amp;ListsWithUsersAccessKeysRestriction, #CurrentTableName + ":#ObjectField;+") #Then
+      
+    #If &amp;CurrentExternalUser = Value(Catalog.ExternalUsers.EmptyRef) #Then
+      LEFT JOIN InformationRegister.UsersAccessKeys AS AccessKeysOfUserGroupSets
+      ON
+          AccessKeysOfUserGroupSets.AccessKey = AccessKeysForObjects.UsersAccessKey
+        AND AccessKeysOfUserGroupSets.User = &amp;AllowedUserGroupsSet
+    #Else
+      LEFT JOIN InformationRegister.ExternalUsersAccessKeys AS AccessKeysOfUserGroupSets
+      ON
+          AccessKeysOfUserGroupSets.AccessKey = AccessKeysForObjects.ExternalUsersAccessKey
+        AND AccessKeysOfUserGroupSets.ExternalUser = &amp;AllowedUserGroupsSet
+    #EndIf
+  #EndIf
+  WHERE
+  #If "#ObjectField"  = "" #Then
+      AccessKeysForObjects.Object = CurrentTable.Ref
+  #Else
+      AccessKeysForObjects.Object = CurrentTable.#ObjectField
+  #EndIf
+    AND (
+  #If StrContains(&amp;ListsWithAccessGroupsAccessKeysRestriction, #CurrentTableName + ":#ObjectField;") #Then
+          Not AccessGroupSetsAccessKeys.AccessKey Is NULL
+  #Else
+          False
+  #EndIf
+  #If StrContains(&amp;ListsWithAccessGroupsAccessKeysRestriction, #CurrentTableName + ":#ObjectField;*") #Then
+      Or Not AccessKeysOfAllowedAccessGroupSet.AccessKey Is NULL
+  #EndIf
+  #If StrContains(&amp;ListsWithUsersAccessKeysRestriction, #CurrentTableName + ":#ObjectField;") #Then
+      Or Not UsersAccessKeys.AccessKey Is NULL
+  #EndIf
+  #If StrContains(&amp;ListsWithUsersAccessKeysRestriction, #CurrentTableName + ":#ObjectField;+") #Then
+      Or Not AccessKeysOfUserGroupSets.AccessKey Is NULL
+  #EndIf
+      )
+ )
+#EndIf
+
+#If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";ConsiderRightsSettingsOnBuildQueryExecutionPlan;") #Then
+  #If Not StrContains(&amp;ListsWithUsersAccessKeysRestriction, #CurrentTableName + ":#ObjectField;") #Then
+  AND CASE
+      WHEN
+          #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";31;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";30;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";29;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";28;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";27;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";26;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";25;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";24;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";23;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";22;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";21;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";20;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";19;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";18;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";17;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";16;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";15;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";14;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";13;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";12;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";11;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";10;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";09;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";08;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";07;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";06;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";05;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";04;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";03;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";02;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";01;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";00;") #Then True = True #Else True &lt;&gt; False #EndIf
+      THEN TRUE
+      ELSE FALSE
+    END
+  #Else
+  AND CASE
+      WHEN
+          #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";31^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";30^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";29^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";28^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";27^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";26^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";25^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";24^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";23^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";22^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";21^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";20^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";19^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";18^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";17^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";16^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";15^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";14^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";13^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";12^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";11^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";10^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";09^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";08^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";07^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";06^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";05^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";04^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";03^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";02^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";01^;") #Then True = True #Else True &lt;&gt; False #EndIf
+        AND #If StrContains(&amp;CommonAccessRestrictionTemplateParameters, ";00^;") #Then True = True #Else True &lt;&gt; False #EndIf
+      THEN TRUE
+      ELSE FALSE
+    END
+  #EndIf
+#EndIf</condition>
+	</restrictionTemplate>
+</Rights>

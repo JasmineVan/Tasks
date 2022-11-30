@@ -1,0 +1,776 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupQuickFilters" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Quick filters</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group quick filters</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupQuickFiltersExtendedTooltip" id="87"/>
+		</UsualGroup>
+		<CommandBar name="GroupCommandBar" id="162">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command bar</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command bar</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="GroupCommandBarExtendedTooltip" id="163"/>
+			<ChildItems>
+				<ButtonGroup name="FormGroupEntriesActivity" id="84">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активность проводок</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Posting activity</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активность проводок</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Posting activity</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="FormGroupEntriesActivityExtendedTooltip" id="85"/>
+					<ChildItems>
+						<Button name="FormToggleEntriesActivity" id="81">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ToggleEntriesActivity</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="FormToggleEntriesActivityExtendedTooltip" id="86"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
+			</ChildItems>
+		</CommandBar>
+		<Table name="List" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>List</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>GroupQuickFilters</UserSettingsGroup>
+			<ContextMenu name="ListContextMenu" id="2"/>
+			<AutoCommandBar name="ListCommandBar" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ListExtendedTooltip" id="91"/>
+			<SearchStringAddition name="ListSearchString" id="164">
+				<AdditionSource>
+					<Item>List</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ListSearchStringContextMenu" id="165"/>
+				<ExtendedTooltip name="ListSearchStringExtendedTooltip" id="166"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ListViewStatus" id="167">
+				<AdditionSource>
+					<Item>List</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ListViewStatusContextMenu" id="168"/>
+				<ExtendedTooltip name="ListViewStatusExtendedTooltip" id="169"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ListSearchControl" id="170">
+				<AdditionSource>
+					<Item>List</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ListSearchControlContextMenu" id="171"/>
+				<ExtendedTooltip name="ListSearchControlExtendedTooltip" id="172"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ListChoice</Event>
+				<Event name="BeforeLoadUserSettingsAtServer">ListBeforeLoadUserSettingsAtServer</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ListLineNumber" id="8">
+					<DataPath>List.LineNumber</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>N</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>No.</v8:content>
+						</v8:item>
+					</Title>
+					<Width>4</Width>
+					<ContextMenu name="ListLineNumberContextMenu" id="9"/>
+					<ExtendedTooltip name="ListLineNumberExtendedTooltip" id="95"/>
+				</LabelField>
+				<ColumnGroup name="GroupDocument" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Document</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group document</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="GroupDocumentExtendedTooltip" id="92"/>
+					<ChildItems>
+						<LabelField name="ListPeriod" id="4">
+							<DataPath>List.Period</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>16</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ListPeriodContextMenu" id="5"/>
+							<ExtendedTooltip name="ListPeriodExtendedTooltip" id="94"/>
+						</LabelField>
+						<LabelField name="Recorder" id="173">
+							<DataPath>List.Recorder</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ShowInHeader>false</ShowInHeader>
+							<ContextMenu name="RecorderContextMenu" id="174"/>
+							<ExtendedTooltip name="RecorderExtendedTooltip" id="175"/>
+						</LabelField>
+						<LabelField name="BalanceUnit" id="176">
+							<DataPath>List.BalanceUnit</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ContextMenu name="BalanceUnitContextMenu" id="177"/>
+							<ExtendedTooltip name="BalanceUnitExtendedTooltip" id="178"/>
+						</LabelField>
+						<LabelField name="Scenario" id="179">
+							<DataPath>List.Scenario</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ContextMenu name="ScenarioContextMenu" id="180"/>
+							<ExtendedTooltip name="ScenarioExtendedTooltip" id="181"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="GroupDr" id="71">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дебет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Debit</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет и аналитика дебета</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Account and debit dimension</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="GroupDrExtendedTooltip" id="98"/>
+					<ChildItems>
+						<ColumnGroup name="GroupAccountQuantityCurrencyDr" id="131">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Счет, количество и валюта Дт</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Account, quantity and currency Dr</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Счет, количество и валюта Дт</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Account, quantity and currency Dr</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="GroupAccountQuantityCurrencyDrExtendedTooltip" id="132"/>
+							<ChildItems>
+								<LabelField name="ListAccountDr" id="12">
+									<DataPath>List.AccountDr</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>7</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ContextMenu name="ListAccountDrContextMenu" id="13"/>
+									<ExtendedTooltip name="ListAccountDrExtendedTooltip" id="99"/>
+								</LabelField>
+								<ColumnGroup name="GroupCurrencyDr" id="135">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Валюта Дт</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Currency Dr </v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Валюта Дт</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Currency Dr </v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="GroupCurrencyDrExtendedTooltip" id="136"/>
+									<ChildItems>
+										<LabelField name="ListCurrencyDr" id="20">
+											<DataPath>List.CurrencyDr</DataPath>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>5</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ListCurrencyDrContextMenu" id="21"/>
+											<ExtendedTooltip name="ListCurrencyDrExtendedTooltip" id="107"/>
+										</LabelField>
+										<LabelField name="ListCurrencyAmountDr" id="24">
+											<DataPath>List.CurrencyAmountDr</DataPath>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>10</Width>
+											<ContextMenu name="ListCurrencyAmountDrContextMenu" id="25"/>
+											<ExtendedTooltip name="ListCurrencyAmountDrExtendedTooltip" id="108"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="GroupDrDepartmentItem" id="182">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дебет подразделение статья</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Debit department item Group</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дебет подразделение статья</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Debit department item Group</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="GroupDrDepartmentItemExtendedTooltip" id="183"/>
+							<ChildItems>
+								<LabelField name="ListDepartmentDr" id="22">
+									<DataPath>List.DepartmentDr</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>15</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ListDepartmentDrContextMenu" id="23"/>
+									<ExtendedTooltip name="ListDepartmentDrExtendedTooltip" id="100"/>
+								</LabelField>
+								<LabelField name="ItemDr" id="184">
+									<DataPath>List.ItemDr</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<ContextMenu name="ItemDrContextMenu" id="185"/>
+									<ExtendedTooltip name="ItemDrExtendedTooltip" id="186"/>
+								</LabelField>
+								<LabelField name="ProjectDr" id="192">
+									<DataPath>List.ProjectDr</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<ContextMenu name="ProjectDrContextMenu" id="193"/>
+									<ExtendedTooltip name="ProjectDrExtendedTooltip" id="194"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<LabelField name="ListExtDimensionDr1" id="14">
+							<DataPath>List.ExtDimensionDr1</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>15</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ListExtDimensionDr1ContextMenu" id="15"/>
+							<ExtendedTooltip name="ListExtDimensionDr1ExtendedTooltip" id="102"/>
+						</LabelField>
+						<LabelField name="ListExtDimensionTypeDr2" id="16">
+							<DataPath>List.ExtDimensionTypeDr2</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>15</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ListExtDimensionTypeDr2ContextMenu" id="17"/>
+							<ExtendedTooltip name="ListExtDimensionTypeDr2ExtendedTooltip" id="103"/>
+						</LabelField>
+						<LabelField name="ListExtDimensionDr3" id="18">
+							<DataPath>List.ExtDimensionDr3</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>15</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ListExtDimensionDr3ContextMenu" id="19"/>
+							<ExtendedTooltip name="ListExtDimensionDr3ExtendedTooltip" id="104"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="GroupCr" id="74">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кредит</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Credit</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет и аналитика кредита</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Account and credit dimension</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="GroupCrExtendedTooltip" id="109"/>
+					<ChildItems>
+						<ColumnGroup name="GroupAccountQuantityCurrencyCr" id="137">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Счет, количество и валюта Кт</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Account, quantity and currency Cr</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Счет, количество и валюта Кт</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Account, quantity and currency Cr</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="GroupAccountQuantityCurrencyCrExtendedTooltip" id="138"/>
+							<ChildItems>
+								<LabelField name="ListAccountCr" id="34">
+									<DataPath>List.AccountCr</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>7</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ContextMenu name="ListAccountCrContextMenu" id="35"/>
+									<ExtendedTooltip name="ListAccountCrExtendedTooltip" id="110"/>
+								</LabelField>
+								<ColumnGroup name="GroupCurrencyCr" id="141">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Валюта Кт</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Currency Cr </v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Валюта Кт</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Currency Cr </v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="GroupCurrencyCrExtendedTooltip" id="142"/>
+									<ChildItems>
+										<LabelField name="ListCurrencyCr" id="42">
+											<DataPath>List.CurrencyCr</DataPath>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>5</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ListCurrencyCrContextMenu" id="43"/>
+											<ExtendedTooltip name="ListCurrencyCrExtendedTooltip" id="118"/>
+										</LabelField>
+										<LabelField name="ListCurrencyAmountCr" id="46">
+											<DataPath>List.CurrencyAmountCr</DataPath>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>10</Width>
+											<ContextMenu name="ListCurrencyAmountCrContextMenu" id="47"/>
+											<ExtendedTooltip name="ListCurrencyAmountCrExtendedTooltip" id="119"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="GroupCrDepartmentItem" id="187">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кредит подразделение статья</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Credit department item Group</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кредит подразделение статья</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Credit department item Group</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="GroupCrDepartmentItemExtendedTooltip" id="188"/>
+							<ChildItems>
+								<LabelField name="ListDepartmentCr" id="44">
+									<DataPath>List.DepartmentCr</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>15</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ListDepartmentCrContextMenu" id="45"/>
+									<ExtendedTooltip name="ListDepartmentCrExtendedTooltip" id="111"/>
+								</LabelField>
+								<LabelField name="ItemCr" id="189">
+									<DataPath>List.ItemCr</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<ContextMenu name="ItemCrContextMenu" id="190"/>
+									<ExtendedTooltip name="ItemCrExtendedTooltip" id="191"/>
+								</LabelField>
+								<LabelField name="ProjectCr" id="195">
+									<DataPath>List.ProjectCr</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<ContextMenu name="ProjectCrContextMenu" id="196"/>
+									<ExtendedTooltip name="ProjectCrExtendedTooltip" id="197"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<LabelField name="ListExtDimensionCr1" id="36">
+							<DataPath>List.ExtDimensionCr1</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>15</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ListExtDimensionCr1ContextMenu" id="37"/>
+							<ExtendedTooltip name="ListExtDimensionCr1ExtendedTooltip" id="113"/>
+						</LabelField>
+						<LabelField name="ListExtDimensionCr2" id="38">
+							<DataPath>List.ExtDimensionCr2</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>15</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ListExtDimensionCr2ContextMenu" id="39"/>
+							<ExtendedTooltip name="ListExtDimensionCr2ExtendedTooltip" id="114"/>
+						</LabelField>
+						<LabelField name="ListExtDimensionCr3" id="40">
+							<DataPath>List.ExtDimensionCr3</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>15</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ListExtDimensionCr3ContextMenu" id="41"/>
+							<ExtendedTooltip name="ListExtDimensionCr3ExtendedTooltip" id="115"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="GroupAmountContent" id="79">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Amount</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма бухгалтерского учета 
+и содержание проводки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Amount of accounting 
+and posting content</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="GroupAmountContentExtendedTooltip" id="120"/>
+					<ChildItems>
+						<LabelField name="ListAmount" id="56">
+							<DataPath>List.Amount</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>12</Width>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="ListAmountContextMenu" id="57"/>
+							<ExtendedTooltip name="ListAmountExtendedTooltip" id="121"/>
+						</LabelField>
+						<ColumnGroup name="GroupPrimaryDocument" id="198">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа первичный документ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Source document Group</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа первичный документ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Source document Group</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="GroupPrimaryDocumentExtendedTooltip" id="199"/>
+							<ChildItems>
+								<LabelField name="PrimaryDocument" id="200">
+									<DataPath>List.PrimaryDocument</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<ContextMenu name="PrimaryDocumentContextMenu" id="201"/>
+									<ExtendedTooltip name="PrimaryDocumentExtendedTooltip" id="202"/>
+								</LabelField>
+								<LabelField name="EntryNumberAcc" id="203">
+									<DataPath>List.EntryNumberAcc</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>3</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>3</MaxWidth>
+									<ContextMenu name="EntryNumberAccContextMenu" id="204"/>
+									<ExtendedTooltip name="EntryNumberAccExtendedTooltip" id="205"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<LabelField name="ListContent" id="58">
+							<DataPath>List.Content</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>12</Width>
+							<ContextMenu name="ListContentContextMenu" id="59"/>
+							<ExtendedTooltip name="ListContentExtendedTooltip" id="122"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="List" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>List</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>List.ExtDimensionTypeCr1</Field>
+				<Field>List.ExtDimensionTypeCr2</Field>
+				<Field>List.ExtDimensionTypeCr3</Field>
+				<Field>List.ExtDimensionTypeDr1</Field>
+				<Field>List.ExtDimensionTypeDr2</Field>
+				<Field>List.ExtDimensionTypeDr3</Field>
+				<Field>List.Recorder</Field>
+				<Field>~List.ВидСубконтоДт1</Field>
+				<Field>~List.ВидСубконтоДт2</Field>
+				<Field>~List.ВидСубконтоДт3</Field>
+				<Field>~List.ВидСубконтоКт1</Field>
+				<Field>~List.ВидСубконтоКт2</Field>
+				<Field>~List.ВидСубконтоКт3</Field>
+				<Field>~List.Регистратор</Field>
+				<Field>~List.СчетДтВалютный</Field>
+				<Field>~List.СчетДтКоличественный</Field>
+				<Field>~List.СчетДтУчетПоПодразделениям</Field>
+				<Field>~List.СчетКтВалютный</Field>
+				<Field>~List.СчетКтКоличественный</Field>
+				<Field>~List.СчетКтУчетПоПодразделениям</Field>
+				<Field>~List.ФинРезДт</Field>
+				<Field>~List.ФинРезКт</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>SELECT
+	fmBudgetingRecordsWithExtDimensions.Period AS Period,
+	fmBudgetingRecordsWithExtDimensions.Recorder AS Recorder,
+	fmBudgetingRecordsWithExtDimensions.LineNumber AS LineNumber,
+	fmBudgetingRecordsWithExtDimensions.Active AS Active,
+	fmBudgetingRecordsWithExtDimensions.AccountDr AS AccountDr,
+	fmBudgetingRecordsWithExtDimensions.ExtDimensionDr1 AS ExtDimensionDr1,
+	fmBudgetingRecordsWithExtDimensions.ExtDimensionTypeDr1 AS ExtDimensionTypeDr1,
+	fmBudgetingRecordsWithExtDimensions.ExtDimensionDr2 AS ExtDimensionDr2,
+	fmBudgetingRecordsWithExtDimensions.ExtDimensionTypeDr2 AS ExtDimensionTypeDr2,
+	fmBudgetingRecordsWithExtDimensions.ExtDimensionDr3 AS ExtDimensionDr3,
+	fmBudgetingRecordsWithExtDimensions.ExtDimensionTypeDr3 AS ExtDimensionTypeDr3,
+	fmBudgetingRecordsWithExtDimensions.AccountCr AS AccountCr,
+	fmBudgetingRecordsWithExtDimensions.ExtDimensionCr1 AS ExtDimensionCr1,
+	fmBudgetingRecordsWithExtDimensions.ExtDimensionTypeCr1 AS ExtDimensionTypeCr1,
+	fmBudgetingRecordsWithExtDimensions.ExtDimensionCr2 AS ExtDimensionCr2,
+	fmBudgetingRecordsWithExtDimensions.ExtDimensionTypeCr2 AS ExtDimensionTypeCr2,
+	fmBudgetingRecordsWithExtDimensions.ExtDimensionCr3 AS ExtDimensionCr3,
+	fmBudgetingRecordsWithExtDimensions.ExtDimensionTypeCr3 AS ExtDimensionTypeCr3,
+	fmBudgetingRecordsWithExtDimensions.BalanceUnit AS BalanceUnit,
+	fmBudgetingRecordsWithExtDimensions.Scenario AS Scenario,
+	fmBudgetingRecordsWithExtDimensions.ProjectDr AS ProjectDr,
+	fmBudgetingRecordsWithExtDimensions.ProjectCr AS ProjectCr,
+	fmBudgetingRecordsWithExtDimensions.DepartmentDr AS DepartmentDr,
+	fmBudgetingRecordsWithExtDimensions.DepartmentCr AS DepartmentCr,
+	fmBudgetingRecordsWithExtDimensions.ItemDr AS ItemDr,
+	fmBudgetingRecordsWithExtDimensions.ItemCr AS ItemCr,
+	fmBudgetingRecordsWithExtDimensions.CurrencyDr AS CurrencyDr,
+	fmBudgetingRecordsWithExtDimensions.CurrencyCr AS CurrencyCr,
+	fmBudgetingRecordsWithExtDimensions.Amount AS Amount,
+	fmBudgetingRecordsWithExtDimensions.CurrencyAmountDr AS CurrencyAmountDr,
+	fmBudgetingRecordsWithExtDimensions.CurrencyAmountCr AS CurrencyAmountCr,
+	fmBudgetingRecordsWithExtDimensions.Content AS Content,
+	ISNULL(fmBudgetingRecordsWithExtDimensions.AccountCr.Currency, False) AS AccountCrCurrency,
+	ISNULL(fmBudgetingRecordsWithExtDimensions.AccountDr.Currency, False) AS AccountDrCurrency,
+	ISNULL(fmBudgetingRecordsWithExtDimensions.AccountCr.FinancialResults, False) AS FinResCr,
+	ISNULL(fmBudgetingRecordsWithExtDimensions.AccountDr.FinancialResults, False) AS FinResDr,
+	fmBudgetingRecordsWithExtDimensions.PointInTime AS PointInTime,
+	fmBudgetingRecordsWithExtDimensions.PrimaryDocument AS PrimaryDocument,
+	fmBudgetingRecordsWithExtDimensions.EntryNumberAcc AS EntryNumberAcc
+FROM
+	AccountingRegister.fmBudgeting.RecordsWithExtDimensions AS fmBudgetingRecordsWithExtDimensions
+</QueryText>
+				<MainTable>AccountingRegister.fmBudgeting.RecordsWithExtDimensions</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ToggleEntriesActivity" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключить активность проводок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Switch posting activity</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключить активность проводок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Switch posting activity</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SwitchActivity</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ToggleEntriesActivity</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

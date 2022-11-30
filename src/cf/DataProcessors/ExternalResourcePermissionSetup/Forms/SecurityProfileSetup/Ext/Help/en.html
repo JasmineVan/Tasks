@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><style>TABLE {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; WIDTH: 98%; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; cellSpacing: 4; cellPadding: 0
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+</style><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>Use this panel to set <a href="DataProcessor.ExternalResourcePermissionSetup/Help">security profiles</a> of the infobase for the 1C:Enterprise server cluster. Security profiles control the way the application is using the resources, which are external to the 1C:Enterprise server cluster.</p>
+<p>To manage security profiles, go to <strong>Administration - Support and Maintenance - Security</strong>.</p>
+<h3>Security profile usage mode</h3>
+<p>You can select security profile usage mode for an application via radio button:</p>
+<ul><li><strong>Security profiles are not used for this infobase</strong> 
+<ul><li>The application does not notify administrator that external resources must be added to security profiles. 
+<ul><li>If security profiles are enabled in a server cluster and this option is selected, any attempt to access external resources not permitted for this cluster server will result in application error. 
+</li><li>If the <strong>Full access to external reports and data processors</strong> check box is not selected in security profile, the application will not start.</li></ul></li></ul></li><li><strong>Security profiles for this infobase are set up by administrator via cluster console</strong> 
+<ul><li>The application does not notify administrator that external resources must be added to security profiles 
+</li><li>The administrator sets up permissions in security profiles via cluster console. 
+<ul><li>The list of permissions that must be added to a security profile is available to the administrator in a report that can be accessed by clicking the <strong>Required permissions</strong> hyperlink on the panel. 
+</li><li>The <strong>Safe mode profile</strong> check box must be selected for the infobase profile. 
+</li><li>In the <strong>Infobase security profile</strong> field, fill in the name of security profile used for this infobase. 
+</li><li>If the <strong>Full access to external reports and data processors</strong> check box is cleared in a security profile, select the <strong>Can be used as security profile</strong> check box and specify the security profile name in the <strong>Infobase security profile</strong> field on this panel. Otherwise, the application will not start. </li></ul></li></ul></li><li><strong>Option to automatically add permissions to security profiles when necessary</strong> 
+<ul><li>When you switch to this mode, a new security profile will be created (and assigned to infobase) that permits access to all external resources required for the application to operate correctly. 
+</li><li>Permissions in security profiles are managed by the application. 
+</li><li>Profile management functionality is accessible from the application. 
+</li><li>If while editing any application settings you need to gain access to a new external resource, an administrator receives a dialog box with the <a href="DataProcessor.ExternalResourcePermissionSetup.Form.ExternalResourcePermissionSetup/Help">list of permissions</a>. 
+<ul><li>If an administrator agrees to grant permissions, they enter authentication parameters for a cluster and click <strong>Next</strong>. 
+</li><li>Permissions in security profiles are granted automatically.</li></ul></li></ul></li></ul><h3>Required permissions</h3>
+<p>This command cannot be used if <strong>Profile security usage mode</strong> is set to <strong>Security profiles are not used for this infobase</strong>. </p>
+<ul><li>Click <strong>Required permissions</strong> to display a report listing external resources that must be permitted in security profiles for the application to operate correctly. </li></ul><h3>Infobase security profile</h3>
+<p>This field is read-only if <strong>Profile security usage mode</strong> is set to <strong>Option to automatically add permissions to security profiles when necessary</strong>.</p>
+<p>If the <strong>Profile security usage mode</strong> is set to <strong>Security profiles for this infobase are set up by administrator via cluster console</strong> and the <strong>Full access to external reports and data processors</strong> check box is not selected in the security profile, select the <strong>Can be used as security profile</strong> check box for the security profile and specify the name of this security profile in this field. Otherwise the application will not be able to start. </p>
+<ul><li>
+<div>In the <strong>Infobase security profile</strong> field, enter the name of security profile to be used (in the 1C:Enterprise server cluster). </div></li></ul><h3>Restoring security profile settings</h3>
+<p>This command can be used only when <strong>Profile security usage mode</strong> is set to <strong>Option to automatically add permissions to security profiles when necessary</strong>.</p>
+<p>This command fully rebuilds the infobase security profiles considering external resources required to run the application with current settings. This can be useful, for example, after the infobase was migrated between server clusters. </p>
+<ul><li>Click <strong>Restore security profile settings</strong>.</li></ul><h3>Editing external data processors or reports</h3>
+<ul><li>
+<div>Click <strong>Open external data processor or report</strong>. You can select the <strong>Secure mode</strong> to add an external module.</div></li></ul></body></html>

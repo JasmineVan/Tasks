@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>The interactive data synchronization wizard is used to perform data synchronization with optional data preview and data mapping. This wizard allows to perform object mapping between two infobases participating in data synchronization. Once data mapping is complete, data import is performed, followed by data export.</p>
+<p>The interactive data synchronization mode should be used when identical objects were independently entered into both infobases participating in data synchronization. In other words, the interactive data synchronization mode should be used during the first data synchronization between two infobases previously used for accounting. When synchronizing such infobases, the risk of conflicts between identical objects is significant. In this case, use interactive mode for manual mapping of the conflicting objects.</p>
+<p>To start the wizard, in the <a href="CommonForm.DataSynchronization/Help">Data synchronization</a> list, click <img src="CommonPicture.DataSynchronizationInteractiveExecute" width="16" height="16"></img><strong>Start synchronization</strong>.</p>
+<h3>Connection parameters</h3>
+<ul><li>On the first page of the wizard, select the <a href="InformationRegister.DeleteExchangeTransportSettings/Help">exchange message transport kind</a> (you can change the existing connection option, which is specified on this page). To do this, click <img src="StdPicture.Change"></img><strong>Configure</strong>. If necessary, go to the information exchange directory to make sure that the required files exist, or check exchange message transport parameters. 
+</li><li>To proceed to the next page, click <strong>Next</strong>. </li></ul><h3 align="left">Data mapping</h3>
+<ul><li>On the second page of this wizard, object mapping statistics are displayed. Before displaying this page, the application will attempt automated data mapping. 
+</li><li>The automated mapping is performed for the default mapping fields, using the strictest mapping rules. We recommend that you review and verify the automated data mapping results. The list includes the following columns: 
+<ul><li>
+<div><strong>Data, Total accepted, pcs</strong></div>
+</li><li><img src="CommonPicture.Information1" width="16" height="16"></img> - object mapping problems, attention required; 
+</li><li>
+<div align="left"><strong>In this application, pcs</strong></div>
+<div></div>
+</li><li>
+<div align="left"><strong>Not yet mapped, pcs</strong></div>
+</li><li>
+<div align="left"><strong>Mapped, %</strong></div></li></ul></li><li>Click the <strong>Map</strong> button to preview the imported data and perform the <a href="DataProcessor.InfobaseObjectMapping/Help">manual object mapping</a> in a separate window. Each manual mapping between infobase objects will be saved for further use and automatically applied during next automated mapping. When in the interactive mode, we recommend that you start with the automated mapping and then follow it up with manual mapping for objects that failed to be mapped automatically. 
+</li><li>
+<div align="left">This list is not updated in real time; to view the latest data received and mapped after the list was opened, click <img src="StdPicture.Refresh"></img><strong>Update</strong>.</div>
+</li><li>
+<div align="left">To import data for the selected table rows, use the <strong>More -</strong> <strong>Get data</strong> command. The data import option is used rarely, only for mapping linked data tables.</div>
+</li><li>
+<div align="left">The above commands are located in the context menu of the mapping statistics table. When called from the context menu, these commands apply to all selected table rows.</div>
+</li><li>
+<div align="left">Once the mapping is complete, the rules will be saved for further use so that this page will no longer be displayed. </div>
+</li><li>
+<div align="left">To proceed with data synchronization, click <strong>Next</strong>.</div></li></ul><h3>Data to be sent</h3>
+<ul><li>On the third page of this wizard, you must specify data to be sent to the other application for synchronization. If you skip this step, all data modified since the last synchronization session will be sent. 
+</li><li>The radio button is set to <strong>Do not add</strong> by default; in this case, data will be sent in accordance with common settings. 
+</li><li>
+<div align="left">To export additional documents, use the <strong>Add documents</strong> radio button. </div>
+<ul><li>
+<div align="left"><strong>For period field:</strong> <img src="StdPicture.InputFieldSelect"></img><strong>Select</strong> a date period for documents you want to export.</div>
+</li><li>
+<div align="left"><strong>With filter field:</strong> The default value specifies that <strong>All documents</strong> (link) can be sent. Click the link to set <a href="DataProcessor.InteractiveExportModification.Form.PeriodAndFilterEdit/Help">filter conditions</a>: enter the field for filtering, set the <strong>Comparison type</strong>, and select the <strong>Value</strong> for comparison. You can specify multiple filter conditions if necessary, and group them with logical operations <strong>And</strong>, <strong>Or</strong>, and <strong>Not</strong>.</div></li></ul></li><li>
+<div align="left">To export additional data, use the <strong>Add data</strong> radio button. </div>
+<ul><li>
+<div align="left">Select the link to select the data you want to export. The link displays <strong>Additional data not selected</strong> by default. Select <a href="DataProcessor.InteractiveExportModification/Help">Data to send</a> from the lists offered by the application and select <strong>OK</strong>. The link will change to display the list of selected data.</div></li></ul></li><li>
+<div align="left">To view the <a href="DataProcessor.InteractiveExportModification.Form.ExportComposition/Help">sent data statistics</a>, click the <strong>Sent data content report</strong> link.</div>
+</li><li>
+<div align="left">Click <strong>Settings</strong> to re-use the <a href="DataProcessor.InteractiveExportModification.Form.SettingsCompositionEdit/Help">earlier settings</a> or save the new settings.</div>
+</li><li>
+<div align="left">Click <strong>Next</strong> to start data synchronization with the selected parameters.</div></li></ul><h3>Data synchronization complete</h3>
+<ul><li>On the final page of this wizard, synchronization session status will be displayed: 
+<ul><li><img src="CommonPicture.DataExchangeStateError"></img><strong>Failed to receive data</strong>, <strong>Data received successfully</strong>, and other messages. 
+</li><li><strong><img src="CommonPicture.DataExchangeStateError" width="16" height="16"></img>Failed to send data</strong>, <strong>Data sent successfully</strong>, and other messages. 
+</li><li>Click <strong>Details</strong> to access the <a href="DataProcessor.EventLog/Help">event log</a>, read the detailed synchronization report, and review the errors if any.</li></ul></li><li>You can set a <a href="Catalog.DataExchangeScenarios.Form.ItemForm/Help">schedule for automated data synchronization</a> if necessary (this can be useful when the current data synchronization is not yet included in any <a href="Catalog.DataExchangeScenarios/Help">data synchronization schedules</a>). Click <img src="StdPicture.ScheduledJob" width="16" height="16"></img><strong>Configure</strong>. 
+</li><li>To exit the wizard, click <strong>Done</strong>.</li></ul><h3>See also:</h3>
+<ul><li><a href="CommonForm.DataSynchronization/Help">Data synchronization</a>.</li></ul></body></html>

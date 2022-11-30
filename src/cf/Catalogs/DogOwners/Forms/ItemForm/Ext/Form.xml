@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">AfterWrite</Event>
+		<Event name="AfterWriteAtServer">AfterWriteAtServer</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnWriteAtServer">OnWriteAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Verify" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>For development</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Owner credential</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>View Owner credential</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<Collapsed>true</Collapsed>
+			<Representation>None</Representation>
+			<United>false</United>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="VerifyExtendedTooltip" id="50"/>
+			<ChildItems>
+				<InputField name="Code" id="1">
+					<DataPath>Object.Code</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Phone number</v8:content>
+						</v8:item>
+					</Title>
+					<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>100</MaxWidth>
+					<MaxHeight>30</MaxHeight>
+					<ContextMenu name="CodeContextMenu" id="2"/>
+					<ExtendedTooltip name="CodeExtendedTooltip" id="3"/>
+				</InputField>
+				<InputField name="Password" id="46">
+					<DataPath>Object.Password</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>10</MaxWidth>
+					<PasswordMode>false</PasswordMode>
+					<ContextMenu name="PasswordContextMenu" id="47"/>
+					<ExtendedTooltip name="PasswordExtendedTooltip" id="48"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Description" id="4">
+			<DataPath>Object.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>30</MaxWidth>
+			<ContextMenu name="DescriptionContextMenu" id="5"/>
+			<ExtendedTooltip name="DescriptionExtendedTooltip" id="6"/>
+		</InputField>
+		<UsualGroup name="Group1" id="51">
+			<GroupVerticalAlign>Center</GroupVerticalAlign>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="Group1ExtendedTooltip" id="52"/>
+			<ChildItems>
+				<InputField name="DateOfBirth" id="10">
+					<DataPath>Object.DateOfBirth</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>DF=dd/MM/yyyy</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="DateOfBirthContextMenu" id="11"/>
+					<ExtendedTooltip name="DateOfBirthExtendedTooltip" id="12"/>
+				</InputField>
+				<InputField name="Gender" id="13">
+					<DataPath>Object.Gender</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>10</MaxWidth>
+					<ContextMenu name="GenderContextMenu" id="14"/>
+					<ExtendedTooltip name="GenderExtendedTooltip" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="PhoneNumber" id="7">
+			<DataPath>Object.PhoneNumber</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>10</MaxWidth>
+			<ContextMenu name="PhoneNumberContextMenu" id="8"/>
+			<ExtendedTooltip name="PhoneNumberExtendedTooltip" id="9"/>
+		</InputField>
+		<InputField name="Address" id="16">
+			<DataPath>Object.Address</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>30</MaxWidth>
+			<ContextMenu name="AddressContextMenu" id="17"/>
+			<ExtendedTooltip name="AddressExtendedTooltip" id="18"/>
+		</InputField>
+		<UsualGroup name="RelevantContact" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Relevant Contact</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Relevant contact</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="RelevantContactExtendedTooltip" id="45"/>
+			<ChildItems>
+				<Table name="RelevantContacts" id="19">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Object.RelevantContacts</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="RelevantContactsContextMenu" id="20"/>
+					<AutoCommandBar name="RelevantContactsCommandBar" id="21"/>
+					<ExtendedTooltip name="RelevantContactsExtendedTooltip" id="22"/>
+					<SearchStringAddition name="RelevantContactsSearchString" id="23">
+						<AdditionSource>
+							<Item>RelevantContacts</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="RelevantContactsSearchStringContextMenu" id="24"/>
+						<ExtendedTooltip name="RelevantContactsSearchStringExtendedTooltip" id="25"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="RelevantContactsViewStatus" id="26">
+						<AdditionSource>
+							<Item>RelevantContacts</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="RelevantContactsViewStatusContextMenu" id="27"/>
+						<ExtendedTooltip name="RelevantContactsViewStatusExtendedTooltip" id="28"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="RelevantContactsSearchControl" id="29">
+						<AdditionSource>
+							<Item>RelevantContacts</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="RelevantContactsSearchControlContextMenu" id="30"/>
+						<ExtendedTooltip name="RelevantContactsSearchControlExtendedTooltip" id="31"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="RelevantContactsLineNumber" id="32">
+							<DataPath>Object.RelevantContacts.LineNumber</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="RelevantContactsLineNumberContextMenu" id="33"/>
+							<ExtendedTooltip name="RelevantContactsLineNumberExtendedTooltip" id="34"/>
+						</LabelField>
+						<InputField name="RelevantContactsFullName" id="35">
+							<DataPath>Object.RelevantContacts.FullName</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="RelevantContactsFullNameContextMenu" id="36"/>
+							<ExtendedTooltip name="RelevantContactsFullNameExtendedTooltip" id="37"/>
+						</InputField>
+						<InputField name="RelevantContactsPhoneNumber" id="38">
+							<DataPath>Object.RelevantContacts.PhoneNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="RelevantContactsPhoneNumberContextMenu" id="39"/>
+							<ExtendedTooltip name="RelevantContactsPhoneNumberExtendedTooltip" id="40"/>
+						</InputField>
+						<InputField name="RelevantContactsRelationshipwithdogsowner" id="41">
+							<DataPath>Object.RelevantContacts.RelationshipWithDogOwner</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="RelevantContactsRelationshipwithdogsownerContextMenu" id="42"/>
+							<ExtendedTooltip name="RelevantContactsRelationshipwithdogsownerExtendedTooltip" id="43"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.DogOwners</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="isFromDogOwnerList" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Is from dog owner list</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html;charset=utf-8" http-equiv="content-type"></meta><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>. 
+<style>TABLE {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; WIDTH: 98%; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; cellSpacing: 4; cellPadding: 0
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+</style><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 9.00.8112.16421"></meta><p>In this panel you can synchronize data with other applications and organize collaboration in the distributed infobase.</p>
+<ul><li><strong>Data synchronization</strong>. Select this check box to activate the <strong>Data synchronization</strong> application section and commands: 
+<ul><a name="СтандартныеПодсистемы.СинхронизацияДанных">
+<li><a href="CommonForm.DataSynchronization/Help">Data synchronization settings</a>. Proceed to setting and synchronizing data with other application (for example, with 1C:Accounting, version 3.0), as well as to organizing collaboration in a distributed infobase.</li></a> <a name="СтандартныеПодсистемы.ДатыЗапретаИзменения">
+<li><a href="InformationRegister.PeriodClosingDates/Help">Import closing dates</a>. Select this check box to close import of previous period data from other applications.</li></a> See also: <strong>Period-end closing dates</strong> in the <a href="DataProcessor.SSLAdministrationPanel.Form.CommonSettings/Help">Common settings</a> subsection. 
+<ul><li>After it the following command becomes available: 
+</li><li><strong>Customize</strong>. Proceed to closing data of previous periods to import.</li></ul><li>
+<div><a href="InformationRegister.DataExchangeResults/Help">Warnings on data synchronization</a>. View warnings, appeared during data synchronization (unpassed documents, unfilled attributes, conflicts and data not received by closing date). </div>
+</li><li>
+<div><strong>Import Enterprisedata data</strong>. Import data in the <strong>Enterprisedata</strong> format without needing to set regular data synchronization. Infobases should support data synchronization through the universal <strong>Enterprisedata</strong> format. Using this command you can only import data.</div>
+</li><li>
+<div><strong>This infobase prefix</strong> is used to define the program in which list items and documents were entered. Infobase prefix is added to list item codes and document numbers automatically.</div></li></ul></li></ul><h3>Temporary file directory of 1C:Enterprise server cluster</h3>
+<ul><li>Path to a single network directory for common temporary files of 1C:Enterprise servers working in a single cluster: 
+<ul><li><strong>Managed by Windows OS</strong>. Specify the path to a united temporary files directory of all servers in the cluster, which will be used for servers managed by Windows OS. 
+</li><li><strong>Managed by Linux OS</strong>. Specify the path to a united temporary files directory of all servers in the cluster, which will be used for servers managed by Linux OS.</li></ul></li><li>Temporary file directories can be <strong>left blank</strong> when only <strong>one server</strong> works in the 1C:Enterprise cluster, or the application operates in <strong>file mode</strong>. 
+</li><li>If all servers in the cluster are running under the operating systems of the same family (Windows / Linux), then the second field is optional. 
+</li><li>Directory should be <strong>available for reading and recording</strong> for all servers of the cluster. Including all users of operating systems, on behalf of which 1C:Enterprise servers are started. 
+</li><li>UNC directory path should be the same for all servers of the same family. For this directory should be connected to servers under the same name. 
+</li><li>In the <strong>Common temporary files directory in Linux</strong> field you can only specify the local path, for example, <strong>/home/path</strong>. 
+</li><li>Before you can use UNC path, you need to mount the folder. Sign in as administrator (root) and execute the following commands: 
+<ul><li><strong>mkdir folder<br></strong>write a directory name instead of <strong>folder</strong>. for example, make <strong>mkdir shared</strong> in the <strong>/home</strong> directory. This command will create the <strong>shared</strong> directory with the <strong>/home/shared</strong> full path. 
+</li><li><strong>mount -t cifs //server/share folder -o //domain/user, password=pwd</strong><br>, where <strong>//server/share</strong> is the UNC path to other computer, <strong>folder</strong> is the directory path on Linux computer, for example <strong>\home\shared</strong>, <strong>//domain/user</strong> is a user/domain name, if needed, and <strong>pwd</strong> is a user password (if needed). 
+</li><li>If user name and password are not required, simply execute <br><strong>mount -t cifs //server/share folder</strong> 
+</li><li>Now you can specify <strong>folder</strong> (example: <strong>/home/shared</strong>) as the path to the directory.</li></ul></li></ul><p>For more information on 1C:Enterprise server administration, see the 1C:Enterprise platform documentation.</p>
+<h3>See also: </h3>
+<ul><li><a href="DataProcessor.SSLAdministrationPanel/Help">Application settings</a>.</li></ul></body></html>

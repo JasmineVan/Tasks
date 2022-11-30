@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<ChildItems>
+		<InputField name="Code" id="1">
+			<DataPath>Object.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="CodeContextMenu" id="2"/>
+			<ExtendedTooltip name="CodeExtendedTooltip" id="3"/>
+		</InputField>
+		<InputField name="Description" id="4">
+			<DataPath>Object.Description</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Vaccine label</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="DescriptionContextMenu" id="5"/>
+			<ExtendedTooltip name="DescriptionExtendedTooltip" id="6"/>
+		</InputField>
+		<Table name="DiseaseName" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Object.DiseaseName</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="DiseaseNameContextMenu" id="8"/>
+			<AutoCommandBar name="DiseaseNameCommandBar" id="9"/>
+			<ExtendedTooltip name="DiseaseNameExtendedTooltip" id="10"/>
+			<SearchStringAddition name="DiseaseNameSearchString" id="11">
+				<AdditionSource>
+					<Item>DiseaseName</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="DiseaseNameSearchStringContextMenu" id="12"/>
+				<ExtendedTooltip name="DiseaseNameSearchStringExtendedTooltip" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="DiseaseNameViewStatus" id="14">
+				<AdditionSource>
+					<Item>DiseaseName</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="DiseaseNameViewStatusContextMenu" id="15"/>
+				<ExtendedTooltip name="DiseaseNameViewStatusExtendedTooltip" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="DiseaseNameSearchControl" id="17">
+				<AdditionSource>
+					<Item>DiseaseName</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="DiseaseNameSearchControlContextMenu" id="18"/>
+				<ExtendedTooltip name="DiseaseNameSearchControlExtendedTooltip" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="DiseaseNameLineNumber" id="20">
+					<DataPath>Object.DiseaseName.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="DiseaseNameLineNumberContextMenu" id="21"/>
+					<ExtendedTooltip name="DiseaseNameLineNumberExtendedTooltip" id="22"/>
+				</LabelField>
+				<InputField name="DiseaseNameDiseaseName" id="23">
+					<DataPath>Object.DiseaseName.DiseaseName</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="DiseaseNameDiseaseNameContextMenu" id="24"/>
+					<ExtendedTooltip name="DiseaseNameDiseaseNameExtendedTooltip" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Vaccines</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<EventSubscription uuid="6d042890-27b2-4efc-935e-8190bb57c037">
+		<Properties>
+			<Name>DenySettingDeletionMarksToPredefinedItems</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить пометку удаления предопределенных элементов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deny marking predefined items for deletion</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zakaz zaznaczenie usuwania elementów predefiniowanych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verhindern, dass vordefinierte Elemente zum Löschen markiert werden</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Interzice marcarea elementelor predefinite pentru ștergere</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Önceden tanımlanmış nesnelerin silinmek için işaretlenmesini yasakla</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Prohibir el marcar para borrar de los artículos predefinidos</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Source>
+				<v8:TypeSet>cfg:ChartOfCalculationTypesObject</v8:TypeSet>
+				<v8:TypeSet>cfg:ChartOfAccountsObject</v8:TypeSet>
+				<v8:TypeSet>cfg:ChartOfCharacteristicTypesObject</v8:TypeSet>
+				<v8:TypeSet>cfg:CatalogObject</v8:TypeSet>
+			</Source>
+			<Event>BeforeWrite</Event>
+			<Handler>CommonModule.StandardSubsystemsServer.ProhibitMarkingPredefinedItemsForDeletionBeforeWrite</Handler>
+		</Properties>
+	</EventSubscription>
+</MetaDataObject>

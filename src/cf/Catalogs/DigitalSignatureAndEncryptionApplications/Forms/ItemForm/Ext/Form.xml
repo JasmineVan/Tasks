@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandSet>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<ChildItems>
+			<Button name="FormMarkForDeletion" id="53">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.SetDeletionMark</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="FormMarkForDeletionExtendedTooltip" id="54"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">AfterWrite</Event>
+		<Event name="AfterWriteAtServer">AfterWriteAtServer</Event>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="FillCheckProcessingAtServer">FillCheckProcessingAtServer</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Description" id="50">
+			<DataPath>Object.Description</DataPath>
+			<DropListButton>true</DropListButton>
+			<ContextMenu name="DescriptionContextMenu" id="51"/>
+			<ExtendedTooltip name="DescriptionExtendedTooltip" id="52"/>
+			<Events>
+				<Event name="OnChange">DescriptionOnChange</Event>
+				<Event name="ChoiceProcessing">DescriptionChoiceProcessing</Event>
+			</Events>
+		</InputField>
+		<InputField name="ApplicationName" id="1">
+			<DataPath>Object.ApplicationName</DataPath>
+			<Width>50</Width>
+			<ChoiceListButton>true</ChoiceListButton>
+			<BackColor>style:MasterFieldBackground</BackColor>
+			<ContextMenu name="ApplicationNameContextMenu" id="2"/>
+			<ExtendedTooltip name="ApplicationNameExtendedTooltip" id="3"/>
+			<Events>
+				<Event name="OnChange">ApplicationNameOnChange</Event>
+			</Events>
+		</InputField>
+		<InputField name="ApplicationType" id="4">
+			<DataPath>Object.ApplicationType</DataPath>
+			<BackColor>style:MasterFieldBackground</BackColor>
+			<ContextMenu name="ApplicationTypeContextMenu" id="5"/>
+			<ExtendedTooltip name="ApplicationTypeExtendedTooltip" id="6"/>
+			<Events>
+				<Event name="OnChange">ApplicationTypeOnChange</Event>
+			</Events>
+		</InputField>
+		<InputField name="SignAlgorithm" id="7">
+			<DataPath>Object.SignAlgorithm</DataPath>
+			<DropListButton>true</DropListButton>
+			<ContextMenu name="SigningAlgorithmContextMenu" id="8"/>
+			<ExtendedTooltip name="SigningAlgorithmExtendedTooltip" id="9"/>
+		</InputField>
+		<InputField name="HashAlgorithm" id="10">
+			<DataPath>Object.HashAlgorithm</DataPath>
+			<DropListButton>true</DropListButton>
+			<ContextMenu name="HashAlgorithmContextMenu" id="11"/>
+			<ExtendedTooltip name="HashAlgorithmExtendedTooltip" id="12"/>
+		</InputField>
+		<InputField name="EncryptAlgorithm" id="13">
+			<DataPath>Object.EncryptAlgorithm</DataPath>
+			<DropListButton>true</DropListButton>
+			<ContextMenu name="EncryptionAlgorithmContextMenu" id="14"/>
+			<ExtendedTooltip name="EncryptionAlgorithmExtendedTooltip" id="15"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.DigitalSignatureAndEncryptionApplications</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="AlgorithmListsPopulatedSuccessfully" id="4">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SuppliedSignatureAlgorithms" id="2">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SuppliedHashAlgorithms" id="3">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SuppliedEncryptionAlgorithms" id="6">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="SetDeletionMark" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление / Снять пометку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mark or unmark for deletion</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Mark or unmark for deletion</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Mark or unmark for deletion</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Mark or unmark for deletion</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Mark or unmark for deletion</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Mark or unmark for deletion</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SetDeletionMark</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="SuppliedSettingID">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

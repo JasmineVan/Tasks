@@ -1,0 +1,1005 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<ChildItems>
+			<ButtonGroup name="CommandBarGroup" id="34">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Командная панель</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Command bar</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>pl</v8:lang>
+						<v8:content>Pasek poleceń</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>de</v8:lang>
+						<v8:content>Befehlsleiste</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ro</v8:lang>
+						<v8:content>Bara de comandă</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>tr</v8:lang>
+						<v8:content>Komut çubuğu</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>es_ES</v8:lang>
+						<v8:content>Barra de comandos</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="CommandBarGroupExtendedTooltip" id="35"/>
+				<ChildItems>
+					<Button name="WriteAndClose" id="36">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+						<ExtendedTooltip name="WriteAndCloseExtendedTooltip" id="37"/>
+					</Button>
+					<Button name="Write" id="38">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Write</CommandName>
+						<ExtendedTooltip name="WriteExtendedTooltip" id="39"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="FormHelp" id="48">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="FormHelpExtendedTooltip" id="49"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ChoiceProcessing</Event>
+		<Event name="AfterWriteAtServer">AfterWriteAtServer</Event>
+		<Event name="OnReadAtServer">OnReadAtServer</Event>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="BeforeWrite">BeforeWrite</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="BeforeWriteAtServer">BeforeWriteAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="Synchronize" id="138">
+			<DataPath>Record.Synchronize</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать файлы с облачным сервисом:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Synchronize files with cloud service:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Synchronizuj pliki z chmurą:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Synchronisieren von Dateien mit dem Cloud-Service:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Sincronizare fișierele cu cloud service:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Dosyaları bulut servisi ile eşleştir:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Sincronizar los archivos con el servicio de nube:</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="SynchronizeContextMenu" id="139"/>
+			<ExtendedTooltip name="SynchronizeExtendedTooltip" id="140"/>
+		</CheckBoxField>
+		<InputField name="Account" id="118">
+			<DataPath>Record.Account</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<Width>40</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетная запись облачного сервиса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cloud service account</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Konto chmury</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Cloud-Service-Konto</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Contul serviciului cloud</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Bulut hizmeti hesabı</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Cuenta del servicio de nube</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="AccountContextMenu" id="119"/>
+			<ExtendedTooltip name="AccountExtendedTooltip" id="120">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Укажите учетную запись облачного сервиса, с которым будет производиться синхронизация файлов.</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Specify the cloud service account.</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>pl</v8:lang>
+						<v8:content>Wskaż konto chmury, z którym będzie odbywała się synchronizacja plików.</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>de</v8:lang>
+						<v8:content>Geben Sie das Cloud-Service-Konto an, mit dem die Dateien synchronisiert werden sollen.</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ro</v8:lang>
+						<v8:content>Indicați contul serviciului cloud cu care va fi făcută sincronizarea fișierelor.</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>tr</v8:lang>
+						<v8:content>Dosyaları senkronize etmek istediğiniz bulut hizmeti hesabını belirtin.</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>es_ES</v8:lang>
+						<v8:content>Especifique una cuenta de servicio con el que se sincronizarán los archivos.</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</InputField>
+		<UsualGroup name="SynchObjectGroup" id="67" DisplayImportance="VeryHigh">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Что синхронизировать:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Synchronize:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Co synchronizować:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Was ist zu synchronisieren:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Ce sincronizăm:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Ne eşleşecek:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Que hay que sincronizar:</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="SyncObjectGroupExtendedTooltip" id="68"/>
+			<ChildItems>
+				<UsualGroup name="ObjectFileSyncGroup" id="72">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синхронизация файлов объекта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Synchronize object files</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Synchronizacja plików obiektu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Objektdateien synchronisieren</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Sincronizarea fișierelor obiectului</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Nesne dosyaların eşleşmesi</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Sincronización de los archivos del objeto</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ObjectFileSyncGroupExtendedTooltip" id="73"/>
+					<ChildItems>
+						<RadioButtonField name="SyncObjectItemFiles" id="74">
+							<DataPath>SynchronizationObject</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Файлы, присоединенные к</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Files attached to</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Pliki, dołączone do</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Dateien angehängt an</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Fișierele atașate la</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>... ile bağlı dosyalar</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Archivos adjuntos en</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Все файлы, присоединенные к:</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>All files attached to:</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>pl</v8:lang>
+												<v8:content>Wszystkie plik, dołączone do:</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>de</v8:lang>
+												<v8:content>Alle Dateien angehängt an:</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ro</v8:lang>
+												<v8:content>Toate fișierele atașate la:</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>tr</v8:lang>
+												<v8:content>... ile bağlı tüm dosyalar</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>es_ES</v8:lang>
+												<v8:content>Todos los archivos adjuntos en:</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">OnlyItemFiles</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="SyncObjectItemFilesContextMenu" id="75"/>
+							<ExtendedTooltip name="SyncObjectItemFilesExtendedTooltip" id="76"/>
+							<Events>
+								<Event name="OnChange">SynchronizationObjectItemFilesOnChange</Event>
+							</Events>
+						</RadioButtonField>
+						<InputField name="CatalogItem" id="115">
+							<DataPath>CatalogItem</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>35</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<DropListButton>false</DropListButton>
+							<ContextMenu name="CatalogItemContextMenu" id="116"/>
+							<ExtendedTooltip name="CatalogItemExtendedTooltip" id="117"/>
+							<Events>
+								<Event name="StartChoice">CatalogItemStartChoice</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<RadioButtonField name="SyncObjectAllFiles" id="69">
+					<DataPath>SynchronizationObject</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ColumnsCount>1</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Файлы %1 по заданным правилам синхронизации:</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Files attached to "%1" by the following synchronization rules:</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Pliki %1 według zadanych reguł synchronizacji:</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Dateien %1 nach den angegebenen Synchronisationsregeln:</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Fișierele %1 conform regulilor de sincronizare specificate:</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Belirlenmiş eşleşme kurallarına göre %1 dosyalar:</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>Archivos %1 según las reglas establecidas de sincronización:</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">AllFiles</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="SyncObjectAllFilesContextMenu" id="70"/>
+					<ExtendedTooltip name="SyncObjectAllFilesExtendedTooltip" id="71"/>
+					<Events>
+						<Event name="OnChange">SynchronizationObjectOnChange</Event>
+					</Events>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SyncRuleGroup" id="86">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила синхронизации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Synchronization rule</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Reguły synchronizacji</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Synchronisationsregeln</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Regulile de sincronizare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Eşleşme kuralları</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Reglas de sincronización</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="SyncRuleGroupExtendedTooltip" id="87"/>
+			<ChildItems>
+				<Table name="SetupRuleFilter" id="10" DisplayImportance="VeryLow">
+					<Representation>Tree</Representation>
+					<Autofill>true</Autofill>
+					<InitialTreeView>ExpandAllLevels</InitialTreeView>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Rule.Settings.Filter</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правило настройки отбор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Synchronization rule filter</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Reguła ustawienia selekcja</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Auswahl der Regeleinstellung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Refula de setare filtru</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Ayar kuralı filtre</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Regla de ajustar la selección</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSet>
+						<ExcludedCommand>AddFilterItemGroup</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>Detailed</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>HierarchicalList</ExcludedCommand>
+						<ExcludedCommand>List</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>SetPresentation</ExcludedCommand>
+						<ExcludedCommand>Tree</ExcludedCommand>
+						<ExcludedCommand>UseFieldAsValue</ExcludedCommand>
+						<ExcludedCommand>UserSettingItemProperties</ExcludedCommand>
+					</CommandSet>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CurrentRowUse>SelectionPresentationAndChoice</CurrentRowUse>
+					<ViewMode>All</ViewMode>
+					<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+					<ContextMenu name="SetupRuleFilterContextMenu" id="11">
+						<ChildItems>
+							<ButtonGroup name="ContextMenuAdd" id="151">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Контекстное меню добавить</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Context menu add</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Menu kontekstowe dodaj</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Kontextmenü hinzufügen</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Meniu de context adăugare</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Bağlam menüsü ekle</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>Menú contextual añadir</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ContextMenuAddExtendedTooltip" id="152"/>
+								<ChildItems>
+									<Button name="SetupRuleFilterContextMenuAddFilterItem" id="149">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.SetupRuleFilter.StandardCommand.AddFilterItem</CommandName>
+										<ExtendedTooltip name="SetupRuleFilterContextMenuAddFilterItemExtendedTooltip" id="150"/>
+									</Button>
+									<Button name="SetupRuleFilterContextMenuAddConditionByDate" id="147">
+										<Type>CommandBarButton</Type>
+										<Enabled>false</Enabled>
+										<CommandName>Form.Command.AddConditionByDate</CommandName>
+										<ExtendedTooltip name="SetupRuleFilterContextMenuAddConditionByDateExtendedTooltip" id="148"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="ContextMenuGroup" id="153">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Контекстное меню сгруппировать</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Context menu group</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Menu kontekstowe zgrupuj</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Kontextmenü gruppieren</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Meniu de context grupare</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Bağlam menüsü gruplandır</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>Menú contextual agrupar</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ContextMenuGroupExtendedTooltip" id="154"/>
+								<ChildItems>
+									<Button name="SetupRuleFilterContextMenuGroupFilterItems" id="155">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.SetupRuleFilter.StandardCommand.GroupFilterItems</CommandName>
+										<ExtendedTooltip name="SetupRuleFilterContextMenuGroupFilterItemsExtendedTooltip" id="156"/>
+									</Button>
+									<Button name="SetupRuleFilterContextMenuUngroup" id="157">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.SetupRuleFilter.StandardCommand.Ungroup</CommandName>
+										<ExtendedTooltip name="SetupRuleFilterContextMenuUngroupExtendedTooltip" id="158"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Button name="SetupRuleFilterContextMenuDelete" id="159">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.SetupRuleFilter.StandardCommand.Delete</CommandName>
+								<ExtendedTooltip name="SetupRuleFilterContextMenuDeleteExtendedTooltip" id="160"/>
+							</Button>
+						</ChildItems>
+					</ContextMenu>
+					<AutoCommandBar name="SetupRuleFilterCommandBar" id="12">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Popup name="MenuAdd" id="44">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Добавить</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Add</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Dodaj</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Hinzufügen</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Adăugați</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Ekle</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>Añadir</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="MenuAddExtendedTooltip" id="45"/>
+								<ChildItems>
+									<Button name="AddFilterItem" id="40">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.SetupRuleFilter.StandardCommand.AddFilterItem</CommandName>
+										<ExtendedTooltip name="AddFilterItemExtendedTooltip" id="41"/>
+									</Button>
+									<Button name="AddConditionByDate" id="46">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.AddConditionByDate</CommandName>
+										<ExtendedTooltip name="AddConditionByDateExtendedTooltip" id="47"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+							<ButtonGroup name="MenuGroup" id="145">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Меню сгруппировать</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Group menu</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Menu zgrupuj</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Menü gruppieren</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Meniu grupare</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Menüyü gruplandır</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>Menú agrupar</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="MenuGroupExtendedTooltip" id="146"/>
+								<ChildItems>
+									<Button name="GroupFilterItems" id="42">
+										<Type>CommandBarButton</Type>
+										<Representation>Text</Representation>
+										<CommandName>Form.Item.SetupRuleFilter.StandardCommand.GroupFilterItems</CommandName>
+										<ExtendedTooltip name="GroupFilterItemsExtendedTooltip" id="43"/>
+									</Button>
+									<Button name="UngroupFilterItems" id="143">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.SetupRuleFilter.StandardCommand.Ungroup</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="UngroupFilterItemsExtendedTooltip" id="144"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Button name="SetupRuleFilterDelete" id="141">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.SetupRuleFilter.StandardCommand.Delete</CommandName>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="SetupRuleFilterDeleteExtendedTooltip" id="142"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="SetupRuleFilterExtendedTooltip" id="13">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнять условия отбора файлов не требуется, если необходимо синхронизировать все файлы %1.
+Либо задайте правила, в соответствие с которыми должны синхронизироваться файлы.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>You can leave the filter conditions blank to synchronize all files attached to "%1."
+Alternatively, you can set the file synchronization files.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>pl</v8:lang>
+								<v8:content>Wypełnienie warunków selekcji plików nie jest wymagane, jeżeli należy synchronizować wszystkie pliki %1. 
+ Lub zadaj reguły zgodnie z którymi powinny synchronizować się pliki.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>de</v8:lang>
+								<v8:content>Die Dateiauswahlbedingungen müssen nicht ausgefüllt werden, wenn Sie alle Dateien synchronisieren möchten%1.
+Oder legen Sie die Regeln fest, nach denen die Dateien synchronisiert werden sollen.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Completarea condiției de filtrare nu este necesară, dacă trebuie sincronizate toate fișierele %1.
+Sau setați regulile, conform cărora trebuie sincronizate fișierele.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>tr</v8:lang>
+								<v8:content>Tüm dosyaları eşitlemek istiyorsanız, dosya seçim koşullarını doldurmaya gerek yok%1.
+Veya dosyaların eşleşeceği kuralları belirleyin.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>es_ES</v8:lang>
+								<v8:content>No se requiere rellenar las condiciones de seleccionar los archivos, si es necesario sincronizar todos los archivos %1.
+O establezca las reglas según las que los archivos se sincronizarán.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<SearchStringAddition name="SetupRuleFilterSearchString" id="14">
+						<AdditionSource>
+							<Item>SetupRuleFilter</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="SetupRuleFilterSearchStringContextMenu" id="17"/>
+						<ExtendedTooltip name="SetupRuleFilterSearchStringExtendedTooltip" id="18"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="SetupRuleFilterViewStatus" id="19">
+						<AdditionSource>
+							<Item>SetupRuleFilter</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="SetupRuleFilterViewStatusContextMenu" id="22"/>
+						<ExtendedTooltip name="SetupRuleFilterViewStatusExtendedTooltip" id="23"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="SetupRuleFilterSearchControl" id="24">
+						<AdditionSource>
+							<Item>SetupRuleFilter</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="SetupRuleFilterSearchControlContextMenu" id="27"/>
+						<ExtendedTooltip name="SetupRuleFilterSearchControlExtendedTooltip" id="28"/>
+					</SearchControlAddition>
+				</Table>
+				<InputField name="Description" id="88" DisplayImportance="VeryHigh">
+					<DataPath>Record.Description</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Краткое описание правила</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Brief rule description</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Krótki opis reguły</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Kurzbeschreibung der Regel</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Descrierea succintă a regulii</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Kuralın kısa açıklaması</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Descripción corta de la regla</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Например, только файлы организации ООО Ромашка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Example: only files of North Start, LLC</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Na przykład, tylko pliki organizacji Rumianek Sp. z o.o.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Zum Beispiel, nur die Dateien der Kamille GmbH</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>De exemplu, numai fișierele organizației SRL Viorica</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Örneğin, sadece "Papatya" Ltd. iş yerinin dosyaları</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Por ejemplo, solo archivos de la organización SL Manzanilla</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="DescriptionContextMenu" id="89"/>
+					<ExtendedTooltip name="DescriptionExtendedTooltip" id="90"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Record" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.FileSynchronizationSettings</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Rule" id="2">
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="AttributesArrayWithDateType" id="3">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SynchronizationObject" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект синхронизации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Synchronization object</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Obiekt synchronizacji</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Synchronisationsobjekt</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Obiectul sincronizării</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Eşleşme nesnesi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Objeto de sincronización</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="CatalogItem" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элемент справочника</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Catalog item</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Element katalogu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Element des Verzeichnisses</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Elementul clasificatorului</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Katalog öğesi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Elemento de catálogo</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:BusinessProcessRef</v8:TypeSet>
+				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+				<v8:TypeSet>cfg:TaskRef</v8:TypeSet>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ExistingSettingsList" id="6">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="FilesOwnerID" id="7">
+			<Type>
+				<v8:Type>cfg:CatalogRef.MetadataObjectIDs</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="NewSetting" id="8">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ReturnValue" id="9">
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="AddConditionByDate" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить условие по дате</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add date-based condition</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Dodaj warunek według daty</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Hinzufügen einer Datumsbedingung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Adăugare condiția conform datei</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Tarihe göre koşulu ekle</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Añadir condición por la fecha</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить условие по дате</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add date-based condition</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Dodaj warunek według daty</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Hinzufügen einer Datumsbedingung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Adăugare condiția conform datei</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Tarihe göre koşulu ekle</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Añadir condición por la fecha</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>AddConditionByDate</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

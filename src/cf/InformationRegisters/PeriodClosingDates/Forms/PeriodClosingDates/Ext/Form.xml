@@ -1,0 +1,3778 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Даты запрета изменения данных</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Period-end closing dates</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>pl</v8:lang>
+			<v8:content>Data zamknięcia okresu</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>de</v8:lang>
+			<v8:content>Periodenabschlussdaten</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>ro</v8:lang>
+			<v8:content>Datele de închidere de la sfârșitul perioadei</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>tr</v8:lang>
+			<v8:content>Dönem sonu kapanış tarihleri</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>es_ES</v8:lang>
+			<v8:content>Fechas de cierre del fin de período</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ChoiceProcessing</Event>
+		<Event name="NotificationProcessing">NotificationProcessing</Event>
+		<Event name="BeforeClose">BeforeClose</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="HeaderGroup" id="446">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Header</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Grupa kont</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Kopfzeile</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Antet</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Üst Bilgi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Encabezado</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalAlign>Center</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="HeaderGroupExtendedTooltip" id="447"/>
+			<ChildItems>
+				<RadioButtonField name="SetPeriodEndClosingDate" id="439">
+					<DataPath>SetPeriodEndClosingDateNew</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ColumnsCount>3</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Для всех пользователей</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>For all users</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>dla wszystkich użytkowników</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Für alle Benutzer</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Pentru toți utilizatorii</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Tüm kullanıcılar için</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>Para todos los usuarios</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ForAllUsers</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>По пользователям</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>For specified users</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Wg użytkowników</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Von Nutzern</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Conform utilizatorilor</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Kullanıcılar tarafından</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>Por usuarios</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ForSpecifiedUsers</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="SetClosingDateContextMenu" id="440"/>
+					<ExtendedTooltip name="SetClosingDateExtendedTooltip" id="441"/>
+					<Events>
+						<Event name="OnChange">SetPeriodEndClosingDateOnChange</Event>
+					</Events>
+				</RadioButtonField>
+				<CommandBar name="CommandBar" id="444">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Command bar</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Pasek poleceń</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Befehlsleiste</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Bara de comandă</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Komut çubuğu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Barra de comandos</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<CommandSource>Form</CommandSource>
+					<ExtendedTooltip name="CommandBarExtendedTooltip" id="445"/>
+					<ChildItems>
+						<Button name="Refresh" id="200">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Refresh</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="RefreshExtendedTooltip" id="321"/>
+						</Button>
+						<Button name="ShowReport" id="429">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ShowReport</CommandName>
+							<ExtendedTooltip name="ShowReportExtendedTooltip" id="430"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ClosingDatesUsage" id="451">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование дат запрета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use period-end closing dates</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Używanie dat zakazu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verwendung von Sperrdaten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Utilizarea datelor de interdicție</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Son tarihlerin kullanımı</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Usar las fechas de restricción</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ClosingDatesUsageExtendedTooltip" id="452"/>
+			<ChildItems>
+				<Page name="Enabled" id="453">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включено</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Enabled</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Włączono</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Aktiviert</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Activat</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Etkin</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Activado</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="EnabledExtendedTooltip" id="454"/>
+					<ChildItems>
+						<LabelDecoration name="SetClosingDateNote" id="448">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:NoteText</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разрешен ввод и редактирование любых данных прошлых периодов.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Entry and edition of data from previous periods is allowed.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Dozwolone jest wprowadzenie i edycja dowolnych danych poprzednich okresów.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Erlaubt die Eingabe und Bearbeitung von Daten vergangener Zeiträume.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Este permisă introducerea și editarea oricăror date din perioadele precedente.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Geçmiş dönemlere ait herhangi verilerin girişi ve düzenlenmesi yapılabilir.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>La introducción y la edición de los datos de los períodos anteriores están permitidas.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="SetClosingDateNoteContextMenu" id="449"/>
+							<ExtendedTooltip name="SetClosingDateNoteExtendedTooltip" id="450"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="Disabled" id="455">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отключено</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Disabled</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Wyłączono</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Deaktiviert</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Dezactivat</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Devre dışı</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Desconectado</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<BackColor>style:MasterFieldBackground</BackColor>
+					<ExtendedTooltip name="DisabledExtendedTooltip" id="456"/>
+					<ChildItems>
+						<PictureDecoration name="ClosingDatesUsageDisabledPicture" id="433">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использование дат запрета выключено картинка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Period-end closing dates disabled picture</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Używanie dat zakazu jest wyłączono obraz</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Verwenden Sie gesperrte Daten aus dem Bild</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Utilizarea datelor de interdicție dezactivată imagine</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Son tarihlerin kullanımı devre dışı resim</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>El uso las fechas de restricción está desactivado imagen</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.Warning</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ClosingDatesUsageDisabledPictureContextMenu" id="434"/>
+							<ExtendedTooltip name="ClosingDatesUsageDisabledPictureExtendedTooltip" id="435"/>
+						</PictureDecoration>
+						<LabelDecoration name="ClosingDatesUsageDisabledLabel" id="436">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>1</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Даты запрета ввода и редактирования данных прошлых периодов отключены в настройках программы.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Entry and edition of data from previous periods is disabled.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Daty zakazu wprowadzania i edycji danych poprzednich okresów są wyłączone w ustawieniach programu.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Die Termine für das Verbot der Eingabe und Bearbeitung von Altdaten sind in den Programmeinstellungen deaktiviert.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Datele de interdicție a introducerii și editării datelor perioadelor precedente sunt dezactivate în setările programului.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Geçmiş dönemlere ait verilerin son giriş ve düzenlenmesinin tarihleri program ayarlarında devre dışı bırakıldı.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Las fechas de restricción de introducir y editar los datos de los períodos anteriores están desactivadas en los ajustes del programa.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ClosingDatesUsageDisabledLabelContextMenu" id="437"/>
+							<ExtendedTooltip name="ClosingDatesUsageDisabledLabelExtendedTooltip" id="438"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ClosingDateSetting" id="203">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка даты запрета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period-end closing date settings</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Ustawienie daty zamknięcia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Abschlussdatum einrichten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Setările datei de interdicție</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kapatılma tarihlerin ayarı</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Configurar la fecha de cierre</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ClosingDateSettingExtendedTooltip" id="323"/>
+			<ChildItems>
+				<UsualGroup name="SpecifedUsersList" id="204">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установка по пользователям</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Settings by users</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Ustawienie wg użytkowników</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Installation durch den Benutzer</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Stabilire pe utilizatori</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Kullanıcılara göre kurulum</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Instalar por usuarios</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SpecifedUsersListExtendedTooltip" id="324"/>
+					<ChildItems>
+						<Table name="Users" id="124">
+							<Representation>List</Representation>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<HeightInTableRows>3</HeightInTableRows>
+							<SelectionMode>SingleRow</SelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ClosingDatesUsers</DataPath>
+							<RowPictureDataPath>ClosingDatesUsers.PictureNumber</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.UsersStates</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователи</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Users</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Użytkownicy</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Benutzer</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Utilizatori</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Kullanıcılar</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Usuarios</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="UsersContextMenu" id="125"/>
+							<AutoCommandBar name="UsersCommandBar" id="126">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="UsersPick" id="176">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.SelectUsers</CommandName>
+										<ExtendedTooltip name="UsersPickExtendedTooltip" id="325"/>
+									</Button>
+									<Button name="UsersAdd" id="397">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Users.StandardCommand.Add</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="UsersAddExtendedTooltip" id="398"/>
+									</Button>
+									<ButtonGroup name="UsersStandardCommands" id="177">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Пользователи стандартные команды</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Users standard commands</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>pl</v8:lang>
+												<v8:content>Użytkownicy standardowe polecenia</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>de</v8:lang>
+												<v8:content>Benutzer Standard-Befehle</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ro</v8:lang>
+												<v8:content>Utilizatori comenzi standard</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>tr</v8:lang>
+												<v8:content>Kullanı standart komutları</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>es_ES</v8:lang>
+												<v8:content>Comandos estándar de usuarios</v8:content>
+											</v8:item>
+										</Title>
+										<CommandSource>Item.Users</CommandSource>
+										<ExtendedTooltip name="UsersStandardCommandsExtendedTooltip" id="326"/>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="UsersExtendedTooltip" id="327"/>
+							<SearchStringAddition name="UsersSearchString" id="411">
+								<AdditionSource>
+									<Item>Users</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="UsersSearchStringContextMenu" id="412"/>
+								<ExtendedTooltip name="UsersSearchStringExtendedTooltip" id="413"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="UsersViewStatus" id="414">
+								<AdditionSource>
+									<Item>Users</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="UsersViewStatusContextMenu" id="415"/>
+								<ExtendedTooltip name="UsersViewStatusExtendedTooltip" id="416"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="UsersSearchControl" id="417">
+								<AdditionSource>
+									<Item>Users</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="UsersSearchControlContextMenu" id="418"/>
+								<ExtendedTooltip name="UsersSearchControlExtendedTooltip" id="419"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">UsersOnEditEnd</Event>
+								<Event name="Selection">UsersSelection</Event>
+								<Event name="BeforeAddRow">UsersBeforeAddRow</Event>
+								<Event name="BeforeDeleteRow">UsersBeforeDelete</Event>
+								<Event name="OnActivateRow">UsersOnActivateRow</Event>
+								<Event name="ChoiceProcessing">UsersChoiceProcessing</Event>
+								<Event name="BeforeRowChange">UsersBeforeRowChange</Event>
+								<Event name="OnStartEdit">UsersOnStartEdit</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="UsersFullPresentation" id="127">
+									<DataPath>ClosingDatesUsers.FullPresentation</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователь или группа пользователей</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>User or user group</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Użytkownik lub grupa użytkowników</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Benutzer oder Benutzergruppe</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Utilizatorul sau grupul utilizatorilor</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Kullanıcı veya kullanıcı grubu</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Usuario o grupo de usuarios</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>31</Width>
+									<ChoiceButton>true</ChoiceButton>
+									<OpenButton>true</OpenButton>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="UsersFullPresentationContextMenu" id="128"/>
+									<ExtendedTooltip name="UsersFullPresentationContextMenuExtendedTooltip" id="328"/>
+									<Events>
+										<Event name="OnChange">UsersFullPresentationOnChange</Event>
+										<Event name="AutoComplete">UsersFullPresentationAutoComplete</Event>
+										<Event name="StartChoice">UsersFullPresentationStartChoice</Event>
+										<Event name="Opening">UsersFullPresentationOpen</Event>
+										<Event name="Clearing">UsersFullPresentationClear</Event>
+										<Event name="TextEditEnd">UsersFullPresentationTextEditEnd</Event>
+										<Event name="ChoiceProcessing">UsersFullPresentationChoiceProcessing</Event>
+									</Events>
+								</InputField>
+								<InputField name="UsersComment" id="129">
+									<DataPath>ClosingDatesUsers.Comment</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Причина отдельного запрета для пользователя или группы пользователей</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Describe the reason why this user/user group is subject to personal period-end closing date.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Przyczyna oddzielnego zakazu dla użytkownika lub grupy użytkowników</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Grund für separates Verbot für Benutzer oder Benutzergruppe</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Cauza interdicției separate pentru utilizator sau grupul de utilizatori</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Kullanıcı veya kullanıcı grubu için ayrı yasaklama sebebi</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Razón para la prohibición de separación para el usuario o el grupo de usuarios</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>31</Width>
+									<ExtendedEdit>true</ExtendedEdit>
+									<ContextMenu name="UsersCommentContextMenu" id="130"/>
+									<ExtendedTooltip name="UsersCommentExtendedTooltip" id="329"/>
+									<Events>
+										<Event name="OnChange">UsersCommentOnChange</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="CurrentUserPresentation" id="409">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий пользователь представление</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Current user presentation</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Bieżący użytkownik widok</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Aktuelle Benutzeransicht</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Utilizatorul curent</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Mevcut kullanıcısı görüntüleme</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Usuario actual presentación</v8:content>
+						</v8:item>
+					</Title>
+					<Width>60</Width>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="CurrentUserPresentationExtendedTooltip" id="410"/>
+					<ChildItems>
+						<Pages name="UserData" id="266">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные пользователя</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>User data</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Dane użytkownika</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Benutzerdaten</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Datele utilizatorului</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Kullanıcı verileri</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Datos de usuario</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="UserDataExtendedTooltip" id="331"/>
+							<ChildItems>
+								<Page name="UserNotSelectedPage" id="267">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница пользователь не выбран</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>User not selected page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona uzytkownika nie wybrana</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Benutzer nicht ausgewählt</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Utilizatorul paginii nu a fost selectat</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa kullanıcısı seçilmedi</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página usuario no seleccionado</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="UserNotSelectedPageExtendedTooltip" id="332"/>
+									<ChildItems>
+										<LabelDecoration name="UserNotSelected" id="269">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пользователь не выбран</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>No users selected</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Użytkownik nie jest wybrany</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Benutzer ist nicht angegeben</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Utilizatorul nu este selectat</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Kullanıcı seçilmedi</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Usuario no está especificado</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="UserNotSelectedContextMenu" id="270"/>
+											<ExtendedTooltip name="UserNotSelectedExtendedTooltip" id="333"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="UserSelectedPage" id="268">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница пользователь выбран</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>User selected page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona użytkownika wybrana</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Benutzer ausgewählt</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Utilizatorul selectat pentru pagină</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa kullanıcısı seçildi</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página usuario seleccionado</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="UserSelectedPageExtendedTooltip" id="334"/>
+									<ChildItems>
+										<Pages name="DateSettingMethods" id="218">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Способы указания</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Period-end closing date setting method</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Sposoby wskazania</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Anzeigemethoden</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Metode de indicare</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Belirtme yöntemleri</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Métodos de indicación</v8:content>
+												</v8:item>
+											</Title>
+											<PagesRepresentation>None</PagesRepresentation>
+											<ExtendedTooltip name="DateSettingMethodsExtendedTooltip" id="336"/>
+											<ChildItems>
+												<Page name="DateSettingMethodSingleDate" id="219">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Способ указания общая дата</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Period-end closing date setting method single date</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Sposoby wskazania wspólnych danych</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Gemeinsames Datum der Anzeigemethode</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Metoda de indicare a datei comune</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Belirtme yöntemleri ortak tarihi</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Fecha común del método de indicación</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="DateSettingMethodSingleDateExtendedTooltip" id="337"/>
+													<ChildItems>
+														<Pages name="OperationModesGroup" id="459">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Режимы работы</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Modes</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Tryby pracy</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Betriebsarten</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Regimurile de lucru</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Çalışma modları</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es_ES</v8:lang>
+																	<v8:content>Modo de trabajo</v8:content>
+																</v8:item>
+															</Title>
+															<PagesRepresentation>None</PagesRepresentation>
+															<ExtendedTooltip name="OperationModesGroupExtendedTooltip" id="460"/>
+															<ChildItems>
+																<Page name="SimpleMode" id="465">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Простой режим</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Simple mode</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>pl</v8:lang>
+																			<v8:content>Tryb prosty</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>de</v8:lang>
+																			<v8:content>Einfacher Modus</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>ro</v8:lang>
+																			<v8:content>Regim simplu</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>tr</v8:lang>
+																			<v8:content>Basit mod</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>es_ES</v8:lang>
+																			<v8:content>Modo simple</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="SimpleModeExtendedTooltip" id="466"/>
+																	<ChildItems>
+																		<RadioButtonField name="PeriodEndClosingNotSet" id="467">
+																			<DataPath>PeriodEndClosingDateDetails</DataPath>
+																			<Visible>false</Visible>
+																			<TitleLocation>None</TitleLocation>
+																			<RadioButtonType>Auto</RadioButtonType>
+																			<ChoiceList>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Запрет изменения данных не установлен</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Period-end closing is not specified</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>pl</v8:lang>
+																								<v8:content>Zakaz zmiany danych nie ustawiony</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>de</v8:lang>
+																								<v8:content>Datenänderungsverbot nicht gesetzt</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ro</v8:lang>
+																								<v8:content>Interdicția de modificare a datelor nu este instalată</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>tr</v8:lang>
+																								<v8:content>Son veri değişim tarihi belirlenmedi</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>es_ES</v8:lang>
+																								<v8:content>La restricción de cambiar los datos no está establecida</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string"/>
+																					</xr:Value>
+																				</xr:Item>
+																			</ChoiceList>
+																			<ContextMenu name="PeriodEndClosingNotSetContextMenu" id="468"/>
+																			<ExtendedTooltip name="PeriodEndClosingNotSetExtendedTooltip" id="469"/>
+																		</RadioButtonField>
+																		<UsualGroup name="CustomDateGroup" id="470">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Произвольная дата</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Custom date</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>pl</v8:lang>
+																					<v8:content>Data dowolna</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>de</v8:lang>
+																					<v8:content>Individuelle Datum</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>ro</v8:lang>
+																					<v8:content>Date personalizate</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>tr</v8:lang>
+																					<v8:content>Özel tarih</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>es_ES</v8:lang>
+																					<v8:content>Fecha personalizada</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="CustomDateGroupExtendedTooltip" id="471"/>
+																			<ChildItems>
+																				<RadioButtonField name="CustomPeriodEndClosingDate" id="472">
+																					<DataPath>PeriodEndClosingDateDetails</DataPath>
+																					<Visible>false</Visible>
+																					<TitleLocation>None</TitleLocation>
+																					<RadioButtonType>Auto</RadioButtonType>
+																					<ChoiceList>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Дата запрета:</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>Period-end closing date:</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>pl</v8:lang>
+																										<v8:content>Data zakazu:</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>de</v8:lang>
+																										<v8:content>Verbotsdatum:</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>ro</v8:lang>
+																										<v8:content>Data de interdicție:</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>tr</v8:lang>
+																										<v8:content>Son tarih:</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>es_ES</v8:lang>
+																										<v8:content>Fecha de restricción:</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">CustomDate</Value>
+																							</xr:Value>
+																						</xr:Item>
+																					</ChoiceList>
+																					<ContextMenu name="CustomPeriodEndClosingDateContextMenu" id="473"/>
+																					<ExtendedTooltip name="CustomPeriodEndClosingDateExtendedTooltip" id="474"/>
+																				</RadioButtonField>
+																				<InputField name="PeriodEndClosingDateSimpleMode" id="475">
+																					<DataPath>PeriodEndClosingDate</DataPath>
+																					<ClearButton>true</ClearButton>
+																					<ContextMenu name="PeriodEndClosingDateSimpleModeContextMenu" id="476"/>
+																					<ExtendedTooltip name="PeriodEndClosingDateSimpleModeExtendedTooltip" id="477"/>
+																					<Events>
+																						<Event name="OnChange">PeriodEndClosingDateOnChange</Event>
+																					</Events>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="GroupMoreOptions" id="478">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Больше возможностей</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>More options</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>pl</v8:lang>
+																					<v8:content>Więcej możliwości</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>de</v8:lang>
+																					<v8:content>Mehr Möglichkeiten</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>ro</v8:lang>
+																					<v8:content>Mai multe opțiuni</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>tr</v8:lang>
+																					<v8:content>Daha fazla seçenek</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>es_ES</v8:lang>
+																					<v8:content>Más posibilidades</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Representation>NormalSeparation</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="GroupMoreOptionsExtendedTooltip" id="479"/>
+																			<ChildItems>
+																				<LabelDecoration name="MoreOptions" id="480">
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<Title formatted="false">
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Больше возможностей &gt;&gt;</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>More options &gt;&gt;</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>pl</v8:lang>
+																							<v8:content>Więcej możliwości&gt;&gt;</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>de</v8:lang>
+																							<v8:content>Mehr Möglichkeiten &gt;&gt;</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>ro</v8:lang>
+																							<v8:content>Mai multe opțiuni &gt;&gt;</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>tr</v8:lang>
+																							<v8:content>Daha fazla seçenek &gt;&gt;</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>es_ES</v8:lang>
+																							<v8:content>Más posibilidades &gt;&gt;</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ToolTip>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Указать относительную дату запрета и отсрочку</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Specify relative period-end closing date and delay</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>pl</v8:lang>
+																							<v8:content>Wskaż względną datę zakazu i odroczenie</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>de</v8:lang>
+																							<v8:content>Geben Sie das relative Datum des Verbots und die Verzögerung an</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>ro</v8:lang>
+																							<v8:content>Indică data relativă de interdicție și amânarea</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>tr</v8:lang>
+																							<v8:content>Göreli son tarihi ve ertelemeyi belirtin</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>es_ES</v8:lang>
+																							<v8:content>Indicar la fecha relativa de la restricción y la demora</v8:content>
+																						</v8:item>
+																					</ToolTip>
+																					<Hyperlink>true</Hyperlink>
+																					<ContextMenu name="MoreOptionsContextMenu" id="481"/>
+																					<ExtendedTooltip name="MoreOptionsExtendedTooltip" id="482"/>
+																					<Events>
+																						<Event name="Click">MoreOptionsClick</Event>
+																					</Events>
+																				</LabelDecoration>
+																			</ChildItems>
+																		</UsualGroup>
+																	</ChildItems>
+																</Page>
+																<Page name="ExtendedMode" id="463">
+																	<Visible>false</Visible>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Расширенный режим</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Advanced mode</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>pl</v8:lang>
+																			<v8:content>Tryb zaawansowany</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>de</v8:lang>
+																			<v8:content>Fortgeschrittener Modus</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>ro</v8:lang>
+																			<v8:content>Mod avansat</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>tr</v8:lang>
+																			<v8:content>Gelişmiş mod</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>es_ES</v8:lang>
+																			<v8:content>Modo avanzado</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="ExtendedModeExtendedTooltip" id="464"/>
+																	<ChildItems>
+																		<UsualGroup name="PeriodEndClosingDateWithDetails" id="222">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Дата запрета с описанием</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Period-end closing date with details</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>pl</v8:lang>
+																					<v8:content>Data zamknięcia z opisem</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>de</v8:lang>
+																					<v8:content>Verbotsdatum mit Beschreibung</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>ro</v8:lang>
+																					<v8:content>Data de interdicție cu descriere</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>tr</v8:lang>
+																					<v8:content>Açıklamalı son tarih</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>es_ES</v8:lang>
+																					<v8:content>Fecha de restricción con la descripción</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="PeriodEndClosingDateWithDetailsExtendedTooltip" id="339"/>
+																			<ChildItems>
+																				<InputField name="PeriodEndClosingDateDetails" id="223">
+																					<DataPath>PeriodEndClosingDateDetails</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Дата запрета</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Period-end closing date</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>pl</v8:lang>
+																							<v8:content>Data zamknięcia</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>de</v8:lang>
+																							<v8:content>Auflösungsdatum</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>ro</v8:lang>
+																							<v8:content>Data de interdicție</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>tr</v8:lang>
+																							<v8:content>Kapanış tarihi</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>es_ES</v8:lang>
+																							<v8:content>Fecha de cierre</v8:content>
+																						</v8:item>
+																					</Title>
+																					<Width>20</Width>
+																					<HorizontalStretch>false</HorizontalStretch>
+																					<ListChoiceMode>true</ListChoiceMode>
+																					<TextEdit>false</TextEdit>
+																					<ChoiceList>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Не установлена</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>Not specified</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>pl</v8:lang>
+																										<v8:content>Nie zainstalowana</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>de</v8:lang>
+																										<v8:content>Nicht installiert</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>ro</v8:lang>
+																										<v8:content>Nu este stabilită</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>tr</v8:lang>
+																										<v8:content>Belirlenmedi</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>es_ES</v8:lang>
+																										<v8:content>No establecida</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string"/>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Произвольная дата</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>Custom date</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>pl</v8:lang>
+																										<v8:content>Dowolna data</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>de</v8:lang>
+																										<v8:content>Individuelle Datum</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>ro</v8:lang>
+																										<v8:content>Date personalizate</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>tr</v8:lang>
+																										<v8:content>Özel tarih</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>es_ES</v8:lang>
+																										<v8:content>Fecha personalizada</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">CustomDate</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Конец прошлого года</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>End of last year</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>pl</v8:lang>
+																										<v8:content>Koniec zeszłego roku</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>de</v8:lang>
+																										<v8:content>Letztes Jahresende</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>ro</v8:lang>
+																										<v8:content>Sfârșitul anului trecut</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>tr</v8:lang>
+																										<v8:content>Geçen yıl sonu</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>es_ES</v8:lang>
+																										<v8:content>Fin del año pasado</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">EndOfLastYear</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Конец прошлого квартала</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>End of last quarter</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>pl</v8:lang>
+																										<v8:content>Koniec zeszłego kwartału</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>de</v8:lang>
+																										<v8:content>Letztes Quartalsende</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>ro</v8:lang>
+																										<v8:content>Ultimul trimestru</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>tr</v8:lang>
+																										<v8:content>Geçen çeyrek sonu</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>es_ES</v8:lang>
+																										<v8:content>Fin del último trimestre</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">EndOfLastQuarter</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Конец прошлого месяца</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>End of last month</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>pl</v8:lang>
+																										<v8:content>Koniec zeszłego miesiąca</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>de</v8:lang>
+																										<v8:content>Letztes Monatsende</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>ro</v8:lang>
+																										<v8:content>Sfârșitul lunii trecute</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>tr</v8:lang>
+																										<v8:content>Geçen ay sonu</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>es_ES</v8:lang>
+																										<v8:content>Fin del último mes</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">EndOfLastMonth</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Конец прошлой недели</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>End of last week</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>pl</v8:lang>
+																										<v8:content>Koniec zeszłego tygodnia</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>de</v8:lang>
+																										<v8:content>Letzte Woche Ende</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>ro</v8:lang>
+																										<v8:content>Săptămâna trecută</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>tr</v8:lang>
+																										<v8:content>Geçen hafta sonu</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>es_ES</v8:lang>
+																										<v8:content>Fin de la última semana</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">EndOfLastWeek</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Предыдущий день</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>Previous day</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>pl</v8:lang>
+																										<v8:content>Dzień poprzedni</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>de</v8:lang>
+																										<v8:content>Letzter Tag</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>ro</v8:lang>
+																										<v8:content>Ziua precedentă</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>tr</v8:lang>
+																										<v8:content>Önceki gün</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>es_ES</v8:lang>
+																										<v8:content>Día precedente</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">PreviousDay</Value>
+																							</xr:Value>
+																						</xr:Item>
+																					</ChoiceList>
+																					<BackColor>style:MasterFieldBackground</BackColor>
+																					<ContextMenu name="PeriodEndClosingDateDetailsContextMenu" id="224"/>
+																					<ExtendedTooltip name="PeriodEndClosingDateDetailsExtendedTooltip" id="340"/>
+																					<Events>
+																						<Event name="OnChange">PeriodEndClosingDateDetailsOnChange</Event>
+																						<Event name="Clearing">PeriodEndClosingDateDetailsClear</Event>
+																					</Events>
+																				</InputField>
+																				<Pages name="Custom" id="225">
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Произвольная дата</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Custom date</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>pl</v8:lang>
+																							<v8:content>Data własna</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>de</v8:lang>
+																							<v8:content>Individuelle Datum</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>ro</v8:lang>
+																							<v8:content>Date personalizate</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>tr</v8:lang>
+																							<v8:content>Özel tarih</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>es_ES</v8:lang>
+																							<v8:content>Fecha personalizada</v8:content>
+																						</v8:item>
+																					</Title>
+																					<PagesRepresentation>None</PagesRepresentation>
+																					<ExtendedTooltip name="CustomDateExtendedTooltip" id="341"/>
+																					<ChildItems>
+																						<Page name="CustomDateUsed" id="226">
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Произвольная дата используется</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>Custom date is used</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>pl</v8:lang>
+																									<v8:content>Wykorzystuje się data własna</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>de</v8:lang>
+																									<v8:content>Benutzerdefiniertes Datum wird verwendet</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>ro</v8:lang>
+																									<v8:content>Se utilizează data personalizată</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>tr</v8:lang>
+																									<v8:content>Özel tarih kullanılıyor</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>es_ES</v8:lang>
+																									<v8:content>Fecha personalizada utilizada</v8:content>
+																								</v8:item>
+																							</Title>
+																							<ExtendedTooltip name="CustomDateUsedExtendedTooltip" id="342"/>
+																							<ChildItems>
+																								<InputField name="PeriodEndClosingDate" id="227">
+																									<DataPath>PeriodEndClosingDate</DataPath>
+																									<TitleLocation>None</TitleLocation>
+																									<ClearButton>true</ClearButton>
+																									<EditFormat>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>ДП=01.01.0001</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>DE=01/01/0001</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>pl</v8:lang>
+																											<v8:content>DE=01.01.0001</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>de</v8:lang>
+																											<v8:content>DP=01.01.0001</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>ro</v8:lang>
+																											<v8:content>ДП=01.01.0001</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>tr</v8:lang>
+																											<v8:content>DP=01.01.0001</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>es_ES</v8:lang>
+																											<v8:content>ДП=01.01.0001</v8:content>
+																										</v8:item>
+																									</EditFormat>
+																									<ContextMenu name="PeriodEndClosingDateContextMenu" id="228"/>
+																									<ExtendedTooltip name="PeriodEndClosingDateExtendedTooltip" id="343"/>
+																									<Events>
+																										<Event name="OnChange">PeriodEndClosingDateOnChange</Event>
+																									</Events>
+																								</InputField>
+																							</ChildItems>
+																						</Page>
+																						<Page name="CustomDateNotUsed" id="229">
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Произвольная дата не используется</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>Custom date is not used</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>pl</v8:lang>
+																									<v8:content>Data własna nie wykorzystuje się</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>de</v8:lang>
+																									<v8:content>Benutzerdefiniertes Datum wird nicht verwendet</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>ro</v8:lang>
+																									<v8:content>Nu se utilizează data personalizată</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>tr</v8:lang>
+																									<v8:content>Özel tarih kullanılmıyor</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>es_ES</v8:lang>
+																									<v8:content>Fecha personalizada no está utilizada</v8:content>
+																								</v8:item>
+																							</Title>
+																							<ExtendedTooltip name="CustomDateNotUsedExtendedTooltip" id="344"/>
+																							<ChildItems>
+																								<LabelDecoration name="EmptyLabelToDisplayPage1" id="230">
+																									<ContextMenu name="EmptyLabelToDisplayPage1ContextMenu" id="231"/>
+																									<ExtendedTooltip name="EmptyLabelToDisplayPage1ExtendedTooltip" id="345"/>
+																								</LabelDecoration>
+																							</ChildItems>
+																						</Page>
+																					</ChildItems>
+																				</Pages>
+																			</ChildItems>
+																		</UsualGroup>
+																		<Pages name="PeriodEndClosingDateProperties" id="232">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Свойства даты запрета</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Period-end closing date properties</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>pl</v8:lang>
+																					<v8:content>Cechy daty zakazu</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>de</v8:lang>
+																					<v8:content>Eigenschaften des Verbotsdatums</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>ro</v8:lang>
+																					<v8:content>Proprietățile datei de interdicție</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>tr</v8:lang>
+																					<v8:content>Son tarihin özellikleri</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>es_ES</v8:lang>
+																					<v8:content>Propiedades de la fecha de restricción</v8:content>
+																				</v8:item>
+																			</Title>
+																			<PagesRepresentation>None</PagesRepresentation>
+																			<ExtendedTooltip name="PeriodEndClosingDatePropertiesExtendedTooltip" id="346"/>
+																			<ChildItems>
+																				<Page name="RelativeDate" id="483">
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Относительная дата</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Relative date</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>pl</v8:lang>
+																							<v8:content>Względna data</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>de</v8:lang>
+																							<v8:content>Relatives Datum</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>ro</v8:lang>
+																							<v8:content>Data relativă</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>tr</v8:lang>
+																							<v8:content>Göreli tarih</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>es_ES</v8:lang>
+																							<v8:content>Fecha relativa</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ShowTitle>false</ShowTitle>
+																					<ExtendedTooltip name="RelativeDateExtendedTooltip" id="484"/>
+																					<ChildItems>
+																						<UsualGroup name="PermissionDaysCountGroup" id="485">
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Количество дней разрешения</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>Number of days to delay period-end closing date</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>pl</v8:lang>
+																									<v8:content>Ilość dni pozwolenia</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>de</v8:lang>
+																									<v8:content>Anzahl der Berechtigungstage</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>ro</v8:lang>
+																									<v8:content>Numărul de zile de permisiune</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>tr</v8:lang>
+																									<v8:content>Izin günü sayısı</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>es_ES</v8:lang>
+																									<v8:content>Número de días de permiso</v8:content>
+																								</v8:item>
+																							</Title>
+																							<Representation>NormalSeparation</Representation>
+																							<ShowTitle>false</ShowTitle>
+																							<ExtendedTooltip name="PermissionDaysCountGroupExtendedTooltip" id="486"/>
+																							<ChildItems>
+																								<CheckBoxField name="EnableDataChangeBeforePeriodEndClosingDate" id="487">
+																									<DataPath>EnableDataChangeBeforePeriodEndClosingDate</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="EnableDataChangeBeforePeriodEndClosingDateContextMenu" id="488"/>
+																									<ExtendedTooltip name="EnableDataChangeBeforeClosingDateExtendedTooltip" id="489"/>
+																									<Events>
+																										<Event name="OnChange">EnableDataChangeBeforePeriodEndClosingDateOnChange</Event>
+																									</Events>
+																								</CheckBoxField>
+																								<InputField name="PermissionDaysCount" id="490">
+																									<DataPath>PermissionDaysCount</DataPath>
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content> дней</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>days</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>pl</v8:lang>
+																											<v8:content>dni</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>de</v8:lang>
+																											<v8:content> Tage</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>ro</v8:lang>
+																											<v8:content>zile</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>tr</v8:lang>
+																											<v8:content>gün</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>es_ES</v8:lang>
+																											<v8:content>días</v8:content>
+																										</v8:item>
+																									</Title>
+																									<TitleLocation>Right</TitleLocation>
+																									<ContextMenu name="PermissionDaysCountContextMenu" id="491"/>
+																									<ExtendedTooltip name="PermissionsDaysCountExtendedTooltip" id="492"/>
+																									<Events>
+																										<Event name="OnChange">PermissionDaysCountOnChange</Event>
+																										<Event name="AutoComplete">PermissionDaysCountAutoComplete</Event>
+																									</Events>
+																								</InputField>
+																							</ChildItems>
+																						</UsualGroup>
+																						<LabelDecoration name="NoncustomDateNote" id="493">
+																							<AutoMaxWidth>false</AutoMaxWidth>
+																							<TextColor>style:NoteText</TextColor>
+																							<Title formatted="false">
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Запрещено изменение данных по %1</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>Data modification is not allowed till %1</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>pl</v8:lang>
+																									<v8:content>Zmiana danych zabroniona do %1</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>de</v8:lang>
+																									<v8:content>Das Ändern von Daten an %1 ist verboten</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>ro</v8:lang>
+																									<v8:content>Schimbarea datelor până la %1 este interzisă</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>tr</v8:lang>
+																									<v8:content>%1 itibariyle verilerin değiştirilmesi yasaklandı</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>es_ES</v8:lang>
+																									<v8:content>Cambio de datos en %1 está prohibido</v8:content>
+																								</v8:item>
+																							</Title>
+																							<ContextMenu name="NoncustomDateNoteContextMenu" id="494"/>
+																							<ExtendedTooltip name="NoncustomDateNoteExtendedTooltip" id="495"/>
+																						</LabelDecoration>
+																					</ChildItems>
+																				</Page>
+																				<Page name="NoDetails" id="247">
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Нет пояснения</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>No details</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>pl</v8:lang>
+																							<v8:content>Bez szczegółów</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>de</v8:lang>
+																							<v8:content>Keine Details</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>ro</v8:lang>
+																							<v8:content>Nu există detalii</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>tr</v8:lang>
+																							<v8:content>Detay yok</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>es_ES</v8:lang>
+																							<v8:content>No hay detalles</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ExtendedTooltip name="NoDetailsExtendedTooltip" id="356"/>
+																					<ChildItems>
+																						<LabelDecoration name="LessOptions" id="248">
+																							<AutoMaxWidth>false</AutoMaxWidth>
+																							<Title formatted="false">
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>&lt;&lt; Меньше возможностей</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>&lt;&lt; Less options</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>pl</v8:lang>
+																									<v8:content>&lt;&lt; Mniej możliwości</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>de</v8:lang>
+																									<v8:content>&lt;&lt;&lt; Weniger Möglichkeiten</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>ro</v8:lang>
+																									<v8:content>&lt;&lt; Mai puține opțiuni</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>tr</v8:lang>
+																									<v8:content>&lt;&lt; Daha az fırsat</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>es_ES</v8:lang>
+																									<v8:content>&lt;&lt; Menos posibilidades</v8:content>
+																								</v8:item>
+																							</Title>
+																							<Hyperlink>true</Hyperlink>
+																							<ContextMenu name="LessOptionsContextMenu" id="249"/>
+																							<ExtendedTooltip name="LessOptionsExtendedTooltip" id="357"/>
+																							<Events>
+																								<Event name="Click">LessOptionsClick</Event>
+																							</Events>
+																						</LabelDecoration>
+																					</ChildItems>
+																				</Page>
+																			</ChildItems>
+																		</Pages>
+																	</ChildItems>
+																</Page>
+															</ChildItems>
+														</Pages>
+													</ChildItems>
+												</Page>
+												<Page name="DateSettingMethodBySectionsObjects" id="250">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Способ указания по разделам объектам</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Period-end closing date setting method by sections objects</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Sposób wskazania wg rozdziałów obiektów</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Anzeige Methode nach Abschnitten Objekte</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Metoda de indicare în funcție de obiectele secțiunilor</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Bölüm nesnelerine göre belirtme yöntemi</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Método de indicación por objetos de secciones</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="DateSettingMethodBySectionsObjectsExtendedTooltip" id="358"/>
+													<ChildItems>
+														<Table name="ClosingDates" id="132">
+															<Representation>Tree</Representation>
+															<ChangeRowOrder>false</ChangeRowOrder>
+															<HeightInTableRows>3</HeightInTableRows>
+															<UseAlternationRowColor>true</UseAlternationRowColor>
+															<AutoInsertNewRow>true</AutoInsertNewRow>
+															<InitialTreeView>ExpandAllLevels</InitialTreeView>
+															<EnableStartDrag>true</EnableStartDrag>
+															<EnableDrag>true</EnableDrag>
+															<FileDragMode>AsFile</FileDragMode>
+															<DataPath>ClosingDates</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Даты запрета</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Period-end closing dates</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Data zamknięcia</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Auflösungsdatum</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Datele de interdicție</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Kapanış tarihi</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es_ES</v8:lang>
+																	<v8:content>Fecha de cierre</v8:content>
+																</v8:item>
+															</Title>
+															<CommandSet>
+																<ExcludedCommand>Copy</ExcludedCommand>
+																<ExcludedCommand>EndEdit</ExcludedCommand>
+																<ExcludedCommand>HierarchicalList</ExcludedCommand>
+																<ExcludedCommand>List</ExcludedCommand>
+																<ExcludedCommand>MoveDown</ExcludedCommand>
+																<ExcludedCommand>MoveUp</ExcludedCommand>
+																<ExcludedCommand>OutputList</ExcludedCommand>
+																<ExcludedCommand>SortListAsc</ExcludedCommand>
+																<ExcludedCommand>SortListDesc</ExcludedCommand>
+																<ExcludedCommand>Tree</ExcludedCommand>
+															</CommandSet>
+															<ContextMenu name="ClosingDatesContextMenu" id="133">
+																<Autofill>false</Autofill>
+																<ChildItems>
+																	<Button name="PeriodEndClosingDatesContextMenuAdd" id="274">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ClosingDates.StandardCommand.Add</CommandName>
+																		<ExtendedTooltip name="ClosingDatesContextMenuAddExtendedTooltip" id="389"/>
+																	</Button>
+																	<Button name="ClosingDatesContextMenuChange" id="273">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ClosingDates.StandardCommand.Change</CommandName>
+																		<ExtendedTooltip name="ClosingDatesContextMenuChangeExtendedTooltip" id="390"/>
+																	</Button>
+																	<Button name="ClosingDatesContextMenuDelete" id="276">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ClosingDates.StandardCommand.Delete</CommandName>
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Отключить</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Disable</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>pl</v8:lang>
+																				<v8:content>Wyłącz</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>de</v8:lang>
+																				<v8:content>Deaktivieren</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ro</v8:lang>
+																				<v8:content>Dezactivare</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>tr</v8:lang>
+																				<v8:content>Devre dışı bırak</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>es_ES</v8:lang>
+																				<v8:content>Desactivar</v8:content>
+																			</v8:item>
+																		</Title>
+																		<ExtendedTooltip name="ClosingDatesContextMenuDeleteExtendedTooltip" id="391"/>
+																	</Button>
+																	<ButtonGroup name="ClosingDatesContextMenuStandardCommands" id="275">
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Даты запрета контекстное меню стандартные команды</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Period-end closing dates context menu standard commands</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>pl</v8:lang>
+																				<v8:content>Daty zamknięć menu kontekstowego polecenia standardowe</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>de</v8:lang>
+																				<v8:content>Abschlussdaten Kontextmenü Standardbefehle</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ro</v8:lang>
+																				<v8:content>Datele de interdicție meniu de context comenzile standard</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>tr</v8:lang>
+																				<v8:content>Kapanış tarihleri bağlam menüsü standart komutları</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>es_ES</v8:lang>
+																				<v8:content>Fechas de cierre menú contextual comandos estándar</v8:content>
+																			</v8:item>
+																		</Title>
+																		<CommandSource>Item.ClosingDates</CommandSource>
+																		<ExtendedTooltip name="ClosingDatesContextMenuStandardCommandsExtendedTooltip" id="392"/>
+																	</ButtonGroup>
+																</ChildItems>
+															</ContextMenu>
+															<AutoCommandBar name="ClosingDatesCommandBar" id="134">
+																<Autofill>false</Autofill>
+																<ChildItems>
+																	<Button name="ClosingDatesPick" id="401">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.SelectObjects</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ClosingDatesPickExtendedTooltip" id="402"/>
+																	</Button>
+																	<Button name="ClosingDatesAdd" id="405">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ClosingDates.StandardCommand.Add</CommandName>
+																		<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ClosingDatesAddExtendedTooltip" id="406"/>
+																	</Button>
+																	<Button name="ClosingDatesChange" id="407">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ClosingDates.StandardCommand.Change</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ClosingDatesChangeExtendedTooltip" id="408"/>
+																	</Button>
+																	<Button name="ClosingDatesDelete" id="457">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ClosingDates.StandardCommand.Delete</CommandName>
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Отключить</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Disable</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>pl</v8:lang>
+																				<v8:content>Wyłącz</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>de</v8:lang>
+																				<v8:content>Deaktivieren</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ro</v8:lang>
+																				<v8:content>Dezactivare</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>tr</v8:lang>
+																				<v8:content>Devre dışı bırak</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>es_ES</v8:lang>
+																				<v8:content>Desactivar</v8:content>
+																			</v8:item>
+																		</Title>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ClosingDatesDeleteExtendedTooltip" id="458"/>
+																	</Button>
+																	<ButtonGroup name="ClosingDatesStandardCommands" id="403">
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Даты запрета стандартные команды</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Period-end closing dates standard commands</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>pl</v8:lang>
+																				<v8:content>Daty zamknięć polecenia standardowe</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>de</v8:lang>
+																				<v8:content>Abschlussdaten Standardbefehle</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ro</v8:lang>
+																				<v8:content>Datele de interdicție comenzile standard</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>tr</v8:lang>
+																				<v8:content>Kapanış tarihleri standart komutları</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>es_ES</v8:lang>
+																				<v8:content>Fechas de cierre comandos estándar</v8:content>
+																			</v8:item>
+																		</Title>
+																		<CommandSource>Item.ClosingDates</CommandSource>
+																		<ExtendedTooltip name="ClosingDatesStandardCommandsExtendedTooltip" id="404"/>
+																	</ButtonGroup>
+																</ChildItems>
+															</AutoCommandBar>
+															<ExtendedTooltip name="ClosingDatesExtendedTooltip" id="393"/>
+															<SearchStringAddition name="ClosingDatesSearchString" id="420">
+																<AdditionSource>
+																	<Item>ClosingDates</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ClosingDatesSearchStringContextMenu" id="421"/>
+																<ExtendedTooltip name="ClosingDatesSearchStringExtendedTooltip" id="422"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="ClosingDatesViewStatus" id="423">
+																<AdditionSource>
+																	<Item>ClosingDates</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ClosingDatesViewStatusContextMenu" id="424"/>
+																<ExtendedTooltip name="ClosingDatesViewStatusExtendedTooltip" id="425"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="ClosingDatesSearchControl" id="426">
+																<AdditionSource>
+																	<Item>ClosingDates</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="ClosingDatesSearchControlContextMenu" id="427"/>
+																<ExtendedTooltip name="ClosingDatesSearchControlExtendedTooltip" id="428"/>
+															</SearchControlAddition>
+															<Events>
+																<Event name="OnEditEnd">ClosingDatesOnEditEnd</Event>
+																<Event name="Selection">ClosingDatesChoice</Event>
+																<Event name="BeforeAddRow">ClosingDatesBeforeAddRow</Event>
+																<Event name="BeforeDeleteRow">ClosingDatesBeforeDeleteRow</Event>
+																<Event name="OnActivateRow">ClosingDatesOnActivateRow</Event>
+																<Event name="ChoiceProcessing">ClosingDatesChoiceProcessing</Event>
+																<Event name="BeforeRowChange">ClosingDatesBeforeRowChange</Event>
+																<Event name="OnStartEdit">ClosingDatesOnStartEdit</Event>
+															</Events>
+															<ChildItems>
+																<InputField name="ClosingDatesFullPresentation" id="143">
+																	<DataPath>ClosingDates.FullPresentation</DataPath>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Раздел дат запрета изменения и объекты разделов</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Section and its objects.</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>pl</v8:lang>
+																			<v8:content>Rozdział dat zamknięcia zmian i rozdziały obiektów</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>de</v8:lang>
+																			<v8:content>Abschnitt der Änderung der Abschlussdaten und Abschnittsobjekte</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>ro</v8:lang>
+																			<v8:content>Compartimentul datelor de interdicție a modificării și obiectele compartimentelor</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>tr</v8:lang>
+																			<v8:content>Kapanış tarihleri ve bölüm nesneleri bölümü</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>es_ES</v8:lang>
+																			<v8:content>Sección del cambio de las fechas de cierre y los objetos de sección</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<EditMode>EnterOnInput</EditMode>
+																	<Width>16</Width>
+																	<ChoiceButton>true</ChoiceButton>
+																	<TextEdit>false</TextEdit>
+																	<ContextMenu name="ClosingDatesFullPresentationContextMenu" id="144"/>
+																	<ExtendedTooltip name="ClosingDatesFullPresentationExtendedTooltip" id="394"/>
+																	<Events>
+																		<Event name="StartChoice">ClosingDatesFullPresentationStartChoice</Event>
+																		<Event name="Clearing">ClosingDatesFullPresentationClear</Event>
+																		<Event name="ChoiceProcessing">ClosingDatesFullPresentationChoiceProcessing</Event>
+																	</Events>
+																</InputField>
+																<LabelField name="ClosingDatesDetailsClosingDatesPresentation" id="141">
+																	<DataPath>ClosingDates.PeriodEndClosingDateDetailsPresentation</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Дата запрета</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Period-end closing date</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>pl</v8:lang>
+																			<v8:content>Data zamknięcia</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>de</v8:lang>
+																			<v8:content>Auflösungsdatum</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>ro</v8:lang>
+																			<v8:content>Data de interdicție</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>tr</v8:lang>
+																			<v8:content>Kapanış tarihi</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>es_ES</v8:lang>
+																			<v8:content>Fecha de cierre</v8:content>
+																		</v8:item>
+																	</Title>
+																	<EditMode>EnterOnInput</EditMode>
+																	<CellHyperlink>true</CellHyperlink>
+																	<Width>16</Width>
+																	<ContextMenu name="ClosingDatesDetailsClosingDatesPresentationContextMenu" id="142"/>
+																	<ExtendedTooltip name="ClosingDatesDetailsClosingDatesPresentationExtendedTooltip" id="395"/>
+																</LabelField>
+																<InputField name="ClosingDatesClosingDate" id="135">
+																	<DataPath>ClosingDates.PeriodEndClosingDate</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Действует по</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Expiration date</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>pl</v8:lang>
+																			<v8:content>Ważna do</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>de</v8:lang>
+																			<v8:content>Gültig bis</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>ro</v8:lang>
+																			<v8:content>Valabil pînă la</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>tr</v8:lang>
+																			<v8:content>Geçerlilik tarihi</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>es_ES</v8:lang>
+																			<v8:content>Válido hasta</v8:content>
+																		</v8:item>
+																	</Title>
+																	<EditMode>EnterOnInput</EditMode>
+																	<Width>16</Width>
+																	<ClearButton>true</ClearButton>
+																	<ContextMenu name="ClosingDatesClosingDateContextMenu" id="136"/>
+																	<ExtendedTooltip name="ClosingDatesClosingDateExtendedTooltip" id="396"/>
+																	<Events>
+																		<Event name="OnChange">ClosingDatesPeriodEndClosingDateOnChange</Event>
+																	</Events>
+																</InputField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+										<UsualGroup name="AdvancedOptionsGroup" id="442">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Другие способы указания даты запрета</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Other methods to specify period-end closing dates</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Inne sposoby wskazania daty zakazu</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Andere Möglichkeiten, das Verbotsdatum anzugeben</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Alte moduri de indicare a datei de interdicție</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Son tarihi gösteriminin diğer yöntemleri</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Otros métodos de indicar la fecha de restricción</v8:content>
+												</v8:item>
+											</Title>
+											<Behavior>Collapsible</Behavior>
+											<ControlRepresentation>Picture</ControlRepresentation>
+											<Representation>NormalSeparation</Representation>
+											<ExtendedTooltip name="AdvancedOptionsGroupExtendedTooltip" id="443"/>
+											<ChildItems>
+												<InputField name="PeriodEndClosingDateSettingMethod" id="216">
+													<DataPath>PeriodEndClosingDateSettingMethod</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Указывать дату запрета</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Specify</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Wskazuj datę zakazu</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Geben Sie das Verbotsdatum an</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Indică data de interdicție</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Son tarihi belirtin</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Indicar la fecha de restricción</v8:content>
+														</v8:item>
+													</Title>
+													<Width>24</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ListChoiceMode>true</ListChoiceMode>
+													<TextEdit>false</TextEdit>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Общая дата</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Single date for all sections and objects</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>pl</v8:lang>
+																		<v8:content>Wspólna data</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>de</v8:lang>
+																		<v8:content>Gemeinsame Datum</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ro</v8:lang>
+																		<v8:content>Data comună</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>tr</v8:lang>
+																		<v8:content>Ortak tarih</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>es_ES</v8:lang>
+																		<v8:content>Fecha común</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">SingleDate</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>По разделам</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Date by sections</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>pl</v8:lang>
+																		<v8:content>Wg rozdziałów</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>de</v8:lang>
+																		<v8:content>Nach § §</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ro</v8:lang>
+																		<v8:content>Pe compartimente</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>tr</v8:lang>
+																		<v8:content>Bölümlere göre</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>es_ES</v8:lang>
+																		<v8:content>Por Secciones</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">BySections</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>По разделам и объектам</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Date by sections and objects</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>pl</v8:lang>
+																		<v8:content>Wg rozdziałów i obiektów</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>de</v8:lang>
+																		<v8:content>Der Fachgruppen und Objekte</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ro</v8:lang>
+																		<v8:content>Pe compartimente și pe obiecte</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>tr</v8:lang>
+																		<v8:content>Bölümlere Ve Nesnelere göre</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>es_ES</v8:lang>
+																		<v8:content>Por Secciones y Objetos</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">BySectionsAndObjects</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>По объектам</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Date by objects</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>pl</v8:lang>
+																		<v8:content>Wg obiektów</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>de</v8:lang>
+																		<v8:content>Durch Gegenstände</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ro</v8:lang>
+																		<v8:content>Pe obiecte</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>tr</v8:lang>
+																		<v8:content>Nesnelere göre</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>es_ES</v8:lang>
+																		<v8:content>Por Objetos</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">ByObjects</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<BackColor>style:MasterFieldBackground</BackColor>
+													<ContextMenu name="PeriodEndClosingDateSettingMethodContextMenu" id="217"/>
+													<ExtendedTooltip name="PeriodEndClosingDateSettingMethodExtendedTooltip" id="335"/>
+													<Events>
+														<Event name="Clearing">ClosingDateIndicationMethodClear</Event>
+														<Event name="ChoiceProcessing">ClosingDateIndicationMethodChoiceProcessing</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ClosingDates" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Даты запрета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period-end closing dates</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Data zamknięcia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Auflösungsdatum</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Datele de interdicție</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kapanış tarihi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Fecha de cierre</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="FullPresentation" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Раздел, объект</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Section, object</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Rozdział, obiekt</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Abschnitt, Objekt</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Compartimentul, obiectul</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Bölüm, nesne</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Sección, objeto</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Presentation" id="3">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Section" id="4">
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.PeriodClosingDatesSections</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Object" id="6">
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.PeriodClosingDatesSections</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="PeriodEndClosingDate" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата запрета</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Period-end closing date</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Data zamknięcia</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Auflösungsdatum</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Data de interdicție</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Kapanış tarihi</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Fecha de cierre</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="PeriodEndClosingDateDetailsPresentation" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание даты запрета</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Period-end closing date details</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Opis daty zamknięcia</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Sperrdatum Beschreibung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Descrierea datei de interdicție</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Kapanış tarihi tanımı</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Descripción de la fecha de cierre</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="PeriodEndClosingDateDetails" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="PermissionDaysCount" id="7">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="IsSection" id="1">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="NoPeriodEndClosingDate" id="11">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="SectionWithoutObjects" id="12">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="RecordExists" id="9">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ClosingDatesUsers" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи дат запрета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period-end closing date users</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Użytkownicy daty zamknięcia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Sperrdatum Benutzer</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Utilizatorii datelor de interdicție</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kapanış tarihi kullanıcıları</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Usuarios de la fecha de cierre</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="FullPresentation" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь, группа пользователей</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>User, user group</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Użytkownik, grupa użytkowników</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Benutzer, Benutzergruppe</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Utilizator, grup utilizatori</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Kullanıcı, kullanıcı grubu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Usuario, grupo de usuarios</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="User" id="9">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ExternalUsers</v8:Type>
+						<v8:Type>cfg:CatalogRef.ExternalUsersGroups</v8:Type>
+						<v8:Type>cfg:CatalogRef.UserGroups</v8:Type>
+						<v8:Type>cfg:CatalogRef.Users</v8:Type>
+						<v8:Type>cfg:EnumRef.PeriodClosingDatesPurposeTypes</v8:Type>
+						<v8:TypeSet>cfg:ExchangePlanRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Presentation" id="11">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Comment" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Comment</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Komentarz</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Kommentar</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Cometariu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Yorum</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Comentario</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="NoPeriodEndClosingDate" id="16">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="PictureNumber" id="1">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="AllSectionsWithoutObjects" id="4">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Sections" id="5">
+			<Type/>
+		</Attribute>
+		<Attribute name="NoSectionsAndObjects" id="6">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SingleSection" id="7">
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.PeriodClosingDatesSections</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ShowCurrentUserSections" id="11">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UseExternalUsers" id="12">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CatalogExternalUsersAvailable" id="13">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UserTypesList" id="14">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="LocksAddress" id="10">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="SectionEmptyRef" id="3">
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.PeriodClosingDatesSections</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CurrentUser" id="15">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ExternalUsers</v8:Type>
+				<v8:Type>cfg:CatalogRef.ExternalUsersGroups</v8:Type>
+				<v8:Type>cfg:CatalogRef.UserGroups</v8:Type>
+				<v8:Type>cfg:CatalogRef.Users</v8:Type>
+				<v8:Type>cfg:EnumRef.PeriodClosingDatesPurposeTypes</v8:Type>
+				<v8:TypeSet>cfg:ExchangePlanRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="UsersCurrentRow" id="16">
+			<Type/>
+		</Attribute>
+		<Attribute name="SectionsWithoutObjects" id="17">
+			<Type/>
+		</Attribute>
+		<Attribute name="ShowSections" id="18">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SetPeriodEndClosingDate" id="19">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="PermissionDaysCount" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество дней разрешения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Number of days to delay period-end closing date</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Ilość dni pozwolenia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Anzahl der Berechtigungstage</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Numărul de zile de permisiune</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Izin günü sayısı</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Número de días de permiso</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="EnableDataChangeBeforePeriodEndClosingDate" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вступает в действие с отсрочкой в</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Effect delayed for</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wchodzi w życie z opóźnieniem na</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Tritt mit einer Verzögerung in</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Intră în vigoare cu amânare de</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Ertelemeli olarak yürürlüğe girer</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Entra en vigor con demora en</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="PeriodEndClosingDate" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата запрета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period-end closing date</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Data zamknięcia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Auflösungsdatum</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Data de interdicție</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kapanış tarihi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Fecha de cierre</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="PeriodEndClosingDateDetails" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание даты запрета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period-end closing date details</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Opis daty zamknięcia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Sperrdatum Beschreibung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Descrierea datei de interdicție</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kapanış tarihi tanımı</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Descripción de la fecha de cierre</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="PeriodEndClosingDateSettingMethod" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ указания даты запрета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period-end closing date setting method</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Sposób wyświetlania daty zamknięcia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Sperrdatumsanzeige Methode</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Modul de indicare a datei de interdicție</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kapanış tarihi gösterim yöntemi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Método de indicación de la fecha de cierre</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="BegOfDay" id="26">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ValueForAllUsers" id="27">
+			<Type>
+				<v8:Type>cfg:EnumRef.PeriodClosingDatesPurposeTypes</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CloseFormWithoutConfirmation" id="9">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="InterfaceVersion82" id="28">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="RecordExists" id="29">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SetPeriodEndClosingDateNew" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установка даты запрета новое</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Specify period-end closing date new</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Ustawianie daty zakazu nowe</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Datum des Verbots neu einstellen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Stabilirea datei de interdicție nou</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Son tarihi belirleme yeni</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Instalar la fecha de la restricción nuevo</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ExtendedModeSelected" id="31">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SectionsTableAddress" id="32">
+			<Type/>
+		</Attribute>
+		<Attribute name="RelativePeriodEndClosingDateLabelText" id="33">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="HasUnavailableObjects" id="34">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="SelectObjects" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wybór</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Auswählen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Selectați</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Seç</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Seleccionar</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать объекты раздела</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select section objects</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wybierz obiekty rozdziału</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Wählen Sie Abschnitt Objekte</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Selectați obiectele secțiunii</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Seçim nesnelerini seç</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Seleccionar los objetos de sección</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>PickObjects</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Refresh" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Aktualizuj</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Aktualisieren</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Actualizați </v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Güncelle</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Actualizar</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Aktualizuj</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Aktualisieren</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Actualizați </v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Güncelle</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Actualizar</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Update</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="SelectUsers" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wybór</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Auswählen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Selectați</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Seç</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Seleccionar</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать пользователей</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select users</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wybrać użytkowników</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Wählen Sie Benutzer aus</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Selectare utilizatorii</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kullanıcıları seç</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Seleccionar usuarios</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>PickUsers</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ShowReport" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Report</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Deklaracja</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bericht</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Raport</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Rapor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Informe</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отчет по датам запрета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show period-end closing date report</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Pokaż sprawozdanie według dat zakazu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bericht nach Datum des Verbots anzeigen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Afișare raportul conform datelor de interdicție</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Son tarihlere göre rapor göster</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Mostrar el informe por las fechas de restricción</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ShowReport</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="DataImportRestrictionDates">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

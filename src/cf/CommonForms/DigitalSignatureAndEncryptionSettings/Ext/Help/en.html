@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>Manages parameters for digital signature and encryption utilities. </p>
+<p>To open this form, click <strong>Digital signature and encryption settings</strong> in <strong>Administration - Common settings</strong> section.</p>
+<p>To use the digital signature and encryption functionality, you need to have a third-party crypto provider application installed.</p>
+<p>To enable data signing, select the <strong>Digital signature</strong> check box, and to enable data encryption, select the <strong>Encryption</strong> check box in <strong>Administration - Common settings</strong> section. This enables the corresponding settings and commands.</p>
+<p>Digital signature verifies that an electronic document was not altered in any way since the moment it was signed. To apply a digital signature, you need a digital signature key certificate. Certificates are issued by certification authorities. For example, you can apply for a certificate to the 1С ceritification authority at<a href="http://ca.1c.ru/">http://ca.1c.ru/</a>. Legally valid (qualified) certificates are only available from the certification authorities.</p>
+<p>For distributed infobases, the majority of settings can only be modified from the master node.</p>
+<h3>Certificates</h3>
+<ul><li>Displays all certificates used to sign and encrypt data, and all certificate issue applications. 
+</li><li>To show only your certificates, enable filter in the <strong>Show</strong> field. By default, all certificates are displayed. 
+</li><li>You can also use filter by the <strong>Application state</strong> field ("Any", "Not prepared", "Prepared", "Submitted", "Rejected", "Committed, certificate not installed", "Committed"). 
+</li><li>You can <strong>Add</strong> a <a href="Catalog.DigitalSignatureAndEncryptionKeysCertificates.Form.ItemForm/Help">Certificate</a> from the list of certificates <strong>installed on computer</strong>. This can also be done during data signing or encryption. 
+</li><li>To create an <a href="../id5bc04a9a-6a0a-4607-b8eb-743b87143ae7/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">Application for new certificate issue</a>, click <strong>Add</strong>. 
+</li><li>To view a certificate or a certificate issue application, double-click it. Or, use the <strong>Edit</strong> command available in the context menu and the <strong>More</strong> menu.</li></ul><h3>Applications</h3>
+<ul><li>Contains a list of digital signing and encryption applications to be used in the infobase (including all nodes of distributed infobases). 
+</li><li>Installing these applications on all computers is not required. Moreover, installing several application from this list on a computer may result in software conflicts. 
+</li><li>By default, the list contains the applications most popular in Russia: ViPNet CSP and CryptoPro CSP. 
+</li><li>You can add other applications to the list easily (predefined settings for Microsoft Enhanced CSP, ViPNet CSP, CryptoPro CSP, LISSI CSP, Signal-COM CSP are available). 
+</li><li>To add an encryption application that has no predefined settings, specify its name, type, and algorithms, in accordance with the application manual. 
+</li><li>The <strong>Check result</strong> column displays messages that describe whether the application is installed locally and whether the installation is valid.<span lang="RU"> 
+<li>Linux: <strong>Path to application (&lt;Name of application corresponding the selected list item&gt;)</strong> - this field is mandatory for computers running under Linux.</li></span> 
+</li><li>Below the list, the <a href="http://its.1c.ru/db/metod81#content:5784:1">How to work with digital signature and encryption applications</a> hyperlink is located. If you have any questions, click this link to access the help section. 
+</li><li><strong>Check signatures and certificates on server</strong> check box is available for server-based infobases only. If it is selected, a digital signature and a certificate are checked on the server. In this case, it is not required to install the application on every computer, on which only such actions are expected. 
+<ul><li>From the application window, you can access the <strong>Application paths on Linux servers</strong> list. In this list, you need to specify paths for the computers running 1C:Enterprise servers under Linux.</li></ul></li></ul><h3>More</h3>
+<ul><li>Specify <strong>Encrypted file extension</strong> when sending files by email, when executing the <strong>Save as</strong> command, and when exporting folders. The default extension is <strong>.p7m</strong>. 
+</li><li>
+<div>Specify <strong>Signature file extension</strong> (the default extension is <strong>.p7s</strong>).</div>
+</li><li>
+<div>Use the <strong>On saving data to the file with digital signature</strong> switch to define how the application behaves when the <strong>Save with digital signature</strong> command is executed: </div>
+<ul><li>
+<div><strong>Save all signatures</strong> - all signatures are saved </div>
+</li><li>
+<div><strong>Prompt</strong> - the user selects the signatures to save from <a href="CommonForm.SaveWithDigitalSignature/Help">list</a></div></li></ul></li><li>
+<div>To save the certificate together with the file and digital signature, select the <strong>Save certificate</strong> check box.</div></li></ul><h3>See also:</h3>
+<ul><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

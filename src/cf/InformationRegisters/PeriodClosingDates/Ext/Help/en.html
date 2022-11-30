@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>It is designed for setting the date of period-end closing or data import restriction.</p>
+<p>Data import restrictions might not be used. In this case, only window for setting period-end closing dates is available.</p>
+<p>You can set a period-end closing date and apply various related settings in <strong>Administration - User and rights settings  - Period-end closing dates</strong>. </p>
+<p>You can set a data import restriction date by clicking the relevant command in the <strong>Data synchronization</strong> section.</p>
+<h3>Date of period-end closing (data import restriction)</h3>
+<ul><li>Sometimes you might want to set period-end closing in the application until a specific date. For example, after submitting quarterly accounting reporting to tax inspection, period-end closing is usually set for the data that was used to generate this reporting, i.e. data until the last day of the accounting period. 
+</li><li>Import restriction, unlike period-end closing, can be set for the data to be edited only in one infobase node and according to the rules of data synchronization requirements, not the standard company business processes. For example, a decision to edit data of some companies only in the head office (in the central node) to technically assign responsibility for this data to a specific head office employee is a basis for restriction of data import from other nodes.</li></ul><h3>Examples of period-end closing (import restriction)</h3>
+<ul><li>If period-end closing date is set, whenever you try to change the application data before period-end closing date, a message appears showing that the data cannot be changed. 
+<ul><li>If there are objects marked for deletion in the closed period, you will not be able to delete them. 
+</li><li>If a period-end closing date is not set, restrictions are not valid. </li></ul></li><li>If a data import restriction date is set, whenever you try to get data to the application until the import restriction date, all the restricted data will be skipped, their information will be written to the event log, and permitted data will be received.</li></ul><h3>Setting period-end closing date (data import restriction date)</h3>
+<ul><li>
+<div>In the application, you can set or remove a period-end closing date (data import restriction date). To do so, select one of the following values:</div>
+<ul><li><strong>Not set</strong> - all period-end closing dates (data import restriction dates) will be removed. 
+</li><li><strong>For all users</strong> (<strong>For all infobases</strong>) 
+<ul><li>The <strong>Period-end closing date</strong> field becomes available, <strong>Other methods of specifying a period-end closing date</strong> section becomes available at the bottom of the window. </li></ul></li><li><strong>By users</strong> (<strong>By infobases)</strong>.<strong> </strong>You can use this feature if period-end closing date is to be set for a specific <a href="Catalog.Users.Form.ItemForm/Help">user</a> or <a href="Catalog.Users/Help">user</a> group (for a specific infobase) or different values of period-end closing date (data import restriction date) are to be set for different users (<a href="CommonForm.SelectExchangePlanNodes/Help">infobases</a>). 
+<ul><li>A list, in which you can add users or user groups (infobases) and set period-end closing dates (import restriction dates) for them, becomes available. 
+</li><li>
+<p>The list includes the following columns: </p>
+<ul><li><strong>User, user group</strong>(<strong>Application: infobase</strong>. Name of the application and infobase for this application). 
+</li><li><strong>Comment</strong>. Write additional information on user (infobase).</li></ul></li><li>The list always contains the item <strong>&lt;For all users&gt;</strong> (<strong>&lt;For all infobases&gt;</strong>) by default. You cannot delete or change the item. Settings of period-end closing date (data import restriction date) used for this item will be used for all users (infobases), other than those in the list. 
+</li><li>If required, add the required users or user group (infobases) to the list: 
+<ul><li>Click <strong>Pick</strong> to select several users (infobases) from the list. 
+<ul><li>If the application supports <a href="Catalog.ExternalUsers/Help">external users</a>, you are asked to select a user type to set a period-end closing date (data import restriction date). </li></ul></li><li>Click <strong>More actions</strong><strong> - Add </strong>above the list to<img src="StdPicture.InputFieldSelect" width="12" height="12"></img><strong>Select</strong>a user or a user group (an application or an infobase for this application. You can also select &lt;<strong>All infobases</strong>&gt; for each application).</li></ul></li><li>To set up period-end closing date (data import restriction date), in the list, select a required user, user group (infobase), or item <strong>&lt;For all users&gt;</strong> (<strong>&lt;For all infobases&gt;</strong>) and make the setup below in fields <strong>Period-end</strong> <strong>closing date indication method</strong> and <strong>Period-end closing date</strong>.</li></ul></li></ul></li></ul><h3>Indication methods of period-end closing date (data import restriction date)</h3>
+<p>To set up, click <strong>Other methods of specifying a period-end closing date</strong> and specify the required value in the <strong>Specify period-end closing date</strong> field:</p>
+<ul><li><strong>Common date</strong>. One period-end closing date is specified for all items of the application. 
+</li><li><strong>By sections</strong>. Period-end closing date is set for each application section. 
+<ul><li>When a period-end closing date is specified by sections, a list becomes available. You can add <strong>Sections</strong> (using a corresponding command) to the list and specify a value of period-end closing date for each section. The list includes the following columns: 
+<ul><li><strong>Section, object</strong>. Application sections are listed in the column. 
+</li><li><strong>Period-end closing date</strong>. Select a value type of period-end closing date from the list (you can select an arbitrary date or one of the relative dates). 
+</li><li><strong>Valid until</strong>. Write or <img src="StdPicture.InputFieldCalendar" width="12" height="12"></img>select a value for an arbitrary date, for a relative date the value is set automatically by the application.</li></ul></li><li>The list contains the <strong>&lt;Common date&gt;</strong> item by default. Value of period-end closing date for this item will be used for all sections by default, other than for those already in the list. </li></ul></li><li><strong>By objects</strong>. Period-end closing dates are specified by the application objects. Period-end closing date is set for each object. If you select this value, a list becomes available. You can add objects (using a corresponding command) to the list and specify a separate value of period-end closing date for each object. The <strong>&lt;Common date&gt;</strong> item is also available in the list. 
+</li><li><strong>By sections and objects</strong>. Period-end closing dates are set both by sections and objects. 
+<ul><li>The list with sections and objects becomes available. You can specify a separate value of period-end closing date for each section and object. The <strong>&lt;Common date&gt;</strong> item is also available in the list. 
+<ul><li>To select several objects in the selected section, click <strong>Pick</strong>. 
+</li><li>You can also right-click the section, click <strong>Add</strong>, and then specify the object by clicking <img src="StdPicture.InputFieldSelect"></img><strong>Select</strong>. You can also use the same command in the <strong>More actions</strong> menu.</li></ul></li></ul></li></ul><p>To set a period-end closing date of a required section (object) or change a common date, right-click or double-click the required row of the <strong>Period-end closing date</strong> column, and then click <strong>Change</strong>. To specify a period-end closing date, click <strong>Select</strong>. When the date is selected, click <strong>OK</strong> to return to the setup procedure.</p>
+<p>To cancel the period-end closing date, click <strong>Disable</strong>.</p>
+<h3>Period-end closing date</h3>
+<ul><li>When you specify a period-end closing date, you can specify not only an arbitrary date (in this case, you can type the date or select it from the calendar by clicking <img src="StdPicture.InputFieldCalendar" width="12" height="12"></img>) but also a relative date. 
+</li><li>To set a relative date, click <strong>More options</strong>. 
+</li><li>Relative date values: 
+<ul><li><strong>Last year end</strong> 
+</li><li><strong>Last quarter end</strong> 
+</li><li><strong>Last month end</strong> 
+</li><li><strong>Last week end</strong> 
+</li><li><strong>Previous day</strong></li></ul></li><li>
+<div>For relative dates (other than the <strong>Previous day</strong> value) you can specify a number of delay days before setting a period-end closing date. Within the delay period, you will be able to change data.</div>
+<ul><li>
+<div>To allow changing data within the delay period, select the <strong>Allow changing data before period-end closing date</strong> check box. Then specify a number of delay days, for example, within 10 days after the period-end closing date.</div></li></ul></li></ul><h3>Reports on period-end closing dates</h3>
+<p>You can access reports by clicking the matching command. Reports support data grouping: </p>
+<ul><li>By sections/objects: Select the <strong>Period-end closing dates by sections and objects for users</strong> report (<strong>Period-end closing dates by sections and objects for infobases</strong>). 
+</li><li>By users (infobases): Select report <strong>Period-end closing dates by users</strong> (<strong>Period-end closing dates by infobases</strong>). </li></ul><p>Reports show the resulting period-end closing dates set for users or user groups (infobases) considering priorities.</p>
+<h3>See also:</h3>
+<ul><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

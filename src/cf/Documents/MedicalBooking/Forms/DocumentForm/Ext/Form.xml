@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<ChildItems>
+		<InputField name="Number" id="1">
+			<DataPath>Object.Number</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="NumberContextMenu" id="2"/>
+			<ExtendedTooltip name="NumberExtendedTooltip" id="3"/>
+		</InputField>
+		<InputField name="Date" id="4">
+			<DataPath>Object.Date</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="DateContextMenu" id="5"/>
+			<ExtendedTooltip name="DateExtendedTooltip" id="6"/>
+		</InputField>
+		<UsualGroup name="MedicalBookingInformation" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Medical Booking Information</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Medical booking information</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="MedicalBookingInformationExtendedTooltip" id="48"/>
+			<ChildItems>
+				<InputField name="Owner" id="7">
+					<DataPath>Object.Owner</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="OwnerContextMenu" id="8"/>
+					<ExtendedTooltip name="OwnerExtendedTooltip" id="9"/>
+				</InputField>
+				<InputField name="InjectionDate" id="44">
+					<DataPath>Object.StartDate</DataPath>
+					<ContextMenu name="InjectionDateContextMenu" id="45"/>
+					<ExtendedTooltip name="InjectionDateExtendedTooltip" id="46"/>
+				</InputField>
+				<InputField name="Veterinarian" id="10">
+					<DataPath>Object.Veterinarian</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="VeterinarianContextMenu" id="11"/>
+					<ExtendedTooltip name="VeterinarianExtendedTooltip" id="12"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ListDog" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dog List</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>List dog</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ListDogExtendedTooltip" id="50"/>
+			<ChildItems>
+				<Table name="DogList" id="13">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Object.DogList</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="DogListContextMenu" id="14"/>
+					<AutoCommandBar name="DogListCommandBar" id="15"/>
+					<ExtendedTooltip name="DogListExtendedTooltip" id="16"/>
+					<SearchStringAddition name="DogListSearchString" id="17">
+						<AdditionSource>
+							<Item>DogList</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="DogListSearchStringContextMenu" id="18"/>
+						<ExtendedTooltip name="DogListSearchStringExtendedTooltip" id="19"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="DogListViewStatus" id="20">
+						<AdditionSource>
+							<Item>DogList</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="DogListViewStatusContextMenu" id="21"/>
+						<ExtendedTooltip name="DogListViewStatusExtendedTooltip" id="22"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="DogListSearchControl" id="23">
+						<AdditionSource>
+							<Item>DogList</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="DogListSearchControlContextMenu" id="24"/>
+						<ExtendedTooltip name="DogListSearchControlExtendedTooltip" id="25"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="DogListLineNumber" id="26">
+							<DataPath>Object.DogList.LineNumber</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="DogListLineNumberContextMenu" id="27"/>
+							<ExtendedTooltip name="DogListLineNumberExtendedTooltip" id="28"/>
+						</LabelField>
+						<InputField name="DogListDog" id="29">
+							<DataPath>Object.DogList.Dog</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="DogListDogContextMenu" id="30"/>
+							<ExtendedTooltip name="DogListDogExtendedTooltip" id="31"/>
+							<Events>
+								<Event name="StartChoice">DogListDogStartChoice</Event>
+								<Event name="StartListChoice">DogListDogStartListChoice</Event>
+								<Event name="ChoiceProcessing">DogListDogChoiceProcessing</Event>
+							</Events>
+						</InputField>
+						<InputField name="DogListVaccine" id="32">
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="DogListVaccineContextMenu" id="33"/>
+							<ExtendedTooltip name="DogListVaccineExtendedTooltip" id="34"/>
+						</InputField>
+						<InputField name="DogListDisease" id="35">
+							<DataPath>Object.DogList.Disease</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="DogListDiseaseContextMenu" id="36"/>
+							<ExtendedTooltip name="DogListDiseaseExtendedTooltip" id="37"/>
+						</InputField>
+						<InputField name="DogListNextVaccination" id="38">
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="DogListNextVaccinationContextMenu" id="39"/>
+							<ExtendedTooltip name="DogListNextVaccinationExtendedTooltip" id="40"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.MedicalBooking</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Object.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>When copying files of the infobase to another location, both the original and copied infobases can continue to interact with external resources. For example, report mailing, data synchronization with other applications, and sending or receiving email. To prevent it, when changing the location of the infobase, all such scheduled jobs are locked. When signing in to the moved infobase first time, administrator needs to make a decision on infobase role: If infobase is moved, operations with external resources is resumed. If it is infobase copy, operations with external resources is locked.</p>
+<h3>Determining whether infobase is moved or not</h3>
+<p>When determining whether infobase is moved or not, first of all, change in type of infobase location is checked. From the file type to client/server type and vice versa. If the location type is changed, it is considered moved. If the location type is not changed, the infobase connection string is compared. If the connection string is not changed, the further check is stopped and the infobase is considered not moved. Further check depends on the type of infobase location.</p>
+<li>
+<div>In the file infobase, you can determine whether infobase is moved or not by the <strong>DoNotCopy.txt</strong> service file, automatically created by the application in the infobase directory. There is infobase ID in the file. If there is no ID or ID in the file is different from ID in the infobase, the infobase is considered moved.</div>
+</li><li>
+<div>In the client/server infobase, you can determine whether infobase is moved or not:</div>
+<ul><li>
+<div>If infobase name was changed. For example, the infobase name was "base_bp" and became "base_bp_test".</div>
+</li><li>
+<div>You can also determine it, if the computer or server name was changed. For example, the computer name was "main_server" and became "test_server", and the server name was "main" and became "test".</div></li></ul><p>When operating in SaaS, Service manager sets the flag that shows whether the application is moved or not. If the infobase is imported in the application or exported from it, it is determined automatically.</p>
+<h3>See also:</h3>
+<ul><li>
+<div><a href="v8help://frame/form_common">Working with forms</a></div></li></ul></li></body></html>

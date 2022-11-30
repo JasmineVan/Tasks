@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html xmlns:o="urn:schemas-microsoft-com:office:office" dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">This form is used to view and replace data conversion rules. Data conversion rules are used during data synchronization between two applications. </p>
+<p style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">The default <a href="CommonForm.DataSynchronization/Help">data synchronization</a> setting is applied in accordance with <strong>Standard exchange rules</strong>. The <a href="InformationRegister.DataExchangeRules/Help">exchange rules</a> include object conversion rules and <a href="InformationRegister.DataExchangeRules.Form.ObjectsRegistrationRules/Help">object registration rules</a>. </p>
+<p style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">You can access the <strong>object conversion rules</strong> from the data synchronization settings, via command <strong>More actions - Import object conversion rules</strong>.</p>
+<h3 style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">Rule source</h3>
+<ul><li>For the standard data synchronization between standard applications, standard rules from configuration are used (the name of the conversion rules template, from which standard rules were received, is specified).<strong></strong>However, in some cases, it is necessary to use rules from a file (for example, if synchronization is made between bases with non-standard applications). 
+</li><li>
+<p style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">The Rule source radio button is used to select a source for object registration rules:</p>
+</li><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><strong>Use standard rules</strong> (by default).</div>
+</li><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><strong>Import from file on computer</strong>. Ensure that the rules you are about to import are created in the current application version. Using rules created in previous versions can cause errors.</div>
+</li><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">The list of currently active rules is displayed below the radio button.</div></li></ul><h3 style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">Rules information</h3>
+<ul><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">The following rules information is displayed for additional verification:</div>
+<ul><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">Reminder of errors that could occur due to using rules from external files;</div>
+</li><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><strong>Conversion rules of this infobase</strong>. Here a version of object conversion rules and their creation date are specified.</div>
+</li><li><strong>Correspondent conversion rules</strong>. Here a version of object conversion rules and their creation date are specified.</li></ul></li></ul><h3 style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">Debug mode </h3>
+<ul><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">If a radio button is set to the <strong>Import from file on computer</strong> position, you can use the debug mode.</div>
+</li><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">To work in this mode, click the <strong>Debug mode setting</strong> reference. </div>
+</li><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">Select the <strong>Enable debug mode</strong> check box.</div>
+</li><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">The following settings become available:</div>
+<ul><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><strong>Attach external data processor for export debug</strong>. Specifies a file of external data processor containing an export handler debug module created in Data conversion application. In client/server mode, server path is specified. </div>
+</li><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><strong>Attach external data processor for import debug</strong> Specifies a file of external data processor containing an import handler debug module created in Data conversion application. In client/server mode, server path is specified. </div>
+</li><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><strong>Data synchronization logging mode</strong> If this option is enabled, all events and errors that occur during data exchange will be recorded to a log file you select. If you do not select a log file, all messages will be recorded to <a href="DataProcessor.EventLog/Help">Event log</a>. </div>
+</li><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><strong>Do not interrupt data exchange on errors</strong>. If this option is enabled, data exchange procedure will continue uninterrupted upon any errors. Data exchange will complete, and any debug messages will be saved to the exchange log file or event log.</div></li></ul></li></ul><h3 style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">Importing rules</h3>
+<ul><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">Set the radio button to <strong>Import from file on computer</strong>.</div>
+</li><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">Click <strong>Load</strong>.</div></div>
+</li><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">Specify path to the rules file if necessary.</div></div></li></ul><h3 style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">Exporting rules</h3>
+<ul><li>
+<div style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto">You can export the recording rules to a separate file. To do this, click <strong>Save conversion rules to file</strong>. </div>
+</li><li>Specify file path on a local computer or network disk. File name will be generated automatically. Click <strong>Save</strong>.</li></ul><h3>Using external rule files instead of standard object conversion rules</h3>
+<ul><li>Switch the radio button to <strong>Import from file on computer</strong> and click <strong>Import</strong> to select a rule file located on a local computer or network location. 
+</li><li>Please note that you will import the correct rules that are appropriate for the used versions of the source application and destination application. For this, <strong>Rules information</strong> is displayed where the date of rules creation is indicated. 
+</li><li>Click <strong>Save and close</strong>. The imported rules will apply immediately.</li></ul><p><strong>Note:</strong> the object conversiond and registration rules are used for all data synchronization of the same type (that are based on one exchange plan; for example, two data synchronizations: <strong>"Synchronization with the branch in Krasnodar"</strong> and <strong>"Synchronization with the representative office in Kiev"</strong> are based on the <strong>Full</strong> exchange plan). Therefore, to apply new rules to multiple data synchronization procedures of the same type, you only need to import new rules for any one of them; the new rules will automatically apply to all other data synchronization procedures of the same type.</p>
+<h3>See also:</h3>
+<ul><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

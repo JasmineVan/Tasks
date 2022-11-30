@@ -1,93 +1,105 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) 2019, ООО 1С-Софт
-// Все права защищены. Эта программа и сопроводительные материалы предоставляются 
-// в соответствии с условиями лицензии Attribution 4.0 International (CC BY 4.0)
-// Текст лицензии доступен по ссылке:
+// Copyright (c) 2019, 1C-Soft LLC
+// All Rights reserved. This application and supporting materials are provided under the terms of 
+// Attribution 4.0 International license (CC BY 4.0)
+// The license text is available at:
 // https://creativecommons.org/licenses/by/4.0/legalcode
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#Область СлужебныеПроцедурыИФункции
+#Region Private
 ////////////////////////////////////////////////////////////////////////////////
-// Обработчики операций
+// Web service operation handlers
 
-Функция Ping()
-	Возврат "";
-КонецФункции
+Function Ping()
+	Return "";
+EndFunction
 
-Функция ПроверкаПодключения(СообщениеОбОшибке)
+Function ConnectionTest(ErrorMessage)
 	
-	СообщениеОбОшибке = "";
+	ErrorMessage = "";
 	
-	// Проверяем, что информационная база не является файловой.
-	Если ОбщегоНазначения.ИнформационнаяБазаФайловая() Тогда
-		СообщениеОбОшибке = НСтр("ru = 'Подключаемая информационная база является файловой,
-			|в связи с чем не поддерживает работу методов веб-сервиса.'");
-		Возврат Ложь;
-	КонецЕсли;
+	// Checking that the infobase is not the file one.
+	If Common.FileInfobase() Then
+		ErrorMessage = NStr("ru = 'Подключаемая информационная база является файловой,
+			|в связи с чем не поддерживает работу методов веб-сервиса.'; 
+			|en = 'The infobase is the file base,
+			|so web service methods are not supported.'; 
+			|pl = 'Podłączana baza informacyjna jest system plików,
+			|w związku z czym nie obsługuje metody web-serwisu.';
+			|de = 'Die verbundene Informationsbasis ist eine Dateibasis
+			|und unterstützt daher nicht die Arbeit von Webservice-Methoden.';
+			|ro = 'Baza de informații conectată este de tip fișier,
+			|de aceea nu susține lucrul metodelor serviciului web.';
+			|tr = 'Bağlı veri tabanı bir dosya veri tabanı olmasından dolayı, 
+			|web hizmeti tekniklerinin çalışmasını desteklemiyor.'; 
+			|es_ES = 'La base de información conectada es de archivo
+			|por eso no se admite el uso de métodos del servicio web.'");
+		Return False;
+	EndIf;
 	
-	// Проверяем наличие прав для выполнения обмена.
-	Попытка
-		ОбменДаннымиСлужебный.ПроверитьВозможностьВыполненияОбменов();
-	Исключение
-		СообщениеОбОшибке = КраткоеПредставлениеОшибки(ИнформацияОбОшибке());
-		Возврат Ложь;
-	КонецПопытки;
+	// Checking whether a user has rights to perform the data exchange.
+	Try
+		DataExchangeInternal.CheckCanSynchronizeData();
+	Except
+		ErrorMessage = BriefErrorDescription(ErrorInfo());
+		Return False;
+	EndTry;
 	
-	// Проверяем блокировку информационной базы для обновления.
-	Попытка
-		ОбменДаннымиСлужебный.ПроверитьБлокировкуИнформационнойБазыДляОбновления();
-	Исключение
-		СообщениеОбОшибке = КраткоеПредставлениеОшибки(ИнформацияОбОшибке());
-		Возврат Ложь;
-	КонецПопытки;
+	// Checking whether the infobase is locked for update.
+	Try
+		DataExchangeInternal.CheckInfobaseLockForUpdate();
+	Except
+		ErrorMessage = BriefErrorDescription(ErrorInfo());
+		Return False;
+	EndTry;
 	
-	Возврат Истина;
+	Return True;
 	
-КонецФункции
+EndFunction
 
-Функция ПолучитьРезультатЗагрузкиДанных(ИдентификаторФоновогоЗадания, СообщениеОбОшибке)
+Function GetDataImportResult(BackgroundJobID, ErrorMessage)
 	
-	Возврат ОбменДаннымиСлужебный.ПолучитьСтатусВыполненияПолученияДанных(ИдентификаторФоновогоЗадания, СообщениеОбОшибке);
+	Return DataExchangeInternal.GetDataReceiptExecutionStatus(BackgroundJobID, ErrorMessage);
 	
-КонецФункции
+EndFunction
 
 // PutFilePart
 //
-Функция ЗагрузитьЧастьФайла(ИдентификаторФайла, НомерЗагружаемойЧастиФайла, ЗагружаемаяЧастьФайла, СообщениеОбОшибке)
+Function ImportFilePart(FileID, FilePartToImportNumber, FilePartToImport, ErrorMessage)
 	
-	Возврат ОбменДаннымиСлужебный.ЗагрузитьЧастьФайла(ИдентификаторФайла, НомерЗагружаемойЧастиФайла, ЗагружаемаяЧастьФайла, СообщениеОбОшибке);
+	Return DataExchangeInternal.ImportFilePart(FileID, FilePartToImportNumber, FilePartToImport, ErrorMessage);
 	
-КонецФункции
+EndFunction
 
 // PutData
 //
-Функция ЗагрузитьДанныеВИнформационнуюБазу(ИдентификаторФайла, ИдентификаторФоновогоЗадания, СообщениеОбОшибке)
+Function ImportDataToInfobase(FileID, BackgroundJobID, ErrorMessage)
 	
-	СообщениеОбОшибке = "";
+	ErrorMessage = "";
 	
-	СтруктураПараметров = ОбменДаннымиСлужебный.ИнициализироватьПараметрыWebСервиса();
-	СтруктураПараметров.ИдентификаторФайлаВоВременномХранилище = ОбменДаннымиСлужебный.ПодготовитьФайлДляЗагрузки(ИдентификаторФайла, СообщениеОбОшибке);
-	СтруктураПараметров.ИмяWEBСервиса                          = "EnterpriseDataUpload_1_0_1_1";
+	ParametersStructure = DataExchangeInternal.InitializeWebServiceParameters();
+	ParametersStructure.TempStorageFileID = DataExchangeInternal.PrepareFileForImport(FileID, ErrorMessage);
+	ParametersStructure.WEBServiceName                          = "EnterpriseDataUpload_1_0_1_1";
 	
-	// Загружаем в информационную базу.
-	ПараметрыПроцедуры = Новый Структура;
-	ПараметрыПроцедуры.Вставить("ПараметрыWEBСервиса", СтруктураПараметров);
-	ПараметрыПроцедуры.Вставить("СообщениеОбОшибке",   СообщениеОбОшибке);
+	// Importing to the infobase.
+	ProcedureParameters = New Structure;
+	ProcedureParameters.Insert("WebServiceParameters", ParametersStructure);
+	ProcedureParameters.Insert("ErrorMessage",   ErrorMessage);
 
-	ПараметрыВыполнения = ДлительныеОперации.ПараметрыВыполненияВФоне(Новый УникальныйИдентификатор);
-	ПараметрыВыполнения.НаименованиеФоновогоЗадания = НСтр("ru = 'Загрузка данных в информационную базу через web-сервис ""Enterprise Data Upload""'");
-	ПараметрыВыполнения.КлючФоновогоЗадания = Строка(Новый УникальныйИдентификатор);
+	ExecutionParameters = TimeConsumingOperations.BackgroundExecutionParameters(New UUID);
+	ExecutionParameters.BackgroundJobDescription = NStr("ru = 'Загрузка данных в информационную базу через web-сервис ""Enterprise Data Upload""'; en = 'Import data into the infobase through web service ""Enterprise Data Upload""'; pl = 'Wczytywanie danych do bazy informacyjnej za pośrednictwem web-serwisu ""Enterprise Data Upload""';de = 'Import von Daten in die Datenbank über den Webservice ""Enterprise Data Upload""';ro = 'Încărcarea datelor în baza de informații prin intermediul serviciului web ""Enterprise Data Upload""';tr = 'Verilerin """"Enterprise Data Upload"" web hizmeti üzerinden veritabanına içe aktarımı'; es_ES = 'Descarga de datos en la base de información a través del servicio web ""Enterprise Data Upload""'");
+	ExecutionParameters.BackgroundJobKey = String(New UUID);
 	
-	ПараметрыВыполнения.ЗапуститьВФоне = Истина;
+	ExecutionParameters.RunInBackground = True;
 
-	ФоновоеЗадание = ДлительныеОперации.ВыполнитьВФоне(
-		"ОбменДаннымиСлужебный.ЗагрузитьДанныеXDTOВИнформационнуюБазу",
-		ПараметрыПроцедуры,
-		ПараметрыВыполнения);
-	ИдентификаторФоновогоЗадания = Строка(ФоновоеЗадание.ИдентификаторЗадания);
+	BackgroundJob = TimeConsumingOperations.ExecuteInBackground(
+		"DataExchangeInternal.ImportXDTODateToInfobase",
+		ProcedureParameters,
+		ExecutionParameters);
+	BackgroundJobID = String(BackgroundJob.JobID);
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-#КонецОбласти
+#EndRegion

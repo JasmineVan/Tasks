@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<ChildItems>
+			<Button name="FormEnableEditing" id="17">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.EnableEditing</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="FormEnableEditingExtendedTooltip" id="18"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="SubsystemName" id="1">
+			<DataPath>Record.SubsystemName</DataPath>
+			<ContextMenu name="SubsystemNameContextMenu" id="2"/>
+			<ExtendedTooltip name="SubsystemNameExtendedTooltip" id="3"/>
+		</InputField>
+		<UsualGroup name="VersionGroup" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Version</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wersja</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Version</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Versiune</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sürüm</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Versión</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="VersionGroupExtendedTooltip" id="14"/>
+			<ChildItems>
+				<InputField name="Version" id="4">
+					<DataPath>Record.Version</DataPath>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="VersionContextMenu" id="5"/>
+					<ExtendedTooltip name="VersionExtendedTooltip" id="6">
+						<Title formatted="true">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;b&gt;{Р|РР}.{П|ПП}.{З|ЗЗ}.{С|СС} &lt;/&gt;
+
+где: 
+&lt;b&gt;Р&lt;/&gt; - номер редакции (минимум 1 цифра, может занимать и больше разрядов); 
+&lt;b&gt;П&lt;/&gt; - номер подредакции (минимум 1 цифра, может занимать и больше разрядов); 
+&lt;b&gt;З&lt;/&gt; - номер версии (минимум 1 цифра, может занимать и больше разрядов); 
+&lt;b&gt;С&lt;/&gt; - номер сборки (минимум 1 цифра, может занимать и больше разрядов). 
+
+Пример:
+&lt;b&gt;1.6.4.7&lt;/&gt; – 7-я сборка, 4-й версии, редакции 1.6
+
+Подробнее см. &lt;link http://its.1c.ru/db/v8std#content:2149184132:hdoc&gt;Нумерация редакций и версий&lt;/&gt;</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>&lt;b&gt;{R|RR}.{S|SS}.{V|VV}.{B|BB}  &lt;/&gt;
+
+where: 
+&lt;b&gt;R&lt;/&gt; is the revision number (1 or more digits) 
+&lt;b&gt;S&lt;/&gt; is the subrevision number (1 or more digits) 
+&lt;b&gt;V&lt;/&gt; is the version number (1 or more digits) 
+&lt;b&gt;B&lt;/&gt; is the build number (1 or more digits)  
+
+Example: 
+&lt;b&gt;1.6.4.7&lt;/&gt; stands for revision 1.6, version 4, build 7.
+
+For more details, see &lt;link https://1c-dn.com/library/version_and_revision_numbering/&gt;Version and revision numbering&lt;/&gt;.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>pl</v8:lang>
+								<v8:content>&lt;b&gt;{R|RR}.{S|SS}.{V|VV}.{B|BB}  &lt;/&gt;
+
+where: 
+&lt;b&gt;R&lt;/&gt; is the revision number (1 or more digits) 
+&lt;b&gt;S&lt;/&gt; is the subrevision number (1 or more digits) 
+&lt;b&gt;V&lt;/&gt; is the version number (1 or more digits) 
+&lt;b&gt;B&lt;/&gt; is the build number (1 or more digits)  
+
+Example: 
+&lt;b&gt;1.6.4.7&lt;/&gt; stands for revision 1.6, version 4, build 7.
+
+For more details, see &lt;link https://1c-dn.com/library/version_and_revision_numbering/&gt;Version and revision numbering&lt;/&gt;.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>de</v8:lang>
+								<v8:content>&lt;b&gt;{Р|РР}.{П|ПП}.{З|ЗЗ}.{С|СС}&lt;/&gt;
+
+wo: 
+&lt;b&gt;R&lt;/&gt; - Nummer der Redaktion (mindestens 1 Ziffer kann mehr Stellen belegen); 
+&lt;b&gt;P&lt;/&gt; - Nummer der Redaktion (mindestens 1 Ziffer kann mehr Stellen belegen); 
+&lt;b&gt;Z&lt;/&gt; - Nummer der Version (mindestens 1 Ziffer kann mehr Stellen belegen); 
+&lt;b&gt;C&lt;/&gt; - Nummer der Baugruppe (mindestens 1 Ziffer kann mehr Stellen belegen). 
+
+Beispiel:
+&lt;b&gt;1.6.4.7 &lt;/&gt;- 7. Build, 4. Version, Ausgabe 1.6
+
+ Weitere Informationen finden Sie unter &lt;linkhttp://its.1c.ru/db/v8std#content:2149184132:hdoc&gt;Nummerierung von Ausgaben und Versionen&lt;/&gt;</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ro</v8:lang>
+								<v8:content>&lt;b&gt;{Р|РР}.{П|ПП}.{З|ЗЗ}.{С|СС} &lt;/&gt;
+
+unde: 
+&lt;b&gt;Р&lt;/&gt; - numărul redacției (minim 1 cifră, poate ocupa și mai multe cifre); 
+&lt;b&gt;П&lt;/&gt; - numărul subredacției (minim 1 cifră, poate ocupa și mai multe cifre); 
+&lt;b&gt;З&lt;/&gt; - numărul versiunii (minim 1 cifră, poate ocupa și mai multe cifre); 
+&lt;b&gt;С&lt;/&gt; - numărul asamblării (minim 1 cifră, poate ocupa și mai multe cifre). 
+
+Exemplu:
+&lt;b&gt;1.6.4.7&lt;/&gt; – asamblarea 7, versiunea 4, redacția1.6
+
+Detalii vezi: &lt;link http://its.1c.ru/db/v8std#content:2149184132:hdoc&gt;Нумерация редакций и версий&lt;/&gt;</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>tr</v8:lang>
+								<v8:content>&lt;b&gt;{Р|РР}.{П|ПП}.{З|ЗЗ}.{С|СС} &lt;/&gt;
+
+burada: 
+&lt;b&gt;Р&lt;/&gt; - revizyon numarası (minimum 1 hane, daha fazla hane da olabilir); 
+&lt;b&gt;П&lt;/&gt; - alt revizyon numarası (minimum 1 hane, daha fazla hane da olabilir); 
+&lt;b&gt;З&lt;/&gt; - sürüm numarası (minimum 1 hane, daha fazla hane da olabilir); 
+&lt;b&gt;С&lt;/&gt; - derleme numarası (minimum 1 hane, daha fazla hane da olabilir). 
+
+Örnek:
+&lt;b&gt;1.6.4.7&lt;/&gt; – 7.derleme, 4.sürüm, revizyon 1.6
+
+Detaylı bilgi için bkz. &lt;link http://its.1c.ru/db/v8std#content:2149184132:hdoc&gt;Revizyon ve sürümlerin numaralandırılması&lt;/&gt;</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>es_ES</v8:lang>
+								<v8:content>&lt;b&gt;{Р|РР}.{П|ПП}.{З|ЗЗ}.{С|СС} &lt;/&gt;
+
+donde: 
+&lt;b&gt;Р&lt;/&gt; - número de redaccoin (mínimo 1 cifra, puede ser de más dígitos); 
+&lt;b&gt;П&lt;/&gt; - número de subredacción (mínimo 1 cifra, puede ser de más dígitos); 
+&lt;b&gt;З&lt;/&gt; - número de la versión (mínimo 1 cifra, puede ser de más dígitos); 
+&lt;b&gt;С&lt;/&gt; - número de montaje (mínimo 1 cifra, puede ser de más dígitos). 
+
+Ejemplo:
+&lt;b&gt;1.6.4.7&lt;/&gt; – 7º montaje de la 4º versión de la redacción 1.6
+
+Véase más &lt;link http://its.1c.ru/db/v8std#content:2149184132:hdoc&gt;Enumeración de redacciones y versiones&lt;/&gt;</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</InputField>
+				<CheckBoxField name="IsMainConfiguration" id="7">
+					<DataPath>Record.IsMainConfiguration</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="IsMainConfigurationContextMenu" id="8"/>
+					<ExtendedTooltip name="IsMainConfigurationExtendedTooltip" id="9"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="DeferredHandlersRegistrationCompleted" id="10">
+			<DataPath>Record.DeferredHandlersRegistrationCompleted</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="DeferredHandlersRegisteredContextMenu" id="11"/>
+			<ExtendedTooltip name="DeferredHandlersRegisteredExtendedTooltip" id="12"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Record" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.SubsystemsVersions</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="EnableEditing" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Allow editing</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Udostępnij edycję</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bearbeitung aktivieren</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Permite editarea</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Düzenlemeyi etkinleştir</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Activar la edición</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только для целей поиска неисправности (требуется углубленное понимание работы механизма)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Allow editing for troubleshooting. The feature is for advanced users only.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Tylko dla celów wyszukiwania niesprawności (wymagane jest pogłębione zrozumienie pracy mechanizmu)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Nur zu Zwecken der Fehlersuche (erfordert ein tiefes Verständnis des Mechanismus)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Numai cu scopul căutării defecțiunii (este necesară cunoașterea avansată a mecanismului)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sadece hataların aranması için düzenlemeyi etkinleştir (ileri düzeyde mekanizma bilgisi gerekir)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Solo para buscar fallos (conocimientos avanzados del mecanismo requeridos)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>EnableEditing</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

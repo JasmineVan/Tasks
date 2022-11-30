@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>Use this list to map infobase users added in Designer to the members of <strong>Users</strong> and <strong>External users</strong> lists.</p>
+<p>To open the list, use the <strong>More actions</strong>—<strong>Infobase users</strong> command in the <a href="Catalog.Users/Help">user list</a> or the <a href="Catalog.ExternalUsers/Help">external user list</a>.</p>
+<p>When you save a <a href="Catalog.Users.Form.ItemForm/Help">user</a> or an <a href="Catalog.ExternalUsers.Form.ItemForm/Help">external user</a>, a matching infobase user is created or modified automatically. However, in certain cases, discrepancies may occur between the infobase user list and the application user list. This list can be useful when you need to:</p>
+<ul><li>Find "incorrect" (unmapped) infobase users: 
+<ul><li>The application compares the infobase user list with the application user list. 
+</li><li>If an application user was added, modified, or deleted in Designer, the mapped infobase user becomes inactive (marked gray). 
+</li><li>Infobase users that cannot be mapped to application users are marked red.</li></ul></li><li>Find mapping errors. 
+<ul><li>If an infobase user was created in Designer or programmatically, <a href="#2">map</a> it to an application user or <img src="StdPicture.Delete"></img><strong>Delete</strong> it. 
+</li><li>If an infobase user was deleted in Designer or programmatically but is still referenced by an application user, open the application user and save it in order to clear the reference (or map it to another infobase user). 
+</li><li>If a username of an infobase user was modified in Designer or programmatically, <a href="#3">open</a> the <a href="Catalog.Users.Form.ItemForm/Help">user</a> profile and save it to restore the full name of the infobase user. 
+<ul><li>In this case, the user profile shows a warning that differences must be eliminated. There are two buttons below the warning: 
+<ul><li><strong>Fill from infobase user</strong>. The <strong>Full user name</strong> field will be filled with the changed name from the <strong>Infobase users</strong> list. 
+</li><li><strong>Save</strong>. The full name from the user profile will be written to the <strong>Infobase users</strong> list.</li></ul></li></ul></li></ul></li><li><a href="#1">View the list</a> of all infobase users (this list is also available in Designer).</li></ul><p>The list displays:</p>
+<ul><li>
+<div><strong>Full name</strong>. A username of an infobase user (might differ from the username in the <strong>Users</strong> or <strong>External users</strong> list in case discrepancies occur).</div>
+</li><li>
+<div><strong>Username</strong>. Might differ from the username in the <strong>Users</strong> or <strong>External users</strong> list in case discrepancies occur.</div>
+</li><li>
+<div><strong>1C:Enterprise authentication</strong>. The value is "Yes" if 1C:Enterprise authentication is enabled for the user.</div>
+</li><li>
+<div><strong>OpenID authentication</strong>. The value is "Yes" if OpenID authentication is enabled for the user.</div>
+</li><li>
+<div><strong>OS authentication</strong>. The value is "Yes" if OpenID authentication is enabled for the user.</div></li></ul><p>You can add the following columns using the <strong>More actions—Change form</strong> command:</p>
+<ul><li>
+<div><strong>OS user</strong>. The operating system username for signing in to the application if OS authentication is enabled.</div>
+</li><li>
+<div><strong>Mapped to external user</strong>. Shows whether it is an external user.</div>
+</li><li>
+<div><strong>Added in Designer</strong>. Shows whether the user is added in Designer.<strong></strong></div>
+</li><li>
+<div><strong>Modified in Designer</strong>. "Yes" if the user is modified in Designer. Otherwise, <strong>False</strong>.</div>
+</li><li>
+<div><strong>Deleted in Designer</strong>. "Yes" if the user is deleted in Designer. Otherwise, <strong>False</strong>.</div></li></ul><h3><a name="1">Viewing unmapped records or the entire list</a></h3>
+<ul><li>
+<div>To view unmapped records that require manual correction, select the <strong>Show only users added, modified, or deleted in Designer</strong> check box. To view the entire list of infobase users, clear this check box.</div></li></ul><h3><a name="2">Mapping users</a></h3>
+<p>To map infobase users to application users, use one of the following buttons:</p>
+<ul><li>
+<div><strong>Map</strong>. Map an infobase user to an existing application user.</div>
+<ul><li>
+<div>Click <strong>User</strong> or <strong>External user</strong> and click <strong>OK</strong>. </div>
+</li><li>
+<div>To select a user, double-click it, or click it and then click <strong>Select</strong>.</div>
+</li><li>
+<div>In the <strong>User</strong> or <strong>External user</strong> window, make edits and click <strong>Save and close</strong>. After that, user data mapping in two lists will be restored.</div></li></ul></li><li>
+<div><strong>Map to new user</strong>. Map an infobase user to a new application user.</div>
+<ul><li>
+<div>Click <strong>User</strong> or <strong>External user</strong> and click <strong>OK</strong>. </div>
+</li><li>
+<div>Create a user or an external user. After saving data user data mapping in two lists will be restored.</div></li></ul></li><li>
+<div><strong>Clear mapping</strong>. Clear automatic mapping of infobase users to application users for further manual mapping. This is only required in rare cases when mapping was performed incorrectly (for example, during the infobase update). It is recommended that you do not clear the mapping in other cases. </div></li></ul><h3><a name="3">Viewing mapped users</a></h3>
+<ul><li>
+<div>Select an infobase user. To open an application user or an external application user mapped to the infobase user, right-click the infobase user or click <strong>More actions</strong>, and then click <strong>Go to user</strong>.</div></li></ul><h3>See also:</h3>
+<ul><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

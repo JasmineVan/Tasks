@@ -1,0 +1,1396 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="FormWriteAndClose" id="10">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.WriteAndClose</CommandName>
+				<ExtendedTooltip name="FormWriteAndCloseExtendedTooltip" id="11"/>
+			</Button>
+			<Button name="FormHelp" id="110">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="FormHelpExtendedTooltip" id="111"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="PasswordComplexityGroup" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сложность пароля</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Password complexity</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Złożoność hasła</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Komplexität des Passworts</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Complexitatea parolei</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Şifre zorluğu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Dificultad de la contraseña</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<United>false</United>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:FormBackColor</BackColor>
+			<ExtendedTooltip name="PasswordComplexityGroupExtendedTooltip" id="34"/>
+			<ChildItems>
+				<CheckBoxField name="PasswordMustMeetComplexityRequirements" id="4">
+					<DataPath>PasswordMustMeetComplexityRequirements</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверять, чтобы новый пароль:
+- имел не менее 7 символов; 
+- содержал любые 3 из 4-х типов символов: заглавные буквы,
+  строчные буквы, цифры, специальные символы;
+- не совпадал с именем (для входа).</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>The new password must:
+- contain at least 7 characters
+- contain any 3 out of 4 character types: uppercase letters, 
+lowercase letters, numbers, and special characters
+- differ from the username</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Nowe hasło musi:
+- zawierać co najmniej 7 znaków
+- zawierać dowolne 3 z 4 typów znaków: wielkie litery, 
+małe litery, cyfry i znaki specjalne
+- różne od nazwy użytkownika</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Vergewissern Sie sich, dass das neue Passwort:
+- mindestens 7 Zeichen lang ist; 
+- 3 beliebige der 4 Zeichentypen enthält: Großbuchstaben,
+ Kleinbuchstaben, Zahlen, Sonderzeichen;
+- nicht mit dem Namen übereinstimmt (für die Anmeldung).</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Verifică dacă parola nouă:
+- conține nu mai puțin de 7 caractere; 
+- conține oricare 3 din 4 tipuri de caractere: litere majuscule,
+ litere minuscule, cifre, simboluri speciale;
+- nu coincide cu numele (pentru intrare).</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Yeni şifrenin: - 
+en az 7 karakterden oluştuğunu;
+-4 karakter türünden herhangi 3'nü içerdiğini: büyük harfler, 
+küçük harfler, sayılar, özel karakterler; 
+- adıyla eşleşmediğini (giriş için) kontrol edin.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Comprobar que la nueva contraseña:
+- tenga no menos que 7 símbolos;
+- contenga cualesquiera de 3 o 4 tipos de símbolos: letras mayúsculas,
+ letras minúsculas, cifras, símbolos especiales;
+- no sea igual al nombre (para entrar).</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="PasswordMustComplyWithComplexityRequirements" id="5"/>
+					<ExtendedTooltip name="PasswordMustComplyWithComplexityRequirementsExtendedTooltip" id="6"/>
+					<Events>
+						<Event name="OnChange">PasswordMustMeetComplexityRequirementsOnChange</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="MinPasswordLengthGroup" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Минимальная длина пароля</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Minimum password length</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Minimalna długość hasła</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Minimale Passwortlänge</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Lungimea minimă a parolei</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Minimum şifre uzunluğu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Longitud mínima de la contraseña</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="MinPasswordLengthGroupExtendedTooltip" id="44"/>
+					<ChildItems>
+						<CheckBoxField name="MinPasswordLengthEnable" id="86">
+							<DataPath>MinPasswordLengthEnable</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="MinPasswordLengthEnableContextMenu" id="87"/>
+							<ExtendedTooltip name="MinPasswordLengthEnableExtendedTooltip" id="88"/>
+							<Events>
+								<Event name="OnChange">SettingEnableOnChange</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="MinPasswordLength" id="1">
+							<DataPath>MinPasswordLength</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<MinValue xsi:type="xs:decimal">1</MinValue>
+							<ContextMenu name="MinPasswordLengthContextMenu" id="2"/>
+							<ExtendedTooltip name="MinPasswordLengthExtendedTooltip" id="3"/>
+							<Events>
+								<Event name="OnChange">MinPasswordLengthOnChange</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="MinPasswordLengthNote" id="45">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>знак.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>chars</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>charakterystyka/parametry</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Zeichen.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>caracter.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>karakter.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>símbolo.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="MinPasswordLengthNoteContextMenu" id="46"/>
+							<ExtendedTooltip name="MinPasswordLengthNoteExtendedTooltip" id="47"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ChangePasswordGroup" id="108">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Смена пароля</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change password</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zmiana hasła</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Passwortänderung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Modificarea parolei</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Şifre değişikliği</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Cambio de la contraseña</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<United>false</United>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:FormBackColor</BackColor>
+			<ExtendedTooltip name="ChangePasswordGroupExtendedTooltip" id="109"/>
+			<ChildItems>
+				<UsualGroup name="MaxPasswordLifetimeGroup" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Максимальный срок действия пароля</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Maximum password validity period</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Maksymalny termin ważności hasła</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Maximale Gültigkeitsdauer des Passworts</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Termen maxim de valabilitate a parolei</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Şifrenin maksimum geçerlilik süresi</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Período de validez máximo de la contraseña</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="MaxPasswordLifetimeGroupExtendedTooltip" id="54"/>
+					<ChildItems>
+						<CheckBoxField name="MaxPasswordLifetimeEnable" id="92">
+							<DataPath>MaxPasswordLifetimeEnable</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="MaxPasswordLifetimeEnableContextMenu" id="93"/>
+							<ExtendedTooltip name="MaxPasswordLifetimeEnableExtendedTooltip" id="94"/>
+							<Events>
+								<Event name="OnChange">SettingEnableOnChange</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="MaxPasswordLifetime" id="12">
+							<DataPath>MaxPasswordLifetime</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Срок после первого входа с новым паролем,
+после которого пользователю потребуется сменить пароль.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>The period from the first use of the password
+to the moment the password expires.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Okres od pierwszego użycia hasła
+do momentu wygaśnięcia hasła.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Zeit nach der ersten Anmeldung mit einem neuen Passwort,
+nachdem der Benutzer das Passwort ändern muss.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Termenul după prima intrare cu parola nouă,
+după care utilizatorul va trebui să modifice parola.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Kullanıcının şifreyi değiştirmesi gereken 
+yeni parola ile ilk girişten sonraki süre.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Período después de la primera entrada con la contraseña nueva,
+después del que el usuario debe cambiar la contraseña.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<MinValue xsi:type="xs:decimal">1</MinValue>
+							<ContextMenu name="MaxPasswordLifetimeContextMenu" id="13"/>
+							<ExtendedTooltip name="MaxPasswordLifetimeExtendedTooltip" id="14"/>
+						</InputField>
+						<LabelDecoration name="MaxPasswordLifetimeNote" id="55">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>дн.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>days</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>dn.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Tage</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>zile</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>gün</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>días.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="MaxPasswordLifetimeNoteContextMenu" id="56"/>
+							<ExtendedTooltip name="MaxPasswordLifetimeNoteExtendedTooltip" id="57"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="MinPasswordValidityPeriodGroup" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Минимальный срок действия пароля</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Minimum password validity period</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Minimalny termin ważności hasła</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Minimale Gültigkeitsdauer des Passworts</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Termen minim de valabilitate a parolei</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Şifrenin minimum geçerlilik süresi</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Período de validez mínimo de la contraseña</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="MinPasswordValidityPeriodGroupExtendedTooltip" id="49"/>
+					<ChildItems>
+						<CheckBoxField name="MinPasswordLifetimeEnable" id="89">
+							<DataPath>MinPasswordLifetimeEnable</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="MinPasswordValidityPeriodEnableContextMenu" id="90"/>
+							<ExtendedTooltip name="MinPasswordValidityPeriodEnableExtendedTooltip" id="91"/>
+							<Events>
+								<Event name="OnChange">SettingEnableOnChange</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="MinPasswordLifetime" id="25">
+							<DataPath>MinPasswordLifetime</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Срок после первого входа с новым паролем,
+в течение которого пользователь не сможет сменить пароль.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>The period from the first use of the password
+when the user cannot change the password.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Okres od pierwszego użycia hasła
+do momentu wygaśnięcia hasła.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Der Zeitraum nach der ersten Anmeldung mit einem neuen Passwort,
+in dem der Benutzer das Passwort nicht ändern kann.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Termenul după prima intrare cu parola nouă,
+pe durata căruia utilizatorul nu va putea să modifice parola.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Kullanıcının şifreyi değiştiremeyeceği 
+yeni parola ile ilk girişten sonraki süre.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Período después de la primera entrada con la contraseña nueva,
+durante el que el usuario no puede cambiar la contraseña.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<MinValue xsi:type="xs:decimal">1</MinValue>
+							<ContextMenu name="MinPasswordValidityPeriodContextMenu" id="26"/>
+							<ExtendedTooltip name="MinPasswordValidityPeriodExtendedTooltip" id="27"/>
+						</InputField>
+						<LabelDecoration name="MinPasswordValidityPeriodNote" id="50">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>дн.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>days</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>dn.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Tage</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>zile</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>gün</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>días.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="MinPasswordValidityPeriodNoteContextMenu" id="51"/>
+							<ExtendedTooltip name="MinPasswordValidityPeriodNoteExtendedTooltip" id="52"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="DenyReusingRecentPasswordsGroup" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запретить повторение пароля среди последних</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Prohibit to reuse the same password before changed</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Zakaz na powtórzenie hasła wśród ostatnich</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Die Wiederholung des Passworts aus den letzten Passwörtern ist verboten</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Interzice repetarea parolei între ultimele</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Son şifrelerden biri kullanılamaz</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Prohibir la repetición de la contraseña entre últimas</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="DenyReusingRecentPasswordsGroupExtendedTooltip" id="39"/>
+					<ChildItems>
+						<CheckBoxField name="DenyReusingRecentPasswordsEnable" id="83">
+							<DataPath>DenyReusingRecentPasswordsEnable</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="DenyReusingRecentPasswordsEnableContextMenu" id="84"/>
+							<ExtendedTooltip name="DenyReusingRecentPasswordsenableExtendedTooltip" id="85"/>
+							<Events>
+								<Event name="OnChange">SettingEnableOnChange</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="DenyReusingRecentPasswords" id="7">
+							<DataPath>DenyReusingRecentPasswords</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<MinValue xsi:type="xs:decimal">1</MinValue>
+							<ContextMenu name="DenyReusingRecentPasswordsContextMenu" id="8"/>
+							<ExtendedTooltip name="DenyReusingRecentPasswordsExtendedTooltip" id="9"/>
+						</InputField>
+						<LabelDecoration name="DenyReusingRecentPasswordsNote" id="40">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>знач.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>times</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>wart.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Bed.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>valori</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>değ.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>valor.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="DenyReusingRecentPasswordsNoteContextMenu" id="41"/>
+							<ExtendedTooltip name="DenyReusingRecentPasswordsNoteExtendedTooltip" id="42"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="InactivityPeriodBeforeDenyingAuthorizationGroup" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просрочка работы в программе до запрещения входа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Inactivity period before denying authorization</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Okres bezczynności przed odmową autoryzacji</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verzögerte Arbeit im Programm, bevor der Zugang verweigert wird</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Termenul de inactivitate înainte de a refuza autorizarea</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Giriş yasaklamadan önce programda gecikme</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Caducidad del uso del programa antes de prohibir la entrada</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>NormalSeparation</Representation>
+			<United>false</United>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="InactivityPeriodBeforeDenyingAuthorizationGroupExtendedTooltip" id="76"/>
+			<ChildItems>
+				<CheckBoxField name="InactivityPeriodBeforeDenyingAuthorizationEnable" id="95">
+					<DataPath>InactivityPeriodBeforeDenyingAuthorizationEnable</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<TitleHeight>2</TitleHeight>
+					<VerticalAlign>Top</VerticalAlign>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="InactivityPeriodBeforeDenyingAuthorizationEnableContextMenu" id="96"/>
+					<ExtendedTooltip name="InactivityPeriodBeforeDenyingAuthorizationEnableExtendedTooltip" id="97"/>
+					<Events>
+						<Event name="OnChange">SettingEnableOnChange</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="InactivityPeriodBeforeDenyingAuthorization" id="77">
+					<DataPath>InactivityPeriodBeforeDenyingAuthorization</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок относительно последней активности пользователя,
+после которого вход в программу будет запрещен.
+
+Не влияет на администраторов.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Inactivity period before the user is blocked
+from signing in to the application.
+
+The setting does not affect administrators.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Okres nieaktywności przed zablokowaniem
+użytkownika do zalogowania się do aplikacji.
+
+Ustawienie nie wpływa na administratorów.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Frist für die letzte Benutzeraktivität,
+nach der der Zugriff auf das Programm verweigert wird.
+
+Betrifft nicht die Administratoren.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Termenul, în raport cu ultima activitate a utilizatorului,
+după care intrarea în program va fi interzisă.
+
+Nu afectează administratorii.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Programa girişin engelleneceği 
+son kullanıcı etkinliğine göre süre. 
+
+Yöneticiler etkilemez.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>El período de la última actividad relativa del usuario,
+después del que estará prohibido entrar en el programa.
+
+No influye en los administradores.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<MinValue xsi:type="xs:decimal">1</MinValue>
+					<ContextMenu name="InactivityPeriodBeforeDenyingAuthorizationContextMenu" id="78"/>
+					<ExtendedTooltip name="InactivityPeriodBeforeDenyingAuthorizationExtendedTooltip" id="79"/>
+				</InputField>
+				<LabelDecoration name="InactivityPeriodBeforeDenyingAuthorizationNote" id="80">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>дн.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>days</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>dn.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Tage</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>zile</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>gün</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>días.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="InactivityPeriodBeforeDenyingAuthorizationNoteContextMenu" id="81"/>
+					<ExtendedTooltip name="InactivityPeriodBeforeDenyingAuthorizationNoteExtendedTooltip" id="82"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="MinPasswordLength" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Минимальная длина пароля</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Minimum password length</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Minimalna długość hasła</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Minimale Passwortlänge</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Lungimea minimă a parolei</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Minimum şifre uzunluğu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Longitud mínima de la contraseña</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="PasswordMustMeetComplexityRequirements" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль должен отвечать требованиям сложности</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Apply password complexity requirements</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zastosuj wymagania dotyczące złożoności hasła</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Das Passwort muss den Komplexitätsanforderungen entsprechen.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Parola trebuie să îndeplinească cerințele de complexitate</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Parola karmaşıklık gereksinimlerini karşılamalıdır</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>La contraseña debe coincidir a las exigencias de dificultad</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DenyReusingRecentPasswords" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить повторение пароля среди последних</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Prohibit to reuse the same password before changed</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zakaz na powtórzenie hasła wśród ostatnich</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Die Wiederholung des Passworts aus den letzten Passwörtern ist verboten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Interzice repetarea parolei între ultimele</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Son şifrelerden biri kullanılamaz</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Prohibir la repetición de la contraseña entre últimas</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="MaxPasswordLifetime" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальный срок действия пароля</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Maximum password validity period</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Maksymalny termin ważności hasła</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Maximale Gültigkeitsdauer des Passworts</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Termen maxim de valabilitate a parolei</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Şifrenin maksimum geçerlilik süresi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Período de validez máximo de la contraseña</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="MinPasswordLifetime" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Минимальный срок действия пароля</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Minimum password validity period</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Minimalny termin ważności hasła</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Minimale Gültigkeitsdauer des Passworts</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Termen minim de valabilitate a parolei</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Şifrenin minimum geçerlilik süresi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Período de validez mínimo de la contraseña</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ShowExternalUsersSettings" id="9">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="InactivityPeriodBeforeDenyingAuthorization" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просрочка работы в программе до запрещения входа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Inactivity period before denying authorization</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Okres bezczynności przed odmową autoryzacji</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verzögerte Arbeit im Programm, bevor der Zugang verweigert wird</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Termenul de inactivitate înainte de a refuza autorizarea</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Giriş yasaklamadan önce programda gecikme</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Caducidad del uso del programa antes de prohibir la entrada</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="DenyReusingRecentPasswordsEnable" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить повторение пароля среди последних:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Prohibit to reuse the same password before changed:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zakaz na powtórzenie hasła wśród ostatnich:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Die Wiederholung des Passworts unter den letzten verbieten:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Interzice repetarea parolei între ultimele:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Son şifrelerden biri kullanılamaz:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Prohibir la repetición de la contraseña entre últimas:</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="MinPasswordLengthEnable" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Минимальная длина пароля:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Minimum password length:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Minimalna długość hasła:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Minimale Passwortlänge:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Lungimea minimă a parolei:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Minimum şifre uzunluğu:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Longitud mínima de la contraseña:</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="MinPasswordLifetimeEnable" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Минимальный срок действия пароля:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Minimum password validity period:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Minimalny termin ważności hasła:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Minimale Gültigkeitsdauer des Passworts:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Termen minim de valabilitate a parolei:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Şifrenin minimum geçerlilik süresi:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Período de validez mínimo de la contraseña:</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="MaxPasswordLifetimeEnable" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальный срок действия пароля:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Maximum password validity period:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Maksymalny termin ważności hasła:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Maximale Gültigkeitsdauer des Passworts:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Termen maxim de valabilitate a parolei:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Şifrenin maksimum geçerlilik süresi:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Período de validez máximo de la contraseña:</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="InactivityPeriodBeforeDenyingAuthorizationEnable" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрещать вход в программу пользователям, которые не работали в программе более:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Inactivity period before the user is blocked from signing in to the application:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Okres nieaktywności przed zablokowaniem użytkownika do zalogowania się do aplikacji:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verbieten Sie Benutzern, die nicht mehr im Programm gearbeitet haben, den Zugriff auf das Programm:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Interzice intrarea în program utilizatorilor care nu au lucrat în program mai mult de:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Uygulamada ... 'dan fazla çalışmayan kullanıcıların uygulamaya girişi engelle</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Prohibir entrar en el programa a los usuarios que no han trabajado en el programa más de:</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="RecommendedSettings" id="21">
+			<Type/>
+		</Attribute>
+		<Attribute name="ClearDesignerSettingsQuestionText" id="22">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="WriteAndClose" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save and close</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zapisz i zamknij</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Speichern und schließen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Salvare și închidere</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kaydet ve kapat</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Guardar y cerrar</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save and close</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zapisz i zamknij</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Speichern und schließen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Salvare și închidere</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kaydet ve kapat</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Guardar y cerrar</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>WriteAndClose</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CheckConfirmationCodeSent" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Sprawdzić</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Prüfen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Verificați</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kontrol</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Revisar</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить отправку кода подтверждения
+(на почтовый ящик текущего пользователя)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check whether the confirmation code
+was sent to the current user's email.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Sprawdź, czy kod potwierdzenia
+został wysłany pod adres e-mail bieżącego użytkownika.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Überprüfen Sie das Senden des Bestätigungscodes
+(an den Posteingang des aktuellen Benutzers)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Verifică trimiterea codului de confirmare
+(la cutia poștală a utilizatorului curent)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Onay kodunun gönderilip gönderilmediğini kontrol et
+(geçerli kullanıcının posta kutusuna)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Comprobar el envío del código de confirmación
+ (al correo electrónico del usuario actual)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CheckAuthorizationInvitationSent" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Sprawdzić</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Prüfen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Verificați</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kontrol</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Revisar</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить отправку приглашения на вход
+(на почтовый ящик текущего пользователя)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check whether the invitation to sign in
+was sent to the current user's email.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Sprawdź, czy zaproszenie do podpisania i zostało wysłane
+pod adres e-mail bieżącego użytkownika.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Überprüfen Sie das Senden der Login-Anfrage
+(an den Posteingang des aktuellen Benutzers)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Verifică trimiterea invitației de intrare
+(la cutia poștală a utilizatorului curent)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Giriş isteminin gönderilip gönderilmediğini kontrol et 
+(geçerli kullanıcının posta kutusuna)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Comprobar el envío de la invitación de entrar
+ (al correo electrónico del usuario actual)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ShowExternalUsersSettings">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

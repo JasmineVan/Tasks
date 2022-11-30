@@ -1,716 +1,734 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) 2019, ООО 1С-Софт
-// Все права защищены. Эта программа и сопроводительные материалы предоставляются 
-// в соответствии с условиями лицензии Attribution 4.0 International (CC BY 4.0)
-// Текст лицензии доступен по ссылке:
+// Copyright (c) 2019, 1C-Soft LLC
+// All Rights reserved. This application and supporting materials are provided under the terms of 
+// Attribution 4.0 International license (CC BY 4.0)
+// The license text is available at:
 // https://creativecommons.org/licenses/by/4.0/legalcode
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#Область СлужебныеПроцедурыИФункции
+#Region Private
 
 ////////////////////////////////////////////////////////////////////////////////
-// Обработчики операций
+// Web service operation handlers
 
-// Соответствует операции Upload.
-Функция ВыполнитьВыгрузку(ИмяПланаОбмена, КодУзлаИнформационнойБазы, ХранилищеСообщенияОбмена)
+// Matches the Upload web service operation.
+Function ExecuteExport(ExchangePlanName, InfobaseNodeCode, ExchangeMessageStorage)
 	
-	ПроверитьБлокировкуИнформационнойБазыДляОбновления();
+	CheckInfobaseLockForUpdate();
 	
-	ОбменДаннымиСервер.ПроверитьИспользованиеОбменаДанными();
+	DataExchangeServer.CheckDataExchangeUsage();
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	СообщениеОбмена = "";
+	ExchangeMessage = "";
 	
-	ОбменДаннымиСервер.ВыполнитьВыгрузкуДляУзлаИнформационнойБазыЧерезСтроку(ИмяПланаОбмена, КодУзлаИнформационнойБазы, СообщениеОбмена);
+	DataExchangeServer.ExportForInfobaseNodeViaString(ExchangePlanName, InfobaseNodeCode, ExchangeMessage);
 	
-	ХранилищеСообщенияОбмена = Новый ХранилищеЗначения(СообщениеОбмена, Новый СжатиеДанных(9));
+	ExchangeMessageStorage = New ValueStorage(ExchangeMessage, New Deflation(9));
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции Download.
-Функция ВыполнитьЗагрузку(ИмяПланаОбмена, КодУзлаИнформационнойБазы, ХранилищеСообщенияОбмена)
+// Matches the Download web service operation.
+Function ExecuteImport(ExchangePlanName, InfobaseNodeCode, ExchangeMessageStorage)
 	
-	ПроверитьБлокировкуИнформационнойБазыДляОбновления();
+	CheckInfobaseLockForUpdate();
 	
-	ОбменДаннымиСервер.ПроверитьИспользованиеОбменаДанными();
+	DataExchangeServer.CheckDataExchangeUsage();
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	ОбменДаннымиСервер.ВыполнитьЗагрузкуДляУзлаИнформационнойБазыЧерезСтроку(ИмяПланаОбмена, КодУзлаИнформационнойБазы, ХранилищеСообщенияОбмена.Получить());
+	DataExchangeServer.ImportForInfobaseNodeViaString(ExchangePlanName, InfobaseNodeCode, ExchangeMessageStorage.Get());
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции UploadData.
-Функция ВыполнитьВыгрузкуДанных(ИмяПланаОбмена,
-								КодУзлаИнформационнойБазы,
-								ИдентификаторФайлаСтрокой,
-								ДлительнаяОперация,
-								ИдентификаторОперации,
-								ДлительнаяОперацияРазрешена)
+// Matches the UploadData web service operation.
+Function RunDataExport(ExchangePlanName,
+								InfobaseNodeCode,
+								FileIDAsString,
+								TimeConsumingOperation,
+								OperationID,
+								TimeConsumingOperationAllowed)
 	
-	ПроверитьБлокировкуИнформационнойБазыДляОбновления();
+	CheckInfobaseLockForUpdate();
 	
-	ОбменДаннымиСервер.ПроверитьИспользованиеОбменаДанными();
+	DataExchangeServer.CheckDataExchangeUsage();
 	
-	ИдентификаторФайла = Новый УникальныйИдентификатор;
-	ИдентификаторФайлаСтрокой = Строка(ИдентификаторФайла);
-	ВыполнитьВыгрузкуДанныхВКлиентСерверномРежиме(ИмяПланаОбмена, КодУзлаИнформационнойБазы, ИдентификаторФайла, ДлительнаяОперация, ИдентификаторОперации, ДлительнаяОперацияРазрешена);
+	FileID = New UUID;
+	FileIDAsString = String(FileID);
+	RunExportDataInClientServerMode(ExchangePlanName, InfobaseNodeCode, FileID, TimeConsumingOperation, OperationID, TimeConsumingOperationAllowed);
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции DownloadData.
-Функция ВыполнитьЗагрузкуДанных(ИмяПланаОбмена,
-								КодУзлаИнформационнойБазы,
-								ИдентификаторФайлаСтрокой,
-								ДлительнаяОперация,
-								ИдентификаторОперации,
-								ДлительнаяОперацияРазрешена)
+// Matches the DownloadData web service operation.
+Function RunDataImport(ExchangePlanName,
+								InfobaseNodeCode,
+								FileIDAsString,
+								TimeConsumingOperation,
+								OperationID,
+								TimeConsumingOperationAllowed)
 	
-	ПроверитьБлокировкуИнформационнойБазыДляОбновления();
+	CheckInfobaseLockForUpdate();
 	
-	ОбменДаннымиСервер.ПроверитьИспользованиеОбменаДанными();
+	DataExchangeServer.CheckDataExchangeUsage();
 	
-	ИдентификаторФайла = Новый УникальныйИдентификатор(ИдентификаторФайлаСтрокой);
-	ВыполнитьЗагрузкуДанныхВКлиентСерверномРежиме(ИмяПланаОбмена, КодУзлаИнформационнойБазы, ИдентификаторФайла, ДлительнаяОперация, ИдентификаторОперации, ДлительнаяОперацияРазрешена);
+	FileID = New UUID(FileIDAsString);
+	RunImportDataInClientServerMode(ExchangePlanName, InfobaseNodeCode, FileID, TimeConsumingOperation, OperationID, TimeConsumingOperationAllowed);
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции GetIBParameters.
-Функция ПолучитьПараметрыИнформационнойБазы(ИмяПланаОбмена, КодУзла, СообщениеОбОшибке)
+// Matches the GetIBParameters web service operation.
+Function GetInfobaseParameters(ExchangePlanName, NodeCode, ErrorMessage)
 	
-	Результат = ОбменДаннымиСервер.ПараметрыИнформационнойБазы(ИмяПланаОбмена, КодУзла, СообщениеОбОшибке);
-	Возврат СериализаторXDTO.ЗаписатьXDTO(Результат);
+	Result = DataExchangeServer.InfobaseParameters(ExchangePlanName, NodeCode, ErrorMessage);
+	Return XDTOSerializer.WriteXDTO(Result);
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции GetIBData.
-Функция ПолучитьДанныеИнформационнойБазы(ПолноеИмяТаблицы)
+// Matches the GetIBData web service operation.
+Function GetInfobaseData(FullTableName)
 	
-	Возврат СериализаторXDTO.ЗаписатьXDTO(ОбменДаннымиСервер.ДанныеКорреспондента(ПолноеИмяТаблицы));
+	Return XDTOSerializer.WriteXDTO(DataExchangeServer.CorrespondentData(FullTableName));
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции GetCommonNodsData.
-Функция ПолучитьОбщиеДанныеУзлов(ИмяПланаОбмена)
+// Matches the GetCommonNodsData web service operation.
+Function GetCommonNodesData(ExchangePlanName)
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	Возврат СериализаторXDTO.ЗаписатьXDTO(ОбменДаннымиСервер.ДанныеДляТабличныхЧастейУзловЭтойИнформационнойБазы(ИмяПланаОбмена));
+	Return XDTOSerializer.WriteXDTO(DataExchangeServer.DataForThisInfobaseNodeTabularSections(ExchangePlanName));
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции CreateExchange.
-Функция СоздатьОбменДанными(ИмяПланаОбмена, СтрокаПараметров, НастройкаОтборовXDTO, ЗначенияПоУмолчаниюXDTO)
+// Matches the CreateExchange web service operation.
+Function CreateDataExchange(ExchangePlanName, ParametersString, FiltersSettingsXDTO, DefaultValuesXDTO)
 	
-	ОбменДаннымиСервер.ПроверитьИспользованиеОбменаДанными();
+	DataExchangeServer.CheckDataExchangeUsage();
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	// Получаем обработку помощника настройки обмена во второй базе.
-	ПомощникСозданияОбменаДанными = ОбменДаннымиСервер.МодульПомощникСозданияОбменаДанными().Создать();
-	ПомощникСозданияОбменаДанными.ИмяПланаОбмена = ИмяПланаОбмена;
+	// Creating an instance of exchange setup wizard data processor.
+	DataExchangeCreationWizard = DataExchangeServer.ModuleDataExchangeCreationWizard().Create();
+	DataExchangeCreationWizard.ExchangePlanName = ExchangePlanName;
 	
-	Отказ = Ложь;
+	Cancel = False;
 	
-	// Загружаем параметры помощника из строки в обработку помощника.
-	ПомощникСозданияОбменаДанными.ВыполнитьЗагрузкуПараметровМастера(Отказ, СтрокаПараметров);
+	// Loading wizard parameters from a string to the wizard data processor.
+	DataExchangeCreationWizard.ImportWizardParameters(Cancel, ParametersString);
 	
-	Если Отказ Тогда
-		Сообщение = НСтр("ru = 'При создании настройки обмена во второй информационной базе возникли ошибки: %1'");
-		Сообщение = СтроковыеФункцииКлиентСервер.ПодставитьПараметрыВСтроку(Сообщение, ПомощникСозданияОбменаДанными.СтрокаСообщенияОбОшибке());
+	If Cancel Then
+		Message = NStr("ru = 'При создании настройки обмена во второй информационной базе возникли ошибки: %1'; en = 'Errors occurred in the second infobase during the data exchange setup: %1'; pl = 'Podczas tworzenia ustawień wymiany w drugiej bazie informacyjnej wystąpiły błędy: %1';de = 'Beim Erstellen der Austausch-Einstellung in der zweiten Infobase sind Fehler aufgetreten: %1';ro = 'La crearea setării de schimb în cea de-a doua bază de date au apărut erori: %1';tr = 'İkinci veritabanında değişim ayarı oluştururken, hatalar oluştu: %1'; es_ES = 'Al crear la configuración de intercambio en la segunda infobase, han ocurrido errores: %1'");
+		Message = StringFunctionsClientServer.SubstituteParametersToString(Message, DataExchangeCreationWizard.ErrorMessageString());
 		
-		ЗаписьЖурналаРегистрации(ОбменДаннымиСервер.СобытиеЖурналаРегистрацииСозданиеОбменаДанными(),
-			УровеньЖурналаРегистрации.Ошибка, , , Сообщение);
+		WriteLogEvent(DataExchangeServer.DataExchangeCreationEventLogEvent(),
+			EventLogLevel.Error, , , Message);
 		
-		ВызватьИсключение Сообщение;
-	КонецЕсли;
+		Raise Message;
+	EndIf;
 	
-	ПомощникСозданияОбменаДанными.ВариантРаботыМастера = "ПродолжитьНастройкуОбменаДанными";
-	ПомощникСозданияОбменаДанными.ЭтоНастройкаРаспределеннойИнформационнойБазы = Ложь;
-	ПомощникСозданияОбменаДанными.ВидТранспортаСообщенийОбмена = Перечисления.ВидыТранспортаСообщенийОбмена.WS;
-	ПомощникСозданияОбменаДанными.ПрефиксИнформационнойБазыИсточникаУстановлен = ЗначениеЗаполнено(ПолучитьФункциональнуюОпцию("ПрефиксИнформационнойБазы"));
+	DataExchangeCreationWizard.WizardRunOption = "ContinueDataExchangeSetup";
+	DataExchangeCreationWizard.IsDistributedInfobaseSetup = False;
+	DataExchangeCreationWizard.ExchangeMessagesTransportKind = Enums.ExchangeMessagesTransportTypes.WS;
+	DataExchangeCreationWizard.SourceInfobasePrefixIsSet = ValueIsFilled(GetFunctionalOption("InfobasePrefix"));
 	
-	// Выполняем создание настройки обмена.
-	ПомощникСозданияОбменаДанными.ВебСервисВыполнитьДействияПоНастройкеНовогоОбменаДанными(
-											Отказ,
-											СериализаторXDTO.ПрочитатьXDTO(НастройкаОтборовXDTO),
-											СериализаторXDTO.ПрочитатьXDTO(ЗначенияПоУмолчаниюXDTO));
+	// Creating an exchange setting.
+	DataExchangeCreationWizard.SetUpNewDataExchangeWebService(
+											Cancel,
+											XDTOSerializer.ReadXDTO(FiltersSettingsXDTO),
+											XDTOSerializer.ReadXDTO(DefaultValuesXDTO));
 	
-	Если Отказ Тогда
-		Сообщение = НСтр("ru = 'При создании настройки обмена во второй информационной базе возникли ошибки: %1'");
-		Сообщение = СтроковыеФункцииКлиентСервер.ПодставитьПараметрыВСтроку(Сообщение, ПомощникСозданияОбменаДанными.СтрокаСообщенияОбОшибке());
+	If Cancel Then
+		Message = NStr("ru = 'При создании настройки обмена во второй информационной базе возникли ошибки: %1'; en = 'Errors occurred in the second infobase during the data exchange setup: %1'; pl = 'Podczas tworzenia ustawień wymiany w drugiej bazie informacyjnej wystąpiły błędy: %1';de = 'Beim Erstellen der Austausch-Einstellung in der zweiten Infobase sind Fehler aufgetreten: %1';ro = 'La crearea setării de schimb în cea de-a doua bază de date au apărut erori: %1';tr = 'İkinci veritabanında değişim ayarı oluştururken, hatalar oluştu: %1'; es_ES = 'Al crear la configuración de intercambio en la segunda infobase, han ocurrido errores: %1'");
+		Message = StringFunctionsClientServer.SubstituteParametersToString(Message, DataExchangeCreationWizard.ErrorMessageString());
 		
-		ЗаписьЖурналаРегистрации(ОбменДаннымиСервер.СобытиеЖурналаРегистрацииСозданиеОбменаДанными(),
-			УровеньЖурналаРегистрации.Ошибка, , , Сообщение);
+		WriteLogEvent(DataExchangeServer.DataExchangeCreationEventLogEvent(),
+			EventLogLevel.Error, , , Message);
 		
-		ВызватьИсключение Сообщение;
-	КонецЕсли;
+		Raise Message;
+	EndIf;
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции UpdateExchange.
-Функция ОбновитьНастройкиОбменаДанными(ИмяПланаОбмена, КодУзла, ЗначенияПоУмолчаниюXDTO)
+// Matches the UpdateExchange web service operation.
+Function UpdateDataExchangeSettings(ExchangePlanName, NodeCode, DefaultValuesXDTO)
 	
-	ОбменДаннымиСервер.ВнешнееСоединениеОбновитьНастройкиОбменаДанными(ИмяПланаОбмена, КодУзла, СериализаторXDTO.ПрочитатьXDTO(ЗначенияПоУмолчаниюXDTO));
+	DataExchangeServer.ExternalConnectionUpdateDataExchangeSettings(ExchangePlanName, NodeCode, XDTOSerializer.ReadXDTO(DefaultValuesXDTO));
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции RegisterOnlyCatalogData.
-Функция ЗарегистрироватьИзмененияТолькоСправочников(ИмяПланаОбмена, КодУзла, ДлительнаяОперация, ИдентификаторОперации)
+// Matches the RegisterOnlyCatalogData web service operation.
+Function RecordOnlyCatalogChanges(ExchangePlanName, NodeCode, TimeConsumingOperation, OperationID)
 	
-	ЗарегистрироватьДанныеДляНачальнойВыгрузки(ИмяПланаОбмена, КодУзла, ДлительнаяОперация, ИдентификаторОперации, Истина);
+	RegisterDataForInitialExport(ExchangePlanName, NodeCode, TimeConsumingOperation, OperationID, True);
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции RegisterAllDataExceptCatalogs.
-Функция ЗарегистрироватьИзмененияВсехДанныхКромеСправочников(ИмяПланаОбмена, КодУзла, ДлительнаяОперация, ИдентификаторОперации)
+// Matches the RegisterAllDataExceptCatalogs web service operation.
+Function RecordAllDataChangesButCatalogChanges(ExchangePlanName, NodeCode, TimeConsumingOperation, OperationID)
 	
-	ЗарегистрироватьДанныеДляНачальнойВыгрузки(ИмяПланаОбмена, КодУзла, ДлительнаяОперация, ИдентификаторОперации, Ложь);
+	RegisterDataForInitialExport(ExchangePlanName, NodeCode, TimeConsumingOperation, OperationID, False);
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции GetContinuousOperationStatus.
-Функция ПолучитьСостояниеДлительнойОперации(ИдентификаторОперации, СтрокаСообщенияОбОшибке)
+// Matches the GetContinuousOperationStatus web service operation.
+Function GetTimeConsumingOperationState(OperationID, ErrorMessageString)
 	
-	СостоянияФоновогоЗадания = Новый Соответствие;
-	СостоянияФоновогоЗадания.Вставить(СостояниеФоновогоЗадания.Активно,           "Active");
-	СостоянияФоновогоЗадания.Вставить(СостояниеФоновогоЗадания.Завершено,         "Completed");
-	СостоянияФоновогоЗадания.Вставить(СостояниеФоновогоЗадания.ЗавершеноАварийно, "Failed");
-	СостоянияФоновогоЗадания.Вставить(СостояниеФоновогоЗадания.Отменено,          "Canceled");
+	BackgroundJobStates = New Map;
+	BackgroundJobStates.Insert(BackgroundJobState.Active,           "Active");
+	BackgroundJobStates.Insert(BackgroundJobState.Completed,         "Completed");
+	BackgroundJobStates.Insert(BackgroundJobState.Failed, "Failed");
+	BackgroundJobStates.Insert(BackgroundJobState.Canceled,          "Canceled");
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	ФоновоеЗадание = ФоновыеЗадания.НайтиПоУникальномуИдентификатору(Новый УникальныйИдентификатор(ИдентификаторОперации));
+	BackgroundJob = BackgroundJobs.FindByUUID(New UUID(OperationID));
 	
-	Если ФоновоеЗадание.ИнформацияОбОшибке <> Неопределено Тогда
+	If BackgroundJob.ErrorInfo <> Undefined Then
 		
-		СтрокаСообщенияОбОшибке = ПодробноеПредставлениеОшибки(ФоновоеЗадание.ИнформацияОбОшибке);
+		ErrorMessageString = DetailErrorDescription(BackgroundJob.ErrorInfo);
 		
-	КонецЕсли;
+	EndIf;
 	
-	Возврат СостоянияФоновогоЗадания.Получить(ФоновоеЗадание.Состояние);
-КонецФункции
+	Return BackgroundJobStates.Get(BackgroundJob.State);
+EndFunction
 
-// Соответствует операции GetFunctionalOption.
-Функция ПолучитьЗначениеФункциональнойОпции(Имя)
+// Matches the GetFunctionalOption web service operation.
+Function GetFunctionalOptionValue(Name)
 	
-	Возврат ПолучитьФункциональнуюОпцию(Имя);
+	Return GetFunctionalOption(Name);
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции PrepareGetFile.
-Функция PrepareGetFile(FileId, BlockSize, TransferId, PartQuantity)
+// Matches the PrepareGetFile web service operation.
+Function PrepareGetFile(FileId, BlockSize, TransferId, PartQuantity)
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	TransferId = Новый УникальныйИдентификатор;
+	TransferId = New UUID;
 	
-	ИмяИсходногоФайла = ОбменДаннымиСервер.ПолучитьФайлИзХранилища(FileId);
+	SourceFileName = DataExchangeServer.GetFileFromStorage(FileId);
 	
-	ВременныйКаталог = ВременныйКаталогВыгрузки(TransferId);
+	TempDirectory = TemporaryExportDirectory(TransferId);
 	
-	ИмяИсходногоФайлаВоВременномКаталоге = ОбщегоНазначенияКлиентСервер.ПолучитьПолноеИмяФайла(ВременныйКаталог, "data.zip");
+	SourceFileNameInTemporaryDirectory = CommonClientServer.GetFullFileName(TempDirectory, "data.zip");
 	
-	СоздатьКаталог(ВременныйКаталог);
+	CreateDirectory(TempDirectory);
 	
-	ПереместитьФайл(ИмяИсходногоФайла, ИмяИсходногоФайлаВоВременномКаталоге);
+	MoveFile(SourceFileName, SourceFileNameInTemporaryDirectory);
 	
-	Если BlockSize <> 0 Тогда
-		// Разделение файла на части
-		ИменаФайлов = РазделитьФайл(ИмяИсходногоФайлаВоВременномКаталоге, BlockSize * 1024);
-		PartQuantity = ИменаФайлов.Количество();
+	If BlockSize <> 0 Then
+		// Splitting a file into parts
+		FileNames = SplitFile(SourceFileNameInTemporaryDirectory, BlockSize * 1024);
+		PartQuantity = FileNames.Count();
 		
-		УдалитьФайлы(ИмяИсходногоФайлаВоВременномКаталоге);
-	Иначе
+		DeleteFiles(SourceFileNameInTemporaryDirectory);
+	Else
 		PartQuantity = 1;
-		ПереместитьФайл(ИмяИсходногоФайлаВоВременномКаталоге, ИмяИсходногоФайлаВоВременномКаталоге + ".1");
-	КонецЕсли;
+		MoveFile(SourceFileNameInTemporaryDirectory, SourceFileNameInTemporaryDirectory + ".1");
+	EndIf;
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции GetFilePart.
-Функция GetFilePart(TransferId, PartNumber, PartData)
+// Matches the GetFilePart web service operation.
+Function GetFilePart(TransferId, PartNumber, PartData)
 	
-	ИменаФайлов = НайтиФайлЧасти(ВременныйКаталогВыгрузки(TransferId), PartNumber);
+	FileNames = FindPartFile(TemporaryExportDirectory(TransferId), PartNumber);
 	
-	Если ИменаФайлов.Количество() = 0 Тогда
+	If FileNames.Count() = 0 Then
 		
-		ШаблонСообщения = НСтр("ru = 'Не найден фрагмент %1 сессии передачи с идентификатором %2'");
-		ТекстСообщения = СтроковыеФункцииКлиентСервер.ПодставитьПараметрыВСтроку(ШаблонСообщения, Строка(PartNumber), Строка(TransferId));
-		ВызватьИсключение(ТекстСообщения);
+		MessageTemplate = NStr("ru = 'Не найден фрагмент %1 сессии передачи с идентификатором %2'; en = 'Volume %1 is not found in the transfer session with the following ID: %2'; pl = 'Nie znaleziono fragmentu %1 sesji przesyłania z identyfikatorem %2';de = 'Fragment %1 der Übertragungssitzung mit ID %2 wurde nicht gefunden';ro = 'Fragmentul %1 al sesiunii de transfer cu ID %2 nu a fost găsit';tr = 'ID %2 ile transfer oturumu%1 parçası bulunamadı'; es_ES = 'Fragmento %1 de la sesión de traslado con el identificador %2 no se ha encontrado'");
+		MessageText = StringFunctionsClientServer.SubstituteParametersToString(MessageTemplate, String(PartNumber), String(TransferId));
+		Raise(MessageText);
 		
-	ИначеЕсли ИменаФайлов.Количество() > 1 Тогда
+	ElsIf FileNames.Count() > 1 Then
 		
-		ШаблонСообщения = НСтр("ru = 'Найдено несколько фрагментов %1 сессии передачи с идентификатором %2'");
-		ТекстСообщения = СтроковыеФункцииКлиентСервер.ПодставитьПараметрыВСтроку(ШаблонСообщения, Строка(PartNumber), Строка(TransferId));
-		ВызватьИсключение(ТекстСообщения);
+		MessageTemplate = NStr("ru = 'Найдено несколько фрагментов %1 сессии передачи с идентификатором %2'; en = 'Multiple instances of volume %1 are found in the transfer session with the following ID: %2'; pl = 'Nie znaleziono kilku fragmentów %1 sesji przesyłania z identyfikatorem %2';de = 'Mehrere Fragmente %1 der Übertragungssitzung mit ID %2 werden gefunden';ro = 'Au fost găsite mai multe fragmente %1 din sesiunea de transfer cu ID %2';tr = 'ID ile%1 transfer %2 oturumun birkaç parçası bulundu'; es_ES = 'Varios fragmentos %1 de la sesión de traslado con el identificador %2 se han encontrado'");
+		MessageText = StringFunctionsClientServer.SubstituteParametersToString(MessageTemplate, String(PartNumber), String(TransferId));
+		Raise(MessageText);
 		
-	КонецЕсли;
+	EndIf;
 	
-	ИмяФайлаЧасти = ИменаФайлов[0].ПолноеИмя;
-	PartData = Новый ДвоичныеДанные(ИмяФайлаЧасти);
+	PartFileName = FileNames[0].FullName;
+	PartData = New BinaryData(PartFileName);
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции ReleaseFile.
-Функция ReleaseFile(TransferId)
+// Matches the ReleaseFile web service operation.
+Function ReleaseFile(TransferId)
 	
-	Попытка
-		УдалитьФайлы(ВременныйКаталогВыгрузки(TransferId));
-	Исключение
-		ЗаписьЖурналаРегистрации(ОбменДаннымиСервер.СобытиеЖурналаРегистрацииУдалениеВременногоФайла(),
-			УровеньЖурналаРегистрации.Ошибка,,, ПодробноеПредставлениеОшибки(ИнформацияОбОшибке()));
-	КонецПопытки;
+	Try
+		DeleteFiles(TemporaryExportDirectory(TransferId));
+	Except
+		WriteLogEvent(DataExchangeServer.TempFileDeletionEventLogMessageText(),
+			EventLogLevel.Error,,, DetailErrorDescription(ErrorInfo()));
+	EndTry;
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции PutFilePart.
-Функция PutFilePart(TransferId, PartNumber, PartData)
+// Matches the PutFilePart web service operation.
+Function PutFilePart(TransferId, PartNumber, PartData)
 	
-	ВременныйКаталог = ВременныйКаталогВыгрузки(TransferId);
+	TempDirectory = TemporaryExportDirectory(TransferId);
 	
-	Если PartNumber = 1 Тогда
+	If PartNumber = 1 Then
 		
-		СоздатьКаталог(ВременныйКаталог);
+		CreateDirectory(TempDirectory);
 		
-	КонецЕсли;
+	EndIf;
 	
-	ИмяФайла = ОбщегоНазначенияКлиентСервер.ПолучитьПолноеИмяФайла(ВременныйКаталог, ПолучитьИмяФайлаЧасти(PartNumber));
+	FileName = CommonClientServer.GetFullFileName(TempDirectory, GetPartFileName(PartNumber));
 	
-	PartData.Записать(ИмяФайла);
+	PartData.Write(FileName);
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции SaveFileFromParts.
-Функция SaveFileFromParts(TransferId, PartQuantity, FileId)
+// Matches the SaveFileFromParts web service operation.
+Function SaveFileFromParts(TransferId, PartQuantity, FileId)
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	ВременныйКаталог = ВременныйКаталогВыгрузки(TransferId);
+	TempDirectory = TemporaryExportDirectory(TransferId);
 	
-	ФайлыЧастейДляОбъединения = Новый Массив;
+	PartsFilesToMerge = New Array;
 	
-	Для НомерЧасти = 1 По PartQuantity Цикл
+	For PartNumber = 1 To PartQuantity Do
 		
-		ИмяФайла = ОбщегоНазначенияКлиентСервер.ПолучитьПолноеИмяФайла(ВременныйКаталог, ПолучитьИмяФайлаЧасти(НомерЧасти));
+		FileName = CommonClientServer.GetFullFileName(TempDirectory, GetPartFileName(PartNumber));
 		
-		Если НайтиФайлы(ИмяФайла).Количество() = 0 Тогда
-			ШаблонСообщения = НСтр("ru = 'Не найден фрагмент %1 сессии передачи с идентификатором %2.
+		If FindFiles(FileName).Count() = 0 Then
+			MessageTemplate = NStr("ru = 'Не найден фрагмент %1 сессии передачи с идентификатором %2.
 					|Необходимо убедиться, что в настройках программы заданы параметры
-					|""Каталог временных файлов для Linux"" и ""Каталог временных файлов для Windows"".'");
-			ТекстСообщения = СтроковыеФункцииКлиентСервер.ПодставитьПараметрыВСтроку(ШаблонСообщения, Строка(НомерЧасти), Строка(TransferId));
-			ВызватьИсключение(ТекстСообщения);
-		КонецЕсли;
+					|""Каталог временных файлов для Linux"" и ""Каталог временных файлов для Windows"".'; 
+					|en = 'Fragment %1 of the transfer session with ID %2 is not found. 
+					|Make sure that the ""Directory of temporary files for Linux""
+					| and ""Directory of temporary files for Windows"" parameters are specified in the application settings.'; 
+					|pl = 'Nie znaleziono fragmentu %1 sesji przesyłania z identyfikatorem %2.
+					|Należy upewnić się, że
+					|w ustawieniach aplikacji określono parametry ""Katalog plików tymczasowych Linux"" i ""Katalog plików tymczasowych Windows"".';
+					|de = 'Das Fragment der Übertragungssitzung %1 mit ID %2 wird nicht gefunden. 
+					|Es ist notwendig sicherzustellen, 
+					|dass in den Anwendungseinstellungen die Parameter ""Verzeichnis der temporären Dateien für Linux"" und ""Verzeichnis der temporären Dateien für Windows"" angegeben sind.';
+					|ro = 'Fragmentul %1 al sesiunii de transfer cu ID %2 nu este găsit.
+					|Este necesar să vă asigurați că în setările aplicației sunt specificați parametrii
+					|""Directorul fișierelor temporare pentru Linux"" și ""Directorul fișierelor temporare pentru Windows"".';
+					|tr = '%1ID ile transfer oturumu %2 parçası bulunamadı. 
+					|Uygulama ayarlarında ""Linux için geçici dosya dizini"" ve ""Windows için geçici dosya dizini"" 
+					|belirtildiğinden emin olmak gerekir.'; 
+					|es_ES = 'Fragmento de la sesión de traslado %1 con el identificador %2 no se ha encontrado.
+					|Es necesario asegurarse de que
+					|los parámetros de las configuraciones ""Directorio de los archivos temporales para Linux"" y ""Directorio de los archivos temporales para Windows"" están especificados en la aplicación.'");
+			MessageText = StringFunctionsClientServer.SubstituteParametersToString(MessageTemplate, String(PartNumber), String(TransferId));
+			Raise(MessageText);
+		EndIf;
 		
-		ФайлыЧастейДляОбъединения.Добавить(ИмяФайла);
+		PartsFilesToMerge.Add(FileName);
 		
-	КонецЦикла;
+	EndDo;
 	
-	ИмяАрхива = ОбщегоНазначенияКлиентСервер.ПолучитьПолноеИмяФайла(ВременныйКаталог, "data.zip");
+	ArchiveName = CommonClientServer.GetFullFileName(TempDirectory, "data.zip");
 	
-	ОбъединитьФайлы(ФайлыЧастейДляОбъединения, ИмяАрхива);
+	MergeFiles(PartsFilesToMerge, ArchiveName);
 	
-	Разархиватор = Новый ЧтениеZipФайла(ИмяАрхива);
+	Dearchiver = New ZipFileReader(ArchiveName);
 	
-	Если Разархиватор.Элементы.Количество() = 0 Тогда
-		Попытка
-			УдалитьФайлы(ВременныйКаталог);
-		Исключение
-			ЗаписьЖурналаРегистрации(ОбменДаннымиСервер.СобытиеЖурналаРегистрацииУдалениеВременногоФайла(),
-				УровеньЖурналаРегистрации.Ошибка,,, ПодробноеПредставлениеОшибки(ИнформацияОбОшибке()));
-		КонецПопытки;
-		ВызватьИсключение(НСтр("ru = 'Файл архива не содержит данных.'"));
-	КонецЕсли;
+	If Dearchiver.Items.Count() = 0 Then
+		Try
+			DeleteFiles(TempDirectory);
+		Except
+			WriteLogEvent(DataExchangeServer.TempFileDeletionEventLogMessageText(),
+				EventLogLevel.Error,,, DetailErrorDescription(ErrorInfo()));
+		EndTry;
+		Raise(NStr("ru = 'Файл архива не содержит данных.'; en = 'The archive file does not contain data.'; pl = 'Plik archiwum nie zawiera danych.';de = 'Die Archivdatei enthält keine Daten.';ro = 'Fișierul arhivei nu conține date.';tr = 'Arşiv dosyası veri içermemektedir.'; es_ES = 'Documento del archivo no contiene datos.'"));
+	EndIf;
 	
-	КаталогВыгрузки = ОбменДаннымиСервер.КаталогВременногоХранилищаФайлов();
+	DumpDirectory = DataExchangeServer.TempFilesStorageDirectory();
 	
-	ИмяФайла = ОбщегоНазначенияКлиентСервер.ПолучитьПолноеИмяФайла(КаталогВыгрузки, Разархиватор.Элементы[0].Имя);
+	FileName = CommonClientServer.GetFullFileName(DumpDirectory, Dearchiver.Items[0].Name);
 	
-	Разархиватор.Извлечь(Разархиватор.Элементы[0], КаталогВыгрузки);
-	Разархиватор.Закрыть();
+	Dearchiver.Extract(Dearchiver.Items[0], DumpDirectory);
+	Dearchiver.Close();
 	
-	FileId = ОбменДаннымиСервер.ПоместитьФайлВХранилище(ИмяФайла);
+	FileId = DataExchangeServer.PutFileInStorage(FileName);
 	
-	Попытка
-		УдалитьФайлы(ВременныйКаталог);
-	Исключение
-		ЗаписьЖурналаРегистрации(ОбменДаннымиСервер.СобытиеЖурналаРегистрацииУдалениеВременногоФайла(),
-			УровеньЖурналаРегистрации.Ошибка,,, ПодробноеПредставлениеОшибки(ИнформацияОбОшибке()));
-	КонецПопытки;
+	Try
+		DeleteFiles(TempDirectory);
+	Except
+		WriteLogEvent(DataExchangeServer.TempFileDeletionEventLogMessageText(),
+			EventLogLevel.Error,,, DetailErrorDescription(ErrorInfo()));
+	EndTry;
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции PutFileIntoStorage.
-Функция PutFileIntoStorage(FileName, FileId)
+// Matches the PutFileIntoStorage web service operation.
+Function PutFileIntoStorage(FileName, FileId)
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	FileId = ОбменДаннымиСервер.ПоместитьФайлВХранилище(FileName);
+	FileId = DataExchangeServer.PutFileInStorage(FileName);
 	
-	Возврат "";
+	Return "";
 	
-КонецФункции
+EndFunction
 
-// Соответствует операции GetFileFromStorage.
-Функция GetFileFromStorage(FileId)
+// Matches the GetFileFromStorage web service operation.
+Function GetFileFromStorage(FileId)
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	ИмяИсходногоФайла = ОбменДаннымиСервер.ПолучитьФайлИзХранилища(FileId);
-	ИмяКонечногоФайла = "";
+	SourceFileName = DataExchangeServer.GetFileFromStorage(FileId);
+	DestinationFileName = "";
 	
-	Если СтрЗаканчиваетсяНа(ИмяИсходногоФайла, ".zip") Тогда
-		ЧтениеZip = Новый ЧтениеZipФайла(ИмяИсходногоФайла);
-		ЧтениеZip.Извлечь(ЧтениеZip.Элементы[0], ОбменДаннымиСервер.КаталогВременногоХранилищаФайлов());
+	If StrEndsWith(SourceFileName, ".zip") Then
+		ZIPReader = New ZipFileReader(SourceFileName);
+		ZIPReader.Extract(ZIPReader.Items[0], DataExchangeServer.TempFilesStorageDirectory());
 		
-		ИмяКонечногоФайла = ЧтениеZip.Элементы[0].ПолноеИмя;
+		DestinationFileName = ZIPReader.Items[0].FullName;
 		
-		ЧтениеZip.Закрыть();
+		ZIPReader.Close();
 		
-		УдалитьФайлы(ИмяИсходногоФайла);
-	КонецЕсли;
+		DeleteFiles(SourceFileName);
+	EndIf;
 	
-	Файл = Новый Файл(ИмяКонечногоФайла);
+	File = New File(DestinationFileName);
 	
-	Возврат Файл.Имя;
-КонецФункции
+	Return File.Name;
+EndFunction
 
-// Соответствует операции FileExists.
-Функция FileExists(FileName)
+// Matches the FileExists web service operation.
+Function FileExists(FileName)
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	ПолноеИмяВременногоФайла = ОбщегоНазначенияКлиентСервер.ПолучитьПолноеИмяФайла(ОбменДаннымиСервер.КаталогВременногоХранилищаФайлов(), FileName);
+	TempFileFullName = CommonClientServer.GetFullFileName(DataExchangeServer.TempFilesStorageDirectory(), FileName);
 	
-	Файл = Новый Файл(ПолноеИмяВременногоФайла);
+	File = New File(TempFileFullName);
 	
-	Возврат Файл.Существует();
-КонецФункции
+	Return File.Exist();
+EndFunction
 
-// Соответствует операции Ping.
-Функция Ping()
-	// Проверка связи.
-	Возврат "";
-КонецФункции
+// Matches the Ping web service operation.
+Function Ping()
+	// Testing connection.
+	Return "";
+EndFunction
 
-// Соответствует операции TestConnection.
-Функция TestConnection(ИмяПланаОбмена, КодУзла, Результат)
+// Matches the TestConnection web service operation.
+Function TestConnection(ExchangePlanName, NodeCode, Result)
 	
-	// Проверяем наличие прав для выполнения обмена.
-	Попытка
-		ОбменДаннымиСервер.ПроверитьВозможностьВыполненияОбменов(Истина);
-	Исключение
-		Результат = КраткоеПредставлениеОшибки(ИнформацияОбОшибке());
-		Возврат Ложь;
-	КонецПопытки;
+	// Checking whether a user has rights to perform the data exchange.
+	Try
+		DataExchangeServer.CheckCanSynchronizeData(True);
+	Except
+		Result = BriefErrorDescription(ErrorInfo());
+		Return False;
+	EndTry;
 	
-	// Проверяем блокировку информационной базы для обновления.
-	Попытка
-		ПроверитьБлокировкуИнформационнойБазыДляОбновления();
-	Исключение
-		Результат = КраткоеПредставлениеОшибки(ИнформацияОбОшибке());
-		Возврат Ложь;
-	КонецПопытки;
+	// Checking whether the infobase is locked for update.
+	Try
+		CheckInfobaseLockForUpdate();
+	Except
+		Result = BriefErrorDescription(ErrorInfo());
+		Return False;
+	EndTry;
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	// Проверяем наличие узла плана обмена (возможно узел уже удален).
-	УзелСсылка = ОбменДаннымиСервер.УзелПланаОбменаПоКоду(ИмяПланаОбмена, КодУзла);
-	Если УзелСсылка = Неопределено
-		Или ОбщегоНазначения.ЗначениеРеквизитаОбъекта(УзелСсылка, "ПометкаУдаления") Тогда
-		ПредставлениеПрограммы = ?(ОбщегоНазначения.РазделениеВключено(),
-			Метаданные.Синоним, ОбменДаннымиПовтИсп.ИмяЭтойИнформационнойБазы());
+	// Checking whether the exchange plan node exists (it might be deleted).
+	NodeRef = DataExchangeServer.ExchangePlanNodeByCode(ExchangePlanName, NodeCode);
+	If NodeRef = Undefined
+		Or Common.ObjectAttributeValue(NodeRef, "DeletionMark") Then
+		ApplicationPresentation = ?(Common.DataSeparationEnabled(),
+			Metadata.Synonym, DataExchangeCached.ThisInfobaseName());
 			
-		ПредставлениеПланаОбмена = Метаданные.ПланыОбмена[ИмяПланаОбмена].Представление();
+		ExchangePlanPresentation = Metadata.ExchangePlans[ExchangePlanName].Presentation();
 			
-		Результат = СтроковыеФункцииКлиентСервер.ПодставитьПараметрыВСтроку(
-			НСтр("ru = 'В ""%1"" не найдена настройка синхронизации данных ""%2"" с идентификатором ""%3"".'"),
-			ПредставлениеПрограммы, ПредставлениеПланаОбмена, КодУзла);
+		Result = StringFunctionsClientServer.SubstituteParametersToString(
+			NStr("ru = 'В ""%1"" не найдена настройка синхронизации данных ""%2"" с идентификатором ""%3"".'; en = 'Data synchronization line ""%2"" with ID %3 was not found in %1.'; pl = 'W ""%1"" nie znaleziono ustawienia synchronizacji danych ""%2"" z identyfikatorem ""%3"".';de = 'Die Einstellung für die Datensynchronisation ""%2"" mit der Kennung ""%3"" wurde in ""%1"" nicht gefunden.';ro = 'În ""%1"" nu a fost găsită setarea de sincronizare a datelor ""%2"" cu identificatorul ""%3"".';tr = '""%1"" ''de ""%2"" tanımlayıcısına sahip veri senkronizasyon ayarları ""%3"" bulunamadı.'; es_ES = 'En ""%1"" no se ha encontrado ajuste de sincronización de datos ""%2"" con el identificador ""%3"".'"),
+			ApplicationPresentation, ExchangePlanPresentation, NodeCode);
 		
-		Возврат Ложь;
-	КонецЕсли;
+		Return False;
+	EndIf;
 	
-	Возврат Истина;
-КонецФункции
+	Return True;
+EndFunction
 
 ////////////////////////////////////////////////////////////////////////////////
-// Локальные служебные процедуры и функции.
+// Local internal procedures and functions.
 
-Процедура ПроверитьБлокировкуИнформационнойБазыДляОбновления()
+Procedure CheckInfobaseLockForUpdate()
 	
-	Если ЗначениеЗаполнено(ОбновлениеИнформационнойБазыСлужебный.ИнформационнаяБазаЗаблокированаДляОбновления()) Тогда
+	If ValueIsFilled(InfobaseUpdateInternal.InfobaseLockedForUpdate()) Then
 		
-		ВызватьИсключение НСтр("ru = 'Синхронизация данных временно недоступна в связи с обновлением приложения в Интернете.'");
+		Raise NStr("ru = 'Синхронизация данных временно недоступна в связи с обновлением приложения в Интернете.'; en = 'Data synchronization is unavailable for the duration of Internet-based update.'; pl = 'Synchronizacja danych jest tymczasowo niedostępna z powodu aktualizacji aplikacji online.';de = 'Die Datensynchronisierung ist aufgrund des Online-Anwendungsupdates vorübergehend nicht verfügbar.';ro = 'Sincronizarea datelor este temporar indisponibilă din cauza actualizării aplicației online.';tr = 'Çevrimiçi uygulama güncellemesi nedeniyle veri senkronizasyonu geçici olarak kullanılamıyor.'; es_ES = 'Sincronización de datos no se encuentra temporalmente disponible debido a la actualización online de la aplicación.'");
 		
-	КонецЕсли;
+	EndIf;
 	
-КонецПроцедуры
+EndProcedure
 
-Процедура ВыполнитьВыгрузкуДанныхВКлиентСерверномРежиме(ИмяПланаОбмена,
-														КодУзлаИнформационнойБазы,
-														ИдентификаторФайла,
-														ДлительнаяОперация,
-														ИдентификаторОперации,
-														ДлительнаяОперацияРазрешена)
+Procedure RunExportDataInClientServerMode(ExchangePlanName,
+														InfobaseNodeCode,
+														FileID,
+														TimeConsumingOperation,
+														OperationID,
+														TimeConsumingOperationAllowed)
 	
-	КлючФоновогоЗадания = КлючФоновогоЗаданияВыгрузкиЗагрузкиДанных(ИмяПланаОбмена,
-		КодУзлаИнформационнойБазы,
-		НСтр("ru = 'Выгрузка'"));
+	BackgroundJobKey = ExportImportDataBackgroundJobKey(ExchangePlanName,
+		InfobaseNodeCode,
+		NStr("ru = 'Выгрузка'; en = 'Export'; pl = 'Eksportowanie';de = 'Entladen';ro = 'Export';tr = 'Dışa aktarma'; es_ES = 'Subida'"));
 	
-	Если ЕстьАктивныеФоновыеЗаданияСинхронизацииДанных(КлючФоновогоЗадания) Тогда
-		ВызватьИсключение НСтр("ru = 'Синхронизация данных уже выполняется.'");
-	КонецЕсли;
+	If HasActiveDataSynchronizationBackgroundJobs(BackgroundJobKey) Then
+		Raise NStr("ru = 'Синхронизация данных уже выполняется.'; en = 'Data synchronization is already running.'; pl = 'Synchronizacja danych jest już w toku.';de = 'Die Datensynchronisation wird bereits ausgeführt.';ro = 'Sincronizarea datelor deja se execută.';tr = 'Veri senkronizasyonu zaten yürütülüyor.'; es_ES = 'Sincronización de datos ya se está ejecutando.'");
+	EndIf;
 	
-	ПараметрыПроцедуры = Новый Структура;
-	ПараметрыПроцедуры.Вставить("ИмяПланаОбмена", ИмяПланаОбмена);
-	ПараметрыПроцедуры.Вставить("КодУзлаИнформационнойБазы", КодУзлаИнформационнойБазы);
-	ПараметрыПроцедуры.Вставить("ИдентификаторФайла", ИдентификаторФайла);
-	ПараметрыПроцедуры.Вставить("ИспользоватьСжатие", Истина);
+	ProcedureParameters = New Structure;
+	ProcedureParameters.Insert("ExchangePlanName", ExchangePlanName);
+	ProcedureParameters.Insert("InfobaseNodeCode", InfobaseNodeCode);
+	ProcedureParameters.Insert("FileID", FileID);
+	ProcedureParameters.Insert("UseCompression", True);
 	
-	ПараметрыВыполнения = ДлительныеОперации.ПараметрыВыполненияВФоне(Новый УникальныйИдентификатор);
-	ПараметрыВыполнения.НаименованиеФоновогоЗадания = НСтр("ru = 'Выгрузка данных через веб-сервис.'");
-	ПараметрыВыполнения.КлючФоновогоЗадания = КлючФоновогоЗадания;
+	ExecutionParameters = TimeConsumingOperations.BackgroundExecutionParameters(New UUID);
+	ExecutionParameters.BackgroundJobDescription = NStr("ru = 'Выгрузка данных через веб-сервис.'; en = 'Export data via web service.'; pl = 'Wyeksportowanie danych za pośrednictwem serwisu internetowego.';de = 'Export von Daten über Webservice.';ro = 'Exportul datelor prin intermediul serviciului web.';tr = 'Verileri web servis üzerinden dışa aktarma'; es_ES = 'Subida de datos a través del servicio web.'");
+	ExecutionParameters.BackgroundJobKey = BackgroundJobKey;
 	
-	ПараметрыВыполнения.ЗапуститьНеВФоне = Не ДлительнаяОперацияРазрешена;
-	ПараметрыВыполнения.ЗапуститьВФоне   = ДлительнаяОперацияРазрешена;
+	ExecutionParameters.RunNotInBackground = Not TimeConsumingOperationAllowed;
+	ExecutionParameters.RunInBackground   = TimeConsumingOperationAllowed;
 	
-	ФоновоеЗадание = ДлительныеОперации.ВыполнитьВФоне(
-		"ОбменДаннымиСервер.ВыполнитьВыгрузкуДляУзлаИнформационнойБазыВСервисПередачиФайлов",
-		ПараметрыПроцедуры,
-		ПараметрыВыполнения);
+	BackgroundJob = TimeConsumingOperations.ExecuteInBackground(
+		"DataExchangeServer.ExportToFileTransferServiceForInfobaseNode",
+		ProcedureParameters,
+		ExecutionParameters);
 		
-	Если ФоновоеЗадание.Статус = "Выполняется" Тогда
-		ИдентификаторОперации = Строка(ФоновоеЗадание.ИдентификаторЗадания);
-		ДлительнаяОперация = Истина;
-		Возврат;
-	ИначеЕсли ФоновоеЗадание.Статус = "Выполнено" Тогда
-		ДлительнаяОперация = Ложь;
-		Возврат;
-	Иначе
-		Сообщение = НСтр("ru = 'Ошибка при выгрузке данных через веб-сервис.'");
-		Если ЗначениеЗаполнено(ФоновоеЗадание.ПодробноеПредставлениеОшибки) Тогда
-			Сообщение = ФоновоеЗадание.ПодробноеПредставлениеОшибки;
-		КонецЕсли;
+	If BackgroundJob.Status = "Running" Then
+		OperationID = String(BackgroundJob.JobID);
+		TimeConsumingOperation = True;
+		Return;
+	ElsIf BackgroundJob.Status = "Completed" Then
+		TimeConsumingOperation = False;
+		Return;
+	Else
+		Message = NStr("ru = 'Ошибка при выгрузке данных через веб-сервис.'; en = 'An error occurred during the data export through the web service.'; pl = 'Podczas eksportu danych z pomocą serwisu internetowego wystąpił błąd.';de = 'Beim Exportieren von Daten über den Webservice ist ein Fehler aufgetreten.';ro = 'A apărut o eroare la exportul datelor prin intermediul serviciului web.';tr = 'Web hizmeti yoluyla veri dışa aktarılırken bir hata oluştu.'; es_ES = 'Ha ocurrido un error al exportar los datos a través del servicio web.'");
+		If ValueIsFilled(BackgroundJob.DetailedErrorPresentation) Then
+			Message = BackgroundJob.DetailedErrorPresentation;
+		EndIf;
 		
-		ЗаписьЖурналаРегистрации(ОбменДаннымиСервер.СобытиеЖурналаРегистрацииВыгрузкаДанныхВСервисПередачиФайлов(),
-			УровеньЖурналаРегистрации.Ошибка, , , Сообщение);
+		WriteLogEvent(DataExchangeServer.EventLogEventExportDataToFilesTransferService(),
+			EventLogLevel.Error, , , Message);
 		
-		ВызватьИсключение Сообщение;
-	КонецЕсли;
+		Raise Message;
+	EndIf;
 	
-КонецПроцедуры
+EndProcedure
 
-Процедура ВыполнитьЗагрузкуДанныхВКлиентСерверномРежиме(ИмяПланаОбмена,
-													КодУзлаИнформационнойБазы,
-													ИдентификаторФайла,
-													ДлительнаяОперация,
-													ИдентификаторОперации,
-													ДлительнаяОперацияРазрешена)
+Procedure RunImportDataInClientServerMode(ExchangePlanName,
+													InfobaseNodeCode,
+													FileID,
+													TimeConsumingOperation,
+													OperationID,
+													TimeConsumingOperationAllowed)
 	
 													
-	КлючФоновогоЗадания = КлючФоновогоЗаданияВыгрузкиЗагрузкиДанных(ИмяПланаОбмена,
-		КодУзлаИнформационнойБазы,
-		НСтр("ru = 'Загрузка'"));
+	BackgroundJobKey = ExportImportDataBackgroundJobKey(ExchangePlanName,
+		InfobaseNodeCode,
+		NStr("ru = 'Загрузка'; en = 'Import'; pl = 'Pobieranie';de = 'Beladen';ro = 'Import';tr = 'İçe aktarma'; es_ES = 'Descarga'"));
 	
-	Если ЕстьАктивныеФоновыеЗаданияСинхронизацииДанных(КлючФоновогоЗадания) Тогда
-		ВызватьИсключение НСтр("ru = 'Синхронизация данных уже выполняется.'");
-	КонецЕсли;
+	If HasActiveDataSynchronizationBackgroundJobs(BackgroundJobKey) Then
+		Raise NStr("ru = 'Синхронизация данных уже выполняется.'; en = 'Data synchronization is already running.'; pl = 'Synchronizacja danych jest już w toku.';de = 'Die Datensynchronisation wird bereits ausgeführt.';ro = 'Sincronizarea datelor deja se execută.';tr = 'Veri senkronizasyonu zaten yürütülüyor.'; es_ES = 'Sincronización de datos ya se está ejecutando.'");
+	EndIf;
 	
-	ПараметрыПроцедуры = Новый Структура;
-	ПараметрыПроцедуры.Вставить("ИмяПланаОбмена", ИмяПланаОбмена);
-	ПараметрыПроцедуры.Вставить("КодУзлаИнформационнойБазы", КодУзлаИнформационнойБазы);
-	ПараметрыПроцедуры.Вставить("ИдентификаторФайла", ИдентификаторФайла);
+	ProcedureParameters = New Structure;
+	ProcedureParameters.Insert("ExchangePlanName", ExchangePlanName);
+	ProcedureParameters.Insert("InfobaseNodeCode", InfobaseNodeCode);
+	ProcedureParameters.Insert("FileID", FileID);
 	
-	ПараметрыВыполнения = ДлительныеОперации.ПараметрыВыполненияВФоне(Новый УникальныйИдентификатор);
-	ПараметрыВыполнения.НаименованиеФоновогоЗадания = НСтр("ru = 'Загрузка данных через веб-сервис.'");
-	ПараметрыВыполнения.КлючФоновогоЗадания = КлючФоновогоЗадания;
+	ExecutionParameters = TimeConsumingOperations.BackgroundExecutionParameters(New UUID);
+	ExecutionParameters.BackgroundJobDescription = NStr("ru = 'Загрузка данных через веб-сервис.'; en = 'Import data via web service.'; pl = 'Pobieranie danych za pośrednictwem serwisu internetowego.';de = 'Import von Daten über Webservice.';ro = 'Importul datelor prin intermediul serviciului web.';tr = 'Verileri web servis üzerinden içe aktarma.'; es_ES = 'Descarga de datos a través del servidor web.'");
+	ExecutionParameters.BackgroundJobKey = BackgroundJobKey;
 	
-	ПараметрыВыполнения.ЗапуститьНеВФоне = Не ДлительнаяОперацияРазрешена;
-	ПараметрыВыполнения.ЗапуститьВФоне   = ДлительнаяОперацияРазрешена;
+	ExecutionParameters.RunNotInBackground = Not TimeConsumingOperationAllowed;
+	ExecutionParameters.RunInBackground   = TimeConsumingOperationAllowed;
 	
-	ФоновоеЗадание = ДлительныеОперации.ВыполнитьВФоне(
-		"ОбменДаннымиСервер.ВыполнитьЗагрузкуДляУзлаИнформационнойБазыИзСервисаПередачиФайлов",
-		ПараметрыПроцедуры,
-		ПараметрыВыполнения);
+	BackgroundJob = TimeConsumingOperations.ExecuteInBackground(
+		"DataExchangeServer.ImportFromFileTransferServiceForInfobaseNode",
+		ProcedureParameters,
+		ExecutionParameters);
 		
-	Если ФоновоеЗадание.Статус = "Выполняется" Тогда
-		ИдентификаторОперации = Строка(ФоновоеЗадание.ИдентификаторЗадания);
-		ДлительнаяОперация = Истина;
-		Возврат;
-	ИначеЕсли ФоновоеЗадание.Статус = "Выполнено" Тогда
-		ДлительнаяОперация = Ложь;
-		Возврат;
-	Иначе
+	If BackgroundJob.Status = "Running" Then
+		OperationID = String(BackgroundJob.JobID);
+		TimeConsumingOperation = True;
+		Return;
+	ElsIf BackgroundJob.Status = "Completed" Then
+		TimeConsumingOperation = False;
+		Return;
+	Else
 		
-		Сообщение = НСтр("ru = 'Ошибка при загрузке данных через веб-сервис.'");
-		Если ЗначениеЗаполнено(ФоновоеЗадание.ПодробноеПредставлениеОшибки) Тогда
-			Сообщение = ФоновоеЗадание.ПодробноеПредставлениеОшибки;
-		КонецЕсли;
+		Message = NStr("ru = 'Ошибка при загрузке данных через веб-сервис.'; en = 'An error occurred during the data import through the web service.'; pl = 'Podczas importu danych z pomocą serwisu internetowego wystąpił błąd.';de = 'Beim Importieren von Daten mit dem Webservice ist ein Fehler aufgetreten.';ro = 'A apărut o eroare la importul datelor prin intermediul serviciului web.';tr = 'Web hizmeti kullanılarak veri alınırken bir hata oluştu.'; es_ES = 'Ha ocurrido un error al importar los datos utilizando el servicio web.'");
+		If ValueIsFilled(BackgroundJob.DetailedErrorPresentation) Then
+			Message = BackgroundJob.DetailedErrorPresentation;
+		EndIf;
 		
-		ЗаписьЖурналаРегистрации(ОбменДаннымиСервер.СобытиеЖурналаРегистрацииЗагрузкаДанныхИзСервисаПередачиФайлов(),
-			УровеньЖурналаРегистрации.Ошибка, , , Сообщение);
+		WriteLogEvent(DataExchangeServer.ExportDataFromFileTransferServiceEventLogEvent(),
+			EventLogLevel.Error, , , Message);
 		
-		ВызватьИсключение Сообщение;
-	КонецЕсли;
+		Raise Message;
+	EndIf;
 	
-КонецПроцедуры
+EndProcedure
 
-Функция КлючФоновогоЗаданияВыгрузкиЗагрузкиДанных(ПланОбмена, КодУзла, Действие)
+Function ExportImportDataBackgroundJobKey(ExchangePlan, NodeCode, Action)
 	
-	Возврат СтроковыеФункцииКлиентСервер.ПодставитьПараметрыВСтроку(
-		НСтр("ru = 'ПланОбмена:%1 КодУзла:%2 Действие:%3'"),
-		ПланОбмена,
-		КодУзла,
-		Действие);
+	Return StringFunctionsClientServer.SubstituteParametersToString(
+		NStr("ru = 'ПланОбмена:%1 КодУзла:%2 Действие:%3'; en = 'ExchangePlan:%1 NodeCode:%2 Action:%3'; pl = 'PlanWymiany:%1 KodWęzła:%2 Działanie:%3';de = 'AustauschPlan:%1 CodeKnoten:%2 Aktion:%3';ro = 'ПланОбмена:%1 КодУзла:%2 Действие:%3';tr = 'AlışverişPlanı:%1 ÜniteKodu: %2 Eylem: %3'; es_ES = 'ExchangePlan:%1 NodeCode:%2 Acción:%3'"),
+		ExchangePlan,
+		NodeCode,
+		Action);
 	
-КонецФункции
+EndFunction
 
-Функция ЕстьАктивныеФоновыеЗаданияСинхронизацииДанных(КлючФоновогоЗадания)
+Function HasActiveDataSynchronizationBackgroundJobs(BackgroundJobKey)
 	
-	Отбор = Новый Структура;
-	Отбор.Вставить("Ключ", КлючФоновогоЗадания);
-	Отбор.Вставить("Состояние", СостояниеФоновогоЗадания.Активно);
+	Filter = New Structure;
+	Filter.Insert("Key", BackgroundJobKey);
+	Filter.Insert("State", BackgroundJobState.Active);
 	
-	АктивныеФоновыеЗадания = ФоновыеЗадания.ПолучитьФоновыеЗадания(Отбор);
+	ActiveBackgroundJobs = BackgroundJobs.GetBackgroundJobs(Filter);
 	
-	Возврат (АктивныеФоновыеЗадания.Количество() > 0);
+	Return (ActiveBackgroundJobs.Count() > 0);
 	
-КонецФункции
+EndFunction
 
-Процедура ЗарегистрироватьДанныеДляНачальнойВыгрузки(Знач ИмяПланаОбмена, Знач КодУзла, ДлительнаяОперация, ИдентификаторОперации, ТолькоСправочники)
+Procedure RegisterDataForInitialExport(Val ExchangePlanName, Val NodeCode, TimeConsumingOperation, OperationID, CatalogsOnly)
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	УзелИнформационнойБазы = ОбменДаннымиСервер.УзелПланаОбменаПоКоду(ИмяПланаОбмена, КодУзла);
+	InfobaseNode = DataExchangeServer.ExchangePlanNodeByCode(ExchangePlanName, NodeCode);
 	
-	Если Не ЗначениеЗаполнено(УзелИнформационнойБазы) Тогда
-		Сообщение = НСтр("ru = 'Не найден узел плана обмена; имя плана обмена %1; код узла %2'");
-		Сообщение = СтроковыеФункцииКлиентСервер.ПодставитьПараметрыВСтроку(Сообщение, ИмяПланаОбмена, КодУзла);
-		ВызватьИсключение Сообщение;
-	КонецЕсли;
+	If Not ValueIsFilled(InfobaseNode) Then
+		Message = NStr("ru = 'Не найден узел плана обмена; имя плана обмена %1; код узла %2'; en = 'Exchange plan node not found. Node name: %1, node code: %2.'; pl = 'Nie znaleziono węzła planu wymiany; nazwa planu wymiany %1; kod węzła %2';de = 'Der Austauschplan-Knoten wurde nicht gefunden. Name des Austauschplans %1; Knotencode %2';ro = 'Nodul planului de schimb nu a fost găsit; numele planului de schimb %1; codul nodului %2';tr = 'Değişim plan ünitesi bulunamadı; değişim planı adı%1; ünite kodu %2'; es_ES = 'Nodo del plan de intercambio no encontrado; nombre del plan de intercambio %1; código del nodo %2'");
+		Message = StringFunctionsClientServer.SubstituteParametersToString(Message, ExchangePlanName, NodeCode);
+		Raise Message;
+	EndIf;
 	
-	Если ОбщегоНазначения.ИнформационнаяБазаФайловая() Тогда
+	If Common.FileInfobase() Then
 		
-		Если ТолькоСправочники Тогда
+		If CatalogsOnly Then
 			
-			ОбменДаннымиСервер.ЗарегистрироватьТолькоСправочникиДляНачальнойВыгрузки(УзелИнформационнойБазы);
+			DataExchangeServer.RegisterOnlyCatalogsForInitialExport(InfobaseNode);
 			
-		Иначе
+		Else
 			
-			ОбменДаннымиСервер.ЗарегистрироватьВсеДанныеКромеСправочниковДляНачальнойВыгрузки(УзелИнформационнойБазы);
+			DataExchangeServer.RegisterAllDataExceptCatalogsForInitialExport(InfobaseNode);
 			
-		КонецЕсли;
+		EndIf;
 		
-	Иначе
+	Else
 		
-		Если ТолькоСправочники Тогда
-			ИмяМетода = "ОбменДаннымиСервер.ЗарегистрироватьТолькоСправочникиДляНачальнойВыгрузкиВФоне";
-			НаименованиеЗадания = НСтр("ru = 'Регистрация изменений справочников для начальной выгрузки.'");
-		Иначе
-			ИмяМетода = "ОбменДаннымиСервер.ЗарегистрироватьВсеДанныеКромеСправочниковДляНачальнойВыгрузкиВФоне";
-			НаименованиеЗадания = НСтр("ru = 'Регистрация изменений всех данных кроме справочников для начальной выгрузки.'");
-		КонецЕсли;
+		If CatalogsOnly Then
+			MethodName = "DataExchangeServer.RegisterCatalogsOnlyForInitialBackgroundExport";
+			JobDescription = NStr("ru = 'Регистрация изменений справочников для начальной выгрузки.'; en = 'Register catalog changes for initial export.'; pl = 'Rejestracja zmian katalogów do początkowego wyeksportowania.';de = 'Registrieren Sie Änderungen an den Verzeichnissen für den ersten Upload.';ro = 'Înregistrarea modificărilor clasificatoarelor pentru exportul inițial.';tr = 'İlk dışa aktarma için dizin değişikliklerin kaydı.'; es_ES = 'Registro de cambios de catálogos para la subida inicial.'");
+		Else
+			MethodName = "DataExchangeServer.RegisterAllDataExceptCatalogsForInitialBackgroundExport";
+			JobDescription = NStr("ru = 'Регистрация изменений всех данных кроме справочников для начальной выгрузки.'; en = 'Register all data changes except for catalogs for initial export.'; pl = 'Rejestracja zmian wszystkich danych z wyjątkiem katalogów dla początkowego wyeksportowania.';de = 'Registrierung von Änderungen aller Daten außer Verzeichnisse für den ersten Upload.';ro = 'Înregistrarea modificărilor tuturor datelor cu excepția clasificatoarelor pentru exportul inițial.';tr = 'Ilk dışa aktarma dizinleri haricinde tüm veri değişikliklerin kaydı.'; es_ES = 'Registro de cambios de todos los datos a excepción de la subida inicial.'");
+		EndIf;
 		
-		ПараметрыПроцедуры = Новый Структура;
-		ПараметрыПроцедуры.Вставить("УзелИнформационнойБазы", УзелИнформационнойБазы);
+		ProcedureParameters = New Structure;
+		ProcedureParameters.Insert("InfobaseNode", InfobaseNode);
 		
-		ПараметрыВыполнения = ДлительныеОперации.ПараметрыВыполненияВФоне(Новый УникальныйИдентификатор);
-		ПараметрыВыполнения.НаименованиеФоновогоЗадания = НаименованиеЗадания;
+		ExecutionParameters = TimeConsumingOperations.BackgroundExecutionParameters(New UUID);
+		ExecutionParameters.BackgroundJobDescription = JobDescription;
 		
-		ПараметрыВыполнения.ЗапуститьВФоне = Истина;
+		ExecutionParameters.RunInBackground = True;
 		
-		ФоновоеЗадание = ДлительныеОперации.ВыполнитьВФоне(ИмяМетода, ПараметрыПроцедуры, ПараметрыВыполнения);
+		BackgroundJob = TimeConsumingOperations.ExecuteInBackground(MethodName, ProcedureParameters, ExecutionParameters);
 			
-		Если ФоновоеЗадание.Статус = "Выполняется" Тогда
-			ИдентификаторОперации = Строка(ФоновоеЗадание.ИдентификаторЗадания);
-			ДлительнаяОперация = Истина;
-		ИначеЕсли ФоновоеЗадание.Статус = "Выполнено" Тогда
-			ДлительнаяОперация = Ложь;
-		Иначе
-			Если ЗначениеЗаполнено(ФоновоеЗадание.ПодробноеПредставлениеОшибки) Тогда
-				ВызватьИсключение ФоновоеЗадание.ПодробноеПредставлениеОшибки;
-			КонецЕсли;
+		If BackgroundJob.Status = "Running" Then
+			OperationID = String(BackgroundJob.JobID);
+			TimeConsumingOperation = True;
+		ElsIf BackgroundJob.Status = "Completed" Then
+			TimeConsumingOperation = False;
+		Else
+			If ValueIsFilled(BackgroundJob.DetailedErrorPresentation) Then
+				Raise BackgroundJob.DetailedErrorPresentation;
+			EndIf;
 			
-			ВызватьИсключение СтроковыеФункцииКлиентСервер.ПодставитьПараметрыВСтроку(
-				НСтр("ru = 'Ошибка при выполнении фонового задания: %1'"),
-				НаименованиеЗадания);
-		КонецЕсли;
+			Raise StringFunctionsClientServer.SubstituteParametersToString(
+				NStr("ru = 'Ошибка при выполнении фонового задания: %1'; en = 'An error occurred while executing the background job: %1'; pl = 'Błąd podczas wykonywania pracy w tle: %1';de = 'Fehler bei der Ausführung von Hintergrundjobs: %1';ro = 'Eroare la executarea sarcinii de fundal: %1';tr = 'Arka plan görevi yürütülürken bir hata oluştu: %1'; es_ES = 'Error al realizar la tarea de fondo: %1'"),
+				JobDescription);
+		EndIf;
 		
-	КонецЕсли;
+	EndIf;
 	
-КонецПроцедуры
+EndProcedure
 
-Функция ПолучитьИмяФайлаЧасти(PartNumber)
+Function GetPartFileName(PartNumber)
 	
-	Результат = "data.zip.[n]";
+	Result = "data.zip.[n]";
 	
-	Возврат СтрЗаменить(Результат, "[n]", Формат(PartNumber, "ЧГ=0"));
-КонецФункции
+	Return StrReplace(Result, "[n]", Format(PartNumber, "NG=0"));
+EndFunction
 
-Функция ВременныйКаталогВыгрузки(Знач ИдентификаторСессии)
+Function TemporaryExportDirectory(Val SessionID)
 	
-	УстановитьПривилегированныйРежим(Истина);
+	SetPrivilegedMode(True);
 	
-	ВременныйКаталог = "{ИдентификаторСессии}";
-	ВременныйКаталог = СтрЗаменить(ВременныйКаталог, "ИдентификаторСессии", Строка(ИдентификаторСессии));
+	TempDirectory = "{SessionID}";
+	TempDirectory = StrReplace(TempDirectory, "SessionID", String(SessionID));
 	
-	Результат = ОбщегоНазначенияКлиентСервер.ПолучитьПолноеИмяФайла(ОбменДаннымиСервер.КаталогВременногоХранилищаФайлов(), ВременныйКаталог);
+	Result = CommonClientServer.GetFullFileName(DataExchangeServer.TempFilesStorageDirectory(), TempDirectory);
 	
-	Возврат Результат;
-КонецФункции
+	Return Result;
+EndFunction
 
-Функция НайтиФайлЧасти(Знач Каталог, Знач НомерФайла)
+Function FindPartFile(Val Directory, Val FileNumber)
 	
-	Для КоличествоРазрядов = КоличествоРазрядовЧисла(НомерФайла) По 5 Цикл
+	For DigitsCount = NumberDigitsCount(FileNumber) To 5 Do
 		
-		ФорматнаяСтрока = СтроковыеФункцииКлиентСервер.ПодставитьПараметрыВСтроку("ЧЦ=%1; ЧВН=; ЧГ=0", Строка(КоличествоРазрядов));
+		FormatString = StringFunctionsClientServer.SubstituteParametersToString("ND=%1; NLZ=; NG=0", String(DigitsCount));
 		
-		ИмяФайла = СтроковыеФункцииКлиентСервер.ПодставитьПараметрыВСтроку("data.zip.%1", Формат(НомерФайла, ФорматнаяСтрока));
+		FileName = StringFunctionsClientServer.SubstituteParametersToString("data.zip.%1", Format(FileNumber, FormatString));
 		
-		ИменаФайлов = НайтиФайлы(Каталог, ИмяФайла);
+		FileNames = FindFiles(Directory, FileName);
 		
-		Если ИменаФайлов.Количество() > 0 Тогда
+		If FileNames.Count() > 0 Then
 			
-			Возврат ИменаФайлов;
+			Return FileNames;
 			
-		КонецЕсли;
+		EndIf;
 		
-	КонецЦикла;
+	EndDo;
 	
-	Возврат Новый Массив;
-КонецФункции
+	Return New Array;
+EndFunction
 
-Функция КоличествоРазрядовЧисла(Знач Число)
+Function NumberDigitsCount(Val Number)
 	
-	Возврат СтрДлина(Формат(Число, "ЧДЦ=0; ЧГ=0"));
+	Return StrLen(Format(Number, "NFD=0; NG=0"));
 	
-КонецФункции
+EndFunction
 
-#КонецОбласти
+#EndRegion

@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Group1" id="35">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Group1ExtendedTooltip" id="36"/>
+			<ChildItems>
+				<InputField name="CheckinDate" id="29">
+					<DataPath>CheckinDate</DataPath>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>DF='dd/MM/yyyy'</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="CheckinDateContextMenu" id="30"/>
+					<ExtendedTooltip name="CheckinDateExtendedTooltip" id="31"/>
+				</InputField>
+				<InputField name="Room" id="32">
+					<DataPath>Room</DataPath>
+					<ContextMenu name="RoomContextMenu" id="33"/>
+					<ExtendedTooltip name="RoomExtendedTooltip" id="34"/>
+				</InputField>
+				<Button name="Check" id="37">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Check</CommandName>
+					<BackColor>style:ActivityColor</BackColor>
+					<ExtendedTooltip name="CheckExtendedTooltip" id="38"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ReservedRooms" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ReservedRooms</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ReservedRoomsContextMenu" id="2"/>
+			<AutoCommandBar name="ReservedRoomsCommandBar" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ReservedRoomsExtendedTooltip" id="4"/>
+			<SearchStringAddition name="ReservedRoomsSearchString" id="5">
+				<AdditionSource>
+					<Item>ReservedRooms</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ReservedRoomsSearchStringContextMenu" id="6"/>
+				<ExtendedTooltip name="ReservedRoomsSearchStringExtendedTooltip" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ReservedRoomsViewStatus" id="8">
+				<AdditionSource>
+					<Item>ReservedRooms</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ReservedRoomsViewStatusContextMenu" id="9"/>
+				<ExtendedTooltip name="ReservedRoomsViewStatusExtendedTooltip" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ReservedRoomsSearchControl" id="11">
+				<AdditionSource>
+					<Item>ReservedRooms</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ReservedRoomsSearchControlContextMenu" id="12"/>
+				<ExtendedTooltip name="ReservedRoomsSearchControlExtendedTooltip" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ReservedRoomsRoom" id="14">
+					<DataPath>ReservedRooms.Room</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ReservedRoomsRoomContextMenu" id="15"/>
+					<ExtendedTooltip name="ReservedRoomsRoomExtendedTooltip" id="16"/>
+				</InputField>
+				<InputField name="ReservedRoomsCustomer" id="17">
+					<DataPath>ReservedRooms.Customer</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ReservedRoomsCustomerContextMenu" id="18"/>
+					<ExtendedTooltip name="ReservedRoomsCustomerExtendedTooltip" id="19"/>
+				</InputField>
+				<InputField name="ReservedRoomsDog" id="20">
+					<DataPath>ReservedRooms.Dog</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ReservedRoomsDogContextMenu" id="21"/>
+					<ExtendedTooltip name="ReservedRoomsDogExtendedTooltip" id="22"/>
+				</InputField>
+				<InputField name="ReservedRoomsCheckIn" id="23">
+					<DataPath>ReservedRooms.CheckIn</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ReservedRoomsCheckInContextMenu" id="24"/>
+					<ExtendedTooltip name="ReservedRoomsCheckInExtendedTooltip" id="25"/>
+				</InputField>
+				<InputField name="ReservedRoomsCheckOut" id="26">
+					<DataPath>ReservedRooms.CheckOut</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ReservedRoomsCheckOutContextMenu" id="27"/>
+					<ExtendedTooltip name="ReservedRoomsCheckOutExtendedTooltip" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ReservedRooms" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reserved rooms</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Room" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Room</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.HotelRooms</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Customer" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Customer</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.DogOwners</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Dog" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dog</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Dogs</v8:Type>
+					</Type>
+				</Column>
+				<Column name="CheckIn" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Check in</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="CheckOut" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Check out</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="CheckinDate" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Checkin date</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Room" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Room</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.HotelRooms</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Check" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Check</Action>
+		</Command>
+	</Commands>
+</Form>

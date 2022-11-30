@@ -1,0 +1,983 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>DataSet1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>BalanceUnit</dataPath>
+			<field>BalanceUnit</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<presentationExpression>CASE 
+    WHEN &amp;PresentationBalanceUnitDep = "Code" Then BalanceUnit.Code
+    Else  CASE 
+            WHEN &amp;PresentationBalanceUnitDep = "Description" Then BalanceUnit
+END   
+           END</presentationExpression>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.fmBalanceUnits</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Scenario</dataPath>
+			<field>Scenario</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Department</dataPath>
+			<field>Department</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Currency</dataPath>
+			<field>Currency</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Analytics3</dataPath>
+			<field>Analytics3</field>
+			<role>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>OperationType</dataPath>
+			<field>OperationType</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Item</dataPath>
+			<field>Item</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Project</dataPath>
+			<field>Project</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Analytics1</dataPath>
+			<field>Analytics1</field>
+			<role>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Analytics2</dataPath>
+			<field>Analytics2</field>
+			<role>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>VersionPeriod</dataPath>
+			<field>VersionPeriod</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Departments</dataPath>
+			<field>Departments</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Departments</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<presentationExpression>CASE 
+    WHEN &amp;PresentationBalanceUnitDep = "Code" Then Departments.Code
+    Else  CASE 
+            WHEN &amp;PresentationBalanceUnitDep = "Description" Then Departments
+END   
+           END</presentationExpression>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.fmDepartments</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>IncomesAndExpensesItem</dataPath>
+			<field>IncomesAndExpensesItem</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Incomes and expenses item</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Amount</dataPath>
+			<field>Amount</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Amount</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>HorizontalAlign</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>MarkNegatives</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CurAmount</dataPath>
+			<field>CurAmount</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cur amount</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>HorizontalAlign</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>MarkNegatives</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Amount_1</dataPath>
+			<field>Amount_1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Amount 1</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>HorizontalAlign</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>MarkNegatives</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CurAmount_1</dataPath>
+			<field>CurAmount_1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cur amount 1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Deviation</dataPath>
+			<field>Deviation</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deviation</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>HorizontalAlign</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>MarkNegatives</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CurDeviation</dataPath>
+			<field>CurDeviation</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cur deviation</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Section</dataPath>
+			<field>Section</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Section</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Period</dataPath>
+			<field>Period</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+			<presentationExpression>CASE 
+WHEN Month(Period) = 1 Then "January" + ","+" " + String(Year(Period))
+Else CASE 
+WHEN Month(Period) = 2 Then "February" + ","+" " + String(Year(Period))
+Else CASE 
+WHEN Month(Period) = 3 Then "March" + ","+" " + String(Year(Period))
+Else CASE
+WHEN Month(Period) = 4 Then "April" + ","+" " + String(Year(Period))
+Else CASE
+WHEN Month(Period) = 5 Then "May" + ","+" " + String(Year(Period))
+Else CASE
+WHEN Month(Period) = 6 Then "June" + ","+" " + String(Year(Period))
+Else CASE
+WHEN Month(Period) = 7 Then "July" + ","+" " + String(Year(Period))
+Else CASE
+WHEN Month(Period) = 8 Then "August" + ","+" " + String(Year(Period))
+Else CASE
+WHEN Month(Period) = 9 Then "September" + ","+" " + String(Year(Period))
+Else CASE
+WHEN Month(Period) = 10 Then "October" + ","+" " + String(Year(Period))
+Else CASE
+WHEN Month(Period) = 11 Then "November" + ","+" " + String(Year(Period))
+Else CASE
+WHEN Month(Period) = 12 Then "December" + ","+" " + String(Year(Period))
+END	
+END	
+END
+END
+END
+END
+END
+END
+END
+END
+END
+END</presentationExpression>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>SELECT
+	FinancialReportStructureIndicators.Ref AS Ref,
+	FinancialReportStructureIndicators.Analytics AS Analytics
+INTO FinancialReportStructureIndicators
+FROM
+	Catalog.fmInfoStructuresSections.SectionStructureData AS FinancialReportStructureIndicators
+WHERE
+	FinancialReportStructureIndicators.Ref.Owner = &amp;ReportVariant
+	AND NOT FinancialReportStructureIndicators.Ref.DeletionMark
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	FinancialReportStructureIndicators.Ref AS Ref,
+	FinancialReportStructureIndicators.Analytics AS Analytics
+INTO FinancialReportStructureIndicatorsWithEmptyString
+FROM
+	FinancialReportStructureIndicators AS FinancialReportStructureIndicators
+
+UNION ALL
+
+SELECT
+	FinancialReportStructure.Ref,
+	Value(Catalog.fmIncomesAndExpensesItems.EmptyRef)
+FROM
+	Catalog.fmInfoStructuresSections AS FinancialReportStructure
+WHERE
+	FinancialReportStructure.IsBlankString
+	AND FinancialReportStructure.Owner = &amp;ReportVariant
+	AND NOT FinancialReportStructure.DeletionMark
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT ALLOWED
+	ISNULL(IncomesExpensesPlanTurnoversJoined.Period, DATETIME(1, 1, 1, 0, 0, 0)) AS Period,
+	ISNULL(IncomesExpensesPlanTurnoversJoined.Department, Value(Catalog.fmDepartments.EmptyRef)) AS Departments,
+	ISNULL(IncomesExpensesPlanTurnoversJoined.Item, Value(Catalog.fmIncomesAndExpensesItems.EmptyRef)) AS IncomesExpensesItem,
+	IncomesExpensesPlanTurnoversJoined.Analytics1 AS Analytics1,
+	IncomesExpensesPlanTurnoversJoined.Analytics2 AS Analytics2,
+	IncomesExpensesPlanTurnoversJoined.Analytics3 AS Analytics3,
+	IncomesExpensesPlanTurnoversJoined.Currency AS Currency,
+	ISNULL(IncomesExpensesPlanTurnoversJoined.IndicatorTurnover, 0) AS Indicator,
+	ISNULL(IncomesExpensesPlanTurnoversJoined.IndicatorCurTurnover, 0) AS CurIndicator,
+	FinancialReportStructureIndicatorsWithEmptyString.Ref AS Ref,
+	ISNULL(IncomesExpensesPlanTurnoversJoined.BalanceUnit, Value(Catalog.fmBalanceUnits.EmptyRef)) AS BalanceUnit,
+	IncomesExpensesPlanTurnoversJoined.IndicatorTurnover1 AS Indicator1,
+	IncomesExpensesPlanTurnoversJoined.IndicatorCurTurnover1 AS CurIndicator1,
+	IncomesExpensesPlanTurnoversJoined.Project AS Project
+INTO TotalTable
+{SELECT
+	Period,
+	Departments.* AS Departments,
+	Analytics1.* AS Analytics1,
+	Analytics2.* AS Analytics2,
+	Analytics3.* AS Analytics3,
+	Currency.* AS Currency,
+	IncomesExpensesItem.* AS IncomesAndExpensesItem,
+	Indicator AS Amount,
+	CurIndicator AS CurAmount,
+	Indicator1 AS Amount_1,
+	CurIndicator1 AS CurAmount_1,
+	Ref.* AS Section,
+	BalanceUnit.* AS BalanceUnit}
+FROM
+	FinancialReportStructureIndicatorsWithEmptyString AS FinancialReportStructureIndicatorsWithEmptyString
+		LEFT JOIN (SELECT
+			IncomesExpensesTurnoversGlue.Period AS Period,
+			IncomesExpensesTurnoversGlue.Department AS Department,
+			IncomesExpensesTurnoversGlue.BalanceUnit AS BalanceUnit,
+			IncomesExpensesTurnoversGlue.Item AS Item,
+			CASE
+				WHEN IncomesExpensesTurnoversGlue.Analytics1 = Undefined
+					Then NULL
+				Else IncomesExpensesTurnoversGlue.Analytics1
+			END AS Analytics1,
+			CASE
+				WHEN IncomesExpensesTurnoversGlue.Analytics2 = Undefined
+					Then NULL
+				Else IncomesExpensesTurnoversGlue.Analytics2
+			END AS Analytics2,
+			CASE
+				WHEN IncomesExpensesTurnoversGlue.Analytics3 = Undefined
+					Then NULL
+				Else IncomesExpensesTurnoversGlue.Analytics3
+			END AS Analytics3,
+			IncomesExpensesTurnoversGlue.Currency AS Currency,
+			SUM(IncomesExpensesTurnoversGlue.IndicatorTurnover1) AS IndicatorTurnover1,
+			SUM(IncomesExpensesTurnoversGlue.IndicatorCurTurnover1) AS IndicatorCurTurnover1,
+			SUM(IncomesExpensesTurnoversGlue.IndicatorTurnover) AS IndicatorTurnover,
+			SUM(IncomesExpensesTurnoversGlue.IndicatorCurTurnover) AS IndicatorCurTurnover,
+			IncomesExpensesTurnoversGlue.Project AS Project
+		FROM
+			(SELECT
+				ImcomesExpensesPlanWithAccounts.Period AS Period,
+				ImcomesExpensesPlanWithAccounts.Department AS Department,
+				ImcomesExpensesPlanWithAccounts.BalanceUnit AS BalanceUnit,
+				ImcomesExpensesPlanWithAccounts.Item AS Item,
+				ImcomesExpensesPlanWithAccounts.Analytics1 AS Analytics1,
+				ImcomesExpensesPlanWithAccounts.Analytics2 AS Analytics2,
+				ImcomesExpensesPlanWithAccounts.Analytics3 AS Analytics3,
+				ImcomesExpensesPlanWithAccounts.Currency AS Currency,
+				0 AS IndicatorTurnover1,
+				0 AS IndicatorCurTurnover1,
+				ImcomesExpensesPlanWithAccounts.AmountTurnover AS IndicatorTurnover,
+				ImcomesExpensesPlanWithAccounts.CurrencyAmountTurnover AS IndicatorCurTurnover,
+				ImcomesExpensesPlanWithAccounts.OperationType AS OperationType,
+				ImcomesExpensesPlanWithAccounts.Project AS Project
+			FROM
+				(SELECT
+					IncomesExpensesPlanTurnovers.Department AS Department,
+					IncomesExpensesPlanTurnovers.Analytics1 AS Analytics1,
+					IncomesExpensesPlanTurnovers.Analytics2 AS Analytics2,
+					IncomesExpensesPlanTurnovers.Analytics3 AS Analytics3,
+					IncomesExpensesPlanTurnovers.Currency AS Currency,
+					IncomesExpensesPlanTurnovers.BalanceUnit AS BalanceUnit,
+					IncomesExpensesPlanTurnovers.Period AS Period,
+					IncomesExpensesPlanTurnovers.Item AS Item,
+					IncomesExpensesPlanTurnovers.AmountTurnover AS AmountTurnover,
+					IncomesExpensesPlanTurnovers.CurrencyAmountTurnover AS CurrencyAmountTurnover,
+					IncomesExpensesPlanTurnovers.OperationType AS OperationType,
+					IncomesExpensesPlanTurnovers.Project AS Project
+				FROM
+					AccumulationRegister.fmIncomesAndExpenses.Turnovers(
+							&amp;BeginOfPeriod1,
+							&amp;EndOfPeriod1,
+							Month,
+							Scenario = &amp;PlanningScenario1
+								AND CASE
+									WHEN &amp;ConsiderInternalSettlements
+										Then OperationType IN (Value(Enum.fmBudgetFlowOperationTypes.Incomes), Value(Enum.fmBudgetFlowOperationTypes.InnerIncomes), Value(Enum.fmBudgetFlowOperationTypes.Expenses), Value(Enum.fmBudgetFlowOperationTypes.InnerExpenses))
+									Else OperationType IN (Value(Enum.fmBudgetFlowOperationTypes.Incomes), Value(Enum.fmBudgetFlowOperationTypes.Expenses))
+								END) AS IncomesExpensesPlanTurnovers
+				WHERE
+					CASE
+							WHEN IncomesExpensesPlanTurnovers.Scenario.ScenarioType = Value(Enum.fmBudgetingScenarioTypes.Plan)
+									AND &amp;BudgetsVersioning
+								Then IncomesExpensesPlanTurnovers.VersionPeriod &lt; &amp;VersionPeriod
+						END) AS ImcomesExpensesPlanWithAccounts
+			
+			UNION ALL
+			
+			SELECT
+				DATEADD(&amp;BeginOfPeriod1, MONTH, Month(IncomesExpensesFactWithAccounts.Period) - Month(&amp;BeginOfPeriod2)),
+				IncomesExpensesFactWithAccounts.Department,
+				IncomesExpensesFactWithAccounts.BalanceUnit,
+				IncomesExpensesFactWithAccounts.Item,
+				IncomesExpensesFactWithAccounts.Analytics1,
+				IncomesExpensesFactWithAccounts.Analytics2,
+				IncomesExpensesFactWithAccounts.Analytics3,
+				IncomesExpensesFactWithAccounts.Currency,
+				IncomesExpensesFactWithAccounts.AmountTurnover,
+				IncomesExpensesFactWithAccounts.CurrencyAmountTurnover,
+				0,
+				0,
+				IncomesExpensesFactWithAccounts.OperationType,
+				IncomesExpensesFactWithAccounts.Project
+			FROM
+				(SELECT
+					IncomesExpensesPlanTurnovers.Department AS Department,
+					IncomesExpensesPlanTurnovers.Analytics1 AS Analytics1,
+					IncomesExpensesPlanTurnovers.Analytics2 AS Analytics2,
+					IncomesExpensesPlanTurnovers.Analytics3 AS Analytics3,
+					IncomesExpensesPlanTurnovers.Currency AS Currency,
+					IncomesExpensesPlanTurnovers.BalanceUnit AS BalanceUnit,
+					IncomesExpensesPlanTurnovers.Period AS Period,
+					IncomesExpensesPlanTurnovers.Item AS Item,
+					IncomesExpensesPlanTurnovers.AmountTurnover AS AmountTurnover,
+					IncomesExpensesPlanTurnovers.CurrencyAmountTurnover AS CurrencyAmountTurnover,
+					IncomesExpensesPlanTurnovers.OperationType AS OperationType,
+					IncomesExpensesPlanTurnovers.Project AS Project
+				FROM
+					AccumulationRegister.fmIncomesAndExpenses.Turnovers(
+							&amp;BeginOfPeriod2,
+							&amp;EndOfPeriod2,
+							Month,
+							Scenario = &amp;PlanningScenario2
+								AND CASE
+									WHEN &amp;ConsiderInternalSettlements
+										Then OperationType IN (Value(Enum.fmBudgetFlowOperationTypes.Incomes), Value(Enum.fmBudgetFlowOperationTypes.InnerIncomes), Value(Enum.fmBudgetFlowOperationTypes.Expenses), Value(Enum.fmBudgetFlowOperationTypes.InnerExpenses))
+									Else OperationType IN (Value(Enum.fmBudgetFlowOperationTypes.Incomes), Value(Enum.fmBudgetFlowOperationTypes.Expenses))
+								END) AS IncomesExpensesPlanTurnovers
+				WHERE
+					CASE
+							WHEN IncomesExpensesPlanTurnovers.Scenario.ScenarioType = Value(Enum.fmBudgetingScenarioTypes.Plan)
+									AND &amp;BudgetsVersioning
+								Then IncomesExpensesPlanTurnovers.VersionPeriod &lt; &amp;VersionPeriod
+						END) AS IncomesExpensesFactWithAccounts) AS IncomesExpensesTurnoversGlue
+		
+		Group BY
+			IncomesExpensesTurnoversGlue.Currency,
+			IncomesExpensesTurnoversGlue.Item,
+			IncomesExpensesTurnoversGlue.Department,
+			IncomesExpensesTurnoversGlue.BalanceUnit,
+			IncomesExpensesTurnoversGlue.Period,
+			IncomesExpensesTurnoversGlue.Project,
+			CASE
+				WHEN IncomesExpensesTurnoversGlue.Analytics1 = Undefined
+					Then NULL
+				Else IncomesExpensesTurnoversGlue.Analytics1
+			END,
+			CASE
+				WHEN IncomesExpensesTurnoversGlue.Analytics2 = Undefined
+					Then NULL
+				Else IncomesExpensesTurnoversGlue.Analytics2
+			END,
+			CASE
+				WHEN IncomesExpensesTurnoversGlue.Analytics3 = Undefined
+					Then NULL
+				Else IncomesExpensesTurnoversGlue.Analytics3
+			END) AS IncomesExpensesPlanTurnoversJoined
+		ON FinancialReportStructureIndicatorsWithEmptyString.Analytics = IncomesExpensesPlanTurnoversJoined.Item
+;
+
+////////////////////////////////////////////////////////////////////////////////
+SELECT
+	TotalTable.Departments AS Departments,
+	TotalTable.Analytics1 AS Analytics1,
+	TotalTable.Analytics2 AS Analytics2,
+	TotalTable.Analytics3 AS Analytics3,
+	TotalTable.Currency AS Currency,
+	TotalTable.IncomesExpensesItem AS IncomesExpensesItem,
+	TotalTable.Indicator AS Indicator,
+	TotalTable.CurIndicator AS CurIndicator,
+	TotalTable.Indicator1 AS Indicator1,
+	TotalTable.CurIndicator1 AS CurIndicator1,
+	TotalTable.Indicator1 - TotalTable.Indicator AS Deviation,
+	TotalTable.CurIndicator1 - TotalTable.CurIndicator AS CurDeviation,
+	TotalTable.Ref AS Ref,
+	TotalTable.BalanceUnit AS BalanceUnit,
+	TotalTable.Period AS Period,
+	TotalTable.Project AS Project
+{SELECT
+	Departments.* AS Departments,
+	Analytics1.* AS Analytics1,
+	Analytics2.* AS Analytics2,
+	Analytics3.* AS Analytics3,
+	Currency.* AS Currency,
+	IncomesExpensesItem.* AS IncomesAndExpensesItem,
+	Indicator AS Amount,
+	CurIndicator AS CurAmount,
+	Indicator1 AS Amount_1,
+	CurIndicator1 AS CurAmount_1,
+	Deviation AS Deviation,
+	CurDeviation AS CurDeviation,
+	Ref.* AS Section,
+	BalanceUnit.* AS BalanceUnit,
+	Period,
+	Project.*}
+FROM
+	TotalTable AS TotalTable
+WHERE
+	NOT TotalTable.Period = DATETIME(1, 1, 1, 0, 0, 0)
+{WHERE
+	TotalTable.Project.*}
+</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Period</dataPath>
+		<expression>Format(Period, "DF = 'MMMM yyyy'; DE = ' ' ") + ", " + Format(DATEADD(&amp;BeginOfPeriod2, "Month", (Month(Period) - Month(&amp;BeginOfPeriod1))), "DF =  'MMMM yyyy'; DE = ' ' ")
+</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Period</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+		</useRestriction>
+		<orderExpression>
+			<dcscom:expression>Period</dcscom:expression>
+			<dcscom:orderType>Asc</dcscom:orderType>
+			<dcscom:autoOrder>false</dcscom:autoOrder>
+		</orderExpression>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>GroupQuarter</dataPath>
+		<expression>Format(Period, "DF='q ""Quarter"" yyyy ""y.""' ; DE = ' ' ") + ", " + Format(DATEADD(&amp;BeginOfPeriod2, "Month", (Month(Period) - Month(&amp;BeginOfPeriod1))), "DF='q ""Quarter"" yyyy ""y.""' ; DE = ' ' ")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Группировка квартал</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Grouping quarter</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+		</useRestriction>
+		<orderExpression>
+			<dcscom:expression>Period</dcscom:expression>
+			<dcscom:orderType>Asc</dcscom:orderType>
+			<dcscom:autoOrder>false</dcscom:autoOrder>
+		</orderExpression>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>GroupYear</dataPath>
+		<expression>Format(Period, "DF='yyyy ""y.""' ; DE = ' ' ") + ", " + Format(DATEADD(&amp;BeginOfPeriod2, "Month", (Month(Period) - Month(&amp;BeginOfPeriod1))), "DF='yyyy ""y.""' ; DE = ' ' ")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Группировка год</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Grouping year</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+		</useRestriction>
+		<orderExpression>
+			<dcscom:expression>Period</dcscom:expression>
+			<dcscom:orderType>Asc</dcscom:orderType>
+			<dcscom:autoOrder>false</dcscom:autoOrder>
+		</orderExpression>
+	</calculatedField>
+	<totalField>
+		<dataPath>Amount</dataPath>
+		<expression>CASE 
+    WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.Thousand) Then Format(Amount(Amount)/1000, "ND=15; NFD=0")
+    Else  CASE 
+            WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.One) Then Format(Amount(Amount), "ND=15; NFD=0")
+            Else   CASE 
+                        WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.WithoutRound) Then Format(Amount(Amount), "ND=15; NFD=2")
+                                            END   
+                           END    
+           
+   END</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Deviation</dataPath>
+		<expression>CASE 
+    WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.Thousand) Then Format(Amount(Deviation)/1000, "ND=15; NFD=0")
+    Else  CASE 
+            WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.One) Then Format(Amount(Deviation), "ND=15; NFD=0")
+            Else   CASE 
+                        WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.WithoutRound) Then Format(Amount(Deviation), "ND=15; NFD=2")
+                                            END   
+                           END    
+           
+   END</expression>
+	</totalField>
+	<totalField>
+		<dataPath>CurAmount</dataPath>
+		<expression>CASE 
+    WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.Thousand) Then Format(Amount(CurAmount)/1000, "ND=15; NFD=0")
+    Else  CASE 
+            WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.One) Then Format(Amount(CurAmount), "ND=15; NFD=0")
+            Else   CASE 
+                        WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.WithoutRound) Then Format(Amount(CurAmount), "ND=15; NFD=2")
+                                            END   
+                           END    
+           
+   END</expression>
+	</totalField>
+	<totalField>
+		<dataPath>CurDeviation</dataPath>
+		<expression>CASE 
+    WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.Thousand) Then Format(Amount(CurDeviation)/1000, "ND=15; NFD=0")
+    Else  CASE 
+            WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.One) Then Format(Amount(CurDeviation), "ND=15; NFD=0")
+            Else   CASE 
+                        WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.WithoutRound) Then Format(Amount(CurDeviation), "ND=15; NFD=2")
+                                            END   
+                           END    
+           
+   END</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Amount_1</dataPath>
+		<expression>CASE 
+    WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.Thousand) Then Format(Amount(Amount_1)/1000, "ND=15; NFD=0")
+    Else  CASE 
+            WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.One) Then Format(Amount(Amount_1), "ND=15; NFD=0")
+            Else   CASE 
+                        WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.WithoutRound) Then Format(Amount(Amount_1), "ND=15; NFD=2")
+                                            END   
+                           END    
+           
+   END</expression>
+	</totalField>
+	<totalField>
+		<dataPath>CurAmount_1</dataPath>
+		<expression>CASE 
+    WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.Thousand) Then Format(Amount(CurAmount_1)/1000, "ND=15; NFD=0")
+    Else  CASE 
+            WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.One) Then Format(Amount(CurAmount_1), "ND=15; NFD=0")
+            Else   CASE 
+                        WHEN &amp;ViewFormat = Value(Enum.fmRoundMethods.WithoutRound) Then Format(Amount(CurAmount_1), "ND=15; NFD=2")
+                                            END   
+                           END    
+           
+   END</expression>
+	</totalField>
+	<parameter>
+		<name>ReportVariant</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Report variant</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.fmInfoStructures</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ViewFormat</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Формат отображения</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Display format</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.fmRoundMethods</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>PresentationBalanceUnitDep</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление БалансоваяЕдиницаПодр</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Presentation BalanceUnitDep</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>EndOfPeriod1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End of period1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>EndOfPeriod2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End of period2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>BeginOfPeriod1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Begin of period1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>BeginOfPeriod2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Begin of period2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>PlanningScenario1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Planning scenario1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.fmBudgetingScenarios</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>PlanningScenario2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Planning scenario2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.fmBudgetingScenarios</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ConsiderInternalSettlements</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Consider internal settlements</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>BudgetsVersioning</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Budgets versioning</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>VersionPeriod</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Version period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>BeginOfPeriod</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Begin of period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>EndOfPeriod</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>End of period</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Main</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Main</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Section</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Departments</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Analytics1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>IncomesAndExpensesItem</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Amount</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Amount_1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Deviation</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Period</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>BalanceUnit</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Project</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Section.Order</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>AppearanceTemplate</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Green</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>HorizontalOverallPlacement</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Begin</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>VerticalOverallPlacement</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>FilterOutput</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

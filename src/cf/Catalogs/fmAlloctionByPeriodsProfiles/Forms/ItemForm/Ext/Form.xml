@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">AfterWrite</Event>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="BeforeWrite">BeforeWrite</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupDescriptionCode" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Name code Group</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Name code Group</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupDescriptionCodeExtendedTooltip" id="33"/>
+			<ChildItems>
+				<InputField name="Description" id="4">
+					<DataPath>Object.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="DescriptionContextMenu" id="5"/>
+					<ExtendedTooltip name="DescriptionExtendedTooltip" id="6"/>
+				</InputField>
+				<InputField name="Code" id="1">
+					<DataPath>Object.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="CodeContextMenu" id="2"/>
+					<ExtendedTooltip name="CodeExtendedTooltip" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Periods" id="10">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Object.Periods</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="PeriodsContextMenu" id="11"/>
+			<AutoCommandBar name="PeriodsCommandBar" id="12"/>
+			<ExtendedTooltip name="PeriodsExtendedTooltip" id="13"/>
+			<SearchStringAddition name="PeriodsSearchString" id="14">
+				<AdditionSource>
+					<Item>Periods</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="PeriodsSearchStringContextMenu" id="15"/>
+				<ExtendedTooltip name="PeriodsSearchStringExtendedTooltip" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="PeriodsViewStatus" id="17">
+				<AdditionSource>
+					<Item>Periods</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="PeriodsViewStatusContextMenu" id="18"/>
+				<ExtendedTooltip name="PeriodsViewStatusExtendedTooltip" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="PeriodsSearchControl" id="20">
+				<AdditionSource>
+					<Item>Periods</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="PeriodsSearchControlContextMenu" id="21"/>
+				<ExtendedTooltip name="PeriodsSearchControlExtendedTooltip" id="22"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnStartEdit">PeriodsOnStartEdit</Event>
+				<Event name="OnChange">PeriodsOnChange</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="PeriodsPeriodNumber" id="26">
+					<DataPath>Object.Periods.PeriodNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ClearButton>false</ClearButton>
+					<SpinButton>true</SpinButton>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧН=</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ЧН=</v8:content>
+						</v8:item>
+					</Format>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧН=</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ЧН=</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="PeriodsPeriodNumberContextMenu" id="27"/>
+					<ExtendedTooltip name="PeriodsPeriodNumberExtendedTooltip" id="28"/>
+				</InputField>
+				<InputField name="PeriodsFraction" id="29">
+					<DataPath>Object.Periods.Fraction</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Object.Periods.TotalFraction</FooterDataPath>
+					<Width>25</Width>
+					<ChoiceButton>false</ChoiceButton>
+					<ContextMenu name="PeriodsFractionContextMenu" id="30"/>
+					<ExtendedTooltip name="PeriodsFractionExtendedTooltip" id="31"/>
+				</InputField>
+				<InputField name="PeriodsSpecificWeight" id="34">
+					<DataPath>Object.Periods.SpecificWeight</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удельный вес, %</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Specific weight, %</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Object.Periods.TotalSpecificWeight</FooterDataPath>
+					<ContextMenu name="PeriodsSpecificWeightContextMenu" id="35"/>
+					<ExtendedTooltip name="PeriodsSpecificWeightExtendedTooltip" id="36"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Object</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogObject.fmAlloctionByPeriodsProfiles</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Object.Periods"/>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

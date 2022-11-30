@@ -1,0 +1,2318 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="BeforeClose">BeforeClose</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="DataSyncDetailsGroup" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание синхронизации данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Data synchronization details</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Opis synchronizacji danych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Datensynchronisationsbeschreibung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Descrierea sincronizării datelor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Veri senkronizasyonu açıklaması</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Descripción de la sincronización de datos</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="DataSyncDetailsGroupExtendedTooltip" id="2"/>
+			<ChildItems>
+				<LabelDecoration name="ExchangeBriefInfoLabelDecoration" id="3">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="ExchangeBriefInfoLabelDecorationContextMenu" id="4"/>
+					<ExtendedTooltip name="ExchangeBriefInfoLabelDecorationExtendedTooltip" id="5"/>
+				</LabelDecoration>
+				<Button name="DataSyncDetails" id="6">
+					<Type>Hyperlink</Type>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<CommandName>Form.Command.DataSyncDetails</CommandName>
+					<ExtendedTooltip name="DataSyncDetailsExtendedTootip" id="7"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="BackupGroup" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резервное копирование</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Backup</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Kopia zapasowa</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Sicherungskopie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Copia de rezervă</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Yedek</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Copia de respaldo</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<VerticalAlign>Center</VerticalAlign>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="BackupGroupExtendedTooltip" id="9"/>
+			<ChildItems>
+				<PictureDecoration name="BackupPictureDecoration" id="10">
+					<Height>2</Height>
+					<Picture>
+						<xr:Ref>CommonPicture.Warning</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="BackupPictureDecorationContextMenu" id="11"/>
+					<ExtendedTooltip name="BackupPictureDecorationExtendedTooltip" id="12"/>
+				</PictureDecoration>
+				<LabelDecoration name="BackupLabelDecoration" id="13">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед началом настройки новой синхронизации данных рекомендуется создать резервную копию данных.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>It is recommended that you back up your data before configuring a new synchronization.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Przed rozpoczęciem konfigurowania nowej synchronizacji danych zaleca się utworzenie kopii zapasowej danych.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Es wird empfohlen, vor der Konfiguration einer neuen Datensynchronisation eine Sicherungskopie der Daten zu erstellen.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Înainte de a începe setarea unei noi sincronizări de date, este recomandată crearea copiei de rezervă a datelor.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Yeni bir veri eşitleme yapılandırmaya başlamadan önce veri yedeklemeniz önerilir.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Antes de empezar a ajustar la sincronización nueva de datos se recomienda crear una copia de respaldo de datos.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="BackupLabelDecorationContextMenu" id="14"/>
+					<ExtendedTooltip name="BackupLabelDecorationExtendedTooltip" id="15"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="SetupGroup" id="121">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этапы настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Synchronization setup steps</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Etapy konfiguracji</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Einrichtungsschritte</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Pașii setării</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Ayarların aşamaları</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Etapas de ajuste</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="SetupGroupExtendedTooltip" id="122"/>
+			<ChildItems>
+				<UsualGroup name="ConnectionSetupGroup" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка подключения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Configure connection parameters</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Konfiguracja połączenia</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Verbindungseinstellung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Setarea conectării</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Bağlantı ayarları</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Ajuste de conexión</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ConnectionSetupGroupExtendedTooltip" id="17"/>
+					<ChildItems>
+						<Pages name="ConnectionSetupPanel" id="18">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель настройка подключения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Configure connection parameters panel</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Panel konfiguracja połączenia</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Verbindungseinstellung-Leiste</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Panoul setarea conectării</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Panel bağlantı ayarları</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Panel de ajuste de conexión</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ConnectionSetupPanelExtendedTooltip" id="19"/>
+							<ChildItems>
+								<Page name="ConnectionSetupSuccessfulPage" id="20">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница настройка подключения успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Configure connection parameters success page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona konfiguracja połączenia pomyślnie</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Verbindungseinstellung</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina setarea conexiunii succes</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa bağlantı ayarları başarılı</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página ajuste de conexión con éxito</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ConnectionSetupSuccessfulPageExtendedTooltip" id="21"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration1" id="22">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.Success</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration1ContextMenu" id="23"/>
+											<ExtendedTooltip name="Decoration1ExtendedTooltip" id="24"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ConnectionSetupPageActive" id="25">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница настройка подключения текущий</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Configure connection parameters current step</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona konfiguracja połączenia aktualny</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Verbindungseinstellung aktuell</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina setarea conexiunii curentă</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa bağlantı ayarları mevcut</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página ajuste de conexión actual</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ConnectionSetupPageActiveExtendedTooltip" id="26"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration2" id="27">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration2ContextMenu" id="28"/>
+											<ExtendedTooltip name="Decoration2ExtendedTooltip" id="29"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ConnectionSetupPageEmpty" id="116">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница настройка подключения пустой</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Configure connection parameters no picture page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona konfiguracja połączenia pusty</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Verbindungseinstellung leer</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina setarea conexiunii goală</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa bağlantı ayarları boş</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página ajuste de conexión vacío</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ConnectionSetupPageEmptyExtendedTooltip" id="117"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration15" id="118">
+											<Width>2</Width>
+											<Height>2</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration15ContextMenu" id="119"/>
+											<ExtendedTooltip name="Decoration15ExtendedTooltip" id="120"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<Button name="SetUpConnectionParameters" id="30">
+							<Type>Hyperlink</Type>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<CommandName>Form.Command.SetUpConnectionParameters</CommandName>
+							<Font ref="style:NormalTextFont" kind="StyleItem"/>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ConfigureConnectionParametersExtendedTooltip" id="31">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Для начала синхронизации данных необходимо указать, каким способом программы будут подключаться друг к другу.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>To start data synchronization, specify how the applications connect to each other.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Aby rozpocząć synchronizację danych, musisz określić, w jaki sposób programy będą się ze sobą łączyć.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Um die Synchronisierung der Daten zu starten, müssen Sie angeben, wie die Programme miteinander verbunden werden sollen.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Pentru a începe sincronizarea de date, trebuie să specificați modul în care programele se vor conecta reciproc.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Verileri eşitlemeye başlamak için, programın birbirine nasıl bağlanacağını belirtmeniz gerekir.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>Para empezar la sincronización de datos es necesario indicar como los programas se conectarán.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ConnectionConfirmationGroup" id="146">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтверждение подключения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Confirm connection</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Potwierdzenie połączenia</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Verbindungsbestätigung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Confirmarea conexiunii</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Bağlantı doğrulaması</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Confirmación de conexión</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ConnectionConfirmationGroupExtendedTooltip" id="147"/>
+					<ChildItems>
+						<Pages name="ConnectionConfirmationPanel" id="150">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель подтверждение подключения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Confirm connection panel</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Panel potwierdzenia połączenia</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Bestätigungsfeld für die Verbindung</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Panoul confirmarea conexiunii</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Panel bağlantı doğrulanması</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Panel de confirmación de conexión</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ConnectionConfirmationPanelExtendedTooltip" id="151"/>
+							<ChildItems>
+								<Page name="ConnectionConfirmationStepSucceededPage" id="152">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница подтверждение подключения успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Confirm connection success page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona potwierdzenia połączenia pomyślnie</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Die Bestätigungsseite für die Verbindung ist erfolgreich</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina confirmarea conexiunii succes</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa bağlantı doğrulanması başarılı</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página confirmación de conezión con éxito</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ConnectionConfirmationStepSucceededPageExtendedTooltip" id="153"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration19" id="158">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.Success</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration19ContextMenu" id="159"/>
+											<ExtendedTooltip name="Decoration19ExtendedTooltip" id="160"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ConnectionConfirmationStepInProgressPage" id="154">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница подтверждение подключения текущий</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Confirm connection current step page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona potwierdzenia połączenia aktualny</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Bestätigungsseite für die aktuelle Verbindung</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina confirmarea conexiunii curentă</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa bağlantı doğrulanması mevcut</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página confirmación de conexión actual</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ConnectionConfirmationStepInProgressPageExtendedTooltip" id="155"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration20" id="161">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration20ContextMenu" id="162"/>
+											<ExtendedTooltip name="Decoration20ExtendedTooltip" id="163"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ConnectionConfirmationStepToProcessPage" id="156">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница подтверждение подключения пустой</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Confirm connection no picture page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona potwierdzenia połączenia pusty</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Die Bestätigungsseite für die Verbindung ist leer</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina confirmarea conexiunii goală</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa bağlantı doğrulanması boş</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página confirmación de conexión vacío</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ConnectionConfirmationStepToProcessPageExtendedTooltip" id="157"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration21" id="164">
+											<Width>2</Width>
+											<Height>2</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration21ContextMenu" id="165"/>
+											<ExtendedTooltip name="Decoration21ExtendedTooltip" id="166"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<Button name="GetConnectionConfirmation" id="148">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.GetConnectionConfirmation</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="GetConnectionConfirmationExtendedTooltip" id="149">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Система "%CorrespondentDescription%" должна подтвердить запрос на настройку подключения из этой программы.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>%CorrespondentDescription% must confirm a request for connection from this application.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>System "%CorrespondentDescription%" musi potwierdzić żądanie skonfigurowania połączenia z tego programu.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Das System "%CorrespondentDescription%" muss die Anforderung zum Verbindungsaufbau aus diesem Programm bestätigen.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Sistemul "%CorrespondentDescription%" trebuie să confirme interogarea de setare a conexiunii din această aplicație.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Sistem "%CorrespondentDescription%" bu programdan bağlantı ayarı talebini doğrulamalıdır. </v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>El sistema "%CorrespondentDescription%" debe confirmar la solicitud de ajustar la conexión de este programa.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="RulesSetupGroup" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка правил</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Configure synchronization rules</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Ustawienia reguł</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Festlegung der Regeln</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Setarea regulilor</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Kural ayarları</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Ajuste de reglas</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="RulesSetupGroupExtendedTooltip" id="33"/>
+					<ChildItems>
+						<Pages name="RulesSetupPanel" id="34">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель настройка правил</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Configure synchronization rules panel</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Panel konfiguracja reguł</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Regeleinstellungsbereich</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Panoul setarea regulilor</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Panel kural ayarları</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Panel ajuste de reglas</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="RulesSetupPanelExtendedTooltip" id="35"/>
+							<ChildItems>
+								<Page name="RulesSetupSuccessfulPage" id="36">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница настройка правил успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Configure synchronization rules success page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona konfiguracja reguł pomyślnie</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Regeleinstellung erfolgreich</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina setarea regulilor succes</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa kural ayarları başarılı</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página ajuste de reglas con éxito</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="RulesSetupSuccessfulPageExtendedTooltip" id="37"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration3" id="38">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.Success</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration3ContextMenu" id="39"/>
+											<ExtendedTooltip name="Decoration3ExtendedTooltip" id="40"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="RulesSetupPageActive" id="41">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница настройка правил текущий</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Configure synchronization rules current step page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona konfiguracja reguł bieżący</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Regeleinstellung aktuell</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina setarea regulilor curentă</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa kural ayarları mevcut</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página ajuste de reglas actual</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="RulesSetupPageActiveExtendedTooltip" id="42"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration4" id="43">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration4ContextMenu" id="44"/>
+											<ExtendedTooltip name="Decoration4ExtendedTooltip" id="45"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="RulesSetupPageEmpty" id="46">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница настройка правил пустой</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Configure synchronization rules no picture page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona konfiguracja reguł pusty</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Regeleinstellung leer</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina setarea regulilor goală</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa kural ayarları boş</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página ajuste de reglas vacío</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="RulesSetupPageEmptyExtendedTooltip" id="47"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration5" id="48">
+											<Width>2</Width>
+											<Height>2</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration5ContextMenu" id="49"/>
+											<ExtendedTooltip name="Decoration5ExtendedTooltip" id="50"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<Button name="SetSendingAndReceivingRules" id="51">
+							<Type>Hyperlink</Type>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<CommandName>Form.Command.ConfigureDataExportImportRules</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ConfigureDataExportImportRules" id="52">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Перед началом использования синхронизации данных требуется указать ограничения отправки данных, а также правила получения данных из другой программы (значения по умолчанию).</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Before you start using data synchronization, specify data sending restrictions and rules of receiving data from the other application (default values).</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Przed rozpoczęciem korzystania z synchronizacji danych należy określić limity wysyłania danych, a także zasady odbierania danych z innego programu (wartości domyślne).</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Bevor Sie mit der Datensynchronisation beginnen, müssen Sie die Einschränkungen beim Senden von Daten sowie die Regeln für den Empfang von Daten aus einem anderen Programm (Standardwerte) festlegen.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Înainte de a începe utilizarea sincronizării de date, trebuie să specificați restricționarea expedierii datelor, precum și regulile pentru primirea datelor dintr-un alt program (valorile implicite).</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Veri senkronizasyonunu kullanmaya başlamadan önce, veri gönderme kısıtlamalarını ve başka bir programdan (varsayılan) veri alma kurallarını belirtmeniz gerekir.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>Antes de empezar a usar la sincronización de datos se requiere indicar las restricciones de envío de datos y también las reglas de recibir los datos de otro programa (valores por defecto).</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="InitialDIBImageGroup" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начальный образ РИБ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Initial DIB image</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Początkowy obraz rozproszonej bazy informacyjnej</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Anfangsbild RIB</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Imaginea inițială a BID</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>İlk RIB görünümü</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Imagen inicial de la base de información distribuida</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="InitialDIBImageGroupExtenedTooltip" id="54"/>
+					<ChildItems>
+						<Pages name="InitialDIBImagePanel" id="55">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель начальный образ РИБ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Initial DIB image panel</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Panel początkowy obraz rozproszonej bazy informacyjnej</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Leiste Anfangsbild RIB</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Panoul imaginea inițială a BID</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Panel ilk RIB görünümü</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Panel imagen inicial de la base de información distribuida</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="InitialDIBImagePanelExtendedTooltip" id="56"/>
+							<ChildItems>
+								<Page name="InitialDIBImagePageSuccessful" id="57">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница начальный образ РИБ успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Initial DIB image success page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona początkowy obraz rozproszonej bazy informacyjnej pomyślnie</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Anfangsbild RIB erfolgreich</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina imaginea inițială a BID succes</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa ilk RIB görünümü başarılı</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página imagen inicial de la base de información distribuida con éxito</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="InitialDIBImagePageSuccessfulExtendedTooltip" id="58"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration6" id="59">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.Success</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration6ContextMenu" id="60"/>
+											<ExtendedTooltip name="Decoration6ExtendedTooltip" id="61"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="InitialDIBImagePageActive" id="62">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница начальный образ РИБ текущий</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Initial DIB image current step page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona początkowy obraz rozproszonej bazy informacyjnej aktualny</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Anfangsbild RIB aktuell</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina imaginea inițială a BID curentă</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa ilk RIB görünümü mevcut</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página imagen inicial de la base de información distribuida actual</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="InitialDIBImagePageActiveExtendedTooltip" id="63"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration7" id="64">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration7ContextMenu" id="65"/>
+											<ExtendedTooltip name="Decoration7ExtendedTooltip" id="66"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="InitialDIBImagePageEmpty" id="67">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница начальный образ РИБ пустой</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Initial DIB image no picture page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona początkowy obraz rozproszonej bazy informacyjnej pusty</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Anfangsbild RIB leer</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina imaginea inițială a BID goală</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa ilk RIB görünümü boş</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página imagen inicial de la base de información distribuida vacío</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="InitialDIBImagePageEmptyExtendedTooltip" id="68"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration8" id="69">
+											<Width>2</Width>
+											<Height>2</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration8ContextMenu" id="70"/>
+											<ExtendedTooltip name="Decoration8ExtendedTooltip" id="71"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<Button name="CreateInitialDIBImage" id="72">
+							<Type>Hyperlink</Type>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<CommandName>Form.Command.CreateInitialDIBImage</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="CreateInitialDIBImageExtendedTooltip" id="73">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Создание начального образа может занять длительное время.
+После создания необходимо развернуть информационную базу из созданного образа и выполнить первоначальный запуск программы для завершения настройки. Возможно создать начальный образ позднее. Для этого необходимо открыть параметры настроенной синхронизации и выполнить команду «Создание начального образа подчиненного узла распределенной информационной базы».</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Creating an initial image might take a long time.
+After creation, deploy the infobase from the initial image and run the application to complete the synchronization setup. You can create an initial image later by opening configured configuration parameters and clicking "Create initial image of a subordinate DIB node."</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Tworzenie początkowego obrazu może zająć dużo czasu.
+ Po utworzeniu należy rozwinąć bazę informacyjną z utworzonego obrazu i dokonać pierwszego uruchomienia programu w celu zakończenia konfiguracji. Istnieje możliwość późniejszego tworzenia obrazu początkowego. W tym celu należy otworzyć parametry skonfigurowanej synchronizacji i uruchomić polecenie "Tworzenie początkowego obraz podporządkowanego węzła rozproszonej bazy informacyjnej".</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Die Erstellung eines ersten Bildes kann sehr lange dauern.
+Nach der Erstellung müssen Sie die Informationsbasis aus dem erstellten Bild erweitern und den ersten Start des Programms durchführen, um das Setup abzuschließen. Es ist möglich, das Ausgangsbild später zu erstellen. Öffnen Sie dazu die Parameter der konfigurierten Synchronisation und führen Sie den Befehl "Anfangsbild des untergeordneten Knotens der verteilten Informationsbasis erstellen" aus.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Crearea imaginii inițiale poate dura mult timp.
+ După creare este necesară desfășurarea bazei de informații din imaginea creată și efectuarea lansării inițiale a programului pentru finalizarea setării. Este posibilă crearea imaginii inițiale mai târziu. Pentru aceasta deschideți parametrii sincronizării setate și executați comanda „Crearea imaginii inițiale a nodului subordonat al bazei de informații distribuite”.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>İlk görüntü oluşturma işlemi bir süre sürebilir. 
+Oluşum tamamlandıktan sonra, oluşturulan görüntünün bilgi tabanını açmalı ve ayarları tamamlamak için ilk uygulama başlatmalısınız. İlk görüntüyü daha sonra oluşturabilirsiniz. Bunu yapmak için, set senkronizasyonunun parametrelerini açın ve dağıtılmış bir bilgi tabanı alt ünite komutunun Oluştur ilk görüntü komutunu çalıştırın.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>La creación de imagen inicial puede llevar mucho tiempo.
+Después de crear es necesario maximizar la base de información de imagen creada y realizar el lanzamiento inicial del programa para terminar de ajustar. Es posible crear imagen inicial más tarde. Para hacerlo es necesario abrir los parámetros de sincronización ajustada y ejecutar el comando "Creación de imagen inicial del nodo subordinado de la base de información distribuida".</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="MapAndImportGroup" id="125">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сопоставление и загрузка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Map and import data</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Zestawienie i pobieranie</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Abgleich und Download</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Confruntare și import</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Karşılaştırma ve içe aktarma</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Comparación y descarga</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="MapAndImportGroupExtendedTooltip" id="126"/>
+					<ChildItems>
+						<Pages name="MapAndImportPanel" id="127">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель сопоставление и загрузка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Map and import data panel</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Panel zestawienie i pobieranie</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Leiste Abgleich und Download</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Panoul confruntare și import</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Panel karşılaştırma ve içe aktarma</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Panel comparación y descarga</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="MapAndImportPanelExtendedTooltip" id="128"/>
+							<ChildItems>
+								<Page name="MapAndImportPageSuccessful" id="131">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница сопоставление и загрузка успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Map and import data success page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona zestawienie i pobieranie pomyślnie</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Abgleich und Download erfolgreich</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina confruntare import succes</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa karşılaştırma ve içe aktarma başarılı</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página comparación y descarga con éxito</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="MapAndImportPageSuccessfulExtendedTooltip" id="132"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration16" id="137">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.Success</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration16ContextMenu" id="138"/>
+											<ExtendedTooltip name="Decoration16ExtendedTooltip" id="139"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="MapAndImportPageActive" id="133">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница сопоставление и загрузка текущий</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Map and import data current step page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona zestawienie i pobieranie aktualny</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Abgleich und Download aktuell</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina confruntare import curentă</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa karşılaştırma ve içe aktarma mevcut</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página comparación y descarga actual</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="MapAndImportPageActiveExtendedTooltip" id="134"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration17" id="140">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration17ContextMenu" id="141"/>
+											<ExtendedTooltip name="Decoration17ExtendedTooltip" id="142"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="MapAndImportPageEmpty" id="135">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница сопоставление и загрузка пустой</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Map and import data no picture page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona zestawienie i pobieranie pusty</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Abgleich und Download leer</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina confruntare import goală</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa karşılaştırma ve içe aktarma boş</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página comparación y descarga vacío</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="MapAndImportPageEmptyExtendedTooltip" id="136"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration18" id="143">
+											<Width>2</Width>
+											<Height>2</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration18ContextMenu" id="144"/>
+											<ExtendedTooltip name="Decoration18ExtendedTooltip" id="145"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<Button name="MapAndExportData" id="129">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.MapAndExportData</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="MapAndImportDataExtendedTooltip" id="130">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Если учет ведется в обеих программах, перед запуском синхронизации следует выполнить сопоставление данных. Это позволит избежать появления дублирующихся элементов справочников, которые независимо друг от друга были введены в обеих программах, например, с одинаковыми наименованиями. С помощью сопоставления можно указать, какие данные являются одинаковыми в двух программах. После чего можно будет выполнить загрузку с учетом настроенных сопоставлений.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>If accounting is carried out in both applications, before you run the synchronization, map their data. This will help you to avoid duplication of catalog items recorded independently in both applications, for example, items with the same name. Once you specify the mapping, you can import data from the other application.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Jeśli ewidencja jest prowadzona w obydwu programach, przed rozpoczęciem synchronizacji należy wykonać zestawienie danych. Pozwoli to uniknąć powstawania duplikatów elementów katalogów, które niezależnie od siebie były wprowadzone w obydwu programach, na przykład, z jednakowymi nazwami. Przy pomocy zestawienia można wskazać, jakie dane są jednakowe w dwóch programach. Po czym można będzie wykonać pobieranie z uwzględnieniem zestawień ustawionych.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Wenn die Abrechnung in beiden Programmen erfolgt, sollten Sie vor dem Start der Synchronisation einen Datenabgleich durchführen. Auf diese Weise wird das Auftreten doppelter Elemente von Verzeichnissen vermieden, die unabhängig voneinander in beiden Programmen eingeführt wurden, z. B. mit demselben Namen. Mit dem Abgleich können Sie festlegen, welche Daten in beiden Programmen gleich sind. Danach können Sie basierend auf den konfigurierten Zuordnungen herunterladen.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Dacă evidența este ținută în ambele programe, înainte de a începe sincronizarea trebuie să efectuați confruntarea datelor. Aceasta va permite să evitați apariția elementelor duplicate ale clasificatoarelor care au fost introduse independent în ambele programe, de exemplu, cu aceleași nume. Folosind confruntarea, puteți specifica care date sunt identice în cele două programe. După aceasta veți putea efectua importul ținând cont de confruntările setate.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Her iki programda da kayıt devam ederse, eşitleme başlamadan önce veri eşlemeniz gerekir. Bu, her iki programda da bağımsız olarak tanıtılan, örneğin aynı adlara sahip olan yinelenen dizin öğelerinin ortaya çıkmasını önleyecektir. Eşlemeyi kullanarak, hangi verilerin iki programda aynı olduğunu belirtebilirsiniz. Bundan sonra, özelleştirilmiş eşlemeleri dikkate alarak bir yükleme yapılabilir.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>Si la contabilidad se lleva en ambos programas, antes de lanzar la sincronización hay que comparar los datos. Esto permitirá evitar la aparición de elementos duplicados de catálogos que se han introducido en ambos programas independiente uno de otro, por ejemplo, con los mismos nombres. Con ayuda de comparación se puede indicar que datos son iguales en ambos programas. Después se puede descargar teniendo en cuenta comparaciones ajustadas.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="InitialDataExportGroup" id="74">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начальная выгрузка данных</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Run initial data export</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Początkowy eksport danych</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Initialer Datenexport</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Exportul inițial de date</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Ilk veri raporu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Exportación de datos inicial</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="InitialDataExportGroupExtendedTooltip" id="75"/>
+					<ChildItems>
+						<Pages name="InitialDataExportPanel" id="76">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель начальная выгрузка данных</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Run initial data export panel</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Panel początkowy eksport danych</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Leiste Initialer Datenexport</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Panoul export de date inițial</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Panel ilk dışa aktarma</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Panel subida de datos inicial</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="InitialDataExportPanelExtendedTooltip" id="77"/>
+							<ChildItems>
+								<Page name="InitialDataExportPageSuccessful" id="78">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница начальная выгрузка данных успешно</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Run initial data export success page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona początkowy eksport danych pomyślnie</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Initialer Datenexport erfolgreich</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina export de date inițial succes</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa  ilk dışa aktarma başarılı</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página subida inicial de datos con éxito</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="InitialDataExportPageSuccessfulExtendedTooltip" id="79"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration9" id="80">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.Success</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration9ContextMenu" id="81"/>
+											<ExtendedTooltip name="Decoration9ExtendedTooltip" id="82"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="InitialDataExportPageActive" id="83">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница начальная выгрузка данных текущий</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Run initial data export current step page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona początkowy eksport danych aktualny</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Initialer Datenexport aktuell</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina export de date inițial curentă</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa ilk dışa aktarma mevcut</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página subida inicial de datos actual</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="InitialDataExportPageActiveExtendedTooltip" id="84"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration10" id="85">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration10ContextMenu" id="86"/>
+											<ExtendedTooltip name="Decoration10ExtendedTooltip" id="87"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="InitialDataExportPageEmpty" id="88">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница начальная выгрузка данных пустой</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Run initial data export no picture page</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strona początkowy eksport danych pusty</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seite Initialer Datenexport leer</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagina export de date inițial goală</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfa  ilk dışa aktarma boş</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Página subida inicial de datos vacío</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="InitialDataExportPageEmptyExtendedTooltip" id="89"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration11" id="90">
+											<Width>2</Width>
+											<Height>2</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration11ContextMenu" id="91"/>
+											<ExtendedTooltip name="Decoration11ExtendedTooltip" id="92"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<Button name="ExecuteInitialDataExport" id="93">
+							<Type>Hyperlink</Type>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<CommandName>Form.Command.ExecuteInitialDataExport</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ExecuteInitialDataExportExtendedTooltip" id="94">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Будет произведена выгрузка данных из этой программы. Сразу после завершения настройки синхронизации возможно будет выполнить загрузку данных в другой программе и указать, какие данные являются одинаковыми для двух синхронизирующихся программ.
+Выгрузку данных можно выполнить позднее из списка настроенных синхронизаций данных.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Data will be exported from this application. Once you complete the synchronization setup, you can import the data in another application and map the data being imported to the application's data.
+You can export the data later from the list of configured data synchronizations.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Zostanie dokonane przesyłanie danych z tego programu do pliku. Zaraz po zakończeniu konfiguracji synchronizacji można będzie wykonać pobieranie danych w innym programie, i określić, które dane są takie same dla dwóch programów, które uczestniczą w synchronizacji.
+Przesyłanie danych można wykonać później z listy skonfigurowanych synchronizacji danych.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Die Daten werden von diesem Programm hochgeladen. Unmittelbar nach Abschluss der Synchronisationseinstellung ist es möglich, Daten in ein anderes Programm zu laden und festzulegen, welche Daten für die beiden zu synchronisierenden Programme gleich sind.
+Die Daten können später aus der Liste der konfigurierten Datensynchronisationen hochgeladen werden.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Va fi efectuat exportul de date din acest program. Imediat după finalizarea setării de sincronizare, va fi posibil importul de date într-un alt program și specificarea datelor identice din cele două programe care se sincronizează.
+Exportul de date poate fi efectuat mai târziu din lista de sincronizări de date configurate.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Bu programdan veri dışa aktarımı yapılacaktır. Senkronizasyon ayarı tamamlandıktan hemen sonra, verileri başka bir programa yüklemek ve iki senkronizasyon programı için hangi verilerin aynı olduğunu belirtmek mümkün olacaktır. 
+Veriler daha sonra özelleştirilmiş veri eşitlemeleri listesinden dışa aktarılabilir.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>Los datos de este programa se subirán. En seguida al finalizar los ajustes de sincronización es posible ejecutar la subida de datos en otro programa e indicar que datos son iguales para dos programas sincronizados.
+Se puede realizar la subida de datos más tarde de la lista de los datos ajustados por sincronización.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ExchangeDetailedInformation" id="1">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ExchangePlanName" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="SettingID" id="3">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="DIBSetup" id="4">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SaaSModel" id="8">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Backup" id="10">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CurrentSetupStep" id="11">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="SetupSteps" id="12">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Name" id="3">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Button" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="StandardFont" id="2">
+					<Type/>
+				</Column>
+				<Column name="BoldFont" id="4">
+					<Type/>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ExchangeNode" id="13">
+			<Type>
+				<v8:TypeSet>cfg:ExchangePlanRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="DataSyncSettingsWizardFormName" id="14">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="InitialImageCreationFormName" id="15">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ContinueSetupInSubordinateDIBNode" id="16">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="NewSYnchronizationSetting" id="17">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ForceCloseForm" id="18">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="AllSetupSteps" id="19">
+			<Type/>
+		</Attribute>
+		<Attribute name="XDTOSetup" id="20">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="BackupDataProcessorURL" id="21">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="DataReceivedForMapping" id="22">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SetupCompleted" id="23">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UniversalExchangeSetup" id="25">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="TransportSettingsAvailable" id="26">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CorrespondentDataArea" id="27">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="IsExchangeWithApplicationInService" id="28">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="InteractiveSendingAvailable" id="29">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DataExchangeWithExternalSystem" id="30">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ExternalSystemConnectionParameters" id="31">
+			<Type/>
+		</Attribute>
+		<Attribute name="SettingOptionDetails" id="32">
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="DataSyncDetails" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробное описание</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Details</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Nazwa pełna</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Detaillierte Beschreibung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Descriere detaliată</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Ayrıntılı açıklama</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Descripción detallada</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробное описание синхронизации данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>View detailed data synchronization description.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Detaliczny opis synchronizacji danych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Detaillierte Beschreibung der Datensynchronisation</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Descriere detaliată a sincronizării datelor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Veri senkronizasyonun detaylı açıklaması</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Descripción detallada de sincronización de datos</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Information1</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>DataSyncDetails</Action>
+		</Command>
+		<Command name="SetUpConnectionParameters" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить параметры подключения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Configure connection parameters</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Skonfiguruj parametry połączenia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verbindungsparameter konfigurieren</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Configurați parametrii conexiunii</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Bağlantı parametrelerini yapılandır</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Configurar parámetros de conexión</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить параметры подключения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Configure connection parameters</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Skonfiguruj parametry połączenia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verbindungsparameter konfigurieren</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Configurați parametrii conexiunii</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Bağlantı parametrelerini yapılandır</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Configurar parámetros de conexión</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>SetUpConnectionParameters</Action>
+		</Command>
+		<Command name="ConfigureDataExportImportRules" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить правила отправки и получения данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Configure data sending and receiving rules</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Konfiguruj reguły wysyłki i otrzymywania danych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Konfigurieren der Regeln für das Senden und Empfangen von Daten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Configurați regulile de trimitere și primire a datelor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Veri gönderim ve alım kurallarını ayarla</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Ajustar reglas de envío y recepción de datos</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить правила отправки и получения данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Configure data sending and receiving rules</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Konfiguruj reguły wysyłki i otrzymywania danych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Konfigurieren der Regeln für das Senden und Empfangen von Daten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Configurați regulile de trimitere și primire a datelor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Veri gönderim ve alım kurallarını ayarla</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Ajustar reglas de envío y recepción de datos</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ConfigureDataExportImportRules</Action>
+		</Command>
+		<Command name="CreateInitialDIBImage" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать начальный образ подчиненного узла РИБ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create initial image of a subordinate DIB node</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Utwórz początkowy obraz podrzędnego węzła DIB</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Erstellen Sie ein Anfangsbild des untergeordneten DIB-Knotens</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Creați imaginea inițială a nodului subordonat DIB</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>DIB bağımlı ünitenin başlangıç görüntüsünü oluştur</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Crear la imagen inicial del nodo subordinado de DIB</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать начальный образ РИБ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create initial DIB image</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Utwórz początkowy obraz rozproszonej bazy informacyjnej</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Erstellen eines Anfangsbildes des RIBs</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Creați imaginea inițială a BID</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>İlk RIB görünümünü oluştur</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Crear imagen inicial de la base de información distribuida</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CreateInitialDIBImage</Action>
+		</Command>
+		<Command name="ExecuteInitialDataExport" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить начальную выгрузку данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Run initial data export</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wykonaj początkowy eksport danych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Erstmaliges Hochladen von Daten durchführen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Efectuați exportul inițial de date</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Verilerin ilk dışa aktarımını yap</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Ejecutar la subida de datos inicial</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить начальную выгрузку данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Run initial data export</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wykonaj początkowy eksport danych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Erstmaliges Hochladen von Daten durchführen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Efectuați exportul inițial de date</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Verilerin ilk dışa aktarımını yap</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Ejecutar la subida de datos inicial</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ExecuteInitialDataExport</Action>
+		</Command>
+		<Command name="MapAndExportData" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить сопоставление и загрузку данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Map and import data</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wykonaj kojarzenie i pobieranie danych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Führen Sie den Abgleich und das Herunterladen der Daten durch</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Efectuați confruntarea și importul de date</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Veri karşılaştır ve içe aktar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Ejecutar comparación y descarga de datos</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить сопоставление и загрузку данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Map and import data</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wykonaj kojarzenie i pobieranie danych</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Führen Sie den Abgleich und das Herunterladen der Daten durch</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Efectuați confruntarea și importul de date</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Veri karşılaştır ve içe aktar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Ejecutar comparación y descarga de datos</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>MapAndExportData</Action>
+		</Command>
+		<Command name="GetConnectionConfirmation" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить подтверждение подключения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get connection confirmation</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Odbierz potwierdzenie połączenia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bestätigung der Verbindung erhalten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Obține confirmarea conexiunii</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Bağlantı doğrulanmasını al</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Recibir confirmación de conexión</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить подтверждение подключения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get connection confirmation</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Odbierz potwierdzenie połączenia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Bestätigung der Verbindung erhalten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Obține confirmarea conexiunii</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Bağlantı doğrulanmasını al</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Recibir confirmación de conexión</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>GetConnectionConfirmation</Action>
+		</Command>
+	</Commands>
+</Form>

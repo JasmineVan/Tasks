@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>This chapter describes how to set up proxy server parameters.</p>
+<p>The application allows you to get files from the Internet by the HTTP, HTTPS, and FTP protocols and save the received files on the client, on the server, or in the temporary storage.</p>
+<p>You might need access to the Internet to perform certain operations, e.g. download exchange rates or the address classifier, exchange data via an FTP resource, update the configuration from the vendor website, etc. </p>
+<p>In case you access the Internet via a proxy server, specify proxy server parameters in the application. There are client and server proxy server settings.</p>
+<p>Generally, proxy server parameters are required for mechanisms that get files from the Internet by the HTTP, HTTPS, and FTP protocols. Server settings are required for the mechanisms to work on the server. </p>
+<p>As for the client mechanisms, e.g. downloading exchange rates in the thin or thick client, you need to customize the workplace. That said, you do not need to set up the proxy server in order to work with emails. Proxy server parameters are usually specified for each workplace, because several workplaces might have different settings for Internet access.</p>
+<p>If company uses client-server 1C:Enterprise version, proxy server parameters must be specified on the 1C:Enterprise server(from the <strong>Administration. Common settings. Server infobase parameters</strong> section). Proxy server parameters for workplace and 1C:Enterprise server can differ. </p>
+<p>To access the Internet from client computers, the proxy server parameters must be specified on each client workstation (via <strong>Personal settings</strong> of the <strong>Administration</strong> section). </p>
+<p><strong>Warning:</strong> if security profiles are enabled, you must use the <strong>inetcfg.xml</strong> configuration file to set up the proxy server parameters.</p>
+<h3>Setting up proxy server parameters</h3>
+<ul><li>Select a proxy server usage option: 
+<ul><li><strong>Do not use proxy server</strong>. Default value upon the first start of the application. 
+</li><li><strong>Use system proxy settings</strong>. The settings are automatically filled in by the proxy server settings of the operating system. In this case, the filled in settings are not available for editing. 
+</li><li><strong>Use other proxy settings</strong>. The settings are specified manually: 
+<ul><li>Type the <strong>Server address</strong> and the server <strong>Port</strong> (the parameter is the same for the 1C:Enterprise server and for the workplaces). 
+</li><li>From the drop-down list, select an <strong>Authentication</strong> method: 
+<ul><li><strong>Base</strong>. In this case, specify proxy server user and their password for each workplace and the server (usually different, it depends on the company's network policy). 
+</li><li><strong>Operating system</strong>. In this case, the account of an operating system user will be used to work with the proxy server.</li></ul></li><li>Specify the name of the <strong>User</strong> and the <strong>Password</strong>. 
+</li><li>If you select the <strong>Bypass proxy for local URLs</strong> check box for each workplace and the server, you will be able to decrease the proxy server load in the company's local network.</li></ul></li></ul></li><li>To confirm proxy server parameters, click <strong>OK</strong>.</li></ul><h3>Additional parameters</h3>
+<ul><li>Click <strong>More</strong>: 
+<ul><li>to view additional parameters if you use proxy server system settings. 
+</li><li>to go to the <a href="CommonForm.AdditionalProxyServerParameters/Help">additional parameters</a> customization if you use other proxy server settings.</li></ul></li></ul><h3>See also:</h3>
+<ul><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

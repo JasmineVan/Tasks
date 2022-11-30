@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><style>TABLE {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; WIDTH: 98%; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; cellSpacing: 4; cellPadding: 0
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+</style><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>This panel is used for setting up parameters for import, storage, and processing of files. The following commands are available:</p>
+<ul><li><strong>Store files in volumes on disk</strong> - used to select between storing files in the infobase or in volumes on a disk. Storing files on a disk presupposes that they will not be stored in the application. 
+<ul><li>In the check box is selected, the <a name="СтандартныеПодсистемы.РаботаСФайлами"></a><a href="Catalog.FileStorageVolumes/Help">File-keeping volumes</a> command becomes available. It allows to set up access to file-keeping volumes (folders) on a file server. </li></ul></li><li><strong>Prohibit importing files with extensions</strong> - select this check box to prohibit uploading to the application the files that contain certain extensions and enter the names of extensions to prohibit to the input filed separating them by spaces. 
+</li><li><strong>Maximal file size</strong> - enter the limiting maximal size of files imported to the application. The default value is 50 MB. The files that exceed this size will not be imported into the application. To make the size of files that can be imported unlimited, set the maximal size to 0. 
+</li><li><strong>ODF flies extensions</strong> is used to set extensions for files of open document format, whose text will be extracted to build full-text search index. Input extensions separating them with a space. By default, the list contains basic file extensions. You can create or edit the list of extensions of files of open access format only if you are using Microsoft operation systems and if an OpenOffice application does not have an IFilter extension. 
+</li><li><strong>Extensions of text files</strong> is used to indicate extensions of files containing text data. Input extensions separating them with a space. <a name="СтандартныеПодсистемы.РаботаСФайлами">
+<li><a href="InformationRegister.FilesClearingSettings/Help">File clearing settings</a> - execute this command to set up clearing of unwanted files. 
+</li><li><strong>Sync files with cloud services</strong> - select this check box to synchronize files with Yandex.Disk, Box, or other cloud services and facilitate editing them. 
+</li><li><a href="InformationRegister.FileSynchronizationSettings/Help">Sync settings</a> - follow this link to set up synchronization of files with cloud services.</li></a></li></ul><h3>Advantages of keeping files in volumes on disk</h3>
+<ul><li>
+<div>It takes unnecessary load off the infobase. This kind of files can be very bulky, and their volume can significantly exceed the volume of all other infobase data. In such case, operation of the application significantly slows down;</div>
+</li><li>
+<div>The size of a volume is only limited by the size of a hard disc;</div>
+</li><li>
+<div>You can check files for viruses;</div>
+</li><li>
+<div>It is a simple way of having files backup.</div></li></ul><h3>Advantages of keeping files in the infobase</h3>
+<ul><li>
+<div>All data is stored in one place - the infobase;</div>
+</li><li>
+<div>Standard 1C:Enterprise or DBMS means are enough for backup.</div></li></ul><p>However, keeping files in the infobase is useful only for bases of a small number of files (size).</p>
+<h3>Rules for storing files in volumes</h3>
+<ul><li>
+<div>If you select or clear the <strong>Store files in volumes on the hard disk</strong> check box, you will no be able to cancel your changes. If you disable volume file storage, new files will be added to the infobase while the old ones will remain in volumes. A volume folder will be used until the infobase stores at least one file. Files that were previously saved to volumes open from these volumes.</div>
+</li><li>
+<div>If you save a file in a volume, and then delete the volume by external means, the file will not be found even if the <strong>Store files in volumes on the hard disk</strong> check box is already disabled. Selecting or clearing the check box will not bring the missing files back.</div>
+</li><li>
+<div>If the application cannot find the files stored in volumes, you should look for error messages in the event log, see the path to the volume folder, check the location of this folder, make sure it contains the file you need, and restore the folder if necessary. To be able to restore folders, make sure you perform regular back-ups of volume folders by external means, for example, by operating system means.</div></li></ul><h3>See also: </h3>
+<ul><li><a href="DataProcessor.SSLAdministrationPanel/Help">Application settings</a>.</li></ul></body></html>

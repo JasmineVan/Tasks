@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="DoneCommandForm" id="19">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.DoneCommand</CommandName>
+				<ExtendedTooltip name="DoneCommandFormExtendedTooltip" id="20"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="MainPanel" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель основная</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Main panel</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Pasek podstawowy</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Hauptpanel</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Panoul principal</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Ana panel</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Panel principal</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="MainPanelExtendedTooltip" id="2"/>
+			<ChildItems>
+				<Page name="TimeConsumingOperationPage" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница длительная операция</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Time-consuming operation page</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Strona operacja długotrwała</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Seite langer Betrieb</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Pagina operație îndelungată</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Sayfa uzun işlem</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Página operación duradera</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="TimeConsumingOperationPageExtendedTooltip" id="4"/>
+					<ChildItems>
+						<PictureDecoration name="Decoration1" id="7">
+							<Width>6</Width>
+							<Height>2</Height>
+							<Picture>
+								<xr:Ref>CommonPicture.TimeConsumingOperation48</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="Decoration1ContextMenu" id="8"/>
+							<ExtendedTooltip name="Decoration1ExtendedTooltip" id="9"/>
+						</PictureDecoration>
+						<LabelDecoration name="WaitLabelDecoration" id="10">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполняется получение параметров из программы "%CorrespondentDescription%".
+Пожалуйста, подождите...</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Getting parameters from %CorrespondentDescription%.
+Please wait...</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Trwa pobieranie parametrów z programu "%CorrespondentDescription%".
+ Proszę czekać...</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Es werden Parameter aus dem Programm "%CorrespondentDescription%" empfangen.
+Bitte warten Sie...</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Are loc primirea parametrilor din aplicația "%CorrespondentDescription%".
+Așteptați...</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>"%CorrespondentDescription%" programından parametreler alınıyor. 
+ Lütfen bekleyin...</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Se están recibiendo los parámetros del programa "%CorrespondentDescription%".
+Espere, por favor...</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="WaitLabelDecorationContextMenu" id="11"/>
+							<ExtendedTooltip name="WaitLabelDecorationExtendedTooltip" id="12"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ErrorPage" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ошибка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Error page</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Strona błąd</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Seitenfehler</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Pagina eroare</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Sayfa hata</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Error de página</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ErrorPageExtendedTooltip" id="6"/>
+					<ChildItems>
+						<PictureDecoration name="Decoration3" id="13">
+							<Width>6</Width>
+							<Height>2</Height>
+							<Picture>
+								<xr:Ref>CommonPicture.Information32</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="Decoration3ContextMenu" id="14"/>
+							<ExtendedTooltip name="Decoration3ExtendedTooltip" id="15"/>
+						</PictureDecoration>
+						<LabelDecoration name="ErrorLabelDecoration" id="16">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перед продолжением настройки синхронизации данных (настройки правил отправки и получения данных) требуется получить параметры из программы "%CorrespondentDescription%".
+
+Перейдите в "%CorrespondentDescription%", завершите в ней настройку и выполните первоначальную выгрузку данных, после чего завершите настройку в этой программе.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Before you proceed with configuring data synchronization (data sending and receiving rules), get parameters from %CorrespondentDescription%.
+
+Go to %CorrespondentDescription%, complete the setup there, perform initial data export, and then complete the setup in this application.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Przed przystąpieniem do synchronizacji danych (ustawienie reguł wysyłania i odbierania danych), musisz pobrać parametry z programu "%CorrespondentDescription%".
+
+Przejdź do "%CorrespondentDescription%", zakończ to ustawienie i przeprowadź wstępne przesyłanie danych, a następnie zakończ ustawianie w tym programie.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Bevor Sie mit den Einstellungen zur Datensynchronisation (Regeln für das Senden und Empfangen von Daten) fortfahren können, müssen Sie die Parameter aus dem Programm "%CorrespondentDescription%" beziehen.
+
+Gehen Sie zu "%CorrespondentDescription%", schließen Sie das Setup ab und führen Sie den ersten Upload der Daten durch, und beenden Sie dann das Setup in diesem Programm.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Înainte de continuarea setării sincronizării de date (setării regulilor de trimitere și de primire a datelor), trebuie să primiți parametrii din aplicația "%CorrespondentDescription%".
+
+ Treceți în "%CorrespondentDescription%", terminați setarea în ea și efectuați exportul inițial de date, după care terminați setarea în acest program.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Veri senkronizasyonunu (veri gönderme ve alma kuralları ayarları) yapılandırmaya devam etmeden önce, "%CorrespondentDescription%" programından parametreleri almanız gerekir. 
+
+"%CorrespondentDescription%" 'na gidin, ayarları tamamlayın ve ilk veri dışa aktarın ve ardından bu programdaki  tamamlayın.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Antes de seguir ajustando la sincronización de datos (ajustes de reglas de envío y recepción de datos) se requiere recibir los parámetros del programa "%CorrespondentDescription%".
+
+Pase al "%CorrespondentDescription%" y termine de ajustar y realice la subida inicial de datos, después termine de ajustar en este programa.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ErrorLabelDecorationContextMenu" id="17"/>
+							<ExtendedTooltip name="ErrorLabelDecorationExtendedTooltip" id="18"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ExchangeNode" id="1">
+			<Type>
+				<v8:TypeSet>cfg:ExchangePlanRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="IdleHandlerParameters" id="2">
+			<Type/>
+		</Attribute>
+		<Attribute name="HandlerParameters" id="3">
+			<Type/>
+		</Attribute>
+		<Attribute name="CorrespondentDescription" id="4">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="DoneCommand" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Finish</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Data zakończenia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Abschluss</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Sfârșit</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Bitiş</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Finalizar</v8:content>
+				</v8:item>
+			</Title>
+			<Action>DoneCommand</Action>
+		</Command>
+	</Commands>
+</Form>

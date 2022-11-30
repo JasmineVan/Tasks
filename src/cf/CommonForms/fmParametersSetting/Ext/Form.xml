@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<HorizontalSpacing>Double</HorizontalSpacing>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="FormSaveAndClose" id="62">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.SaveAndClose</CommandName>
+				<ExtendedTooltip name="FormSaveAndCloseExtendedTooltip" id="199"/>
+			</Button>
+			<Button name="FormSave" id="2">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="FormSaveExtendedTooltip" id="200"/>
+			</Button>
+			<Button name="FormClose" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Close</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="FormCloseExtendedTooltip" id="201"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">AfterWrite</Event>
+		<Event name="BeforeWrite">BeforeWrite</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="GroupPages" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pages Group</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pages Group</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<ExtendedTooltip name="GroupPagesExtendedTooltip" id="202"/>
+			<ChildItems>
+				<Page name="GroupBudgeting" id="486">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бюджетирование</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Budgeting</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа бюджетирование</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group budgeting</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="GroupBudgetingExtendedTooltip" id="487"/>
+					<ChildItems>
+						<UsualGroup name="GroupTitle" id="491">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа заголовок</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Title Group</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа заголовок</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Title Group</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupTitleExtendedTooltip" id="492"/>
+							<ChildItems>
+								<LabelDecoration name="ManagementAccounting" id="493">
+									<Font ref="sys:DefaultGUIFont" height="16" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Управленческий учет</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Management accounting</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ManagementAccountingContextMenu" id="494"/>
+									<ExtendedTooltip name="ManagementAccountingExtendedTooltip" id="495"/>
+								</LabelDecoration>
+								<LabelDecoration name="Indent36" id="504">
+									<ContextMenu name="Indent36ContextMenu" id="505"/>
+									<ExtendedTooltip name="Indent36ExtendedTooltip" id="506"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="fmAccountingByBudgeting" id="501">
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="fmAccountingByBudgetingContextMenu" id="502"/>
+							<ExtendedTooltip name="fmAccountingByBudgetingExtendedTooltip" id="503"/>
+						</CheckBoxField>
+						<InputField name="fmCurrencyOfManAccounting" id="488">
+							<DataPath>ConstantsSet.fmCurrencyOfManAccounting</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="fmCurrencyOfManAccountingContextMenu" id="489"/>
+							<ExtendedTooltip name="fmCurrencyOfManAccountingExtendedTooltip" id="490"/>
+						</InputField>
+						<LabelDecoration name="Decoration1" id="539">
+							<Width>50</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ВНИМАНИЕ! Валюту нельзя изменять после начала эксплуатации ИБ. </v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ATTENTION! Currency can not be changed after the start of IB operation.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Decoration1ContextMenu" id="540"/>
+							<ExtendedTooltip name="Decoration1ExtendedTooltip" id="541"/>
+						</LabelDecoration>
+						<CheckBoxField name="fmProjectAccounting" id="533">
+							<DataPath>ConstantsSet.fmProjectAccounting</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="fmProjectAccountingContextMenu" id="534"/>
+							<ExtendedTooltip name="fmProjectAccountingExtendedTooltip" id="535"/>
+						</CheckBoxField>
+						<CheckBoxField name="fmDepartmentsStructuresVersions" id="530">
+							<DataPath>ConstantsSet.fmDepartmentsStructuresVersions</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать версии структур подразделений</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Use organizational structure versions</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="fmDepartmentsStructuresVersionsContextMenu" id="531"/>
+							<ExtendedTooltip name="fmDepartmentsStructuresVersionsExtendedTooltip" id="532"/>
+							<Events>
+								<Event name="OnChange">fmDepartmentsStructuresVersionsOnChange</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="fmDepartmentStructuresBinding" id="536">
+							<DataPath>ConstantsSet.fmDepartmentStructuresBinding</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="fmDepartmentStructuresBindingContextMenu" id="537"/>
+							<ExtendedTooltip name="fmDepartmentStructuresBindingExtendedTooltip" id="538"/>
+						</CheckBoxField>
+						<InputField name="fmBudgetVersioning" id="527">
+							<DataPath>ConstantsSet.fmBudgetVersioning</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="fmBudgetVersioningContextMenu" id="528"/>
+							<ExtendedTooltip name="fmBudgetVersioningExtendedTooltip" id="529"/>
+						</InputField>
+						<InputField name="fmEditFormat" id="515">
+							<DataPath>ConstantsSet.fmEditFormat</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="fmEditFormatContextMenu" id="516"/>
+							<ExtendedTooltip name="fmEditFormatExtendedTooltip" id="517"/>
+						</InputField>
+						<InputField name="fmViewFormat" id="518">
+							<DataPath>ConstantsSet.fmViewFormat</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="fmViewFormatContextMenu" id="519"/>
+							<ExtendedTooltip name="fmViewFormatExtendedTooltip" id="520"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ConstantsSet" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Constants set</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>ConstantsSet.fmCurrencyOfManAccounting</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="SaveAndClose" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save and close</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save and close</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>SaveAndClose</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Close" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Close</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>CommandClose</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

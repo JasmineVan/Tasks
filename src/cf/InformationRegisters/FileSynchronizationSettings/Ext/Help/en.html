@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>The catalog is designed to configure synchronization settings with cloud services for all users and all application objects.</p>
+<p>You can open it in the <strong>Administration - Configure file operations</strong> section by clicking <strong>Synchronization settings</strong>.</p>
+<p><strong>Warning!</strong> To synchronize files, you should sign up at a cloud service and set settings recommended by this service on your computer. For more information, see the instruction on the selected cloud service.</p>
+<p>You can use features of cloud services when working with files stored in the application. Cloud services can be used to store and process files attached to different application objects, and those stored in the <strong>Files </strong>list.</p>
+<p>The application allows you to view your files in your explorer folder, or on your device, and edit and synchronize them there.</p>
+<h3>List of cloud services </h3>
+<p>The list is limited and cannot be edited. The following cloud services are supported:</p>
+<ul><li><strong>Yandex.Disk</strong> 
+</li><li><strong>4shared.com</strong> 
+</li><li><strong>Box.com</strong> 
+</li><li><strong>Dropbox</strong> (via the paid service <strong>dropdav</strong>)</li></ul><h3>How file synchronization works</h3>
+<ul><li>You can synchronize only one folder in one exchange plane. 
+</li><li>If you have file synchronization configured with the cloud service, editing and creating new files in the application is disabled to prevent conflicts. You can continue editing files in the application if you disable synchronization with the cloud. 
+</li><li>In the cloud service, files are stored in the folder according to the following template: <strong>&lt;Share path to account&gt;\Application object presentation\Data item presentation</strong>, for example, <strong>\YandexDisk\SL 2.3.2\Demo sales order (Document) \Demo Sales Order 00-0000001 dated 12/17/2010 17 46 36</strong>. 
+</li><li>When creating new files or editing existing ones, files are automatically captured by the file <strong>Author</strong> specified in the account. 
+</li><li>After synchronization is complete, files not precessed during synchronization are released. 
+</li><li>After synchronization, all unused accounts are checked. If they captured files, files are released. For example, if you want to disable synchronization, clear all settings with the <strong>Synchronize</strong> check box. The next time you run the scheduled job, all files are released. 
+</li><li>The RLS mode (access rights limitation on records level) is not supported. </li></ul><h3>Configuring file synchronization</h3>
+<ul><li>
+<div>There are the following columns in the list:</div>
+<ul><li>
+<div><strong>File owner</strong>. All application objects that are file owners. With check boxes, you can select files of file owners to synchronize.</div>
+</li><li>
+<div><strong>Account</strong>. Cloud service account. You can specify different accounts for different file owners.</div>
+</li><li>
+<div><strong>Rule</strong>. The link shows files that are synchronized. The default value is set to <strong>All files</strong>. By clicking the link, you can navigate to <a href="InformationRegister.FileSynchronizationSettings.Form.RecordFormSettings/Help">file synchronization settings of a certain owner</a>.</div></li></ul></li><li>
+<div>Click <strong>Configure file synchronization</strong>, or choose a context menu command to add a new file synchronization for application lists. You can configure several synchronizations for such objects.</div></li></ul><h3>File synchronization</h3>
+<ul><li>
+<div>You can synchronize files with the cloud service manually. To do so, click <strong>Synchronize </strong>in the list.</div></li></ul><h3>Configuring automatic file synchronization</h3>
+<ul><li>
+<div>Select the <strong>Automatically synchronize files</strong> check box.</div>
+</li><li>
+<div>Click the <strong>Set schedule</strong> link, that becomes available. Set the <a href="v8help://mngbase/jobschedule.lf">schedule</a>.</div>
+</li><li>
+<div>After you confirm the schedule, it is displayed under the check box.</div>
+</li><li>
+<div>Synchronization by using a scheduled job is performed each 600 seconds by default.</div></li></ul><h3>See also:</h3>
+<ul><li>
+<div><a href="v8help://frame/form_common">Working with forms</a></div></li></ul></body></html>

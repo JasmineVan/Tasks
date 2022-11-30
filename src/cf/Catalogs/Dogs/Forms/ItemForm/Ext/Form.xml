@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<ChildItems>
+			<Button name="FormPrintQRCode" id="150">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.PrintQRCode</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>QRCode</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="FormPrintQRCodeExtendedTooltip" id="151"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWriteAtServer">AfterWriteAtServer</Event>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="BeforeWriteAtServer">BeforeWriteAtServer</Event>
+		<Event name="OnWriteAtServer">OnWriteAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Group2" id="28">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Group2ExtendedTooltip" id="29"/>
+			<ChildItems>
+				<UsualGroup name="Group4" id="67">
+					<ExtendedTooltip name="Group4ExtendedTooltip" id="68"/>
+					<ChildItems>
+						<UsualGroup name="DogInformation" id="26">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Dog information</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Dog information</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="DogInformationExtendedTooltip" id="27"/>
+							<ChildItems>
+								<InputField name="Code" id="1">
+									<DataPath>Object.Code</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="CodeContextMenu" id="2"/>
+									<ExtendedTooltip name="CodeExtendedTooltip" id="3"/>
+								</InputField>
+								<InputField name="Description" id="4">
+									<DataPath>Object.Description</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="DescriptionContextMenu" id="5"/>
+									<ExtendedTooltip name="DescriptionExtendedTooltip" id="6"/>
+								</InputField>
+								<InputField name="Owner" id="7">
+									<DataPath>Object.Owner</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="OwnerContextMenu" id="8"/>
+									<ExtendedTooltip name="OwnerExtendedTooltip" id="9"/>
+								</InputField>
+								<InputField name="DogBreed" id="10">
+									<DataPath>Object.DogBreed</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="DogBreedContextMenu" id="11"/>
+									<ExtendedTooltip name="DogBreedExtendedTooltip" id="12"/>
+								</InputField>
+								<InputField name="FurColor" id="144">
+									<DataPath>Object.FurColor</DataPath>
+									<ContextMenu name="FurColorContextMenu" id="145"/>
+									<ExtendedTooltip name="FurColorExtendedTooltip" id="146"/>
+								</InputField>
+								<InputField name="Species" id="147">
+									<DataPath>Object.Species</DataPath>
+									<ContextMenu name="SpeciesContextMenu" id="148"/>
+									<ExtendedTooltip name="SpeciesExtendedTooltip" id="149"/>
+								</InputField>
+								<InputField name="Gender" id="13">
+									<DataPath>Object.Gender</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="GenderContextMenu" id="14"/>
+									<ExtendedTooltip name="GenderExtendedTooltip" id="15"/>
+								</InputField>
+								<UsualGroup name="Group1" id="100">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Group1ExtendedTooltip" id="101"/>
+									<ChildItems>
+										<InputField name="DateOfBirth" id="16">
+											<DataPath>Object.DateOfBirth</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>DF=dd/MM/yyyy</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="DateOfBirthContextMenu" id="17"/>
+											<ExtendedTooltip name="DateOfBirthExtendedTooltip" id="18"/>
+											<Events>
+												<Event name="OnChange">DateOfBirthOnChange</Event>
+											</Events>
+										</InputField>
+										<InputField name="Age" id="102">
+											<DataPath>Object.Age</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Age (year)</v8:content>
+												</v8:item>
+											</Title>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>ND=4; NFD=1; NDS=.; NGS=,; NLZ=</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="AgeContextMenu" id="103"/>
+											<ExtendedTooltip name="AgeExtendedTooltip" id="104"/>
+										</InputField>
+										<InputField name="Weight" id="97">
+											<DataPath>Object.Weight</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Weight</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="WeightContextMenu" id="98"/>
+											<ExtendedTooltip name="WeightExtendedTooltip" id="99"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Group5" id="142">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Group5ExtendedTooltip" id="143"/>
+									<ChildItems>
+										<CheckBoxField name="Sterilized" id="94">
+											<DataPath>Object.Sterilized</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="SterilizedContextMenu" id="95"/>
+											<ExtendedTooltip name="SterilizedExtendedTooltip" id="96"/>
+										</CheckBoxField>
+										<InputField name="Microchip" id="139">
+											<DataPath>Object.Microchip</DataPath>
+											<ContextMenu name="MicrochipContextMenu" id="140"/>
+											<ExtendedTooltip name="MicrochipExtendedTooltip" id="141"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="AdditionalInformation" id="136">
+									<DataPath>Object.AdditionalInformation</DataPath>
+									<ContextMenu name="AdditionalInformationContextMenu" id="137"/>
+									<ExtendedTooltip name="AdditionalInformationExtendedTooltip" id="138"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<CommandBar name="OwnerRelevantContactsGroup1" id="132">
+							<ExtendedTooltip name="OwnerRelevantContactsGroup1ExtendedTooltip" id="133"/>
+						</CommandBar>
+						<Table name="OwnerRelevantContacts" id="32">
+							<Visible>false</Visible>
+							<TitleLocation>Top</TitleLocation>
+							<Width>100</Width>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Object.Owner.RelevantContacts</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Owner Information</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="OwnerRelevantContactsContextMenu" id="33"/>
+							<AutoCommandBar name="OwnerRelevantContactsCommandBar" id="34">
+								<ChildItems>
+									<Button name="OwnerRelevantContactsFind" id="63">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.OwnerRelevantContacts.StandardCommand.Find</CommandName>
+										<ExtendedTooltip name="OwnerRelevantContactsFindExtendedTooltip" id="64"/>
+									</Button>
+									<Button name="OwnerRelevantContactsSelectAll" id="61">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.OwnerRelevantContacts.StandardCommand.SelectAll</CommandName>
+										<ExtendedTooltip name="OwnerRelevantContactsSelectAllExtendedTooltip" id="62"/>
+									</Button>
+									<Button name="OwnerRelevantContactsDelete" id="59">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.OwnerRelevantContacts.StandardCommand.Delete</CommandName>
+										<ExtendedTooltip name="OwnerRelevantContactsDeleteExtendedTooltip" id="60"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="OwnerRelevantContactsExtendedTooltip" id="35"/>
+							<SearchStringAddition name="OwnerRelevantContactsSearchString" id="36">
+								<AdditionSource>
+									<Item>OwnerRelevantContacts</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="OwnerRelevantContactsSearchStringContextMenu" id="37"/>
+								<ExtendedTooltip name="OwnerRelevantContactsSearchStringExtendedTooltip" id="38"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="OwnerRelevantContactsViewStatus" id="39">
+								<AdditionSource>
+									<Item>OwnerRelevantContacts</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="OwnerRelevantContactsViewStatusContextMenu" id="40"/>
+								<ExtendedTooltip name="OwnerRelevantContactsViewStatusExtendedTooltip" id="41"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="OwnerRelevantContactsSearchControl" id="42">
+								<AdditionSource>
+									<Item>OwnerRelevantContacts</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="OwnerRelevantContactsSearchControlContextMenu" id="43"/>
+								<ExtendedTooltip name="OwnerRelevantContactsSearchControlExtendedTooltip" id="44"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="OwnerRelevantContactsLineNumber" id="45">
+									<DataPath>Object.Owner.RelevantContacts.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="OwnerRelevantContactsLineNumberContextMenu" id="46"/>
+									<ExtendedTooltip name="OwnerRelevantContactsLineNumberExtendedTooltip" id="47"/>
+								</LabelField>
+								<LabelField name="OwnerRelevantContactsFullName" id="48">
+									<DataPath>Object.Owner.RelevantContacts.FullName</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="OwnerRelevantContactsFullNameContextMenu" id="49"/>
+									<ExtendedTooltip name="OwnerRelevantContactsFullNameExtendedTooltip" id="50"/>
+								</LabelField>
+								<LabelField name="OwnerRelevantContactsPhoneNumber" id="51">
+									<DataPath>Object.Owner.RelevantContacts.PhoneNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="OwnerRelevantContactsPhoneNumberContextMenu" id="52"/>
+									<ExtendedTooltip name="OwnerRelevantContactsPhoneNumberExtendedTooltip" id="53"/>
+								</LabelField>
+								<LabelField name="OwnerRelevantContactsAdditionalInformation" id="54">
+									<DataPath>Object.Owner.RelevantContacts.RelationshipWithDogOwner</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="OwnerRelevantContactsAdditionalInformationContextMenu" id="55"/>
+									<ExtendedTooltip name="OwnerRelevantContactsAdditionalInformationExtendedTooltip" id="56"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="Group3" id="134">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Owner list</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="Group3ExtendedTooltip" id="135"/>
+							<ChildItems>
+								<Table name="OwnerSecondary" id="105">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Object.OwnerSecondary</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="OwnerSecondaryContextMenu" id="106"/>
+									<AutoCommandBar name="OwnerSecondaryCommandBar" id="107"/>
+									<ExtendedTooltip name="OwnerSecondaryExtendedTooltip" id="108"/>
+									<SearchStringAddition name="OwnerSecondarySearchString" id="109">
+										<AdditionSource>
+											<Item>OwnerSecondary</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="OwnerSecondarySearchStringContextMenu" id="110"/>
+										<ExtendedTooltip name="OwnerSecondarySearchStringExtendedTooltip" id="111"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="OwnerSecondaryViewStatus" id="112">
+										<AdditionSource>
+											<Item>OwnerSecondary</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="OwnerSecondaryViewStatusContextMenu" id="113"/>
+										<ExtendedTooltip name="OwnerSecondaryViewStatusExtendedTooltip" id="114"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="OwnerSecondarySearchControl" id="115">
+										<AdditionSource>
+											<Item>OwnerSecondary</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="OwnerSecondarySearchControlContextMenu" id="116"/>
+										<ExtendedTooltip name="OwnerSecondarySearchControlExtendedTooltip" id="117"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">OwnerSecondaryBeforeAddRow</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="OwnerSecondaryLineNumber" id="118">
+											<DataPath>Object.OwnerSecondary.LineNumber</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="OwnerSecondaryLineNumberContextMenu" id="119"/>
+											<ExtendedTooltip name="OwnerSecondaryLineNumberExtendedTooltip" id="120"/>
+										</LabelField>
+										<InputField name="OwnerSecondaryOwner" id="121">
+											<DataPath>Object.OwnerSecondary.Owner</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Full Name</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="OwnerSecondaryOwnerContextMenu" id="122"/>
+											<ExtendedTooltip name="OwnerSecondaryOwnerExtendedTooltip" id="123"/>
+											<Events>
+												<Event name="OnChange">OwnerSecondaryOwnerOnChange</Event>
+												<Event name="ChoiceProcessing">OwnerSecondaryOwnerChoiceProcessing</Event>
+											</Events>
+										</InputField>
+										<InputField name="OwnerSecondaryPhone" id="124">
+											<DataPath>Object.OwnerSecondary.Phone</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="OwnerSecondaryPhoneContextMenu" id="125"/>
+											<ExtendedTooltip name="OwnerSecondaryPhoneExtendedTooltip" id="126"/>
+										</InputField>
+										<CheckBoxField name="OwnerSecondaryMain" id="127">
+											<DataPath>Object.OwnerSecondary.Main</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="OwnerSecondaryMainContextMenu" id="128"/>
+											<ExtendedTooltip name="OwnerSecondaryMainExtendedTooltip" id="129"/>
+											<Events>
+												<Event name="OnChange">OwnerSecondaryMainOnChange</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Picture" id="24">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Picture</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>50</Width>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="PictureExtendedTooltip" id="25"/>
+					<ChildItems>
+						<SpreadSheetDocumentField name="QRPicture" id="152">
+							<DataPath>QRPicture</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>QR Code</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Width>30</Width>
+							<MaxHeight>2</MaxHeight>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<SelectionShowMode>DontShow</SelectionShowMode>
+							<DrawingSelectionShowMode>DontShow</DrawingSelectionShowMode>
+							<ShowGroups>false</ShowGroups>
+							<EnableStartDrag>false</EnableStartDrag>
+							<EnableDrag>false</EnableDrag>
+							<ContextMenu name="QRPictureContextMenu" id="153"/>
+							<ExtendedTooltip name="QRPictureExtendedTooltip" id="154"/>
+						</SpreadSheetDocumentField>
+						<PictureField name="PictureAddress" id="19">
+							<DataPath>PictureAddress</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Picture </v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+							<ToolTipRepresentation>ShowAuto</ToolTipRepresentation>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Width>50</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>100</MaxWidth>
+							<PictureSize>AutoSize</PictureSize>
+							<ContextMenu name="PictureAddressContextMenu" id="20"/>
+							<ExtendedTooltip name="PictureAddressExtendedTooltip" id="21"/>
+						</PictureField>
+						<Button name="ChangePicture" id="22">
+							<Type>UsualButton</Type>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<CommandName>Form.Command.ChangePicture</CommandName>
+							<TextColor>style:ButtonBackColor</TextColor>
+							<BackColor>style:AccentColor</BackColor>
+							<ExtendedTooltip name="ChangePictureExtendedTooltip" id="23"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Dogs</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="PictureAddress" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Picture address</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="DogTracking" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dog tracking</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.DogTracking</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="VisitHistory" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Visit history</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="DogOwner" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dog owner</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.DogOwners</v8:Type>
+					</Type>
+				</Column>
+				<Column name="DateIn" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Date in</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="HealthStatus" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Health status</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.CoreDiseases</v8:Type>
+					</Type>
+				</Column>
+				<Column name="DateOut" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Date out</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="QRPicture" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>QRPicture</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>OwnerSecondaryMain</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>OwnerSecondaryLineNumber</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>OwnerSecondaryOwner</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>OwnerSecondaryPhone</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Object.OwnerSecondary.Main</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>BackColor</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ImportantColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ChangePicture" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change picture</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change picture</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ChangePicture</Action>
+		</Command>
+		<Command name="AddNewOwner" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add new owner</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add new owner</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="PrintQRCode" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Print QR code</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Print QRCode</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ExecutePrintQRCode</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>2:126b87c7-be5c-4231-b182-30aaf445c011</Command>
+				<Type>Added</Type>
+				<Attribute>DogTracking</Attribute>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.TrackingHistory.StandardCommand.OpenByRecorder</Command>
+				<Type>Added</Type>
+				<Attribute>DogTracking</Attribute>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

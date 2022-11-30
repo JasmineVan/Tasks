@@ -1,77 +1,77 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) 2019, ООО 1С-Софт
-// Все права защищены. Эта программа и сопроводительные материалы предоставляются 
-// в соответствии с условиями лицензии Attribution 4.0 International (CC BY 4.0)
-// Текст лицензии доступен по ссылке:
+// Copyright (c) 2019, 1C-Soft LLC
+// All Rights reserved. This application and supporting materials are provided under the terms of 
+// Attribution 4.0 International license (CC BY 4.0)
+// The license text is available at:
 // https://creativecommons.org/licenses/by/4.0/legalcode
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#Область СлужебныеПроцедурыИФункции
+#Region Private
 
-// Возвращает массив поддерживаемых подсистемой InterfaceName названий номеров версий.
+// Returns the array of version number names supported by the InterfaceName subsystem.
 //
-// Параметры:
-//   InterfaceName - Строка - Имя подсистемы.
+// Parameters:
+//   InterfaceName - String - subsystem name.
 //
-// Возвращаемое значение:
-//   Массив строк.
+// Returns:
+//   Array of strings.
 //
-// Пример использования:
+// Usage example:
 //
-// 	// Возвращает объект WSПрокси передачи файлов заданной версии.
-// 	// Если ВерсияПередачи = Неопределено, возвращает Прокси базовой версии "1.0.1.1".
+// 	// Returns the file transfer WSProxy object for the specified version.
+// 	// If TransferVersion = Undefined, it returns the basic version (1.0.1.1) proxy.
 //  //
-//	Функция ПолучитьПроксиПередачиФайлов(Знач ПараметрыПодключения, Знач ВерсияПередачи = Неопределено)
+//	Function GetFileTransferProxy(Val ConnectionParameters, Val TransferVersion = Undefined)
 //		// …………………………………………………
-//	КонецФункции
+//	EndFunction
 //
-//	Функция ПолучитьИзХранилища(Знач ИдентификаторФайла, Знач ПараметрыПодключения) Экспорт
+//	Function GetFromStorage(Val FileID, Val ConnectionParameters) Export
 //
-//		// Общая для всех версий функциональность.
+//		// Common features of all versions.
 //		// …………………………………………………
 //
-//		// Учесть версионирование.
-//		МассивПоддерживаемыхВерсий = СтандартныеПодсистемыСервер.ПолучитьМассивВерсийПодсистемы(
-//			ПараметрыПодключения, "СервисПередачиФайлов");
-//		Если МассивПоддерживаемыхВерсий.Найти("1.0.2.1") = Неопределено Тогда
-//			ЕстьПоддержка2йВерсии = Ложь;
-//			Прокси = ПолучитьПроксиПередачиФайлов(ПараметрыПодключения);
-//		Иначе
-//			ЕстьПоддержка2йВерсии = Истина;
-//			Прокси = ПолучитьПроксиПередачиФайлов(ПараметрыПодключения, "1.0.2.1");
-//		КонецЕсли;
+//		// Consider versioning.
+//		SupportedVersionsArray = StandardSubsystemsServer.GetSubsystemVersionArray(
+//			AttachmentParameters, "FileTransferService");
+//		If SupportedVersionsArray.Find("1.0.2.1") = Undefined Then
+//			HasVersion2Support = False;
+//			Proxy = GetFileTransferProxy(ConnectionParameters);
+//		Else
+//			HasVersion2Support = True;
+//			Proxy = GetFileTransferProxy(ConnectionParameters "1.0.2.1");
+//		EndIf.
 //
-//		КоличествоЧастей = Неопределено;
-//		РазмерЧасти = 20 * 1024; // Кб
-//		Если ЕстьПоддержка2йВерсии Тогда
-//	   		ИдентификаторПередачи = Прокси.PrepareGetFile(ИдентификаторФайла, РазмерЧасти, КоличествоЧастей);
-//		Иначе
-//			ИдентификаторПередачи = Неопределено;
-//			Прокси.PrepareGetFile(ИдентификаторФайла, РазмерЧасти, ИдентификаторПередачи, КоличествоЧастей);
-//		КонецЕсли;
+//		PartsNumber = Undefined;
+//		PartSize = 20 * 1024; // Kb
+//		If HasVersion2Suppopt Then
+//	   		TransferID = Proxy.PrepareGetFile(FileID, PartSize, PartsCount);
+//		Else
+//			TransferID = Undefined;
+//			Proxy.PrepareGetFile(FileID, PartSize, TransferID, PartCount);
+//		EndIf.
 //
-//		// Общая для всех версий функциональность.
+//		// Common features of all versions.
 //		// …………………………………………………	
 //
-//	КонецФункции
+//	EndFunction
 //
-Функция GetVersions(InterfaceName)
+Function GetVersions(InterfaceName)
 	
-	МассивВерсий = Неопределено;
+	VersionsArray = Undefined;
 	
-	СтруктураПоддерживаемыхВерсий = Новый Структура;
+	SupportedVersionsStructure = New Structure;
 	
-	ИнтеграцияПодсистемБСП.ПриОпределенииПоддерживаемыхВерсийПрограммныхИнтерфейсов(СтруктураПоддерживаемыхВерсий);
-	ОбщегоНазначенияПереопределяемый.ПриОпределенииПоддерживаемыхВерсийПрограммныхИнтерфейсов(СтруктураПоддерживаемыхВерсий);
+	SSLSubsystemsIntegration.OnDefineSupportedInterfaceVersions(SupportedVersionsStructure);
+	CommonOverridable.OnDefineSupportedInterfaceVersions(SupportedVersionsStructure);
 	
-	СтруктураПоддерживаемыхВерсий.Свойство(InterfaceName, МассивВерсий);
+	SupportedVersionsStructure.Property(InterfaceName, VersionsArray);
 	
-	Если МассивВерсий = Неопределено Тогда
-		Возврат СериализаторXDTO.ЗаписатьXDTO(Новый Массив);
-	Иначе
-		Возврат СериализаторXDTO.ЗаписатьXDTO(МассивВерсий);
-	КонецЕсли;
+	If VersionsArray = Undefined Then
+		Return XDTOSerializer.WriteXDTO(New Array);
+	Else
+		Return XDTOSerializer.WriteXDTO(VersionsArray);
+	EndIf;
 	
-КонецФункции
+EndFunction
 
-#КонецОбласти
+#EndRegion

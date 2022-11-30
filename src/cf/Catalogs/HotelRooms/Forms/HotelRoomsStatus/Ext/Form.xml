@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="FormCommandBar" id="-1" DisplayImportance="VeryLow">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Group1" id="25">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Group1ExtendedTooltip" id="26"/>
+			<ChildItems>
+				<InputField name="StartDate" id="49">
+					<DataPath>StartDate</DataPath>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>DF='dd/MM/yyyy'</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="StartDateContextMenu" id="50"/>
+					<ExtendedTooltip name="StartDateExtendedTooltip" id="51"/>
+				</InputField>
+				<InputField name="Enddate" id="52">
+					<DataPath>Enddate</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>End date</v8:content>
+						</v8:item>
+					</Title>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>DF='dd/MM/yyyy'</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="EnddateContextMenu" id="53"/>
+					<ExtendedTooltip name="EnddateExtendedTooltip" id="54"/>
+				</InputField>
+				<Button name="Generate" id="23">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.Generate</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Check</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="GenerateExtendedTooltip" id="24"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Room" id="55">
+			<Representation>Tree</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Room</DataPath>
+			<ContextMenu name="RoomContextMenu" id="56"/>
+			<AutoCommandBar name="RoomCommandBar" id="57">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="RoomExtendedTooltip" id="58"/>
+			<SearchStringAddition name="RoomSearchString" id="59">
+				<AdditionSource>
+					<Item>Room</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="RoomSearchStringContextMenu" id="60"/>
+				<ExtendedTooltip name="RoomSearchStringExtendedTooltip" id="61"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="RoomViewStatus" id="62">
+				<AdditionSource>
+					<Item>Room</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="RoomViewStatusContextMenu" id="63"/>
+				<ExtendedTooltip name="RoomViewStatusExtendedTooltip" id="64"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="RoomSearchControl" id="65">
+				<AdditionSource>
+					<Item>Room</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="RoomSearchControlContextMenu" id="66"/>
+				<ExtendedTooltip name="RoomSearchControlExtendedTooltip" id="67"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="RoomRoomKinds" id="68">
+					<DataPath>Room.RoomKinds</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="RoomRoomKindsContextMenu" id="69"/>
+					<ExtendedTooltip name="RoomRoomKindsExtendedTooltip" id="70"/>
+				</InputField>
+				<InputField name="RoomQuantity" id="71">
+					<DataPath>Room.Quantity</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="RoomQuantityContextMenu" id="72"/>
+					<ExtendedTooltip name="RoomQuantityExtendedTooltip" id="73"/>
+				</InputField>
+				<InputField name="RoomType" id="74">
+					<DataPath>Room.Type</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="RoomTypeContextMenu" id="75"/>
+					<ExtendedTooltip name="RoomTypeExtendedTooltip" id="76"/>
+				</InputField>
+				<InputField name="RoomPrice" id="77">
+					<DataPath>Room.Price</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="RoomPriceContextMenu" id="78"/>
+					<ExtendedTooltip name="RoomPriceExtendedTooltip" id="79"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="StartDate" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Start date</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Room" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Room</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="RoomKinds" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Room kinds</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.HotelRooms</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Quantity" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Quantity</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Type" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Type</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:EnumRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Price" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Price</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Enddate" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Enddate</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Generate" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Generate</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Generate</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Generate</Action>
+		</Command>
+	</Commands>
+</Form>

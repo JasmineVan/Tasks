@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>Full-text data search allows to search through contents of both card fields and attached files.</p>
+<p>You can run full-text search directly from the <strong>Home page</strong> of the application. </p>
+<p>Full-text search provides such features as: </p>
+<ul><li>Latinization (conversion of non-Latin characters to Latin), 
+</li><li>Substitution (using Latin characters instead of identically-looking non-Latin letters), 
+</li><li>And fuzzy search (finding strings approximately matching the search string).</li></ul><p>To search data in the application, enter the word or its beginning. Click <strong>Find</strong>. You can search by one or several words. You can use such search operators as <strong>AND</strong>, <strong>OR</strong>, <strong>NOT</strong>.</p>
+<p>You can enter data URL in the search input field. This will open the related data card instead of performing data search. You can receive an URL to any infobase object using the <img src="StdPicture.GetURL"></img> command in the each window title of the 1C:Enterprise 8.</p>
+<h3>Index update</h3>
+<p>In File mode infobase, full-text search index is not updated automatically. You need to refresh it manually on a regular basis. If the full-text search index is not relevant, i.e. there is data that is not yet indexed, in the infobase file mode the <strong>Update index</strong> button becomes available.</p>
+<h3>Examples</h3>
+<p></p>
+<table cellpadding="8" width="100%" border="0"><tbody><tr><td valign="top"><strong>Search example</strong></td>
+<td valign="top"><strong>Result</strong></td></tr><tr><td valign="top">"Sales 00016422"</td>
+<td valign="top">Returns document "Goods and services sales" numbered 00016422.</td></tr><tr><td valign="top">"Order 120000"</td>
+<td valign="top">Returns transfer orders for cash amounts 120000 and 120000.50</td></tr><tr><td valign="top">"Johnson Acacia"</td>
+<td valign="top">Returns all documents prepared by Mr. Johnson for Acacia Ltd. counterparty</td></tr><tr><td valign="top">"Sales Acacia"</td>
+<td valign="top">Returns all documents "Goods and services sales" related to Acacia Ltd. counterparty</td></tr><tr><td valign="top">"Acacia 07/05"</td>
+<td valign="top">Returns all documents related to Acacia Ltd. prepared on July 5th</td></tr><tr><td valign="top">"Sneakers"</td>
+<td valign="top">It will return all mentions of goods like "sneakers" in the right order: <br>• White sneakers (Goods) <br>• Black sneakers (Goods) <br>• Goods and services receipt # 00086822 <br>• Goods and services sales # 00016422</td></tr></tbody></table><p> </p>
+<h3>Recommendations </h3>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<ul><li>If your search returns too many results, specify the search query by adding to it any clarification (date, amount, name of the counterparty). 
+</li><li>If your search returns too few results, expand your search by removing some data from the query. 
+</li><li>To perform exact search, use: </li></ul><blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<ul><li>Quotation marks to search the exact phrase, for example: "mini vacuum cleaner". 
+</li><li>OR to search for any one of two words. Example: Acacia OR Uniconstructors search returns all references to Acacia Ltd. or Uniconstructors Inc. counterparties. 
+</li><li>Brackets to group search terms. Example: Johnson (Acacia OR Uniconstructors) search returns all documents prepared by Mr. Johnson for Acacia Ltd. or Uniconstructors Inc. counterparty.</li></ul></blockquote>
+<ul><li>To search giving consideration to synonyms, use "!", for example, if you search "number!", the application will find all documents that contain words "number" or "figure". 
+</li><li>Use hash sign (#) for fuzzy search. Example: Uniconstruct#3 search returns all documents containing words that differ from Uniconstruct by 3 or less letters. 
+</li><li>Use an asterisk (*) to search by a word beginning. Example: Unico* search returns all documents containing words that start with Unico: Uniconstructors, Unicorn, and so on.</li></ul></blockquote>
+<h3>See also: </h3>
+<ul><li><a href="v8help://1cv8/QueryLanguageFullTextSearchInData">Full description of search expression format</a>.</li></ul></body></html>

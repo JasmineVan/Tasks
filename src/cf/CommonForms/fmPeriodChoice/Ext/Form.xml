@@ -1,0 +1,1035 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор периода</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Selection of period</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupTop" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group top</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group top</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>38</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupTopExtendedTooltip" id="54"/>
+			<ChildItems>
+				<CommandBar name="GroupCommandBarTopLeft" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group command bar top left</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group command bar top left</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="GroupCommandBarTopLeftExtendedTooltip" id="55"/>
+					<ChildItems>
+						<Button name="CommandDecreaseYear" id="6">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.CommandDecreaseYear</CommandName>
+							<ExtendedTooltip name="CommandDecreaseYearExtendedTooltip" id="56"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<InputField name="ChosenPeriod" id="50">
+					<DataPath>ChosenPeriod</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<Width>4</Width>
+					<ChoiceButton>false</ChoiceButton>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=гггг</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ=гггг</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ChosenPeriodContextMenu" id="51"/>
+					<ExtendedTooltip name="ChosenPeriodExtendedTooltip" id="57"/>
+					<Events>
+						<Event name="OnChange">ChosenPeriodOnChange</Event>
+					</Events>
+				</InputField>
+				<CommandBar name="GroupCommandBarTopRight" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group command bar top right</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group command bar top right</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="GroupCommandBarTopRightExtendedTooltip" id="58"/>
+					<ChildItems>
+						<Button name="CommandIncreaseYear" id="7">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.CommandIncreaseYear</CommandName>
+							<ExtendedTooltip name="CommandIncreaseYearExtendedTooltip" id="59"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupMonthes" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group monthes</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group monthes</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupMonthesExtendedTooltip" id="60"/>
+			<ChildItems>
+				<UsualGroup name="GroupMonthesLeft" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group monthes left</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group monthes left</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupMonthesLeftExtendedTooltip" id="61"/>
+					<ChildItems>
+						<Button name="CommandMonth01" id="13">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<CommandName>Form.Command.CommandMonth01</CommandName>
+							<BorderColor>style:ButtonBackColor</BorderColor>
+							<ExtendedTooltip name="CommandMonth01ExtendedTooltip" id="62"/>
+						</Button>
+						<Button name="CommandMonth04" id="17">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<CommandName>Form.Command.CommandMonth04</CommandName>
+							<BorderColor>style:ButtonBackColor</BorderColor>
+							<ExtendedTooltip name="CommandMonth04ExtendedTooltip" id="63"/>
+						</Button>
+						<Button name="CommandMonth07" id="20">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<CommandName>Form.Command.CommandMonth07</CommandName>
+							<BorderColor>style:ButtonBackColor</BorderColor>
+							<ExtendedTooltip name="CommandMonth07ExtendedTooltip" id="64"/>
+						</Button>
+						<Button name="CommandMonth10" id="23">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<CommandName>Form.Command.CommandMonth10</CommandName>
+							<BorderColor>style:ButtonBackColor</BorderColor>
+							<ExtendedTooltip name="CommandMonth10ExtendedTooltip" id="65"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="GroupMonthesMiddle" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group monthes middle</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group monthes middle</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupMonthesMiddleExtendedTooltip" id="66"/>
+					<ChildItems>
+						<Button name="CommandMonth02" id="14">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<CommandName>Form.Command.CommandMonth02</CommandName>
+							<BorderColor>style:ButtonBackColor</BorderColor>
+							<ExtendedTooltip name="CommandMonth02ExtendedTooltip" id="67"/>
+						</Button>
+						<Button name="CommandMonth05" id="18">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<CommandName>Form.Command.CommandMonth05</CommandName>
+							<BorderColor>style:ButtonBackColor</BorderColor>
+							<ExtendedTooltip name="CommandMonth05ExtendedTooltip" id="68"/>
+						</Button>
+						<Button name="CommandMonth08" id="21">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<CommandName>Form.Command.CommandMonth08</CommandName>
+							<BorderColor>style:ButtonBackColor</BorderColor>
+							<ExtendedTooltip name="CommandMonth08ExtendedTooltip" id="69"/>
+						</Button>
+						<Button name="CommandMonth11" id="24">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<CommandName>Form.Command.CommandMonth11</CommandName>
+							<BorderColor>style:ButtonBackColor</BorderColor>
+							<ExtendedTooltip name="CommandMonth11ExtendedTooltip" id="70"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="GroupMonthesRight" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group monthes right</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group monthes right</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupMonthesRightExtendedTooltip" id="71"/>
+					<ChildItems>
+						<Button name="CommandMonth03" id="16">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<CommandName>Form.Command.CommandMonth03</CommandName>
+							<BorderColor>style:ButtonBackColor</BorderColor>
+							<ExtendedTooltip name="CommandMonth03ExtendedTooltip" id="72"/>
+						</Button>
+						<Button name="CommandMonth06" id="19">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<CommandName>Form.Command.CommandMonth06</CommandName>
+							<BorderColor>style:ButtonBackColor</BorderColor>
+							<ExtendedTooltip name="CommandMonth06ExtendedTooltip" id="73"/>
+						</Button>
+						<Button name="CommandMonth09" id="22">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<CommandName>Form.Command.CommandMonth09</CommandName>
+							<BorderColor>style:ButtonBackColor</BorderColor>
+							<ExtendedTooltip name="CommandMonth09ExtendedTooltip" id="74"/>
+						</Button>
+						<Button name="CommandMonth12" id="25">
+							<Type>UsualButton</Type>
+							<Width>12</Width>
+							<CommandName>Form.Command.CommandMonth12</CommandName>
+							<BorderColor>style:ButtonBackColor</BorderColor>
+							<ExtendedTooltip name="CommandMonth12ExtendedTooltip" id="75"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupQuarters" id="42">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group quarters</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group quarters</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupQuartersExtendedTooltip" id="76"/>
+			<ChildItems>
+				<Button name="CommandQuarter1" id="43">
+					<Type>UsualButton</Type>
+					<Width>38</Width>
+					<CommandName>Form.Command.CommandQuarter1</CommandName>
+					<BorderColor>style:ButtonBackColor</BorderColor>
+					<ExtendedTooltip name="CommandQuarter1ExtendedTooltip" id="77"/>
+				</Button>
+				<Button name="CommandQuarter2" id="44">
+					<Type>UsualButton</Type>
+					<Width>38</Width>
+					<CommandName>Form.Command.CommandQuarter2</CommandName>
+					<BorderColor>style:ButtonBackColor</BorderColor>
+					<ExtendedTooltip name="CommandQuarter2ExtendedTooltip" id="78"/>
+				</Button>
+				<Button name="CommandQuarter3" id="45">
+					<Type>UsualButton</Type>
+					<Width>38</Width>
+					<CommandName>Form.Command.CommandQuarter3</CommandName>
+					<BorderColor>style:ButtonBackColor</BorderColor>
+					<ExtendedTooltip name="CommandQuarter3ExtendedTooltip" id="79"/>
+				</Button>
+				<Button name="CommandQuarter4" id="46">
+					<Type>UsualButton</Type>
+					<Width>38</Width>
+					<CommandName>Form.Command.CommandQuarter4</CommandName>
+					<BorderColor>style:ButtonBackColor</BorderColor>
+					<ExtendedTooltip name="CommandQuarter4ExtendedTooltip" id="80"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupHalfYears" id="47">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group half years</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group half years</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupHalfYearsExtendedTooltip" id="81"/>
+			<ChildItems>
+				<Button name="CommandHalfYear1" id="48">
+					<Type>UsualButton</Type>
+					<Width>38</Width>
+					<Height>2</Height>
+					<CommandName>Form.Command.CommandHalfYear1</CommandName>
+					<BorderColor>style:ButtonBackColor</BorderColor>
+					<ExtendedTooltip name="CommandHalfYear1ExtendedTooltip" id="82"/>
+				</Button>
+				<Button name="CommandHalfYear2" id="49">
+					<Type>UsualButton</Type>
+					<Width>38</Width>
+					<Height>2</Height>
+					<CommandName>Form.Command.CommandHalfYear2</CommandName>
+					<BorderColor>style:ButtonBackColor</BorderColor>
+					<ExtendedTooltip name="CommandHalfYear2ExtendedTooltip" id="83"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupBottom" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group bottom</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group bottom</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>38</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupBottomExtendedTooltip" id="84"/>
+			<ChildItems>
+				<LabelField name="PeriodAsString" id="27">
+					<DataPath>PeriodAsString</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<Width>15</Width>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ContextMenu name="PeriodAsStringContextMenu" id="28"/>
+					<ExtendedTooltip name="PeriodAsStringExtendedTooltip" id="85"/>
+				</LabelField>
+				<CommandBar name="GroupCancel" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group cancel</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group cancel</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="GroupCancelExtendedTooltip" id="88"/>
+					<ChildItems>
+						<Button name="CommandChoose" id="30">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.CommandChoose</CommandName>
+							<ExtendedTooltip name="CommandChooseExtendedTooltip" id="87"/>
+						</Button>
+						<Button name="CommandCancel" id="31">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.CommandCancel</CommandName>
+							<ExtendedTooltip name="CommandCancelExtendedTooltip" id="89"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="PeriodAsString" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строкой</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period by line</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ChosenPeriod" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбираемый период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Selected period</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ChosenPeriodButtonBackColor" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет фона кнопки выбранного периода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Background color of selected period</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ButtonBackColor" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет фона кнопки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Background color of button</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="PeriodChoiceMode" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим выбора периода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Period selection mode</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="RequestPeriodChoiceModeFromOwner" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрашивать режим выбора периода у владельца</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Request period selection mode from owner</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="YearChanged" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменился год</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Year has changed</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="MarkedPeriod" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмеченный период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mentioned period</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="CommandDecreaseYear" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшить год</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Decrease year</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшить год</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Decrease year</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>CommandDecreaseYear</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandIncreaseYear" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Увеличить год</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Increase year</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Увеличить год</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Increase year</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>CommandIncreaseYear</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandMonth01" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Январь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>January</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command month01</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandMonth01</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandMonth02" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Февраль</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>February</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command month02</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandMonth02</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandMonth03" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Март</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>March</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command month03</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandMonth03</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandMonth04" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Апрель</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>April</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command month04</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandMonth04</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandMonth05" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Май</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>May</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command month05</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandMonth05</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandMonth06" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Июнь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>June</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command month06</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandMonth06</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandMonth07" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Июль</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>July</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command month07</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandMonth07</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandMonth08" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Август</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>August</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command month08</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandMonth08</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandMonth09" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сентябрь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>September</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command month09</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandMonth09</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandMonth10" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Октябрь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>October</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command month10</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandMonth10</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandMonth11" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ноябрь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>November</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command month11</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandMonth11</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandMonth12" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декабрь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>December</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command month12</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandMonth12</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandChoose" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command choose</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandChoose</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandCancel" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cancel</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command cancel</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandCancel</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandQuarter1" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>I квартал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>I quarter</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command quarter1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandQuarter1</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandQuarter2" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>II квартал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>II quarter</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command quarter2</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandQuarter2</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandQuarter3" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>III квартал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Third quarter</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command quarter3</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandQuarter3</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandQuarter4" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IV квартал</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>IV quarter</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command quarter4</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandQuarter4</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandHalfYear1" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>I полугодие</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>I half year</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command half year1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandHalfYear1</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandHalfYear2" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>II полугодие</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>II half year</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command half year2</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandHalfYear2</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="PeriodChoiceMode">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

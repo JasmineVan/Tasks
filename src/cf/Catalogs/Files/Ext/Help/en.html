@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p></p>
+<p>In the application, you can store files of custom format. Unlike storing files on disks or in the corporate document management systems, files are linked with application data. This makes it more convenient to store files. Different lists, documents, business processes, and other application objects can act as a custodian for files. Operations with files attached to the object are performed in the <a href="DataProcessor.FilesOperations.Form.AttachedFiles/Help">Attached files</a> list. You can open the list by choosing a necessary command on the navigation panel of the document or other application object. You can also store files without linking them to a particular object in the <a href="Catalog.Files.Form.Files/Help">file list</a>.</p>
+<p>To work with file attributes (author, name, description, etc.), use the <a href="Catalog.Files.Form.ItemForm/Help">file profile</a>. Working with the file itself is performed in the application installed on your computer. When editing a file, its previous <a href="Catalog.FilesVersions/Help">version </a>is automatically saved in the infobase.</p>
+<p></p>
+<h3>File operations</h3>
+<p></p>
+<p>To perform file operations, use commands on the command bar, or in the <strong>More </strong>menu in the file list, in the context menu, or in the file profile: </p>
+<p></p>
+<table cellpadding="8" width="100%" border="0"><tbody><tr><td><strong>Command</strong> </td>
+<td><strong>Details</strong></td></tr><tr><td><img src="StdPicture.CreateListItem"></img> Add (Insert)</td>
+<td><a href="#1">Adds</a> a new file to the application. Possible options to create a file: from template, from file on disk, or from scanner.</td></tr><tr><td><img src="CommonPicture.OpenSelectedFile" width="16" height="16"></img> Open (View)</td>
+<td>Opens a file via an external application for viewing or editing depending on whether the file is marked as locked for editing by another user. </td></tr><tr><td valign="top"><img src="CommonPicture.EditFile"></img> Edit (<strong>F4</strong>)</td>
+<td valign="top">Marks a file as locked for editing and opens it via an external application. </td></tr><tr><td><strong>Enter</strong> (double-click)</td>
+<td>By default, you should <a href="DataProcessor.FilesOperations.Form.OpeningModeChoiceForm/Help">choose </a>how the file is opened: for viewing, or for editing. The action is configured in the personal application settings on the <strong>File operations</strong> tab.</td></tr><tr><td valign="top">End </td>
+<td valign="top">Updates the file in the storage and unlocks it for editing. </td></tr><tr><td>Print</td>
+<td>Click the button to print the file.</td></tr><tr><td>Send</td>
+<td>Click the button to send an email message. The selected file will be automatically added as attachment.</td></tr><tr><td><img src="CommonPicture.PublishFile"></img> Save changes</td>
+<td>Saves a version of the file you are editing to the storage, but leaves it locked for editing by the current user.</td></tr><tr><td><img src="CommonPicture.LockFile"></img> Lock</td>
+<td>Marks a file in the storage as locked for editing by the current user, but does not open an external application. You can edit the file later.</td></tr><tr><td valign="top"><img src="CommonPicture.UnlockFile"></img> Cancel edit</td>
+<td valign="top">Clears the locked-for-editing mark from file.</td></tr><tr><td><img src="StdPicture.Change"></img> Open card</td>
+<td>Open a file profile storing file information.</td></tr><tr><td>Preview</td>
+<td>Select the check box to view the image in the file list.</td></tr><tr><td><img src="CommonPicture.SaveFileAs"></img> Save as</td>
+<td>Saves the file to the specified folder on a hard or network drive.</td></tr><tr><td>Open file directory</td>
+<td>Open a folder that contains the file in the <strong>Windows Explorer</strong>.</td></tr><tr><td><img src="CommonPicture.UpdateFileFromFileOnHardDrive"></img> Update from file on disk</td>
+<td>Replaces the file in the infobase with the selected file on the hard drive. The application checks file dates. If you try to replace the file with an old version, a warning message appears, and the action is not performed.</td></tr><tr><td>Show service files</td>
+<td>The application attaches service files to objects automatically. Usually they are hidden. Select the check box to view this files in the list.</td></tr><tr><td><img src="CommonPicture.SignedWithDS"></img> Sign</td>
+<td>Creates a digital signature for the file. Before creating a digital signature, the application suggests you to select a digital signature certificate from the certificates on the computer. You can also <a>select a certificate</a> upon customizing personal application settings. Digitally signed files are not available for editing. In lists, they are marked with icon <img src="CommonPicture.SignedWithDS" width="16" height="16"></img>. You can copy a signed file. The application prompts you to choose whether to copy file with the digital signature, or without it.</td></tr><tr><td>Add digital signature from file</td>
+<td><a href="CommonForm.AddDigitalSignatureFromFile/Help">Adds the selected signature file</a> to the file signatures. For example, this command is useful if the digital signature file was received later than the signed file.</td></tr><tr><td>Save with digital signature</td>
+<td>Saves the file to the specified folder on the hard or network drive and <a href="CommonForm.SaveWithDigitalSignature/Help">saves file signatures</a>—all or selected depending on the settings of the <strong>On saving data to the file with digital signature</strong> option. The settings are set in the personal application settings, on the Additional information tab. The command is useful if you want to send the signed file to another person, for example.</td></tr><tr><td><img src="CommonPicture.Encrypted" width="16" height="16"></img> Encrypt</td>
+<td>Encrypting files. Unlike file signing procedure, you can use multiple certificates for file encryption, for example, if you need to encrypt a file for several users. Select the check boxes for certificates from the <a>list</a>. In lists, encrypted files are marked with icon <img src="CommonPicture.Encrypted" width="16" height="16"></img>. Unlike the signing procedure, password to the private key is not required during encryption. An encrypted file is available for editing. All file versions are encrypted. Full-text search is not available for the encrypted files. You can copy encrypted files. A new file you just copied remains encrypted. An encrypted file cannot be signed. A signed file can be encrypted, but before checking the digital signature of the encrypted file, the application prompts you to enter a password to preliminary decrypt the file.</td></tr><tr><td>Decrypt</td>
+<td>Choose the command to decrypt the file. To decrypt the file, enter a <a>password </a>to the private key.</td></tr></tbody></table><p>Note: If the file is encrypted, the full-text search by its content is not available.</p>
+<h3><a name="#1">Adding files</a></h3>
+<p>To add a new file to the application:</p>
+<ul><li>
+<div>Click <strong>Add (</strong>press <strong>Insert</strong>). </div>
+</li><li>
+<div>Select an option to create the file:</div>
+<ul><li>
+<div><strong>From disk</strong> </div>
+<ul><li>
+<div>To attach a file to the object or put a file existing on your computer to the folder, specify a path to the file on the disk, and then click <strong>Open</strong>.</div>
+</li><li>
+<div>The application saves the file and automatically creates and opens a <strong>File profile</strong>.</div></li></ul></li><li>
+<div><strong>From template</strong> </div>
+<ul><li>
+<div>Choose a file template in the <a href="Catalog.Files.Form.ChoiceForm/Help">selection list</a>, and then click <strong>Select</strong>. </div>
+</li><li>
+<div>The application automatically creates and opens a <strong>File profile</strong>.</div></li></ul></li><li>
+<div><strong>From scanner</strong></div>
+<ul><li>
+<div>You can create a file <strong>From scanner</strong> if a scanner is connected to the computer (see scanner documentation) and you have a <a href="DataProcessor.Scanning.Form.ScanningSettings/Help">scanner component</a> installed on your computer. You should also configure scan settings. </div>
+</li><li>
+<div>If all conditions are met and settings are set, you can get a file from scanner. </div>
+</li><li>
+<div>Follow the <a href="DataProcessor.Scanning.Form.ScanningResult/Help">Scanning wizard</a> steps. </div>
+</li><li>
+<div>After the document is scanned, click <strong>Accept</strong>. A file is assigned a code, and a file profile is created. You can see this profile on your screen. In the <strong>Name </strong>field, the code is inserted automatically. Edit the necessary fields, click <strong>Write and close</strong> to save the file profile.</div></li></ul></li></ul></li></ul><ul></ul><h3>See also:</h3>
+<ul style="MARGIN-RIGHT: 0px" dir="ltr"><li><a href="Catalog.FilesVersions/Help">File versions</a> 
+</li><li><a href="DataProcessor.FilesOperations.Form.FilesImportForm/Help">Importing files</a>. 
+</li><li><a href="DataProcessor.FilesOperations.Form.FolderImportForm/Help">Importing folders</a>. 
+</li><li><a href="DataProcessor.FilesOperations.Form.ExportFolderForm/Help">Saving folders</a> 
+</li><li><a href="Catalog.FilesFolders/Help">Folders</a> 
+</li><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

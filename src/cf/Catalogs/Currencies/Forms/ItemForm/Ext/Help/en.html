@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>This form describes properties of a currency.</p>
+<p>Currencies are widely used in any enterprise's activities: all documents related to monetary issues (billing statements, transfer orders, contracts, consignment notes) have a <strong>Currency</strong> field, explicitly or by default. The <strong>Currency</strong> field value can be filled in differently, depending on the enterprise's activity area: Russian ruble, another currency, or a conditional unit.</p>
+<h3>General currency information</h3>
+<div>When adding a currency from the <a href="../id80512d95-5458-4934-98ae-a7b58099196b/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">national currency classifier</a>, the following fields are filled in automatically: </div>
+<ul><li>
+<div><strong>Currency name</strong>. The full name of a currency.</div>
+</li><li>
+<div><strong>Numeric code</strong>. A unique numeric code accepted as an international standard. It is used to identify currencies downloaded from the internet or from the 1C website.</div>
+</li><li>
+<div><strong>Alphabetic code</strong>. An alphabetic code accepted as an international standard; serves as the main presentation of a currency.</div>
+</li><li>
+<div>If the radio button in the <strong>Currency exchange rate</strong> field is set to <strong>Import from the internet</strong>, the currency exchange rates are downloaded from the 1C website. </div></li></ul><h3>About Currency exchange rate radio button</h3>
+<ul><li>
+<div>You should only set the radio button to <strong>Import from the internet</strong> position when:</div>
+<ul><li>
+<div>Adding a currency that supports rate import from the internet, in order to use it as a conditional unit and specify its exchange rate manually.</div>
+</li><li>
+<div>Checking whether a currency rate is up-to-date (because this check requires setting the radio button to "Import from the internet").</div></li></ul></li><li>
+<div>For a local currency, the <strong>Currency exchange rate</strong> radio button must be set to the <strong>Input manually</strong> position, because the exchange rate of any currency in relation to itself is always 1. For example, when working with a Russian enterprise, set the <strong>Currency exchange rate</strong> radio button for RUB to <strong>Input manually</strong>.</div></li></ul><h3>Interdependencies between currency rates</h3>
+<ul><li>This feature can be useful when, for example, you need to calculate an internal currency rate for your company. 
+</li><li>
+<div>Set the <strong>Currency exchange rate</strong> radio button to the <strong>Calculate based on another exchange rate</strong> position.</div>
+</li><li>
+<div>Select a source currency from the list, or type it in. A source currency is used to calculate exchange rates for dependent currencies. </div>
+</li><li>
+<div>Specify the <strong>Increase by, %</strong> coefficient, which is a ratio between exchange rates of the source currency and the dependent currency.</div></li></ul><h3>Calculating exchange rates by formula</h3>
+<ul><li>You can specify a currency whose rate depends on multiple currencies. 
+</li><li>To do this, set the <strong>Currency exchange rate</strong> radio button to the <strong>Calculate by formula</strong> position. 
+</li><li>Specify the exchange rate calculation method (for instance, <strong>(USD+EUR)/2</strong>). 
+</li><li>Possible separators for fractional part of numbers in the formula are fullstop and comma, for example: 
+<ul><li><strong>EUR*1.025</strong> 
+</li><li><strong>EUR*1,025</strong></li></ul></li><li>But if you have to use functions with two or more parameters, separate parameters with commas and fractional parts with fullstops, for example: 
+<ul><li><strong>Round(EUR*1.025,2)</strong></li></ul></li><li>For more information about the rules for constructing such expressions, see the <a href="v8help://dcsui/SKD_Lang">Expression language of data composition system</a> help section.</li></ul><h3>Viewing exchange rates</h3>
+<ul><li>To convert any currency to a local currency, use its <a href="InformationRegister.ExchangeRates/Help">exchange rate</a>. 
+</li><li>On the currency navigation panel, click <strong>Currency exchange rates</strong>. For your viewing convenience, the date interval is adjustable.</li></ul><h3>Entering exchange rates manually</h3>
+<ul><li>Exchange rates for most currencies can be <a href="../idf36150de-33af-4410-8a4c-8c9f4b545793/038b5c85-fb1c-4082-9c4c-e69f8928bf3a">imported</a> from the 1C website. If this option is not available for a currency, the <strong>Currency exchange rate</strong> radio button is automatically set to <strong>Input manually</strong>. 
+</li><li>To specify an exchange rate manually: 
+<ul><li>On the currency navigation panel, click <strong>Currency exchange rates</strong>. 
+</li><li>Click <strong>Create</strong> and type in an exchange rate for a date (the current date is set by default).</li></ul></li></ul><h3>See also: </h3>
+<ul><li><a href="Catalog.Currencies/Help">Currencies</a> 
+</li><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

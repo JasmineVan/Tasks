@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Получение файла для просмотра или редактирования</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Get file to view or edit</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>pl</v8:lang>
+			<v8:content>Odbierz plik do przeglądania lub edytowania</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>de</v8:lang>
+			<v8:content>Datei zur Ansicht oder Bearbeitung empfangen</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>ro</v8:lang>
+			<v8:content>Obținerea fișierului pentru vizualizare sau editare</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>tr</v8:lang>
+			<v8:content>Görüntüleme veya düzenleme için dosya al</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>es_ES</v8:lang>
+			<v8:content>Recibir archivo para ver o editar</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="FormContinue" id="8">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Continue</CommandName>
+				<ExtendedTooltip name="FormContinueExtendedTooltip" id="19"/>
+			</Button>
+			<Button name="FormCancel" id="28">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="FormCancelExtendedTooltip" id="29"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ReminderText" id="9">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сейчас будет предложено открыть или сохранить файл.
+
+1. Нажмите кнопку "Сохранить" ("Save").
+
+2. Выберите каталог для сохранения файла и запомните его
+   (каталог понадобится для редактирования и помещения файла обратно в хранилище).
+
+3. Для редактирования файла перейдите в выбранный ранее каталог,
+   найдите там сохраненный файл и откройте его.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>You will be prompted to open or save the file.
+
+1. Click "Save".
+
+2. Select a directory to save the file and remember its name 
+   (you will need it to edit and put the file back to the storage).
+
+3. To edit the file, open the previously selected directory,
+   find the saved file, and open it.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Teraz zostaniesz poproszony o otwarcie lub zapisanie pliku.
+
+1. Kliknij Zapisz.
+
+2. Wybierz folder do zapisania pliku i
+ zapamiętaj go (będziesz potrzebował folderu do edytowania i przekazywania pliku z powrotem do pamięci).
+
+3. Aby edytować plik, przejdź do 
+poprzednio wybranego folderu, znajdź zapisany plik i otwórz go.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Nun werden Sie aufgefordert, die Datei zu öffnen oder zu speichern.
+
+ 1. Klicken Sie auf Speichern 
+
+2. Wählen Sie den Ordner, in dem die Datei gespeichert werden soll, 
+und merken Sie sich diesen (Sie benötigen den Ordner zum Bearbeiten und Wiederherstellen der Datei). 
+
+3. Um die Datei zu bearbeiten, gehen Sie in den
+ zuvor ausgewählten Ordner, suchen Sie die gespeicherte Datei und öffnen Sie diese. </v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Acum vi se va cere să deschideți sau să salvați fișierul.
+
+1. Faceți click pe Salvare.
+
+2. Selectați folderul pentru salvarea fișierului și
+ memorați-l (veți avea nevoie de folder pentru editarea și introducerea fișierului înapoi în spațiul de stocare).
+
+3. Pentru a edita fișierul mergeți la
+dosarul selectat anterior, găsiți fișierul salvat și deschideți-l.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Şimdi dosyayı açmanız ya da kaydetmeniz istenecektir.
+
+1.Kaydet üzerine Tıklayın.
+
+2.Dosyayı kaydetmek için klasör seçin ve
+bu klasörü hatırlayın (dosyayı düzenlemek ve dosyayı depolamaya geri koymak için klasöre ihtiyacınız olacaktır).
+
+3. Dosyayı düzenlemek için
+ önceden seçilen klasöre gidin, kaydedilmiş dosyayı bulun ve açın.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Ahora se le pedirá abrir o guardar el archivo.
+
+1. Hacer clic en Guardar.
+
+2. Seleccionar la carpeta para guardar el archivo y
+recordarla (necesitará la carpeta para editar y volver a colocar el archivo al almacenamiento).
+
+3. Para editar el archivo ir a la
+carpeta anteriormente seleccionada, buscar el archivo guardado y abrirlo.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ReminderTextContextMenu" id="10"/>
+			<ExtendedTooltip name="ReminderTextExtendedTooltip" id="20"/>
+		</LabelDecoration>
+		<Pages name="Additions" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Additions</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Dodatki</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Zusätze</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Suplimentare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Ekler</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Adiciones</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="AdditionsExtendedTooltip" id="21"/>
+			<ChildItems>
+				<Page name="MozillaFireFox" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Mozilla fire fox</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Mozilla fire fox</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Mozilla fire fox</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Mozilla fire fox</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Mozilla fire fox</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Mozilla fire fox</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Mozilla fire fox</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="MozillaFireFoxExtendedTooltip" id="24"/>
+					<ChildItems>
+						<LabelDecoration name="MozillaFirefoxExtension" id="14">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>(По умолчанию браузер Mozilla Firefox автоматически сохраняет файлы в каталоге ""Мои документы"")</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>(By default Mozilla Firefox saves files to "My Documents" directory.)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>(Domyślnie Mozilla Firefox automatycznie zapisuje pliki w folderze "Moje dokumenty")</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>(Standardmäßig speichert Mozilla Firefox automatisch Dateien im Ordner "Meine Dokumente")</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>(În mod implicit, Mozilla Firefox salvează automat fișiere în dosarul "Documentele mele")</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>(Varsayılan olarak, Mozilla Firefox dosyaları "Belgelerim" klasörüne otomatik olarak kaydeder)</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>(Por defecto, Mozilla Firefox automáticamente guarda en la carpeta "Mis documentos")</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="MozillaFirefoxExtensionContextMenu" id="15"/>
+							<ExtendedTooltip name="MozillaFirefoxExtensionExtendedTooltip" id="25"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="Empty" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пустая</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Blank</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Pusty</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Leer</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Goală</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Boş</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Vacía</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="EmptyExtendedTooltip" id="22"/>
+					<ChildItems>
+						<LabelDecoration name="EmptyLabel" id="17">
+							<ContextMenu name="EmptyLabelContextMenu" id="18"/>
+							<ExtendedTooltip name="EmptyLabelExtendedTooltip" id="23"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="Indent" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отступ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Indent</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Odstęp</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Einrückung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Grafic</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sipariş</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Pedido</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="IndentExtendedTooltip" id="26"/>
+			<ChildItems>
+				<CheckBoxField name="ShowReminderOnEdit" id="2">
+					<DataPath>DontShowAgain</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<TitleHeight>1</TitleHeight>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ShowReminderOnEditContextMenu" id="3"/>
+					<ExtendedTooltip name="ShowReminderOnEditExtendedTooltip" id="27"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="DontShowAgain" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Больше не показывать это сообщение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Do not show this message again</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Nie pokazuj ponownie tej wiadomości</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Diese Nachricht nicht wieder anzeigen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Nu mai afișa acest mesaj</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Bu mesajı tekrar gösterme</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>No mostrar este mensaje más</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ReminderText" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Continue" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Continue</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Kontynuuj</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Weiter</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Continuare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Devam</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Continuar</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Continue</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Kontynuuj</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Weiter</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Continuare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Devam</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Continuar</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ContinueExecute</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

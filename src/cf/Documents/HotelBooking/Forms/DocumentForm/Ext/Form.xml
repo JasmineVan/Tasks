@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<HorizontalSpacing>Double</HorizontalSpacing>
+	<HorizontalAlign>Left</HorizontalAlign>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">AfterWrite</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="HotelBookingInformation" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Hotel Booking Information</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Hotel booking information</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="HotelBookingInformationExtendedTooltip" id="52"/>
+			<ChildItems>
+				<UsualGroup name="Group2" id="49">
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group2ExtendedTooltip" id="50"/>
+					<ChildItems>
+						<InputField name="Number" id="1">
+							<DataPath>Object.Number</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="NumberContextMenu" id="2"/>
+							<ExtendedTooltip name="NumberExtendedTooltip" id="3"/>
+						</InputField>
+						<InputField name="Date" id="4">
+							<DataPath>Object.Date</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="DateContextMenu" id="5"/>
+							<ExtendedTooltip name="DateExtendedTooltip" id="6"/>
+						</InputField>
+						<UsualGroup name="Group1" id="47">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group1ExtendedTooltip" id="48"/>
+							<ChildItems>
+								<InputField name="StartTime" id="7">
+									<DataPath>Object.StartTime</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Check in</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<MaxWidth>21</MaxWidth>
+									<ContextMenu name="StartTimeContextMenu" id="8"/>
+									<ExtendedTooltip name="StartTimeExtendedTooltip" id="9"/>
+								</InputField>
+								<InputField name="EndTime" id="10">
+									<DataPath>Object.EndTime</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Check out</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="EndTimeContextMenu" id="11"/>
+									<ExtendedTooltip name="EndTimeExtendedTooltip" id="12"/>
+								</InputField>
+								<InputField name="Duration" id="22">
+									<DataPath>Object.Duration</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="DurationContextMenu" id="23"/>
+									<ExtendedTooltip name="DurationExtendedTooltip" id="24"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Owner" id="13">
+							<DataPath>Object.Owner</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>2</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
+							<ContextMenu name="OwnerContextMenu" id="14"/>
+							<ExtendedTooltip name="OwnerExtendedTooltip" id="15"/>
+						</InputField>
+						<InputField name="Employee" id="16">
+							<DataPath>Object.Employee</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
+							<ContextMenu name="EmployeeContextMenu" id="17"/>
+							<ExtendedTooltip name="EmployeeExtendedTooltip" id="18"/>
+						</InputField>
+						<CheckBoxField name="Pickup" id="19">
+							<DataPath>Object.Pickup</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="PickupContextMenu" id="20"/>
+							<ExtendedTooltip name="PickupExtendedTooltip" id="21"/>
+							<Events>
+								<Event name="OnChange">PickupOnChange</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group6" id="74">
+					<ExtendedTooltip name="Group6ExtendedTooltip" id="75"/>
+				</UsualGroup>
+				<UsualGroup name="Pickupinfo" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>             Pick up form</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Pickupinfo</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+					<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
+					<Behavior>Collapsible</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="PickupinfoExtendedTooltip" id="54">
+						<Width>28</Width>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>25</MaxWidth>
+						<VerticalStretch>false</VerticalStretch>
+						<TextColor>style:AccentColor</TextColor>
+						<Font faceName="Arial" height="11" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Pick up form:            </v8:content>
+							</v8:item>
+						</Title>
+						<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+						<GroupVerticalAlign>Top</GroupVerticalAlign>
+					</ExtendedTooltip>
+					<ChildItems>
+						<UsualGroup name="Group4" id="70">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group4ExtendedTooltip" id="71"/>
+							<ChildItems>
+								<InputField name="AddressNumber" id="55">
+									<DataPath>Object.AddressNumber</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Number</v8:content>
+										</v8:item>
+									</Title>
+									<Width>23</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>23</MaxWidth>
+									<ContextMenu name="AddressNumberContextMenu" id="56"/>
+									<ExtendedTooltip name="AddressNumberExtendedTooltip" id="57"/>
+								</InputField>
+								<InputField name="Street" id="58">
+									<DataPath>Object.Street</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Street</v8:content>
+										</v8:item>
+									</Title>
+									<Width>24</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>23</MaxWidth>
+									<ContextMenu name="StreetContextMenu" id="59"/>
+									<ExtendedTooltip name="StreetExtendedTooltip" id="60"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Group5" id="72">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Group5ExtendedTooltip" id="73"/>
+							<ChildItems>
+								<InputField name="Ward" id="61">
+									<DataPath>Object.Ward</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Ward</v8:content>
+										</v8:item>
+									</Title>
+									<Width>23</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>23</MaxWidth>
+									<ContextMenu name="WardContextMenu" id="62"/>
+									<ExtendedTooltip name="WardExtendedTooltip" id="63"/>
+								</InputField>
+								<InputField name="District" id="64">
+									<DataPath>Object.District</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>District</v8:content>
+										</v8:item>
+									</Title>
+									<Width>23</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>22</MaxWidth>
+									<ContextMenu name="DistrictContextMenu" id="65"/>
+									<ExtendedTooltip name="DistrictExtendedTooltip" id="66"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="City" id="67">
+							<DataPath>Object.City</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>City</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>23</MaxWidth>
+							<ContextMenu name="CityContextMenu" id="68"/>
+							<ExtendedTooltip name="CityExtendedTooltip" id="69"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="CheckedOut" id="84">
+			<DataPath>Object.CheckedOut</DataPath>
+			<Visible>false</Visible>
+			<TitleTextColor>style:NegativeTextColor</TitleTextColor>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="CheckedOutContextMenu" id="85"/>
+			<ExtendedTooltip name="CheckedOutExtendedTooltip" id="86"/>
+		</CheckBoxField>
+		<UsualGroup name="ListDog" id="82">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dog List</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>List dog</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ListDogExtendedTooltip" id="83"/>
+			<ChildItems>
+				<Table name="DogList" id="25">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Object.DogList</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="DogListContextMenu" id="26"/>
+					<AutoCommandBar name="DogListCommandBar" id="27"/>
+					<ExtendedTooltip name="DogListExtendedTooltip" id="28"/>
+					<SearchStringAddition name="DogListSearchString" id="29">
+						<AdditionSource>
+							<Item>DogList</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="DogListSearchStringContextMenu" id="30"/>
+						<ExtendedTooltip name="DogListSearchStringExtendedTooltip" id="31"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="DogListViewStatus" id="32">
+						<AdditionSource>
+							<Item>DogList</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="DogListViewStatusContextMenu" id="33"/>
+						<ExtendedTooltip name="DogListViewStatusExtendedTooltip" id="34"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="DogListSearchControl" id="35">
+						<AdditionSource>
+							<Item>DogList</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="DogListSearchControlContextMenu" id="36"/>
+						<ExtendedTooltip name="DogListSearchControlExtendedTooltip" id="37"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnChange">DogListOnChange</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="DogListLineNumber" id="38">
+							<DataPath>Object.DogList.LineNumber</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="DogListLineNumberContextMenu" id="39"/>
+							<ExtendedTooltip name="DogListLineNumberExtendedTooltip" id="40"/>
+						</LabelField>
+						<InputField name="DogListDog" id="41">
+							<DataPath>Object.DogList.Dog</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="DogListDogContextMenu" id="42"/>
+							<ExtendedTooltip name="DogListDogExtendedTooltip" id="43"/>
+							<Events>
+								<Event name="StartChoice">DogListDogStartChoice</Event>
+							</Events>
+						</InputField>
+						<InputField name="DogListRoom" id="44">
+							<DataPath>Object.DogList.Room</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="DogListRoomContextMenu" id="45"/>
+							<ExtendedTooltip name="DogListRoomExtendedTooltip" id="46"/>
+							<Events>
+								<Event name="OnChange">DogListRoomOnChange</Event>
+							</Events>
+						</InputField>
+						<InputField name="DogListPrice" id="76">
+							<DataPath>Object.DogList.Price</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="DogListPriceContextMenu" id="77"/>
+							<ExtendedTooltip name="DogListPriceExtendedTooltip" id="78"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Total" id="79">
+			<DataPath>Total</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<ContextMenu name="TotalContextMenu" id="80"/>
+			<ExtendedTooltip name="TotalExtendedTooltip" id="81"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.HotelBooking</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Object.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="Total" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Total</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>This form is used to display progress and view results of the deferred <a href="DataProcessor.ApplicationUpdateResult/Help">infobase updates</a>.</p>
+<p>When performing infobase version updates, you may choose to have some of the data updated in deferred mode, i.e. in background, without service interruption. In this mode, the documents that have not been processed yet will become temporarily unavailable. If you try to open any of such documents, the program will display the message warning that actions with documents are blocked for the time the application is being updated. Some reports may also become unavailable during the update. When a user attempts to run a report, they get a warning that the report might contain inaccurate data because the update is in progress.</p>
+<p>The form and the <a href="CommonForm.ApplicationReleaseNotes/Help"></a>(<strong></strong>) window open simultaneously and automatically the moment the user signs in to the application after the infobase update.</p>
+<p>Information on the results of the deterred update can be accessed by clicking <strong></strong>in the <strong></strong>section or <strong></strong>in the <strong></strong>window. As soon as data processing starts, the hyperlink changes to <strong></strong>.</p>
+<h3>Information on completed infobase updates</h3>
+<ul><li>Update version, update date and time, and update procedure duration are specified.</li></ul><h3>Viewing event log</h3>
+<ul><li>To access the <a href="DataProcessor.EventLog/Help">event log</a> and view the events that appeared during the update, click <strong></strong></li></ul><h3>Executing data processors</h3>
+<ul><li>Before data processing starts, the hyperlink looks as <strong></strong>. Click the hyperlink to view the <a href="DataProcessor.ApplicationUpdateResult.Form.DeferredHandlers/Help"></a>list. 
+</li><li>Click <strong></strong>to start data processing. 
+</li><li>While the data processing procedure is running, the hyperlink displays the number of completed data processors. 
+</li><li>After all data processors are completed, completion date and time are displayed. The hyperlink looks as <strong></strong>, followed by the total number of completed procedures in brackets.</li></ul><h3>Setting priorities</h3>
+<ul><li>
+<div>The application allows to make data processing more quick by setting higher priority for it then the user work. This accelerates the update.</div>
+</li><li>
+<div>The <strong></strong>check box allows to set priorities for data processing:</div>
+<ul><li>
+<div><strong></strong>—data is being processed slowly, diminishing the speed of the server ans users work less.</div>
+</li><li>
+<div><strong></strong>—data is being processed quickly, diminishing the speed of the server ans users work. </div>
+<ul><li>
+<div>If priority is given to data processing, there is no delay between executions of scheduled data processing jobs. </div>
+</li><li>
+<div>Use this option when access to data that is being processed has to be retrieved quickly.</div></li></ul></li></ul></li><li>
+<div>Giving high priority to additional data processing automatically gives the same priority to the procedures it depends on.</div></li></ul><h3>Multithreaded update</h3>
+<ul><li>
+<div>Update can be made in multiple threads, loading all central processing unit cores by switching the <strong></strong>radio button to <strong></strong>.</div>
+</li><li>
+<div>During the multithread update, the <strong></strong>scheduled job controls the update process (starts background jobs). Only this scheduled job addresses common resources. Only this scheduled job addresses common resources. Separate background jobs are started for each part of the update process: no more than N jobs at once, where N is the number of central processing unit cores. Background jobs set environment, execute an update handler, and save results.</div>
+</li><li>
+<div>Define the total number of central processing unit cores on all working servers of a cluster: for instance, if there are 2 working servers, each possessing 8 cores, the total number is 16.</div>
+</li><li>
+<div>Give high priority to data processing for the update;</div>
+</li><li>
+<div>Define the number of threads equal to the number of central processing unit cores;</div>
+</li><li>
+<div>Set the update schedule (for instance, to non-working hours, not to interrupt user sessions).</div>
+<ul><li>
+<div>Number of threads and schedule can be changed anytime. These changes are applied to the update process immediately:</div>
+</li><li>
+<div>If the number of threads gets higher, more background tasks are started;</div>
+</li><li>
+<div>If the number of threads gets lower, redundant background tasks are finished and new background tasks are not started;</div>
+</li><li>
+<div>You can set the schedule so that update will be in progress only at certain hours: background and scheduled jobs will be finished before a set hour.</div></li></ul></li></ul><h3>Setting data processing schedules</h3>
+<ul><li>Data processors often take a long time to complete (from several minutes to hours, depending on volume of data stored in the application and computer performance). Moreover, while data processors are running the user experience may suffer. It is recommended to schedule data processing for hours of minimum user activity. 
+</li><li>In client/server mode, you can set the convenient hours for the scheduled job <strong></strong>. To set the convenient hours for the scheduled job <strong></strong>, click <strong></strong>. 
+</li><li>You can also select the the <a href="DataProcessor.ScheduledAndBackgroundJobs.Form.ScheduledJob/Help">scheduled job</a> to be set from the <a href="DataProcessor.ScheduledAndBackgroundJobs/Help">scheduled jobs list</a> in the <strong></strong>section.</li></ul><h3>Checking scheduled jobs lockout</h3>
+<ul><li>
+<div>You can lock scheduled jobs and stop deferred update in client/server mode </div>
+</li><li>
+<div>by:</div>
+<ul><li>
+<div>Clicking <strong></strong>;</div>
+</li><li>
+<div>Using the server clusers administrative console; To learn more about the administrative console, see platform documentation.</div>
+<ul><li>
+<div>To start the console, click <strong></strong>in the <strong></strong>menu. </div>
+</li><li>
+<div>To view properties of a separate infobase, select the central server, the cluster, and the infobase.</div>
+</li><li>
+<div>To view infobase properties, right-click the infobase name.</div>
+</li><li>
+<div>Find scheduled tasks and users lockout data in the infobase parameters list.</div>
+</li><li>
+<div>To learn more about the lockouts of the selected infobase, click <strong></strong>on the console tree.</div></li></ul></li></ul></li></ul></body></html>

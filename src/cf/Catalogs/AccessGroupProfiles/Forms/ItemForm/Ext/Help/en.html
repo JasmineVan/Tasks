@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>Description of access group profile properties.</p>
+<p>A variety of predefined <a href="Catalog.AccessGroupProfiles.Form.ListForm/Help">access group profiles</a> is available in the application. However, in certain cases, predefined <a href="Catalog.AccessGroupProfiles.Form.ListForm/Help">access group profiles</a> prove to be insuffucient for the purpose of comprehensive setting of user access rights. In such cases, the administrator has the ability to add new access group profiles.</p>
+<p>Generally, an access group profile contains several roles and access kind details that can be used by the administrator to set up user access rights via <a href="Catalog.AccessGroups/Help">access groups</a>. In other words, an access group profile is a template used by the administrator for <a href="Catalog.AccessGroupProfiles.Form.ListForm/Help">access group</a> management purposes.</p>
+<p>One or several access groups can be linked to a single profile. For example, two access groups: <strong>Headquarters accountants</strong> and <strong>New York branch accountants</strong>, can be created on the basis on the <strong>Accountant profile</strong> which differ from each other by allowed organizations: Headquarters and New York branch.</p>
+<h3>Creating access group profiles</h3>
+<ul><li>Enter Profile <strong>description</strong>. 
+</li><li>If you need to add an access group profile to a folder, fill in the <strong>Group (folder)</strong> field. Access group profiles can be grouped by a variety of criteria. Select the required folder from the <a href="Catalog.AccessGroupProfiles.Form.ListForm/Help">list</a>. 
+</li><li>In the <strong>Purpose</strong> field, click the link and use the checkboxes to select who the access group profile is designed for, for example, <strong>Users</strong>, and then click <strong>Select</strong>. After this the link will receive the selected value. 
+</li><li>Select <a href="#1">Allowed actions (roles)</a> on the corresponding tab. 
+</li><li>Specify <a href="#2">Access restrictions</a> on the corresponding tab. 
+</li><li>You can write additional information about the access group profile on the <strong>Сomment</strong> tab. 
+<ul><li>The predefined access profiles have the <strong>Details</strong> tab for the same purpose that contains details of this profile and its purpose.</li></ul></li></ul><h3><a name="1">Allowed actions (roles)</a> </h3>
+<ul><li>When creating a new access group profile on the <strong>Allowed actions (roles</strong>), you first need to assign a list of roles allowed for this profile, according to the demands of the target users. 
+</li><li>A role defines a set of actions with the applied objects the <a href="Catalog.Users.Form.ItemForm/Help">user</a> is allowed to perform. Roles can correspond both to different job responsibilities (or types of activities) of application <a href="Catalog.Users/Help">users</a>, and to smaller functions. For example, the <strong>Accountant</strong> role grants access to a set of functions needed to perform duties of accountant, while the <strong>Read files</strong> role allows viewing file contents. Roles are often used to allow viewing or editing specific data stored in the application. 
+</li><li>Select one or several roles, using the check boxes. 
+<ul><li>To select all roles, click <img src="StdPicture.CheckAll"></img>. 
+</li><li>To cancel the selection of all roles, click <img src="StdPicture.UncheckAll"></img>. </li></ul></li><li>Click <strong>Selected roles only</strong> to show selected roles only. 
+</li><li>By clicking the <strong>More -</strong> <strong>By subsystems</strong> command you can view the list of roles in one of the following ways: 
+<ul><li>sorted alphabetically; 
+</li><li>grouped by subsystem.</li></ul></li></ul><h3><a name="2">Access restrictions</a></h3>
+<ul><li>The <strong>Access restrictions</strong> tab is used to assign a list of access kinds to the profile. 
+</li><li>Access kind is a some kind of rule that allows access to the application data. Access kinds are used to precisely define the data area allowed to the access group members. 
+</li><li>In an elementary case, no access kinds are assigned to a profile and data access rights are solely governed by profile roles. For example, if the profile includes the role for reading documents <strong>Demo:</strong> <strong>Goods receipt</strong>, then all group participants are allowed to view all documents. However, once you add the <strong>Demo:</strong> <strong>Companies</strong> access kind to this profile, you will have the option to allow the users to view documents on a specific company only, or to block the users from viewing documents on a specific company. 
+</li><li>To reiterate, the roles assigned to a profile define which data or functionality is accessible and which is not; while the access kinds assigned to a profile allow to define more precise conditions for data accessibility. 
+</li><li>We recommend that you assign access kinds to a profile whenever you need to specify complicated access rights for the group members. 
+</li><li>Specify the <strong>Access kinds</strong>. 
+<ul><li>Click <strong>Add</strong> and select an access kind from list. 
+</li><li>You can <strong>Delete</strong> unnecessary records using the corresponding command in the <strong>More</strong> menu, or right click it from the context menu. </li></ul></li><li>For each access kind assigned to a profile, you can select any of the four available <strong>Access values</strong>: 
+<ul><li><strong>All prohibited, exceptions defined in access groups</strong> - select this access value to have access to all data prohibited by default. To allow access to an object, an exception must be created in an access group. 
+</li><li><strong>All allowed, exceptions defined in access groups</strong> - select this access value to have access to all data allowed by default. To prohibit access to an object, an exception must be created in an access group. 
+</li><li><strong>All prohibited, exceptions defined in profiles</strong> - select this access value to have all data access prohibited by default. Data access exceptions can be created in profiles only; access rights cannot be modified on access group level. These access kinds will be hidden from the access groups. 
+<ul><li>When this access value is selected, exception creation functionality will be enabled. 
+</li><li>Select <strong>Add</strong>, and select values from lists. 
+</li><li>You can <strong>Delete</strong> extra values using the matching command in the <strong>More actions</strong> menu, or right click it from the shortcut menu.</li></ul></li><li><strong>All allowed, exceptions defined in profiles</strong> - select this access value to have all data access allowed by default. Data access prohibition exceptions can be created in profiles only; access rights cannot be modified on access group level.</li></ul></li></ul><h3>View unused access kinds</h3>
+<ul><li>
+<div>To view those access kinds, that are not used at the moment (for example, this feature is disabled in the application), click <strong>More - Show unused access kinds</strong>.</div></li></ul><h3>Viewing access groups</h3>
+<ul><li>For quick access to the list of access groups based on a selected profile, execute the <strong>Access groups</strong> command located on the navigation panel.</li></ul><h3>See also:</h3>
+<ul><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

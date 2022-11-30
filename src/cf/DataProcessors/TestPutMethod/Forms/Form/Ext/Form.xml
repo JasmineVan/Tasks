@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<ChildItems>
+			<Button name="Put" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Put</CommandName>
+				<ExtendedTooltip name="PutExtendedTooltip" id="2"/>
+			</Button>
+			<Button name="CheckingStatusCheck" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.CheckingStatusCheck</CommandName>
+				<ExtendedTooltip name="CheckingStatusCheckExtendedTooltip" id="4"/>
+			</Button>
+			<Button name="FormTestUpdateDocument" id="8">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.TestUpdateDocument</CommandName>
+				<ExtendedTooltip name="FormTestUpdateDocumentExtendedTooltip" id="9"/>
+			</Button>
+			<Button name="TestBreed" id="10">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.TestBreed</CommandName>
+				<ExtendedTooltip name="TestBreedExtendedTooltip" id="11"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NewWriteProcessing">NewWriteProcessing</Event>
+	</Events>
+	<ChildItems>
+		<Button name="FormTest_HashSHA256" id="12">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Test_HashSHA256</CommandName>
+			<ExtendedTooltip name="FormTest_HashSHA256ExtendedTooltip" id="13"/>
+		</Button>
+		<InputField name="DogCode" id="14">
+			<DataPath>DogCode</DataPath>
+			<ContextMenu name="DogCodeContextMenu" id="15"/>
+			<ExtendedTooltip name="DogCodeExtendedTooltip" id="16"/>
+		</InputField>
+		<Button name="Test" id="17">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Test</CommandName>
+			<ExtendedTooltip name="TestExtendedTooltip" id="18"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.TestPutMethod</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Date" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Date</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="DogCode" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dog code</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Put" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Put</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Put</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Put</Action>
+		</Command>
+		<Command name="CheckingStatusCheck" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Checking status check</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Checking status check</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CheckingStatusCheck</Action>
+		</Command>
+		<Command name="TestUpdateDocument" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test update document</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test update document</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>TestUpdateDocument</Action>
+		</Command>
+		<Command name="TestBreed" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test breed</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test breed</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>TestBreed</Action>
+		</Command>
+		<Command name="Test_HashSHA256" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test hash SHA256</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test hash SHA256</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Test_HashSHA256</Action>
+		</Command>
+		<Command name="Test" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Test</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html;charset=utf-8" http-equiv="content-type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>The assistant is used for configuring <a href="CommonForm.DataSynchronization/Help">data synchronization</a>. You can synchronize data between two applications using exchange rules, without exchange rules, or organize collaboration in the distributed infobase.</p>
+<h3>Selecting data synchronization type</h3>
+<p>Select the required list section:</p>
+<ul><li>Data exchange with other applications; 
+<ul><li>Not using exchange rules; 
+</li><li>Full synchronization; 
+</li><li>Getting data; 
+</li><li>Full data synchronization via EnterpriseData. If you configure exchange using ordinary communication channels (file, FTP, email), you cannot set up sending and receiving rules in a source application unless you configure settings in a destination application. 
+</li><li>Full synchronization supporting backward compatibility; 
+</li><li>Data synchronization via universal format;</li></ul></li><li>Distributed infobases.</li></ul><h3>Stages of configuring parameters of data synchronization between two applications</h3>
+<ul><li>Data synchronization is configured in two stages. Stage 1 of data synchronization setup is performed in this application; then, you need to sign in to the other application to continue with the data synchronization setup. To transfer information between the data synchronization setup stages, a temporary file is used. You must set up data sending and receiving rules in each application participating in the exchange regardless of the selected connection option. 
+</li><li>The following parameters are defined during the setup procedure: 
+<ul><li>Connection parameters. The parameters provided by user are validated; 
+</li><li>Data synchronization rules; 
+</li><li>Initial data export; 
+</li><li>The destination application must also map and import data in addition to these steps.</li></ul></li></ul><h3>Features of synchronization via EnterpriseData universal format</h3>
+<ul><li>You can set up data sending and receiving rules only after getting parameters of a destination application. 
+</li><li>To do that, upon configuring connection options in a source application, go to the destination application, complete the settings in it and perform initial data export, then complete the settings in the source application. The application displays a notification about this.</li></ul><h3>Detailed description</h3>
+<ul><li>Click the <strong>Details</strong> hyperlink to view the detailed information on both applications participating in this data synchronization. </li></ul><h3>Backup</h3>
+<ul><li>We recommend that you <a href="DataProcessor.IBBackupSetup/Help">back up</a> your infobases before performing data synchronization setup. 
+</li><li>In infobase file mode, click the link to create <strong>data backup</strong> (recommended). 
+</li><li>In server mode and other modes, back up data using third-party utilities. 
+</li><li>Click <strong>Next</strong> to proceed with data synchronization setup. </li></ul><h3>Selecting connection to target application</h3>
+<p>The application automatically validates the connection option during configuration.</p>
+<p>To use connection options requiring the Internet, click <strong>Internet access parameters</strong>, then configure <a href="CommonForm.ProxyServerParameters/Help">proxy server parameters</a> by clicking the appropriate link if necessary.</p>
+<p>When entering user logon name and password, keep in mind that data synchronization success depends on this user's access rights (for example, if the user has no access to 1C:Enterprise server, data synchronization may fail).</p>
+<p>Use radio buttons to select the following:</p>
+<ul><li><strong>Direct connection on this computer or in a local network</strong> is used to synchronize data between two applications. In this case, both applications must be available for connection. 
+<ul><li>
+<p>Enter the target application connection parameters: </p>
+<ul><li>Select the destination <strong>Application location</strong>: 
+<ul><li><strong>On this computer or in a local network</strong>; 
+<ul><li><img src="StdPicture.InputFieldSelect"></img> Select an infobase <strong>Directory</strong>. Specify a path to a local folder.</li></ul></li><li><strong>On 1C:Enterprise server</strong>; 
+<ul><li>Enter a <strong>Server</strong>; 
+</li><li>Enter an <strong>infobase</strong> <strong>name</strong>.</li></ul></li></ul></li><li>use <strong>Application authorization parameters</strong> radio buttons to select the following: 
+<ul><li><strong>Use operating system account</strong>; 
+</li><li><strong>Use specified username and password</strong>: 
+<ul><li>Enter <strong>Name</strong> and <strong>Password</strong> of the user on whose behalf data synchronization will be performed. </li></ul></li></ul></li></ul></li><li>Click <strong>Next</strong>. </li></ul></li><li><strong>Connecting to an application via the Internet (web service)</strong>: 
+<ul><li>This connection option is used to synchronize data between two applications. It can be used when the destination application is located in another office and is available for synchronizing via the Internet. 
+</li><li>Enter the <strong>application URL</strong>; 
+</li><li>Enter <strong>Username</strong> and <strong>Password</strong>; 
+</li><li>select the <strong>Remember password</strong> check box. 
+</li><li>To set up <a href="CommonForm.ProxyServerParameters/Help">proxy server parameters</a> if necessary, click <strong>Internet access parameters</strong>.</li></ul></li><li><strong>Synchronizing data via file, without connecting to another application (network directory, FTP, email)</strong>; 
+<ul><li>This option can be used in the following cases: 
+</li><li>to synchronize data with an application that is located in another office and can operate in standalone mode. In this case, the two applications participating in data synchronization can operate at different time. 
+<ul><li>To proceed with configuring synchronization in the destination application, select the <strong>Import connection parameters from file</strong> and specify the path to the settings file. </li></ul></li><li>To synchronize data in a distributed infobase.</li></ul></li><li><strong>Synchronization connection is executed from another application</strong>. If this option is used, the application sends and receives data via the Internet only upon a request from the correspondent application.</li></ul><p>To proceed with configuring data synchronization, click <strong>Next</strong>.</p>
+<h3>Data synchronization via local or network directory</h3>
+<ul dir="ltr"><li>
+<div>Select the <strong>Use local or network directory for data synchronization</strong> check box. </div>
+</li><li>In the <strong>Directory</strong> <img src="StdPicture.InputFieldSelect" width="12" height="12"></img> field, select a path to a local folder or a network location. 
+</li><li>To reduce the size of the outgoing message, select the <strong>Compress sent data to archive</strong> check box. Enter <strong>Archive password</strong> if necessary. 
+</li><li>To ensure the correctness of the entered settings, click <strong>Check whether it is possible to write to directory</strong>. 
+</li><li>
+<div>To proceed with configuring data synchronization, click <strong>Next</strong>.</div></li></ul><h3>Data synchronization via directory on FTP server</h3>
+<ul><li>Select the <strong>Use directory on FTP server to synchronize data</strong> check box. 
+</li><li>Specify <strong>Directory address</strong>. <strong>Port</strong> is specified automatically. 
+</li><li>Fill in the <strong>User (Username)</strong> and <strong>Password</strong> fields. 
+</li><li>If the data size on the FTP server is limited, select the <strong>File size limit</strong> check box and specify the maximum file size. 
+</li><li>If necessary, select the <strong>Passive mode</strong> check box. 
+</li><li>If necessary, click <strong>Internet access parameters</strong> and specify proxy server parameters. 
+</li><li>To proceed with configuring data synchronization, click <strong>Next</strong>.</li></ul><h3>Data synchronization via email</h3>
+<ul><li>Enable the <strong>Use email for data synchronization</strong> check box. 
+</li><li>In the <strong>Account</strong> <img src="StdPicture.InputFieldSelect" width="12" height="12"></img> field, select an account from the <a href="Catalog.EmailAccounts/Help">list</a> or click <strong>+</strong> <strong>Create</strong> (press <strong>F8</strong>) to add a new <a href="Catalog.EmailAccounts.Form.ItemForm/Help">account</a>. 
+</li><li>To limit the size of sent messages, select the <strong>Attachment size limit</strong> check box. Specify the maximum attachment size. 
+</li><li>To proceed with configuring data synchronization, click <strong>Next</strong>.</li></ul><h3>Additional settings for synchronization via file</h3>
+<li>Select the <strong>Transliterate file names of exchange messages</strong> check box. File names will be automatically written with Latin characters. 
+</li><li>To reduce the size of the outgoing message, select the <strong>Archive exchange files</strong> check box. Enter <strong>Archive password</strong> if necessary. 
+<h3>Features of data synchronization via universal format or EnterpriseData format via file</h3>
+<ul><li>When configuring synchronization via EnterpriseData format or via universal format, the composition and other characteristics of data to be received are set up with sending rules in the correspondent application. 
+</li><li>Connection option configuration differs: 
+</li><li>Set up a connection option via file in a source application; 
+</li><li>Continue data synchronization setup in a destination application. Configure connection option via file. 
+</li><li>To do this, go to a destination application, select <strong>Data synchronization via file</strong> as a connection option, and specify the settings file <strong>Data synchronization via universal format.xml</strong> (received from the source application) without connecting to another application. 
+</li><li>You can proceed with further data synchronization configuration only after setting up connection options in both applications.</li></ul><h3>Configuring data sending and receiving rules</h3>
+<p>If you must synchronize only part of data (not all data), use data synchronization rules.</p>
+<ul><li>Use the <strong>Documents</strong> radio buttons to define the way of synchronization: 
+<ul><li><strong>Send and receive automatically</strong> - documents will be synchronized in both applications; 
+</li><li><strong>Send automatically</strong> - documents will be automatically sent to the second application. The first application will not automatically receive documents from the second application; 
+</li><li><strong>Receive automatically</strong> - documents will be received from the second application. Documents will not be sent by the first application; 
+</li><li><strong>Send and receive manually</strong> - documents will not be synchronized automatically. You must send and receive documents manually.</li></ul></li><li>Use the <strong>Regulatory and legislation data</strong> radio buttons to select the application's list export mode: 
+<ul><li><strong>Send and receive automatically</strong> - data will be synchronized in full. Regulatory and legislation data will be automatically synchronized in both applications; 
+</li><li><strong>Send and receive only information used in documents</strong> - data will be synchronized in full. Regulatory and legislation data will be automatically synchronized in both applications; 
+</li><li><strong>Send and receive manually</strong> - regulatory and legislation data will not be automatically synchronized. You must send and receive this information manually.</li></ul></li><li>Specify the <strong>Date of document sending start</strong>. The default value is the beginning of the current year. 
+</li><li>You can limit data participating in synchronization and specify sending data filters broken down by selected <strong>Companies</strong>, <strong>Warehouses</strong>, and <strong>Departments</strong>: 
+<ul><li>The <strong>By companies</strong> filter limits the list of companies for which data synchronization is allowed. The enabled filter affects sending the companies list and other data related to companies (lists and documents). To enable the filter, select the <strong>By selected</strong> (companies) radio button and use check boxes to specify the required companies from the list. 
+</li><li>To enable the <strong>By departments</strong> filter, on the appropriate tab, select the <strong>By selected</strong> (departments) radio button and use check boxes to specify the required departments. 
+</li><li>You can also export information <strong>By selected</strong> warehouses. To do this, on the appropriate tab, select the By selected radio button and use check boxes to specify the required warehouses.</li></ul></li><li><strong>Data receiving rules - default values</strong> are required for correct document recording. The rules are used for automatic filling data in documents that cannot be received from exchange. For example, some documents received from another application do not contain certain attributes. In this case, the attributes will be automatically filled in by the application during data synchronization. You can specify these attributes while configuring synchronization (click <strong>Change autofill values</strong>).</li></ul><h3>Data synchronization parameters</h3>
+<ul><li><strong>Presentation of this application</strong> is outputted: 
+<ul><li><strong>Description</strong>. 
+</li><li><strong>Prefix</strong>;</li></ul></li><li><strong>Presentation of the correspondent application</strong> is outputted: 
+<ul><li><strong>Description</strong>. 
+</li><li><strong>Prefix</strong>.</li></ul></li><li>Click <strong>Next</strong> to check the provided parameters and complete data synchronization setup for this application (in case of direct connection between applications, you will need to set up and validate parameters for the other application as well).</li></ul><h3>Switching to interactive data synchronization</h3>
+<ul><li>
+<div>There is a high risk of data duplication when synchronizing data between two applications. To map data, it is recommended to use <a href="DataProcessor.InteractiveDataExchangeWizard/Help">Interactive data synchronization wizard</a>. </div></li></ul><h3>Specifics of data synchronization setup in client/server mode</h3>
+<ul><li>When setting up data synchronization in client/server infobase mode, keep in mind that all data will be synchronized on a computer where 1C:Enterprise server is installed. The path to the 1C:Enterprise server running on Microsoft Windows will look like this: <br><strong>\\servername\resource</strong><br>. The path to the server running on Linux will look like this: <br><strong>//servername/resource</strong>. 
+</li><li>Make sure that the user on whose behalf the 1C:Enterprise server runs has sufficient rights to read and write in the data synchronization folder. If the user does not have the sufficient rights, you will need to grant them these rights, or select another user with sufficient rights to read and write in the data synchronization folder and run the 1C:Enterprise server on their behalf. The same recommendations apply to FTP and email access. For more information on 1C:Enterprise server administration, see the 1C:Enterprise platform documentation.</li></ul><h3>Specifics of distributed infobase node creation </h3>
+<p>During Stage 1, the initial distributed infobase (DIB) image is created. All wizard pages remain as they are. On the <strong>Setup stage 1 completed successfully</strong> page, make sure the <strong>Create initial image of subordinate DIB node</strong> check box is selected (it is recommended to do this immediately). However, you can go back to this step at any moment during the data synchronization setup procedure. </p>
+<ul><li>
+<div>After selecting the check box, click <strong>Done</strong>. You will be asked to create the initial DIB image. To do this, click <strong>Create initial image</strong>. </div>
+</li><li>
+<div>By default, the settings file required for DIB node creation will be created in a folder selected for exchange purposes, <strong>On this computer or in local network</strong>.</div>
+</li><li>
+<div>However, you can use radio buttons to select creating <strong>On 1C:Enterprise server</strong>. In this case, you will need to enter <strong>Infobase parameters</strong>:</div>
+</li><li>
+<div>Enter <strong>1C:Enterprise server cluster</strong>. </div>
+</li><li>
+<div>Type in <strong>Name of infobase in cluster</strong>.</div>
+</li><li>
+<div><img src="StdPicture.InputFieldSelect" width="12" height="12"></img> Select parameters in the <strong>Secure connection</strong> field.</div>
+</li><li>
+<div><img src="StdPicture.InputFieldSelect" width="12" height="12"></img> Select <strong>DBMS type</strong>.</div>
+</li><li>
+<div>Specify <strong>Database server</strong>.</div>
+</li><li>
+<div>Type in <strong>Database name</strong> and</div>
+</li><li>
+<div>Fill in the <strong>Database user</strong> field and enter <strong>User password</strong>.</div>
+</li><li>
+<div>Specify <strong>Date shift</strong>.</div>
+</li><li>
+<div>Select <strong>Interface language</strong>.</div>
+</li><li>
+<div>Select the <strong>Set scheduled job lock</strong> check box if necessary.</div>
+</li><li>
+<div>Click <strong>Create initial image</strong>.</div>
+</li><li>
+<div>Save the file containing the initial image of subordinate DIB node to a new folder, which will be further used as a working folder for the new infobase.</div>
+</li><li>Create a new infobase via the <strong>Add infobase to list</strong> command. Specify path to the initial image file. The selected infobase will be added to the infobase list. 
+</li><li>
+<div>Once you sign in to the application, the <strong>Wizard</strong> will automatically proceed from the<strong> Continue setting up data synchronization with master node</strong> page. Click <strong>Next</strong> to proceed with the setup and specify a master node connection method.</div></li></ul><h3>Creating DIB nodes (external files)</h3>
+<ul><li>If any of your files are stored in volumes, during <a href="CommonForm.CreateInitialImageWithFiles/Help">initial image creation</a> you will need to specify path to the .ZIP archive file containing all files stored in volumes. When starting the application with a local branch infobase for the first time, you will need to execute the <strong>Store initial image files</strong> command and specify the path to the archive file.</li></ul></li></body></html>

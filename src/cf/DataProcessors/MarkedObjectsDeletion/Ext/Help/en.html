@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>This form is used to permanently delete objects marked for deletion.</p>
+<p>While working with applications, users may need to mark certain objects for deletion (for example, objects created by mistake). Objects marked for deletion can be permanently deleted by a <a href="Catalog.Users.Form.ItemForm/Help">user</a> with administrative rights.</p>
+<p>To delete a marked object, execute the <strong>Deletion of marked objects</strong> command located in the <strong>Administration - Service</strong> section.</p>
+<p>During deletion procedure, reference integrity control is performed. This means that if a particular applied object (document, catalog item, etc.) is referenced by other objects, the deletion of the object will not be performed. Keep in mind that deletion of the marked objects is an irreversible operation. </p>
+<p>When deleting the marked objects, two methods are available (selectable by radio button):</p>
+<ul><li><a href="#1">Delete all marked objects automatically</a> . In this mode, all objects marked for deletion will be deleted permanently. 
+</li><li><a href="#2">Delete objects selectively</a>. In this mode, the user selects which objects to delete </li></ul><h3><a name="#1">Automatically delete</a> all selected objects </h3>
+<ul><li>Click <strong>Delete</strong>. 
+</li><li>In this mode, all objects marked for deletion will be identified and deleted. Once the procedure is complete, a notification containing number of deleted objects will be displayed. User intervention is only required when a marked object is referenced by other objects and cannot be deleted.</li></ul><h3><a name="#2">Delete objects selectively</a></h3>
+<ul><li>Click <strong>Next</strong>. 
+</li><li>In this mode, a list of objects marked for deletion will be generated. 
+<ul><li>Objects in this list are grouped by type. All check boxes are selected by default. 
+</li><li>If you do not want to delete some of the marked objects in the list, clear the corresponding check boxes. 
+</li><li>To open the object and decide if it should be deleted, double click the object or use the <img src="StdPicture.Change"></img><strong>Change</strong> button. </li></ul></li><li>To delete the selected objects permanently, click <strong>Delete</strong>. 
+</li><li>Once the procedure is complete, a notification containing number of deleted objects will be displayed. 
+</li><li>If any of the marked objects were referenced by other objects, the application will generate a warning and display a list of marked objects that were not deleted due to references, as well as a list of objects referencing them. </li></ul><h3>How to proceed when an object cannot be deleted</h3>
+<p>The list of objects that could not be deleted consists of two sections: object list on the left, and <strong>Usage instances</strong> on the right. </p>
+<ul><li>To delete these objects permanently, you need to: 
+<ul><li>Double click it in the list or using the <strong>More -</strong> <strong>Change</strong> command to open the object that prevents deletion, for example, to manually delete all its references to the object being deleted. 
+</li><li>replace the reference that prevents deletion. Click <strong>Replace everywhere where found</strong> to proceed to <a href="DataProcessor.ReplaceAndMergeItems.Form.ItemsReplacement/Help">replacing items</a>. To replace a reference, select a replacement item from the list. 
+</li><li><img src="StdPicture.MarkToDelete" width="16" height="16"></img><strong>Mark to delete</strong> all objects associated with the item to be deleted (<strong>Usage instances</strong> on the right), 
+</li><li><img src="StdPicture.MarkToDelete" width="16" height="16"></img><strong>Clear deletion mark</strong> from the marked object.</li></ul></li><li>Then click <strong>Retry deletion</strong> to retry object deletion. 
+</li><li>Click <strong>Restart</strong> to select a different deletion method. 
+</li><li>Click <strong>Close</strong> to cancel the deletion procedure and go back to the application.</li></ul><h3>Accelerate deletion of marked objects</h3>
+<ul><li>Deletion of marked objects can take a long time. While deleting the user experience may suffer. 
+</li><li>We recommend that you delete marked objects in the periods of the least user activity. 
+</li><li>You can <strong>Block all operations in the application and speed up the deletion</strong> selecting the corresponding check box.</li></ul><h3>Configuring a schedule of automatic deletion.</h3>
+<ul><li>Select the check box to <strong>Automatically delete selected objects on schedule</strong>. 
+</li><li>After that the <a href="v8help://mngbase/jobschedule.lf">Configure schedule</a> link becomes available. After the schedule is configured, it is displayed below the check box.</li></ul><h3>Automatic deletion of marked object of the application n the Interned (in the SaaS mode)</h3>
+<ul><li>
+<div>The Internet application (in the SaaS mode) does not have setting of marked object deletion on schedule, the <strong>Configure schedule</strong> link is missing.</div>
+</li><li>
+<div>This is due to the fact that you cannot configure scheduled of scheduled jobs in the Internet application. </div>
+</li><li>
+<div>That is why the check box is called <strong>Automatically delete selected objects</strong>. Select the check box to run background deletion of selected objects.</div></li></ul><h3>See also:</h3>
+<ul><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

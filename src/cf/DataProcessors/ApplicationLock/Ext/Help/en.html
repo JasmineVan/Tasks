@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>Application administrator can terminate the sessions of all active <a href="Catalog.Users/Help">users</a> (including the session of the <a href="Catalog.Users.Form.ItemForm/Help">user</a> who initiated locking) and temporarily block any new connections to the application for a specified period of time. </p>
+<p>This feature is useful when scheduled or emergency maintenance must be performed. Generally, maintenance is performed at night hours, in order to minimize inconvenience for other users. However, it may be necessary to perform maintenance during working hours. This includes mandatory application updates, recovery after power failure, infobase backup, or emergency job by a senior user that requires all available computational resources. In these cases, all users sessions must be terminated before the emergency task can be performed.</p>
+<p>When running in Client/server mode, the <a href="DataProcessor.ScheduledAndBackgroundJobs/Help">scheduled jobs</a> can be locked as well.</p>
+<p>To <strong>lock users out of the application</strong>, click the relevant link in <strong>Administration - Support and maintenance</strong>.</p>
+<h3>Accessing Active users list</h3>
+<ul><li>Click <a href="DataProcessor.ActiveUsers/Help">Active users</a> to view the list of users currently working with the application. </li></ul><h3>Lock status information</h3>
+<ul><li>Above the lock parameters, there is a message displaying lock status: "User operation in the application is allowed (prohibited)". If the application lock is enabled, the message is marked in red. </li></ul><h3>Application lock</h3>
+<ul><li>
+<div>The application locking can be started with following parameters: </div>
+<ul><li>
+<div><strong>User message</strong>. Message text that is displayed to users as a notification that the application lock is going to be started. Specify when a user is supposed to log out, describe the reason and the expected period of application lock: Example: "Please log out before 8 PM to allow for scheduled maintenance. The infobase will be offline for 30 minutes." </div>
+</li><li>Lock period. Application lock start date/time, application lock end date/time. The lock end date/time is optional; however, if you do not specify this parameter, the lock will remain active indefinitely until manually disabled by the administrator. 
+</li><li><strong>Unlock code</strong>. An arbitrary string that can be used as a "<strong>/UC</strong>" launch parameter that allows you to sign in to the locked application despite the lock. 
+</li><li><strong>Enable scheduled job lock management</strong>. Click this link to prohibit scheduled jobs from running during the application lock period (in client/server mode only). Generally, we recommend that you use this option.</li></ul></li><li>
+<div>To lock the application, click <strong>Set lock</strong>. The lock must be confirmed by the administrator before it will be set. Click <strong>OK</strong> to confirm.</div>
+</li><li>
+<div>To prevent the scheduled application lock from activating, click <strong>Stop</strong> at any moment until the lock start time.</div></li></ul><h3>Actions that are performed on user side during the session termination</h3>
+<ul><li>
+<div>In 15 minutes prior to application lock start time all active user receive a warning regarding the planned application lock time and message text that was specified in application lock parameters.</div>
+</li><li>
+<div>At the application lock start time an attempt to terminate all user sessions will be performed: a suggestion to save current work and exit will be displayed. Starting from this moment and till the application lock end time, new connections cannot be established. All standard session termination activities will be performed, including termination confirmation (for users who chose to enable confirmations), peripheral equipment shutdown, etc. </div>
+</li><li>
+<div>Keep in mind that nonresponding sessions may be present during the application lock initiation (for example, unattended sessions, nonresponding client applications, sessions busy with complicated tasks, etc). To view information on the current sessions, click <a href="DataProcessor.ActiveUsers/Help">Active users</a>. In client/server mode, all user sessions can be terminated regardless of their responding/nonresponding status. In File mode, however, you first have to terminate the nonresponding user sessions locally and, if necessary, also terminate other applications accessing the infobase via external COM connections or web services.</div>
+</li><li>
+<div>If a user session cannot be terminated for any reason (for example, the user is in the middle of a complicated activity in Designer mode), an error message listing active users will be displayed and application lock will not be inititated.</div>
+</li><li>
+<div>Once all active users sessions are terminated, the administrator will also be notified that their session must be terminated prior to application lock time. To keep the administrator session running, click <strong>No</strong>.</div>
+</li><li>
+<div>
+<div>If a user attempts to sign in to the application while application lock is enabled, a warning message containing administrator instructions will be displayed. To allow users to sign in regardless of the application lock, the administrator should run the application with the following <a href="#1">parameters</a>:</div></div>
+<ul><li>
+<div>
+<div>New infobase connections during the application lock period will be allowed only if a correct access code is specified in the "<strong>/UC</strong>" command-line parameter or in the "<strong>UC</strong>" connection string parameter.</div></div></li></ul></li></ul><h3>Application unlocking</h3>
+<ul><li>
+<div>Application lock is removed automatically once the lock period specified by administrator ends.</div>
+</li><li>
+<div>To unlock the application before the lock period is ended:</div>
+<ul><li>
+<div>Once you have performed the scheduled maintenance and before the lock period is over, click <strong>Application lock</strong> in <strong>Administration - Support and maintenance</strong>. This will open the Application lock window. Click <strong>Unlock</strong>.</div>
+</li><li>
+<div>Sign in during the application lock period using startup parameters "<strong>/C AllowUserAuthorization</strong>" and "<strong>/UC</strong>" with correct access code. This unlocks the application for all users.</div>
+<ul><li>
+<div>Note: running the client application with the <strong>AllowUserLogon</strong> parameter should be used only to remove application lock, not for normal operation. </div></li></ul></li><li>
+<div>Sign in without removing the application lock, perform the scheduled maintenance, then remove the lock: </div>
+<ul><li>
+<div>sign in using the startup parameters specified in the message except "<strong>/C</strong>". </div>
+</li><li>
+<div>Use the "<strong>/UC</strong>" parameter with correct access code.</div>
+</li><li>
+<div>Once you have performed the scheduled maintenance and before the lock period is over, click <strong>Application lock</strong> in <strong>Administration - Support and maintenance</strong>. Click <strong>Unlock</strong>.</div></li></ul></li></ul></li></ul><h3><a name="#1">Running application with startup parameters</a></h3>
+<p>You can run the application with a variety of startup parameters. For more information on startup parameters, refer to the platform documentation.</p>
+<ul><li>
+<div>You can specify the following parameters in the application startup string:</div>
+<ul><li>
+<div><strong>/F</strong>. Path to the infobase ("C:\Documents and Settings\....\1C\DemoSSL").</div>
+</li><li>
+<div><strong>/N</strong>. Username.</div>
+</li><li>
+<div><strong>/P</strong>. User password.</div>
+</li><li>
+<div><strong>/C</strong>. Command parameters, such as <strong>AllowUserLogon</strong>.</div>
+</li><li>
+<div><strong>/UC</strong>. Access code required for logon during application lock period.</div></li></ul></li><li>
+<div>To enable the application lock, you can also run the application with the <strong>TerminateSessions</strong> parameter:</div>
+<ul><li>
+<div>"C:\Program Files\1cv8\bin\1cv8.exe" ENTERPRISE /F"C:\Documents and Settings\Admin\My Documents\1C\DemoSSL" /NAdministrator /Pxxxxx /CTerminateSessions</div></li></ul></li><li>
+<div>To disable the application lock, we recommend that you run the application with the <strong>AllowUserLogon</strong> parameter:</div>
+<ul><li>
+<div>"C:\Program Files\1cv8\bin\1cv8.exe" ENTERPRISE \F"C:\Documents and Settings\Admin\My DOcuments\1C\DemoSSL" /CAllowUserLogon /UC &lt;access code&gt;</div>
+</li><li>
+<div>Running the client application with the <strong>AllowUserLogon</strong> parameter should be only used to remove application lock, not for normal operation. This parameter is only intended for batch execution, and the application started with this parameter will be terminated immediately.</div></li></ul></li></ul><h3>Additional functionality and restrictions</h3>
+<ul><li>
+<div>It is also possible to prohibit execution of scheduled and background jobs in client/server mode. It might be required to provide additional <a href="CommonForm.ApplicationAdministrationParameters/Help">parameters</a> of connection to server cluster in <strong>Infobase administration parameters</strong>. Besides the Administration of 1C:Enterprise servers console can be used to lock and unlock the application. </div>
+</li><li>
+<div>
+<div>In client/server mode, in some rare cases some background jobs cannot be terminated forcibly.</div></div>
+</li><li>
+<div>In File mode, the application cannot be locked if an external connection using COM connection or web services is established or Designer mode is opened. </div></li></ul></body></html>

@@ -1,0 +1,944 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<HTTPService uuid="6cada4b5-50fa-47da-9575-67da4690bd1f">
+		<Properties>
+			<Name>DogsPark</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dogs park</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>DogsPark</RootURL>
+			<ReuseSessions>AutoUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="0e4d7d40-987e-4016-8831-0fc1a24c1d24">
+				<Properties>
+					<Name>Metadata</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Metadata</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/Metadata</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="4f021104-7fbe-4100-8e85-e81f29c86140">
+						<Properties>
+							<Name>GetListData</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get list data</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GetListData</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="5eb86186-75d2-4282-94b2-a19c38ba6c92">
+				<Properties>
+					<Name>Dogs</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dogs</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/Dog</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="7b6d0ded-093f-4a6f-a725-7f47d8d18dd7">
+						<Properties>
+							<Name>GETDogs</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>GETDogs</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GetDogs</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="7c964ee1-b013-4100-b575-de399e6eb706">
+						<Properties>
+							<Name>PUTDog</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>PUTDog</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PUT</HTTPMethod>
+							<Handler>PUTDog</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="6f443f65-b409-4df4-9e4c-66912a2fe338">
+						<Properties>
+							<Name>POSTDog</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>POSTDog</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>POSTDog</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="21b7545c-cf2c-4897-8067-d2895be1bd0c">
+				<Properties>
+					<Name>DogBreed</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dog breed</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/DogBreeds</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="7a4ef4aa-e8c8-48a9-be84-8def8524b9b1">
+						<Properties>
+							<Name>GETDogBreed</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>GETDog breed</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GETDogBreed</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="c5d9289c-150e-4344-9cb2-9b5d20b87876">
+				<Properties>
+					<Name>DogList</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dog list</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/DogList</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="09ca2e35-9bb1-4089-9755-7b394cda70b7">
+						<Properties>
+							<Name>GETDoglist</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>GETDoglist</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GETDoglist</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="36606ba3-ad6c-44b7-bf85-0eb55ee9448e">
+				<Properties>
+					<Name>Owner</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Owner</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/Owner</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="dcbf4faa-4b50-4c1c-9e53-4438f8898e80">
+						<Properties>
+							<Name>GetOwner</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get owner</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GetOwner</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="a01f6057-963c-408d-ac98-da7079d4953a">
+						<Properties>
+							<Name>PUTOwner</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>PUTOwner</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PUT</HTTPMethod>
+							<Handler>OwnerPUTOwner</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="c7e0b1b2-bc16-479a-bba0-2309f322bd1c">
+						<Properties>
+							<Name>POSTOwner</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>POSTOwner</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>PostOwner</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="4e881552-cf07-4ab7-b14e-ae9c981bef64">
+				<Properties>
+					<Name>CoreDiseases</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Core diseases</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/CoreDiseases</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="b721317d-2f24-4287-a472-89b7d39cee80">
+						<Properties>
+							<Name>GetDiseases</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get diseases</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GetDiseases</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="70f71f4d-0e31-42b6-92a0-fe1b490acf46">
+				<Properties>
+					<Name>Product</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Product</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/Product</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="d96cbcea-8d63-49b0-9ab5-a1b58e50ccd7">
+						<Properties>
+							<Name>GetProduct</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get product</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GetProduct</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="d1006e3e-6a07-4dde-8a75-7df18b8bd475">
+				<Properties>
+					<Name>Vaccines</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Vaccines</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/Vaccines</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="e8fad00e-b308-4666-a9db-93846708566a">
+						<Properties>
+							<Name>GetVaccines</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get vaccines</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GetVaccines</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="7095068b-5a46-4971-bd0d-08a8a9b7eb27">
+				<Properties>
+					<Name>Veterinarians</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Veterinarians</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/Veterinarians</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="4dbd4b91-e2b5-49a9-a791-a577f74993c5">
+						<Properties>
+							<Name>GetVeterinarians</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get veterinarians</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GetVeterinarians</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="a9ce4d34-dc19-4558-bfb2-15a0de41ad28">
+				<Properties>
+					<Name>HealthStatus</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Health status</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/HealthStatus</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="5ee9aa80-8c39-48b0-8ed3-df94d4319049">
+						<Properties>
+							<Name>GetHealthStatus</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get health status</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GetHealthStatus</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="177dbb8b-bf4d-44e6-958a-ba1ee1509713">
+				<Properties>
+					<Name>InjectionHistory</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Injection history</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/InjectionHistory</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="bdccfe48-3d4d-48ad-ad2b-83ab24fad5b0">
+						<Properties>
+							<Name>GetInjectionHistory</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get injection history</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GetInjectionHistory</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="6d64e6b1-0d96-4c9e-b334-cd22f0e1c52c">
+				<Properties>
+					<Name>LouseDogTreatment</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>LouseDogTreatment</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/LouseDogTreatment</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="93a926e1-9993-45d3-a196-420ad705d7d0">
+						<Properties>
+							<Name>GetLouseDogTreatment</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get louse dog treatment</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GetLouseDogTreatment</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="610ab71c-6226-4219-9a2a-16269d220ad9">
+				<Properties>
+					<Name>NewDogTracking</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>New dog tracking</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/NewDogTracking</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="88a872b6-12ff-4217-b592-2a5b2d90e2ae">
+						<Properties>
+							<Name>PostCheckindata</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Post checkindata</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>NewDogTrackingPostCheckindata</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="7e269d78-f773-4a39-94f2-d400761c3f6e">
+						<Properties>
+							<Name>PutCheckinData</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Put checkin data</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PUT</HTTPMethod>
+							<Handler>NewDogTrackingPutCheckindata</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="06c6992d-e336-476f-9d27-7d4212eb94e2">
+				<Properties>
+					<Name>Listzone</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Listzone</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/Listzone</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="694e2297-f6d5-4c02-ae74-bdd76c3d199d">
+						<Properties>
+							<Name>GetListzone</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get listzone</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ListzoneGetListzone</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="610bc3b4-1772-4a85-9628-476eafe388cf">
+				<Properties>
+					<Name>Packages</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Packages</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/Packages</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="afa0df4e-1a95-4165-88b4-c69c1cf45683">
+						<Properties>
+							<Name>GetPackageActivity</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get package activity</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>PackagesGetPackageActivity</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="14deae78-abe7-4fee-bfc7-49a1d1a7d0e2">
+				<Properties>
+					<Name>Activities</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Activities</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/Activities</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="7a7901c6-cee5-48b4-b027-5b0bc0c48f6e">
+						<Properties>
+							<Name>GetActivities</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get activities</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>AcitivitiesGetActivities</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="489a167c-b15b-40fd-9606-88dc36a38dd8">
+				<Properties>
+					<Name>GetBreedFrequency</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Get breed frequency</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>GetBreedFrequency</Comment>
+					<Template>/V1/BreedFrequency</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="b237c0e6-41e0-4470-8ab5-6c0466edfb50">
+						<Properties>
+							<Name>GetBreedFrequency</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get breed frequency</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>GetBreedFrequencyGetBreedFrequency</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="e0a0e2c3-b64c-4266-b451-fda86a2b4420">
+				<Properties>
+					<Name>DayCare</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Day care</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/DayCare</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="4d24ae08-879d-4fd5-8798-7eb871721f97">
+						<Properties>
+							<Name>GetEmployeeTask</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get employee task</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>DayCareGetEmployeeTask</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="27f1ddfb-b229-4be9-9e06-5cb1c9e30b53">
+						<Properties>
+							<Name>NewDayCare</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>New day care</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>DayCareNewDayCare</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="60aedd08-a5da-4b91-baf0-213fd4139efb">
+				<Properties>
+					<Name>DayCareCCTVAccessCode</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Day care CCTVAccess code</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/CCTVAccessCode</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="d36cf54a-5fda-4001-8ce3-7978b16e87b4">
+						<Properties>
+							<Name>GetCCTVAccessCode</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get CCTVAccess code</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>DayCareCCTVAccessCodeGetCCTVAccessCode</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="4df5d539-47ef-4a67-9360-db6bbccd0065">
+				<Properties>
+					<Name>Moderator</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Moderator</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/Moderator</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="3137c438-114b-4769-8c73-62d10ad49ba0">
+						<Properties>
+							<Name>VerifyModerator</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Verify moderator</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ModeratorVerifyModerator</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="5f4bd86b-ea0d-451f-a46b-961dd17b27a4">
+				<Properties>
+					<Name>CCTVs</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>CCTVs</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V1/CCTV</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="4d73e2be-a0fc-42ba-ab9e-1be8f2fc22de">
+						<Properties>
+							<Name>GetCCTV</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get CCTV</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>CCTVsGetCCTV</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="44eb560d-908b-45d4-817d-90fe54def7dd">
+				<Properties>
+					<Name>Metadata2</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Metadata2</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V2/Metadata</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="9f184516-663e-463c-832d-d17173fea2ae">
+						<Properties>
+							<Name>Metadata</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Metadata</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>Metadata2Metadata</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="0aba492a-cf44-483e-bded-28b1d032087b">
+				<Properties>
+					<Name>Dogs2</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dogs2</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V2/Dog</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="ae405aa7-c276-400c-b7ea-a1bccd3945ce">
+						<Properties>
+							<Name>CreateNewDog2</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Create new dog2</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>Dogs2CreateNewDog2</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="7878d6b1-c78f-4d79-b75a-3584b02a1549">
+				<Properties>
+					<Name>Packages2</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Packages2</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V2/Packages</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="6f966dc6-2a2e-4252-8a19-641b15dcc6ca">
+						<Properties>
+							<Name>GetPackages</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get packages</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>Packages2GetPackages</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="ed5b89b9-95d6-4fd5-8e68-ca768a7f75c3">
+				<Properties>
+					<Name>DayCare2</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Day care2</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V2/DayCare</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="9167f619-31ee-49ec-82ad-8ef040b84fdc">
+						<Properties>
+							<Name>NewDayCare2</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>New day care2</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>DayCare2NewDayCare2</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="f3cd7a2b-73e5-43f2-8039-a3ecd3d9e39e">
+						<Properties>
+							<Name>GetDayCareActivity2</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get day care activity2</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>DayCare2GetDayCareActivity2</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="6fb543be-3040-4a6d-b7cd-643b25ca0930">
+				<Properties>
+					<Name>DayCare3</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Day care3</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V3/DayCare</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="2f3dae43-2deb-4d04-9c7c-65dbbb175e08">
+						<Properties>
+							<Name>GetEmployeeTask_Manager</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get employee task manager</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>DayCareGetEmployeeTask_Manager</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="9e6910dd-734e-436f-8c38-25d128d8ac73">
+						<Properties>
+							<Name>NewDayCare3</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>New day care3</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>DayCare3NewDayCare3</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="55389ea9-e162-4956-bad6-576c46fbda90">
+				<Properties>
+					<Name>DogBreeds2</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dog breeds2</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V2/DogBreed</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="83b4549c-987d-4c17-9c5e-dab96f0c78e0">
+						<Properties>
+							<Name>GetAllDogBreeds</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Get all dog breeds</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>DogBreeds2GetAllDogBreeds</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="c6330c9b-915f-4053-9412-ec82ec7f285f">
+				<Properties>
+					<Name>Moderator2</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Moderator2</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/V2/Moderator</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="418c6ca5-f9cd-429e-85a2-21669f3faaf2">
+						<Properties>
+							<Name>VerifyModerator</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Verify moderator</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>Moderator2VerifyModerator</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>

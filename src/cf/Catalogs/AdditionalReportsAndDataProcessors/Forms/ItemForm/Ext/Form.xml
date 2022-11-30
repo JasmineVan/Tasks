@@ -1,0 +1,3877 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="CommandWriteAndClose" id="240">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.CommandWriteAndClose</CommandName>
+				<ExtendedTooltip name="WriteAndCloseCommandExtendedTooltip" id="241"/>
+			</Button>
+			<Button name="CommandWrite" id="242">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.CommandWrite</CommandName>
+				<ExtendedTooltip name="WriteCommandExtendedTooltip" id="243"/>
+			</Button>
+			<ButtonGroup name="ExportImportCommands" id="333">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды выгрузки загрузки</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Import and export commands</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>pl</v8:lang>
+						<v8:content>Komendy importu eksportu</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>de</v8:lang>
+						<v8:content>Befehle für den Export Import</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ro</v8:lang>
+						<v8:content>Comenzi import export</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>tr</v8:lang>
+						<v8:content>Dışa aktarım içe aktarım komutları</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>es_ES</v8:lang>
+						<v8:content>Comandos de exportación importación</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ExportImportCommandsExtendedTooltip" id="334"/>
+				<ChildItems>
+					<Button name="LoadFromFile" id="10">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.LoadFromFile</CommandName>
+						<ExtendedTooltip name="ImportFromFileExtendedTooltip" id="176"/>
+					</Button>
+					<Button name="ExportToFile" id="11">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.ExportToFile</CommandName>
+						<ExtendedTooltip name="ExportToFileExtendedTooltip" id="177"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<ButtonGroup name="FormCommands" id="255">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды формы</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Form commands</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>pl</v8:lang>
+						<v8:content>Komendy formy</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>de</v8:lang>
+						<v8:content>Formular-Befehle</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ro</v8:lang>
+						<v8:content>Formular comenzi</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>tr</v8:lang>
+						<v8:content>Form komutları</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>es_ES</v8:lang>
+						<v8:content>Comandos de formulario</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="FormCommandsExtendedTooltip" id="256"/>
+				<ChildItems>
+					<Button name="FormWriteAndClose" id="244">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+						<ExtendedTooltip name="FormWriteAndCloseExtendedTooltip" id="245"/>
+					</Button>
+					<Button name="FormWrite" id="246">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<CommandName>Form.StandardCommand.Write</CommandName>
+						<ExtendedTooltip name="FormWriteExtendedTooltip" id="247"/>
+					</Button>
+					<Button name="FormChangeForm" id="331">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+						<ExtendedTooltip name="FormChangeFormExtendedTooltip" id="332"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="FormHelp" id="257">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="FormHelpExtendedTooltip" id="258"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ChoiceProcessing</Event>
+		<Event name="AfterWriteAtServer">AfterWriteAtServer</Event>
+		<Event name="NotificationProcessing">NotificationProcessing</Event>
+		<Event name="OnReadAtServer">OnReadAtServer</Event>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="BeforeWriteAtServer">BeforeWriteAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="DescriptionRunModeGroup" id="384">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование режим работы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mode description</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Nazwa tryb pracy</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Name der Betriebsart</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Denumire mod de operare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Çalışma modu adı</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Nombre del modo de trabajo</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="DescriptionRunModeGroupExtendedTooltip" id="385"/>
+			<ChildItems>
+				<InputField name="Description" id="1">
+					<DataPath>Object.Description</DataPath>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="DescriptionContextMenu" id="2"/>
+					<ExtendedTooltip name="DescriptionExtendedTooltip" id="178"/>
+				</InputField>
+				<UsualGroup name="SafeModeGlobalGroup" id="382">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Безопасный режим глобальный</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Safe mode global</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Bezpieczny tryb globalny</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Abgesicherter Modus Global</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Regim global securizat</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Güvenli mod küresel</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Modo de seguridad global</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="SafeModeGlobalGroupExtendedTooltip" id="383"/>
+					<ChildItems>
+						<LabelDecoration name="SafeModeFalseLabelDecoration" id="374">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Mode:&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt; &lt;/&gt;&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt;Unsafe&lt;/&gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Mode:&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt; &lt;/&gt;&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt;Unsafe&lt;/&gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Mode:&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt; &lt;/&gt;&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt;Unsafe&lt;/&gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Mode:&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt; &lt;/&gt;&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt;Unsafe&lt;/&gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Mode:&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt; &lt;/&gt;&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt;Unsafe&lt;/&gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Mode:&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt; &lt;/&gt;&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt;Unsafe&lt;/&gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Mode:&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt; &lt;/&gt;&lt;colorstyle 0:b9627855-6773-4a59-b7d3-f9e2e565cd9e&gt;Unsafe&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="SafeModeFalseLabelDecorationContextMenu" id="375"/>
+							<ExtendedTooltip name="SafeModeFalseLabelDecorationExtendedTooltip" id="376">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Этот отчет или обработка будет подключаться к программе в небезопасном режиме!
+Подробно о режимах подключения дополнительных отчетов и обработок к программе см. информацию в справке к форме.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>The report or data processor will be attached to the application in unsafe mode.
+For more information about attachment modes, see the form help.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Ten raport lub przetwarzanie danych połączy się z aplikacją w trybie awaryjnym!
+Aby uzyskać szczegółowe informacje na temat dodatkowych trybów połączenia raportów i przetwarzania danych z aplikacją, skorzystaj z menu pomocy formularza.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Dieser Bericht oder Datenprozessor verbindet sich mit der Anwendung in einem unsicheren Modus! 
+Detaillierte Informationen zu den zusätzlichen Verbindungsmodi von Bericht und Datenprozessor zur Anwendung finden Sie im Hilfemenü des Formulars.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Acest raport sau procesarea se va conecta la program în regim nesecurizat!
+Detalii despre modurile de conectare a rapoartelor și procesărilor suplimentare la program vezi în informațiile din asistența formei.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Bu rapor veya veri işlemcisi uygulamaya güvensiz modda bağlanacaktır! 
+Uygulamaya ek rapor ve veri işlemcisi bağlantı modları hakkında ayrıntılı bilgi için form yardım menüsüne başvurun.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>¡Este informe o el procesador de datos se conectará a la aplicación en el modo inseguro!
+Para más información sobre un informe adicional y los modos de conexión del procesador de datos a la aplicación dirigirse al menú de ayuda del formulario.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</LabelDecoration>
+						<LabelDecoration name="SafeModeTrueLabelDecoration" id="379">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Mode: &lt;colorstyle 0:0da019ca-1fc7-4aff-8998-3ddcccf10872&gt;Secure&lt;/&gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Mode: &lt;colorstyle 0:0da019ca-1fc7-4aff-8998-3ddcccf10872&gt;Secure&lt;/&gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Mode: &lt;colorstyle 0:0da019ca-1fc7-4aff-8998-3ddcccf10872&gt;Secure&lt;/&gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Mode: &lt;colorstyle 0:0da019ca-1fc7-4aff-8998-3ddcccf10872&gt;Secure&lt;/&gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Mode: &lt;colorstyle 0:0da019ca-1fc7-4aff-8998-3ddcccf10872&gt;Secure&lt;/&gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Mode: &lt;colorstyle 0:0da019ca-1fc7-4aff-8998-3ddcccf10872&gt;Secure&lt;/&gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Mode: &lt;colorstyle 0:0da019ca-1fc7-4aff-8998-3ddcccf10872&gt;Secure&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="SafeModeTrueLabelDecorationContextMenu" id="380"/>
+							<ExtendedTooltip name="SafeModeTrueLabelDecorationExtendedTooltip" id="381">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Этот отчет или обработка будет подключаться к программе в безопасном режиме.
+Подробно о режимах подключения дополнительных отчетов и обработок см. информацию в справке к форме.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>The report or data processor will be attached to the application in safe mode.
+For more information about attachment modes, see the form help.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Dany raport lub przetwarzanie danych połączy się z aplikacją w trybie awaryjnym.
+Aby uzyskać szczegółowe informacje na temat dodatkowych trybów połączenia raportów i przetwarzania danych można znaleźć w menu pomocy formularza.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Dieser Bericht oder Datenprozessor verbindet sich mit der Anwendung im sicheren Modus. 
+Detaillierte Informationen zu den zusätzlichen Verbindungsmodi für Berichte und Datenverarbeiter finden Sie im Hilfemenü des Formulars.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Raportul sau procesarea de date vor fi atașate aplicației în regim securizat.
+Pentru mai multe informații despre modurile de atașare, consultați formularul de ajutor.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Bu rapor veya veri işlemcisi uygulamaya güvenli modda bağlanacaktır! 
+Uygulamaya ek rapor ve veri işlemcisi bağlantı modları hakkında ayrıntılı bilgi için form yardım menüsüne başvurun.</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es_ES</v8:lang>
+										<v8:content>Este informe o el procesador de datos se conectará a la aplicación en el modo seguro.
+Para más información sobre un informe adicional y los modos de conexión del procesador de datos dirigirse al menú de ayuda del formulario.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="PublishingOptionEmployeeResponsibleGroup" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Публикация ответственный</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Person responsible for publishing</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Publikacja odpowiedzialny</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Publikationsverantwortlicher</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Publicarea persoanei responsabile</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Yayım sorumlu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Publicación responsable</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="PublishingOptionEmployeeResponsibleGroupExtendedTooltip" id="179"/>
+			<ChildItems>
+				<RadioButtonField name="Publication" id="43">
+					<DataPath>Object.Publication</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.AdditionalReportsAndDataProcessorsPublicationOptions.EnumValue.Used</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.AdditionalReportsAndDataProcessorsPublicationOptions.EnumValue.DebugMode</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.AdditionalReportsAndDataProcessorsPublicationOptions.EnumValue.Disabled</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="PublishingOptionContextMenu" id="44"/>
+					<ExtendedTooltip name="PublishingOptionExtendedTooltip" id="180"/>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Pages" id="314">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pages</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Strony</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Seiten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Pagini</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sayfalar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Páginas</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="PagesExtendedTooltip" id="315"/>
+			<ChildItems>
+				<Page name="Parameters" id="316">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Parameters</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Parametry</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Parameter</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Parametrii </v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Parametreler</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Parámetros</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ParametersExtendedTooltip" id="317"/>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Pages name="OptionsCommandsPermissionsPages" id="80">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Варианты, Команды, Разрешения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Options, Commands, Permissions</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Opcje, Polecenia, Uprawnienia</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Optionen, Befehle, Berechtigungen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Opțiuni, Comenzi, Permisiuni</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Seçenekler, Komutlar, İzinler</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Opciones, Comandos, Permisos</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="OptionsCommandsPermissionsPagesExtendedTooltip" id="186"/>
+			<ChildItems>
+				<Page name="CommandsPage" id="164">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команды</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Commands</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Komendy</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Befehle</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Comenzi</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Komutlar</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Comandos</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="CommandsPageExtendedTooltip" id="209"/>
+					<ChildItems>
+						<UsualGroup name="LocationGroup" id="389">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Размещение</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Layout</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Dodatkowe pola</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Platzierung</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Destinație de plasare</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Yerleşim</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Ubicación</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="LocationGroupExtendedTooltip" id="390"/>
+							<ChildItems>
+								<LabelField name="CommandsLocation" id="167">
+									<DataPath>PurposePresentation</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Размещение</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Layout</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Dodatkowe pola</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Platzierung</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Destinație de plasare</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Yerleşim</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Ubicación</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="CommandsLocationContextMenu" id="168"/>
+									<ExtendedTooltip name="CommandsLocationExtendedTooltip" id="210"/>
+									<Events>
+										<Event name="Click">CommandsPlacementClick</Event>
+									</Events>
+								</LabelField>
+								<Button name="SetVisibility" id="400">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.SetVisibility</CommandName>
+									<ExtendedTooltip name="SetVisibilityExtendedTooltip" id="401"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="FormsTypes" id="62">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Типы форм</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Form types</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Rodzaje formularzy</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Formulartypen</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Tipuri de formulare</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Form türleri</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Tipos de formularios</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="FormsTypesExtendedTooltip" id="182"/>
+							<ChildItems>
+								<LabelDecoration name="Show" id="143">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показывать:</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Show:</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Pokaż:</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Anzeigen:</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Afișați:</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Göster:</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Mostrar:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ShowContextMenu" id="144"/>
+									<ExtendedTooltip name="ShowExtendedTooltip" id="183"/>
+								</LabelDecoration>
+								<CheckBoxField name="UseForListForm" id="71">
+									<DataPath>Object.UseForListForm</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>В списках</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>In lists</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>W listach</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>In Listen</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>În liste</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Listelerde</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>En listas</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ShowInListFormContextMenu" id="72"/>
+									<ExtendedTooltip name="ShowInListFormExtendedTooltip" id="184"/>
+									<Events>
+										<Event name="OnChange">UseForListFormOnChange</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="UseForObjectForm" id="69">
+									<DataPath>Object.UseForObjectForm</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>В формах элементов справочников и документов</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>In forms of catalog and document items</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>W formularzach elementów katalogów i dokumentów</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>In Form von Katalog- und Belegpositionen</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>În forme cataloage și documente</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Katalog ve belge öğeleri formlarında</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>En formularios del catálogo y los artículos del documento</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="UseInObjectFormContextMenu" id="70"/>
+									<ExtendedTooltip name="UseInObjectFormExtendedTooltip" id="185"/>
+									<Events>
+										<Event name="OnChange">UseForObjectFormOnChange</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<CommandBar name="CommandBarObjectCommands" id="405">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель объект команды</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Command bar command object</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Panel zarządzania obiekt polecenia</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Bedienfeld Befehlsobjekt</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Panoul de comenzi obiectul comenzi</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Kumanda paneli kumanda nesnesi</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Barra de comandos objeto del comando</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="CommandBarObjectCommandsExtendedTooltip" id="406"/>
+							<ChildItems>
+								<Button name="ExecuteCommand" id="407">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ExecuteCommand</CommandName>
+									<ExtendedTooltip name="ExecuteCommandExtendedTooltip" id="408"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<Table name="ObjectCommands" id="147">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoAddIncomplete>false</AutoAddIncomplete>
+							<AutoMarkIncomplete>false</AutoMarkIncomplete>
+							<SearchOnInput>Use</SearchOnInput>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.Commands</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Объект команды</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Command object</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Obiekt polecenia</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Befehlsobjekt</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Obiectul comenzi</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Kumanda nesnesi</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Objeto del comando</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ObjectCommandsContextMenu" id="148">
+								<ChildItems>
+									<Button name="ObjectCommandsSetQuickAccess" id="165">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ObjectCommandsSetQuickAccess</CommandName>
+										<ExtendedTooltip name="ObjectCommandsSetQuickAccessExtendedTooltip" id="211"/>
+									</Button>
+									<Button name="ObjectCommandsSetSchedule" id="166">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ObjectCommandsSetSchedule</CommandName>
+										<ExtendedTooltip name="ObjectCommandsSetScheduleExtendedTooltip" id="212"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ObjectCommandsCommandBar" id="149"/>
+							<ExtendedTooltip name="ObjectCommandsExtendedTooltip" id="213"/>
+							<SearchStringAddition name="ObjectCommandsSearchString" id="335">
+								<AdditionSource>
+									<Item>ObjectCommands</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ObjectCommandsSearchStringContextMenu" id="336"/>
+								<ExtendedTooltip name="ObjectCommandsSearchStringExtendedTooltip" id="337"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ObjectCommandsViewStatus" id="338">
+								<AdditionSource>
+									<Item>ObjectCommands</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ObjectCommandsViewStatusContextMenu" id="339"/>
+								<ExtendedTooltip name="ObjectCommandsViewStatusExtendedTooltip" id="340"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ObjectCommandsSearchControl" id="341">
+								<AdditionSource>
+									<Item>ObjectCommands</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ObjectCommandsSearchControlContextMenu" id="342"/>
+								<ExtendedTooltip name="ObjectCommandsSearchExtendedTooltipControl" id="343"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ObjectCommandsBeforeAddRow</Event>
+								<Event name="BeforeDeleteRow">ObjectCommandsBeforeDeleteRow</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ObjectCommandsPresentation" id="156">
+									<DataPath>Object.Commands.Presentation</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ObjectCommandsPresentationContextMenu" id="157"/>
+									<ExtendedTooltip name="ObjectCommandsPresentationExtendedTooltip" id="214"/>
+								</InputField>
+								<InputField name="ObjectCommandsQuickAccessPresentation" id="158">
+									<DataPath>Object.Commands.QuickAccessPresentation</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователи, которым выведена команда.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Users that see the command.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Użytkownicy, dla których polecenie zostało wyprowadzone.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Benutzer, für die der Befehl ausgegeben wird.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Utilizatorii, pentru care este afișată comanda.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Komutun çıkarıldığı kullanıcılar.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Usuarios para que el comando es la salida.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>Directly</EditMode>
+									<Width>1</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ChoiceButton>true</ChoiceButton>
+									<IncompleteChoiceMode>OnActivate</IncompleteChoiceMode>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ObjectCommandsQuickAccessPresentationContextMenu" id="159"/>
+									<ExtendedTooltip name="ObjectCommandsQuickAccessPresentationExtendedTooltip" id="215"/>
+									<Events>
+										<Event name="StartChoice">ObjectCommandsQuickAccessPresentationStartChoice</Event>
+										<Event name="Clearing">ObjectCommandsQuickAccessPresentationClearing</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ObjectCommandsScheduledJobUsage" id="160">
+									<DataPath>Object.Commands.ScheduledJobUsage</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выполнять команду по расписанию</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Scheduled</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Uruchom polecenie zgodnie z harmonogramem</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Ausführung des Befehls nach Zeitplan</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Executați comanda conform program</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Programa göre yürütüm komutu</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Ejecutar el comando a tiempo</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.SetTime</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ObjectCommandsScheduledJobUsageContextMenu" id="161"/>
+									<ExtendedTooltip name="ObjectCommandsScheduledJobUsageExtendedTooltip" id="216"/>
+									<Events>
+										<Event name="OnChange">ObjectCommandsScheduledJobUseOnChange</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ObjectCommandsScheduledJobPresentation" id="162">
+									<DataPath>Object.Commands.ScheduledJobPresentation</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расписание выполнения команды.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Command schedule.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Harmonogram wykonywania poleceń.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Zeitplan für die Ausführung von Befehlen.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Comandă program de execuție.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Komutun icrası programı.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Horario de la ejecución del comando.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>Directly</EditMode>
+									<Width>12</Width>
+									<ChoiceButton>true</ChoiceButton>
+									<IncompleteChoiceMode>OnActivate</IncompleteChoiceMode>
+									<ContextMenu name="ObjectCommandsScheduledJobPresentationContextMenu" id="163"/>
+									<ExtendedTooltip name="ObjectCommandsScheduledJobPresentationExtendedTooltip" id="217"/>
+									<Events>
+										<Event name="StartChoice">ObjectCommandsScheduledJobPresentationStartChoice</Event>
+										<Event name="Clearing">ObjectCommandsScheduledJobPresentationClearing</Event>
+									</Events>
+								</InputField>
+								<InputField name="ObjectCommandsComment" id="386">
+									<DataPath>Object.Commands.Comment</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ObjectCommandsCommentContextMenu" id="387"/>
+									<ExtendedTooltip name="ObjectCommandsCommentExtendedTooltip" id="388"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="OptionsPage" id="81">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Варианты отчета</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Report options</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Warianty sprawozdań</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Berichtsoptionen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Opțiuni rapoarte</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Rapor seçenekleri</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Opciones de informe</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="OptionsPageExtendedTooltip" id="189"/>
+					<ChildItems>
+						<Pages name="OptionsPages" id="83">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы варианты</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Pages options</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Opcje stron</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Seitenoptionen</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Opțiuni pagini</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Sayfa seçenekleri</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Opciones de páginas</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="OptionsPagesExtendedTooltip" id="190"/>
+							<ChildItems>
+								<Page name="OptionsHideBeforeWrite" id="84">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Варианты скрыть до записи</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Hide options until written</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Opcje ukryj przed nagraniem</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Optionen vor der Aufzeichnung ausblenden</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Opțiunile se ascund până la scriere</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Kayıttan önce seçenekleri gizlet</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Ocultar las opciones antes de grabar</v8:content>
+										</v8:item>
+									</Title>
+									<Group>HorizontalIfPossible</Group>
+									<ExtendedTooltip name="OptionsHideBeforeWriteExtendedTooltip" id="191"/>
+									<ChildItems>
+										<LabelDecoration name="OptionsInfoLabel" id="85">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:NoteText</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Для просмотра и изменения вариантов 
+необходимо записать дополнительный отчет, 
+указав в поле Публикация "Используется".</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>To view or edit a report option,
+save it as an additional report
+and set the Availability to "Available."</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>W celu przeglądania i edycji opcji 
+należy zapisać dodatkowy raport, 
+podając w polu Publikacja "W użyciu".</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Um die Varianten 
+ anzuzeigen und zu ändern, sollten Sie einen zusätzlichen Bericht schreiben, 
+der im Feld Veröffentlichung die Angabe "Verwendet" enthält.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Pentru a vizualiza sau a edita opțiunile pentru rapoarte, 
+creați un raport suplimentar specificând 
+"În utilizare" în câmpul Publicație.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Varyantları 
+görüntülemek ve değiştirmek için, Yayım alanında 
+"Kullanılıyor" belirterek ek bir rapor yazın.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Para ver y cambiar las variantes 
+, es necesario guardar un informe adicional, 
+especificando "Está en uso" en el campo de Envío.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="OptionsInfoLabelContextMenu" id="86"/>
+											<ExtendedTooltip name="OptionsInfoLabelExtendedTooltip" id="192"/>
+										</LabelDecoration>
+										<Button name="WriteForReportOptionsCommand" id="248">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.CommandWrite</CommandName>
+											<ExtendedTooltip name="WriteForReportOptionsCommandExtendedTooltip" id="249"/>
+										</Button>
+									</ChildItems>
+								</Page>
+								<Page name="OptionsShow" id="88">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Варианты показать</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Show options</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Opcje pokaż</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Optionen zeigen an</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Opțiunile sunt afișate</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Seçenekleri göster</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Mostrar opciones</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="OptionsShowExtendedTooltip" id="194"/>
+									<ChildItems>
+										<Table name="AdditionalReportOptions" id="89">
+											<Representation>List</Representation>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<Header>false</Header>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>AdditionalReportOptions</DataPath>
+											<RowPictureDataPath>AdditionalReportOptions.PictureIndex</RowPictureDataPath>
+											<RowsPicture>
+												<xr:Ref>CommonPicture.ItemIcons</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</RowsPicture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Варианты дополнительного отчета</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Additional report options</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Opcje dodatkowego raportu</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Zusätzliche Berichtsoptionen</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Variantele raportului suplimentar</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Ek rapor seçenekleri</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Variantes del informe adicional</v8:content>
+												</v8:item>
+											</Title>
+											<CommandSet>
+												<ExcludedCommand>Add</ExcludedCommand>
+												<ExcludedCommand>Copy</ExcludedCommand>
+												<ExcludedCommand>EndEdit</ExcludedCommand>
+												<ExcludedCommand>MoveDown</ExcludedCommand>
+												<ExcludedCommand>MoveUp</ExcludedCommand>
+												<ExcludedCommand>SelectAll</ExcludedCommand>
+											</CommandSet>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="AdditionalReportOptionsContextMenu" id="90">
+												<ChildItems>
+													<Button name="AdditionalReportOptionsOpen1" id="114">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.AdditionalReportOptionsOpen</CommandName>
+														<ExtendedTooltip name="AdditionalReportOptionsOpen1ExtendedTooltip" id="195"/>
+													</Button>
+													<Button name="AdditionalReportOptionsChange1" id="115">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Item.AdditionalReportOptions.StandardCommand.Change</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Изменить...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Edit...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>pl</v8:lang>
+																<v8:content>Zmień...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>de</v8:lang>
+																<v8:content>Ändern...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ro</v8:lang>
+																<v8:content>Editați...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>tr</v8:lang>
+																<v8:content>Değiştir...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>es_ES</v8:lang>
+																<v8:content>Cambiar...</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="AdditionalReportOptionsChange1ExtendedTooltip" id="196"/>
+													</Button>
+													<Button name="AdditionalReportOptionsPlaceInSections1" id="116">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.PlaceInSections</CommandName>
+														<ExtendedTooltip name="AdditionalReportOptionsPlaceInSections1ExtendedTooltip" id="197"/>
+													</Button>
+													<Button name="AdditionalReportOptionsDelete1" id="117">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Item.AdditionalReportOptions.StandardCommand.Delete</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="AdditionalReportOptionsDelete1ExtendedTooltip" id="198"/>
+													</Button>
+												</ChildItems>
+											</ContextMenu>
+											<AutoCommandBar name="AdditionalReportOptionsCommandBar" id="91">
+												<ChildItems>
+													<ButtonGroup name="AdditionalReportOptionsSearchAndOutputList" id="113">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа поиск и вывести список</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Search and display list group</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>pl</v8:lang>
+																<v8:content>Grupa wyszukaj i wyświetl listę</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>de</v8:lang>
+																<v8:content>Listengruppe suchen und anzeigen</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ro</v8:lang>
+																<v8:content>Căutați și afișați grupul de liste</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>tr</v8:lang>
+																<v8:content>Liste grubunu ara ve görüntüle</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>es_ES</v8:lang>
+																<v8:content>Buscar y visualizar el grupo de lista</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="AdditionalReportOptionsSearchAndOutputListExtendedTooltip" id="199"/>
+														<ChildItems>
+															<Button name="AdditionalReportOptionsFind" id="101">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.AdditionalReportOptions.StandardCommand.Find</CommandName>
+																<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="AdditionalReportOptionsFindExtendedTooltip" id="200"/>
+															</Button>
+															<Button name="AdditionalReportOptionsCancelSearch" id="102">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.AdditionalReportOptions.StandardCommand.CancelSearch</CommandName>
+																<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="AdditionalReportOptionsCancelSearchExtendedTooltip" id="201"/>
+															</Button>
+															<Button name="AdditionalReportOptionsOutputList" id="112">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.AdditionalReportOptions.StandardCommand.OutputList</CommandName>
+																<ExtendedTooltip name="AdditionalReportOptionsOutputListExtendedTooltip" id="202"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<Button name="AdditionalReportOptionsOpen" id="94">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.AdditionalReportOptionsOpen</CommandName>
+														<ExtendedTooltip name="AdditionalReportOptionsOpenExtendedTooltip" id="203"/>
+													</Button>
+													<Button name="AdditionalReportOptionsChange" id="111">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Item.AdditionalReportOptions.StandardCommand.Change</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Изменить...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Edit...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>pl</v8:lang>
+																<v8:content>Zmień...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>de</v8:lang>
+																<v8:content>Ändern...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ro</v8:lang>
+																<v8:content>Editați...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>tr</v8:lang>
+																<v8:content>Değiştir...</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>es_ES</v8:lang>
+																<v8:content>Cambiar...</v8:content>
+															</v8:item>
+														</Title>
+														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="AdditionalReportOptionsChangeExtendedTooltip" id="204"/>
+													</Button>
+													<Button name="AdditionalReportOptionsPlaceInSections" id="103">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.PlaceInSections</CommandName>
+														<ExtendedTooltip name="AdditionalReportOptionsPlaceInSectionsExtendedTooltip" id="205"/>
+													</Button>
+													<Button name="AdditionalReportOptionsDelete" id="104">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Item.AdditionalReportOptions.StandardCommand.Delete</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="AdditionalReportOptionsDeleteExtendedTooltip" id="206"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="AdditionalReportOptionsExtendedTooltip" id="207"/>
+											<SearchStringAddition name="AdditionalReportOptionsSearchString" id="344">
+												<AdditionSource>
+													<Item>AdditionalReportOptions</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="AdditionalReportOptionsSearchStringContextMenu" id="345"/>
+												<ExtendedTooltip name="AdditionalReportOptionsSearchStringExtendedTooltip" id="346"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="AdditionalReportOptionsViewStatus" id="347">
+												<AdditionSource>
+													<Item>AdditionalReportOptions</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="AdditionalReportOptionsViewStatusContextMenu" id="348"/>
+												<ExtendedTooltip name="AdditionalReportOptionsViewStatusExtendedTooltip" id="349"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="AdditionalReportOptionsSearchControl" id="350">
+												<AdditionSource>
+													<Item>AdditionalReportOptions</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="AdditionalReportOptionsSearchControlContextMenu" id="351"/>
+												<ExtendedTooltip name="AdditionalReportOptionsSearchControlExtendedTooltip" id="352"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="BeforeAddRow">AdditionalReportOptionsBeforeAddRow</Event>
+												<Event name="BeforeDeleteRow">AdditionalReportOptionsBeforeDeleteRow</Event>
+												<Event name="BeforeRowChange">AdditionalReportOptionsBeforeRowChange</Event>
+											</Events>
+											<ChildItems>
+												<LabelField name="AdditionalReportOptionsDescription" id="98">
+													<DataPath>AdditionalReportOptions.Description</DataPath>
+													<ContextMenu name="AdditionalReportOptionsDescriptionContextMenu" id="99"/>
+													<ExtendedTooltip name="AdditionalReportOptionsDescriptionExtendedTooltip" id="208"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="PermissionsPage" id="259">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разрешения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Permissions</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Pozwolenia</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Berechtigungen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Permisiuni</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>İzinler</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Permisos</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PermissionsPageExtendedTooltip" id="260"/>
+					<ChildItems>
+						<UsualGroup name="SafeModeWithPermissionsGroup" id="287">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Безопасный режим с разрешениями</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Safe mode with permissions</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Tryb bezpieczny z zezwoleniami</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Abgesicherter Modus mit Berechtigungen</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Regim securizat cu permisiuni</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>İzinlerle güvenli mod</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Modo seguro con permisos</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="SafeModeWithPermissionsGroupExtendedTooltip" id="288"/>
+							<ChildItems>
+								<PictureDecoration name="DecorationSafeModeWithPermissionsIcon" id="267">
+									<SkipOnInput>true</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация безопасный режим с разрешениями пиктограмма</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Decoration safe mode with permissions icon</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Dekorowanie tryb bezpieczny z ikoną uprawnień</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Sicherer Dekorationsmodus mit Berechtigungssymbol</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Decorare regim securizat cu pictograma permisiuni</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>İzinler simgesiyle dekorasyon güvenli mod.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Modo seguro de decoración con el icono de permisos</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.UnavailableFieldsInformation</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="DecorationSafeModeWithPermissionsIconContextMenu" id="268"/>
+									<ExtendedTooltip name="DecorationSafeModeWithPermissionsIconExtendedTooltip" id="269"/>
+								</PictureDecoration>
+								<Pages name="SafeModeWithPermissionsPages" id="263">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы безопасный режим с разрешениями</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Safe mode with permissions pages</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strony tryb bezpieczny z uprawnieniami</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seiten zum sicheren Modus mit Berechtigungen</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagini în regim securizat cu permisiuni</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>İzinlerle sayfalar güvenli mod</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Modo seguro de páginas con permisos</v8:content>
+										</v8:item>
+									</Title>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="SafeModeWithPermissionsPagesExtendedTooltip" id="264"/>
+									<ChildItems>
+										<Page name="PersonalSecurityProfilePage" id="289">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница персональный профиль безопасности</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Personal security profile page</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Strona osobisty profil bezpieczeństwa</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Seite Persönliches Sicherheitsprofil</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Profil pagină personală securizat</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Sayfa kişisel güvenlik profili</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Perfil de seguridad personal de la página</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="PersonalSecurityProfilePageExtendedTooltip" id="290"/>
+											<ChildItems>
+												<LabelDecoration name="DecorationPersonalSecurityProfileLabel" id="295">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<TextColor>style:FieldSelectionBackColor</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Дополнительный отчет или обработка будет подключаться к программе с использованием "персонального"
+профиля безопасности %1, в котором будут разрешены только следующие операции:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>The report or data processor will be attached to the application with a custom security profile
+%1, which allows the following actions:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Dodatkowy raport lub przetwarzanie będzie łączyć się 
+z aplikacją za pomocą "osobistego" profilu bezpieczeństwa, %1który pozwala tylko na następujące operacje:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Der zusätzliche Bericht oder die Verarbeitung wird über das "persönliche"
+Sicherheitsprofil %1mit dem Programm verbunden, in dem nur die folgenden Operationen erlaubt sind:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Raportul sau procesarea de date vor fi atașate la aplicație cu un profil de securitate
+personalizat %1 cu următoarele operații permise:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Ek rapor veya veri işlemcisi, sadece aşağıdaki işlemlere izin veren "kişisel" 
+güvenlik profilini kullanarak %1 bağlanacaktır:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Informe adicional o el procesador de datos se conectará a la aplicación usando el perfil
+ de seguridad "personal"%1, que permite solo las siguientes operaciones:</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="DecorationPersonalSecurityProfileLabelContextMenu" id="296"/>
+													<ExtendedTooltip name="DecorationPersonalSecurityProfileLabelExtendedTooltip" id="297"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="UnsafeModeWithPermissionsPage" id="293">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница небезопасный режим с разрешениями</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Unsafe mode with permissions page</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Strona niebezpieczny tryb z uprawnieniami</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Seite zum unsicheren Modus mit Berechtigungen</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Regim nesecurizat pe pagină cu permisiuni</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>İzinlerle sayfa güvensiz mod</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Modo inseguro de la página con permisos</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="UnsafeModeWithPermissionsPageExtendedTooltip" id="294"/>
+											<ChildItems>
+												<LabelDecoration name="DecorationUnsafeModeLabel" id="298">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<TextColor>style:SpecialTextColor</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Дополнительный отчет или обработка будет подключаться к программе без установки безопасного режима,
+т.к. для корректной работы дополнительного отчета или обработки требуется выполнение следующих операций
+с внешними ресурсами:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>The report or data processor will be attached to the application in unsafe mode
+because it requires the following operations
+with external resources:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Dodatkowy raport lub przetwarzanie będzie łączyć się z aplikacją
+ bez instalacji trybu awaryjnego, ponieważ raport dodatkowy lub poprawna wydajność procesora danych wymaga wykonania następujących
+ operacji przy użyciu zasobów zewnętrznych:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Ein zusätzlicher Bericht oder Datenprozessor verbindet sich mit der Anwendung 
+ohne sicheren Modus, da die korrekte Leistung des zusätzlichen Berichts oder Datenprozessors die Ausführung
+ der folgenden Operationen mit externen Ressourcen erfordert:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Raportul sau procesarea de date vor fi atașate aplicației în regim nesecurizat
+deoarece necesită următoarele operații
+cu resurse externe:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Ek rapor veya veri işlemcisi uygulamaya güvenli mod 
+olmadan bağlanacaktır, çünkü Ek rapor veya veri işlemcisinin doğru performansı dış kaynaklarla 
+aşağıdaki işlemlerin yürütülmesini gerektirir. </v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Informe adicional o el procesador de datos se conectará a la aplicación
+sin el modo seguro porque la realización correcta del Informe adicional o el procesador de datos requiere la ejecución de
+las siguientes operaciones con fuentes externas:</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="DecorationUnsafeModeLabelContextMenu" id="299"/>
+													<ExtendedTooltip name="DecorationUnsafeModeLabelExtendedTooltip" id="300"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="SafeModeWithPermissionsPage" id="291">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница безопасный режим с разрешениями</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Page safe mode with permissions</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Strona bezpieczny tryb z uprawnieniami</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Seite zum sicheren Modus mit Berechtigungen</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Pagină în regim securizat cu permisiuni</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>İzinlerle sayfa güvenli mod</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Modo seguro de la página con permisos</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="SafeModeWithPermissionsPageExtendedTooltip" id="292"/>
+											<ChildItems>
+												<LabelDecoration name="DecorationSafeModeWithPermissionsLabel" id="301">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<TextColor>style:FieldSelectionBackColor</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Дополнительный отчет или обработка будет подключаться к программе в безопасном режиме с предоставлением
+дополнительных разрешений:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>The report or data processor will be attached to the application in safe mode
+with additional permissions:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Dodatkowy raport lub przetwarzanie danych połączy się z
+ aplikacją w trybie awaryjnym z dodatkowymi uprawnieniami:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Zusätzliche Berichte oder Verarbeitungen werden im abgesicherten Modus mit dem Programm verbunden, wobei 
+zusätzliche Berechtigungen erteilt werden:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Raportul sau procesarea de date vor fi atașate aplicației în modul sigur
+cu permisiuni suplimentare:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Ek rapor veya veri işlemcisi uygulamaya ek izinlerle 
+güvenli modda bağlanacaktır:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>El informe adicional o el procesador de datos se conectará a la aplicación en el modo seguro con permisos
+adicionales:</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="DecorationSafeModeWithPermissionsLabelContextMenu" id="302"/>
+													<ExtendedTooltip name="DecorationSafeModeWithPermissionsLabelExtendedTooltip" id="303"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</UsualGroup>
+						<Pages name="PermissionCompatibilityModesPagesGroup" id="261">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы режимы совместимости разрешений</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Permission compatibility modes pages</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Strony tryby zgodności uprawnień</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Seiten Kompatibilitätsberechtigungsmodi</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Pagini modurile de compatibilitate a permisiunilor</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Sayfalar izin uyumluluk modları</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Páginas modos de compatibilidad de permisos</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="PermissionCompatibilityModesPagesGroupExtendedTooltip" id="262"/>
+							<ChildItems>
+								<Page name="PermissionsPageVersion_2_1_3" id="169">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Разрешения (режим совместимости  разрешений "Версия 2.1.3")</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Permissions ("Version 2.1.3" permission compatibility mode)</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Uprawnienia (tryb kompatybilności uprawnień "Wersja 2.1.3")</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Berechtigungen (Kompatibilitätsmodus der Berechtigungen "Version 2.1.3")</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Permisiuni (modul de compatibilitate a permisiunilor "Versiunea 2.1.3")</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>İzinler (izinlerin uyumluluk modu "Sürüm 2.1.3")</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Permisos (modo de compatibilidad de permisos "Versión 2.1.3")</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="PermissionsPageVersion_2_1_3ExtendedTooltip" id="187"/>
+									<ChildItems>
+										<HTMLDocumentField name="Permissions" id="170">
+											<DataPath>PermissionsPresentation_2_1_3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Height>3</Height>
+											<ContextMenu name="PermissionsContextMenu" id="171"/>
+											<ExtendedTooltip name="PermissionsExtendedTooltip" id="188"/>
+											<Events>
+												<Event name="OnClick">PermissionsOnClick</Event>
+											</Events>
+										</HTMLDocumentField>
+									</ChildItems>
+								</Page>
+								<Page name="PermissionsPageVersion_2_2_2" id="250">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Разрешения (режим совместимости  разрешений "Версия 2.2.3")</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Permissions ("Version 2.2.3" permission compatibility mode)</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Uprawnienia (tryb kompatybilności uprawnień "Wersja 2.2.3")</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Berechtigungen (Kompatibilitätsmodus der Berechtigungen "Version 2.2.3")</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Permisiuni (modul de compatibilitate a permisiunilor "Versiunea 2.2.3")</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>İzinler (izinlerin uyumluluk modu "Sürüm 2.2.3")</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Permisos (modo de compatibilidad de permisos "Versión 2.2.3")</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="PermissionsPageVersion_2_2_2ExtendedTooltip" id="251"/>
+									<ChildItems>
+										<SpreadSheetDocumentField name="PermissionsPresentation_2_2_2" id="252">
+											<DataPath>PermissionsPresentation_2_2_2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Width>20</Width>
+											<Height>1</Height>
+											<VerticalScrollBar>true</VerticalScrollBar>
+											<HorizontalScrollBar>true</HorizontalScrollBar>
+											<ContextMenu name="PermissionsPresentation_2_2_2ContextMenu" id="253"/>
+											<ExtendedTooltip name="PermissionsPresentation_2_2_2ExtendedTooltip" id="254"/>
+										</SpreadSheetDocumentField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<UsualGroup name="EnablingSecurityProfilesGroup" id="304">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Включение профилей безопасности</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Enable security profiles</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Włączenie profili bezpiecznych</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Aktivieren von Sicherheitsprofilen</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Activați profile de securitate</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Güvenlik profillerini kullan</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Activar los perfiles de seguridad</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="EnablingSecurityProfilesGroupExtendedTooltip" id="305"/>
+							<ChildItems>
+								<LabelDecoration name="DecorationEnablingSecurityProfilesLabel" id="306">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для того, чтобы "изолировать" возможность обращения к внешних ресурсам из кода дополнительного отчета
+или обработки только вышеперечисленными операциями, требуется &lt;link int://sp-on&gt;включить использование профилей безопасности&lt;/&gt;.
+При этом для дополнительного отчета или обработки будет создан "персональный" профиль безопасности, содержащий
+разрешения только на выполнение явно одобренных операций и подключение дополнительного отчета или обработке к
+программе без установки безопасного режима больше не будет требоваться.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>If you want to narrow down the access of additional reports or data processors to external resources to the listed operations,
+&lt;link int://sp-on&gt;enable security profiles&lt;/&gt;. After that, a custom security profile will be created and assigned to the report or data processor.
+The profile will contain only those permissions that are considered safe.
+Once done, you will no longer need to enable safe mode to attach the report or data processor to the application.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>W celu "odizolowania" możliwości dostępu do zasobów zewnętrznych z dodatkowego kodu raportu
+ lub przetwarzania tylko przez operacje wymienione powyżej,  &lt;link int://sp-on&gt;włącz profil bezpieczny&lt;/&gt;.
+Jednocześnie w celu dodatkowego raportu lub opracowania utworzony zostanie "osobisty" profil bezpieczeństwa, zawierający
+ uprawnienia tylko do wykonywania wyraźnie zatwierdzonych operacji i dołączania dodatkowego raportu lub opracowania do
+ programu bez ustawienia trybu bezpiecznego nie będzie już wymagany.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Um die Möglichkeit, auf externe Ressourcen zuzugreifen, aus dem Code eines zusätzlichen Berichts
+zu "isolieren" oder nur die oben genannten Operationen zu verarbeiten, ist es notwendig, &lt;link int://sp-on&gt; die Verwendung von Sicherheitsprofilen zu ermöglichen&lt;/&gt;.
+ Gleichzeitig wird ein "persönliches" Sicherheitsprofil für den zusätzlichen Bericht oder die Verarbeitung erstellt, das nur die
+ Berechtigungen enthält, explizit genehmigte Operationen durchzuführen, und die Verbindung eines zusätzlichen Berichts oder einer zusätzlichen Verarbeitung mit dem
+Programm ohne Einrichtung eines sicheren Modus ist nicht mehr erforderlich.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pentru a restricționa accesul la resurse externe din codul raportului suplimentar
+sau din procesarea de date pentru operațiile enumerate mai sus, &lt;link int://sp-on&gt;enable profiluri de securitate&lt;/&gt;.
+În acest caz, un profil de securitate personalizat va fi creat pentru raport sau procesare de date. Profilul va conține
+numai permisiuni pentru operațiuni aprobate în mod explicit. Atașarea raportului sau a procesării de date
+la aplicație nu va mai necesita un regim securizat.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Ek rapor 
+kodundan veya veri işlemcisinden dış kaynaklara yalnızca yukarıda belirtilen işlemlerle erişme olasılığını "yalıtmak" için, &lt;linkint://sp-on&gt; güvenlik profillerini etkinleştirmek gerekir&lt;/&gt;. 
+Bununla birlikte, yalnızca onaylanmış işlemleri gerçekleştirmek için gerekli 
+izinleri içeren ek rapor veya veri işlemcisi için bir "kişisel" güvenlik profili oluşturulacak, ek rapor veya veri işlemcisinin 
+güvenli modun ayarlanması yapılmadan uygulamaya bağlanmasına gerek olmayacaktır.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Para "aislar" la posibilidad de acceso de las fuentes externas de un código de informe adicional
+o el procesador de datos solo por las operaciones anteriormente mencionadas, se requiere&lt;link int://sp-on&gt;habilitar los perfiles de seguridad&lt;/&gt;.
+ Así, un perfil de seguridad "personal" se creará para el informe adicional o el procesador de datos, que contiene
+permisos para realizar solo las operaciones aprobadas, la conexión del informe adicional o el procesador de datos a
+la aplicación sin configurar el modo seguro no se requerirá.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="DecorationEnablingSecurityProfilesLabelContextMenu" id="307"/>
+									<ExtendedTooltip name="DecorationEnablingSecurityProfilesLabelExtendedTooltip" id="308"/>
+									<Events>
+										<Event name="URLProcessing">DecorationEnableSecurityProfilesLabelURLProcessing</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="DecorationPermissionsSeeAlso" id="311">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подробно о режимах подключения дополнительных отчетов и обработок см. информацию в справке к форме.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>For more information about additional report and data processor attachment modes, see Help.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Aby uzyskać więcej szczegółowych informacji na temat trybów połączeń dodatkowych raportów i przetwarzania danych, skorzystaj z  informacji w pomocy do formularza.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Weitere Informationen über die Verbindungsmodi von Zusatzberichten und Datenverarbeitern finden Sie in den Informationen in der Hilfe zum Formular.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Pentru mai multe informații despre modurile suplimentare de raportare și de procesări ale datelor, consultați secțiunea ajutor.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Ek raporlar ve veri işlemcilerinin bağlantı modları hakkında daha fazla bilgi için, forma yardımdaki bilgilere bak.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Para más información sobre los modos de conexión de informes adicionales y procesadores de datos, ver la información en la ayuda para el formulario.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="DecorationPermissionsSeeAlsoContextMenu" id="312"/>
+							<ExtendedTooltip name="DecorationPermissionsSeeAlsoExtendedTooltip" id="313"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="DataImportFromFilePage" id="322">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка данных из файла</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Import data from file</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Import danych z pliku</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Daten aus der Datei importieren</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Importați date din fișier</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Verileri dosyadan içe aktar</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Importar los datos del archivo</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="DataImportFromFilePageExtendedTooltip" id="323"/>
+					<ChildItems>
+						<Table name="ImportCommands" id="324">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoAddIncomplete>false</AutoAddIncomplete>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ImportCommandList</DataPath>
+							<RowPictureDataPath>ImportCommandList.Picture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Команды загрузки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Import commands</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Import polecenia</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Befehle importieren</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Importați comenzi</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>İçe aktarma komutları</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Importar comandos</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ImportCommandsContextMenu" id="325"/>
+							<AutoCommandBar name="ImportCommandsCommandBar" id="326">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ImportCommandsExtendedTooltip" id="327"/>
+							<SearchStringAddition name="ImportCommandsSearchString" id="353">
+								<AdditionSource>
+									<Item>ImportCommands</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ImportCommandsSearchStringContextMenu" id="354"/>
+								<ExtendedTooltip name="ImportCommandsSearchStringExtendedTooltip" id="355"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ImportCommandsViewStatus" id="356">
+								<AdditionSource>
+									<Item>ImportCommands</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ImportCommandsViewStatusContextMenu" id="357"/>
+								<ExtendedTooltip name="ImportCommandsViewStatusExtendedTooltip" id="358"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ImportCommandsSearchControl" id="359">
+								<AdditionSource>
+									<Item>ImportCommands</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ImportCommandsSearchControlContextMenu" id="360"/>
+								<ExtendedTooltip name="ImportCommandsSearchControlExtendedTooltip" id="361"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ImportCommandsValue" id="328">
+									<DataPath>ImportCommandList.Value</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Команды загрузки</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Import commands</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Import polecenia</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Befehle importieren</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Importați comenzi</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>İçe aktarma komutları</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Importar comandos</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ImportCommandsValueContextMenu" id="329"/>
+									<ExtendedTooltip name="ImportCommandsValueExtendedTooltip" id="330"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="AdditionalInfoPage" id="318">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительная информация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Additional information</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Dodatkowe informacje</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Zusätzliche Informationen</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Informații suplimentare</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Ek bilgi</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Información adicional</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительная информация об обработке</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Additional data processor information</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Dodatkowe informacje na temat przetwarzania danych</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Zusätzliche Informationen zum Datenverarbeiter</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Informații suplimentare despre procesare</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Veri işlemcisi hakkında ek bilgi</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Información adicional sobre el procesador de datos</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="AdditionalInfoPageExtendedTooltip" id="319"/>
+					<ChildItems>
+						<LabelField name="Kind" id="12">
+							<DataPath>Object.Kind</DataPath>
+							<SkipOnInput>true</SkipOnInput>
+							<Width>50</Width>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="KindContextMenu" id="13"/>
+							<ExtendedTooltip name="KindExtendedTooltip" id="232"/>
+						</LabelField>
+						<LabelField name="FileName" id="4">
+							<DataPath>Object.FileName</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>true</SkipOnInput>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Имя файла</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>File name</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Nazwa pliku</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Dateiname</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Nume fișier</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Dosya adı</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Nombre del archivo</v8:content>
+								</v8:item>
+							</Title>
+							<Width>50</Width>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="FileNameContextMenu" id="5"/>
+							<ExtendedTooltip name="FileNameExtendedTooltip" id="233"/>
+						</LabelField>
+						<LabelField name="Version" id="7">
+							<DataPath>Object.Version</DataPath>
+							<SkipOnInput>true</SkipOnInput>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Версия</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Version</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Wersja</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Version</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Versiune</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Sürüm</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Versión</v8:content>
+								</v8:item>
+							</Title>
+							<Width>10</Width>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="VersionContextMenu" id="8"/>
+							<ExtendedTooltip name="VersionExtendedTooltip" id="234"/>
+						</LabelField>
+						<LabelField name="ObjectName" id="78">
+							<DataPath>Object.ObjectName</DataPath>
+							<SkipOnInput>true</SkipOnInput>
+							<Width>1</Width>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="ObjectNameContextMenu" id="79"/>
+							<ExtendedTooltip name="ObjectNameExtendedTooltip" id="235"/>
+						</LabelField>
+						<LabelField name="Information" id="26">
+							<DataPath>Object.Information</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>true</SkipOnInput>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Details</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Szczegóły</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Einzelheiten</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Detalii</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Ayrıntılar</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Detalles</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Left</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>2</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>3</MaxHeight>
+							<ContextMenu name="InformationContextMenu" id="27"/>
+							<ExtendedTooltip name="InformationExtendedTooltip" id="236"/>
+						</LabelField>
+						<InputField name="Group" id="45">
+							<DataPath>Object.Parent</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Grupowania</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Gruppe</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Grup</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Gruplama</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Grupo</v8:content>
+								</v8:item>
+							</Title>
+							<Width>33</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="GroupContextMenu" id="46"/>
+							<ExtendedTooltip name="GroupExtendedTooltip" id="237"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="EmployeeResponsibleAndComment" id="320">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный и комментарий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Person responsible and comment</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Osoba odpowiedzialna i komentarz</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Verantwortlich und Kommentar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Persoană responsabilă și comentariu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sorumlu ve yorum</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Responsable y comentario</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="EmployeeResponsibleAndCommentExtendedTooltip" id="321"/>
+			<ChildItems>
+				<InputField name="EmployeeResponsible" id="31">
+					<DataPath>Object.EmployeeResponsible</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<ContextMenu name="EmployeeResponsibleContextMenu" id="32"/>
+					<ExtendedTooltip name="EmployeeResponsibleExtendedTooltip" id="238"/>
+				</InputField>
+				<InputField name="Comment" id="402">
+					<DataPath>Object.Comment</DataPath>
+					<ContextMenu name="CommentContextMenu" id="403"/>
+					<ExtendedTooltip name="CommentExtendedTooltip" id="404"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.AdditionalReportsAndDataProcessors</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Object.Commands">
+					<Column name="ScheduledJobUsage" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Использовать расписание</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Use schedule</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>pl</v8:lang>
+								<v8:content>Użyć rozkładu</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>de</v8:lang>
+								<v8:content>Zeitplan verwenden</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Utilizați programul</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>tr</v8:lang>
+								<v8:content>Programı kullanın</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>es_ES</v8:lang>
+								<v8:content>Utilizar el horario</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ScheduledJobPresentation" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Расписание</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Schedule</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>pl</v8:lang>
+								<v8:content>Harmonogram</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>de</v8:lang>
+								<v8:content>Zeitplan</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Program</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>tr</v8:lang>
+								<v8:content>Zaman çizelgesi</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>es_ES</v8:lang>
+								<v8:content>Horario</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ScheduledJobSchedule" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Регламентное задание расписание</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Scheduled job schedule</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>pl</v8:lang>
+								<v8:content>Zadanie zaplanowane harmonogram</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>de</v8:lang>
+								<v8:content>Geplanter Arbeitszeitplan</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Orar de lucru programat</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>tr</v8:lang>
+								<v8:content>Zamanlanmış iş programı</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>es_ES</v8:lang>
+								<v8:content>Programado el horario de tarea</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:ValueListType</v8:Type>
+						</Type>
+					</Column>
+					<Column name="QuickAccessPresentation" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Быстрый доступ</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Quick access</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>pl</v8:lang>
+								<v8:content>Szybki dostęp</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>de</v8:lang>
+								<v8:content>Schnellzugang</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Acces rapid</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>tr</v8:lang>
+								<v8:content>Hızlı erişim</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>es_ES</v8:lang>
+								<v8:content>Acceso rápido</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ScheduledJobAllowed" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Регламентное задание разрешено</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Scheduled job allowed</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>pl</v8:lang>
+								<v8:content>Zaplanowane zadanie jest dozwolone</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>de</v8:lang>
+								<v8:content>Geplanter Auftrag erlaubt</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Program de lucru permis</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>tr</v8:lang>
+								<v8:content>Zamanlanmış işe izin verilir</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>es_ES</v8:lang>
+								<v8:content>Programado tarea permitida</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Comment" id="6">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Комментарий</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Comment</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>pl</v8:lang>
+								<v8:content>Uwagi</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>de</v8:lang>
+								<v8:content>Kommentar</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Cometariu</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>tr</v8:lang>
+								<v8:content>Yorum</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>es_ES</v8:lang>
+								<v8:content>Comentario</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="DataProcessorRegistration" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="IsNew" id="6">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="KindAdditionalReport" id="3">
+			<Type>
+				<v8:Type>cfg:EnumRef.AdditionalReportsAndDataProcessorsKinds</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="KindAdditionalDataProcessor" id="7">
+			<Type>
+				<v8:Type>cfg:EnumRef.AdditionalReportsAndDataProcessorsKinds</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="DataProcessorDataAddress" id="8">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ReportKind" id="4">
+			<Type>
+				<v8:Type>cfg:EnumRef.AdditionalReportsAndDataProcessorsKinds</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="AdditionalReportOptions" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Варианты отчета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Report options</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Opcje sprawozdania</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Berichtsoptionen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Opțiuni rapoarte</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Rapor seçenekleri</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Opciones de informe</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="VariantKey" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Description" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Description</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Nazwa</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Benennung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Denumirea</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>İsim</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Nombre</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="PictureIndex" id="4">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="DeletionMark" id="3">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Custom" id="5">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ref" id="6">
+					<Type>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="PurposePresentation" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Assignment</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Przeznaczenie</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Ziel</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Destinația</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kullanım amacı</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Asignación</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="QuickAccess" id="2">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="CommandID" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="User" id="2">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Users</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="PermissionsAddress" id="9">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="PermissionsPresentation_2_1_3" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление разрешений 2 1 3</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Permission presentation 2 1 3</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Prezentacja uprawnień 2 1 3</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Berechtigungspräsentation 2 1 3</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Prezentarea permisiunilor 2 1 3</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>İzin sunumu 2 1 3</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Presentación de permiso 2 1 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Transition" id="13">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ShowImportFromFileDialogOnOpen" id="15">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="PermissionsPresentation_2_2_2" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление разрешений 2 2 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Permission presentation 2 2 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Prezentacja uprawnień 2 2 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Präsentation der Berechtigung 2 2 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Prezentarea permisiunii 2 2 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>İzin sunumu 2 2 2</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Presentación de permiso 2 2 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ImportCommandList" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список команд загрузки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Import command list</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Lista poleceń importu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Befehlsliste importieren</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Importați lista de comenzi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Komut listesini içeri aktar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Lista de comandos de importación</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="KindImportDataFromFile" id="17">
+			<Type>
+				<v8:Type>cfg:EnumRef.AdditionalReportsAndDataProcessorsKinds</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="RunMode" id="18">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="LoadFromFile" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить из файла...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update from file...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zaktualizuj z pliku...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Aktualisieren aus Datei...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Actualizați din fișier...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Dosyadan güncelle ...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Actualizar desde el archivo...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить из файла на диске...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update from file.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zaktualizuj opracowanie (raport) z pliku na komputerze</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Aktualisieren von Dateien auf der Festplatte ...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Actualizare din fișierul de pe disk...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sabit sürücüdeki dosyadan güncelle ...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Actualizar desde el archivo en el disco duro...</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.UpdateFileFromFileOnHardDrive</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ImportFromFile</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ExportToFile" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить как...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save as...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zapisz jako...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Speichern als...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Descărcare în fișier...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Dosyaya aktar...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Exportar al archivo...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить как...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save as a file.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wyeksportuj opracowanie (raport) do pliku na komputerze</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Speichern als...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Descărcare în fișier...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Dosyaya aktar...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Exportar al archivo...</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.SaveFileAs</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ExportToFile</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ObjectCommandsSetQuickAccess" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить быстрый доступ...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Configure quick access...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Ustawi szybki dostęp...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Schnellzugriff anpassen...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Setare acces rapid...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Hızlı erişimi isteğe uyarla</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Personalizar el acceso rápido...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ObjectCommandsSetQuickAccess</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ObjectCommandsSetSchedule" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Configure schedule...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Ustawienia harmonogramu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Zeitplan konfigurieren...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Setați program...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Zaman çizelgesini yapılandır...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Configurar el horario...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ObjectCommandsSetSchedule</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="AdditionalReportOptionsOpen" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Otwórz...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Öffnen...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Deschideți...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Aç...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Abrir...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть вариант дополнительного отчета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open additional report option.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Otwórz opcję dodatkowego raportu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Zusätzliche Berichtsoption öffnen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Deschideți opțiunea de raport suplimentar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Ek rapor seçeneğini aç</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Abrir la opción de informe adicional</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>AdditionalReportOptionsOpen</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="PlaceInSections" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разместить в разделах...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Assign to sections...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Umieść na sekcjach...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>In Abschnitte platzieren...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Adăugați la secțiuni...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Bölümlere yerleştir...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Colocar en secciones...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разместить в разделах</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Assign to sections.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Umieść na sekcjach</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>In Abschnitte platzieren</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Adăugați la secțiuni</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Bölümlere yerleştir</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Colocar en secciones</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>PlaceInSections</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandWriteAndClose" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save and close</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zapisz i zamknij</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Speichern und schließen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Salvare și închidere</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Kaydet ve kapat</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Guardar y cerrar</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать объект и закрыть форму</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save changes and close the form.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zapisz obiekt i zamknij formę</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Das Objekt schreiben und das Formular schließen.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Salvați obiectul și forma.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Nesneyi kaydet ve formu kapat</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Guardar el objeto y cerrar el formulario.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>CommandWriteAndClose</Action>
+			<Representation>Text</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CommandWrite" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zapisz</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Schreiben</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Scrieți</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Yaz</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Escribir</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать объект</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save changes.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zapisz obiekt</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Objekt speichern </v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Salvare obiect</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Nesneyi kaydet</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Guardar el objeto</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+S</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>CommandWrite</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="SetVisibility" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить видимость...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Customize visibility...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Ustaw widok...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Sichtbarkeit einstellen...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Setare vizibilitate...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Görünürlüğü ayarla...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Ajustar la visibilidad...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить видимость</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Customize visibility.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Ustaw widok</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Einstellen der Sichtbarkeit</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Setare vizibilitate</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Görünürlüğü ayarla</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Ajustar la visibilidad</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>SetVisibility</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ExecuteCommand" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Run</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wykonaj</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Ausführen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Executare</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Yürüt</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Ejecutar</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить выбранную команду обработки (отчета).</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Run the selected command of report or data processor.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wypełnij wybrane polecenie opracowania (raportu).</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Führen Sie den ausgewählten Verarbeitungsbefehl (Report) aus.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Execută comanda selectată a procesării (raport).</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Seçilmiş (rapor) işleme komutunu çalıştır.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Realizar el comando seleccionado del procesamiento (del informe).</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ExecuteCommand</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>0:4ef362ee-0350-49fe-b40a-3ffa1576aa36</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:1ea304f6-8e8f-4479-aceb-086cf9709ce7</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:4769b1a9-c88a-4d5e-9520-ea46da1ac861</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

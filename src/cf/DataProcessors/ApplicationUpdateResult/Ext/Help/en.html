@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>Two complementary infobase update methods are available for your convenience:</p>
+<ul><li>
+<div>using exclusive processors:</div>
+<ul><li>
+<div>all <a href="Catalog.Users/Help">users</a> are locked out.</div>
+</li><li>
+<div>this method is used to update data that must be fully processed prior to the users logging back on.</div>
+<ul><li>
+<div>the less data volume, the shorter downtime.</div></li></ul></li></ul></li><li>
+<div>using deferred processors:</div>
+<ul><li>
+<div>Users can sign in to the application.</div>
+</li><li>
+<div>this method is used to update the infobase "data archive" (i.e. data not actively accessed by the users, or data that can be accessed by the users while the update is running).</div></li></ul></li></ul><h3>Infobase update</h3>
+<ul><li>The first application startup after the update must be made by the administrator in <strong>Designer</strong> or with the <strong></strong><a href="DataProcessor.InstallUpdates/Help">wizard</a>. At first run, the application finalizes the update. Depending on the update scope and computer performance, it might take time. 
+</li><li>We recommend that you terminate all user sessions before running the application for the first time after update. This is necessary for correct application update. 
+</li><li>If any user sessions in the application are active, you can <a href="DataProcessor.ApplicationLock/Help">log these users out</a> in the file mode and temporarily lock the authorization. In the client/server version, the start is aborted and the "active user sessions" message is displayed. Follow the link to view the <a href="DataProcessor.ActiveUsers/Help">active users</a> list and ask them to end their sessions or to proceed with an update by clicking <strong></strong>. 
+</li><li>The application will prepare active user sessions to being ended. All active users will be asked to sign out. The application will be locked and the update will be resumed. 
+</li><li>However, the application will not shut down; it will continue running and display the <strong></strong><a href="DataProcessor.ApplicationUpdateResult.Form.IBUpdateProgressIndicator/Help"></a>on empty desktops. The message displays the new infobase version number. The indicator displays infobase update progress - both visually and as a percentage. To view detailed information on the infobase update progress, click <strong></strong>in the <a href="DataProcessor.EventLog/Help">event log</a>. 
+</li><li>If an obsolete platform version is used, the application will display a message that requires to update the platform version and lock the desktop. 
+</li><li>The application restarts automatically once the update is finished. The application desktop will open, but the application will be locked. To unlock it and start working with the application, confirm the <a href="DataProcessor.LegitimateSoftware/Help"></a>. 
+</li><li>If the update is interrupted by anything, the application displays the <a href="DataProcessor.ApplicationUpdateResult.Form.UnsuccessfulUpdateMessage/Help"></a>asking to contact technical support. To view such error messages, click <strong></strong>. Users will not able to work with the application until the issues are resolved. 
+</li><li>In case of successful update, the application is unlocked and the <strong></strong>window emerges for all users<strong> </strong>.</li></ul><h3>Change log</h3>
+<ul><li>After the update is completed, you can view <a href="CommonForm.ApplicationReleaseNotes/Help"></a>in the <strong></strong>window and update-related technical details in the event log. If the <a href="DataProcessor.ApplicationUpdateResult.Form.DeferredIBUpdateProgressIndicator/Help"></a>is available in the current application version, you can run and control it. The <strong></strong>window can be accessed in the <strong></strong>section.</li></ul><h3>Features and advantages of deferred infobase updates</h3>
+<ul><li>In Client/server mode, application update may require additional data processing that should be executed in background to reduce downtime. Users can start working with the application before the processing is completed. White the update procedure is running, certain application functionality may be temporarily unavailable. 
+</li><li>In this mode, the documents that have not been processed yet will become temporarily unavailable. If you try to open any of such documents, the program will display the message warning that actions with documents are blocked for the time the application is being updated. Some reports may also become unavailable during the update. When a user attempts to run a report, they get a warning that the report might contain inaccurate data because the update is in progress.</li></ul><h3>Monitoring deferred updates</h3>
+<ul><li>If the application update includes deferred background data processing, the administrator can use the <strong></strong>command in the <strong></strong>section or click <strong></strong>in the <strong></strong>window to monitor the deferred version update progress. </li></ul></body></html>

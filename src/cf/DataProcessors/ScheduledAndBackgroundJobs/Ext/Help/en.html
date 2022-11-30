@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>This form is used to administrate scheduled and background jobs.</p>
+<p>A number of actions in the application can be executed automatically in background mode, on a specific schedule. Such actions are scheduled jobs. For example, it is daily currency rates import, regular report mailing, and deferred document posting. Scheduled jobs allow you to perform routine tasks in the application, and at the same time reduce the human factor (for example, you can forget to import currency rates).</p>
+<p>To open this list, in section <strong>Administration - Service - Scheduled operations</strong>, click <strong>Scheduled and background jobs</strong>.</p>
+<p>The list has the following features: </p>
+<ul><li><a href="#Работа_с_РЗ">Scheduled jobs</a>. 
+</li><li><a href="#Работа_с_ФЗ">Background jobs</a>. 
+</li><li><a href="#КонтрольРЗ">Scheduled job execution monitor</a>.</li></ul><h2><a name="#Работа_с_РЗ">Scheduled jobs</a></h2>
+<p>In the list you can enable or disable <a href="DataProcessor.ScheduledAndBackgroundJobs.Form.ScheduledJob/Help">scheduled job</a> and change schedule.</p>
+<p>The list includes the following columns:</p>
+<ul><li><img src="StdPicture.ScheduledJob"></img> If check box in the column is selected, scheduled job is <strong>Enabled</strong> and is executed according to the specified schedule. 
+</li><li><strong>Description</strong>. This column displays full description of scheduled job. 
+</li><li><strong>State</strong>. This column displays scheduled job execution details. 
+</li><li><strong>End date</strong>. This column displays date and time when the scheduled job is completed.</li></ul><p>If the State and End date columns are &lt;not defined&gt; and the check box is selected, check scheduled job schedule. Perhaps the schedule is incorrect, so the scheduled job cannot be executed.</p>
+<h3>Refreshing lists</h3>
+<ul><li>
+<div>To update information in scheduled job list and on the <strong>Background jobs</strong> tab, click <strong>Update</strong>. Since the lists are linked, the list will be filtered according to the specified settings.</div></li></ul><h3>Schedule settings</h3>
+<ul><li>
+<div>For each scheduled job, a <a href="v8help://mngbase/jobschedule.lf">schedule</a> can be set, according to which the scheduled job will be automatically started. The application supports one-time and periodic schedules. </div>
+</li><li>
+<div>Click <strong>Configure schedule</strong>.</div></li></ul><h3>Scheduled job execution</h3>
+<ul><li>
+<div>To start scheduled job execution immediately, click <strong>Execute now</strong>. </div>
+</li><li>
+<div>In file mode procedure will be executed in the current session.</div>
+</li><li>
+<div>In client server mode procedure will be executed in the background job on server. When a procedure is executed in a background job on server, the last execution date, which is used for execution by a schedule, is not changed.</div>
+</li><li>
+<div>Simultaneous execution of two versions of the same scheduled job is not allowed. If the same scheduled job will be started at the same time, the application will display an error message that the scheduled job cannot be started again.</div></li></ul><h3>Entering new scheduled job</h3>
+<ul><li>
+<div>You can also set two separate schedules for one scheduled job and add a new scheduled task following one of the predefined templates of the application. </div>
+</li><li>
+<div>Click <strong>Add</strong>, select a template from the list, and click <strong>OK</strong>. Fill in the required <a href="DataProcessor.ScheduledAndBackgroundJobs.Form.ScheduledJob/Help">fields</a>.</div></li></ul><h3>Enabling scheduled job</h3>
+<ul><li>
+<div>You can <strong>Enable</strong> or <strong>Disable</strong> scheduled job using the command of the context menu by the right click.</div></li></ul><h2><a name="Работа_с_ФЗ">Background jobs</a></h2>
+<p>According to the specified schedule, a background job is created to execute the scheduled job, which executes scheduled actions. For example, if you set the daily schedule to 09:15 AM, a new background job session starts every day at 9:15 AM. After scheduled operation is completed, the background job is automatically completed.</p>
+<p>The list includes the following columns:</p>
+<ul><li><strong>State</strong>. This column displays execution of a job. 
+</li><li><strong>Description</strong>. This column displays background job description. 
+</li><li><strong>Start</strong>. This column displays date and time when the background job is started. 
+</li><li><strong>Finish</strong>. This column displays date and time when the background job is completed. 
+</li><li><strong>Scheduled job</strong>. This column displays scheduled job description.</li></ul><p>To control scheduled job execution, use background jobs filter.</p>
+<p></p>
+<table width="100%" border="1"><tbody><tr><td valign="top"><strong>Filter</strong></td>
+<td valign="top"><strong>Details</strong></td></tr><tr><td><strong>By state</strong></td>
+<td>
+<ul><li>Allows to filter by a state: 
+<ul><li><strong>Completed</strong>. 
+</li><li><strong>Completed with errors</strong>. 
+</li><li><strong>Canceled</strong>. 
+</li><li><strong>Executing</strong>.</li></ul></li><li>Select the check boxes for necessary filters.</li></ul></td></tr><tr><td valign="top"><strong>By period</strong></td>
+<td valign="top">
+<ul><li>
+<div>Allows to filter by a period:</div>
+<ul><li><strong>Custom</strong>. You can specify a custom period. 
+</li><li><strong>All time</strong>. No filter by period will be applied. 
+</li><li><strong>Last night</strong>. Standard period of 12 hours starting at 9:00 PM till 09:00 AM. 
+</li><li><strong>Yesterday</strong>. Standard period of 24 hours starting at 12:00 AM till 11:59 PM of yesterday. 
+</li><li><strong>Today</strong>. Standard period of 24 hours starting at 12:00 AM till 11:59 PM of today.</li></ul></li></ul></td></tr><tr><td><strong>By scheduled job</strong></td>
+<td>
+<ul><li>Allows to filter by a scheduled job: 
+</li><li>Select the <strong>Filter by scheduled job</strong> check box. 
+</li><li>Select scheduled job name from the list. 
+</li><li>The scheduled job with the name "&lt;not defined&gt;", is used to filter background jobs, <br>started for execution of other (not scheduled) jobs.</li></ul></td></tr></tbody></table><p><strong>Warning!</strong> To filter background jobs according to the selected settings, click <strong>Update</strong>.</p>
+<h3>Viewing information about background job</h3>
+<ul><li>To view background job properties, double click the line. You can also click <strong>Open</strong>.</li></ul><h3><a name="#КонтрольРЗ">Scheduled job execution monitor</a></h3>
+<ul><li>The monitor view can be simple or detailed. 
+</li><li>Simple view includes analysis of the <strong>State</strong> and <strong>End date</strong> columns on the <a href="#Работа_с_РЗ" name="#Работа_с_РЗ">Scheduled jobs</a> tab. It is also includes analysis of the <strong>Messages to user and error details</strong> field in the scheduled job edit window. 
+</li><li>Detailed view includes analysis of background jobs on the <strong>Background jobs</strong> tab that were created and executed to execute scheduled job. 
+</li><li>Detailed view displays background jobs filtered by a specific scheduled job and analysis of background job attributes. Note, that scheduled job execution details are obtained by selection of a part of details of the last background job execution. 
+</li><li>The filter to background jobs is applied only after clicking the <strong>Update</strong> command, so after changing filter settings, execute this command. 
+</li><li>For a detailed analysis of the scheduled jobs execution in client server mode, see the <strong>Duration of scheduled jobs</strong> report from the <a href="Report.EventLogAnalysis/Help">Event log analysis</a> report group. To open it, execute the matching command in the <strong>Administration - Service - Administrator reports</strong> section.</li></ul><h3>See also:</h3>
+<ul><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

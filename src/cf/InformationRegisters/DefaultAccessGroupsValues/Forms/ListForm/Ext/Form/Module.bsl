@@ -1,0 +1,94 @@
+﻿///////////////////////////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 2019, 1C-Soft LLC
+// All Rights reserved. This application and supporting materials are provided under the terms of 
+// Attribution 4.0 International license (CC BY 4.0)
+// The license text is available at:
+// https://creativecommons.org/licenses/by/4.0/legalcode
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#Region EventHandlers
+
+&AtServer
+Procedure OnCreateAtServer(Cancel, StandardProcessing)
+	
+	SetConditionalAppearance();
+	
+	ReadOnly = True;
+	
+EndProcedure
+
+#EndRegion
+
+#Region FormCommandHandlers
+
+&AtClient
+Procedure EnableEditing(Command)
+	
+	ReadOnly = False;
+	
+EndProcedure
+
+&AtClient
+Procedure UpdateRegisterData(Command)
+	
+	HasChanges = False;
+	
+	UpdateRegisterDataAtServer(HasChanges);
+	
+	If HasChanges Then
+		Text = NStr("ru = 'Обновление выполнено успешно.'; en = 'The update is completed.'; pl = 'Aktualizacja zakończona pomyślnie.';de = 'Das Update war erfolgreich.';ro = 'Actualizarea este executată cu succes.';tr = 'Güncelleme başarılı.'; es_ES = 'Actualización se ha realizado con éxito.'");
+	Else
+		Text = NStr("ru = 'Обновление не требуется.'; en = 'The update is not required.'; pl = 'Aktualizacja nie jest wymagana.';de = 'Update ist nicht erforderlich.';ro = 'Actualizarea nu este necesară.';tr = 'Güncelleme gerekmiyor.'; es_ES = 'No se requiere una actualización.'");
+	EndIf;
+	
+	ShowMessageBox(, Text);
+	
+EndProcedure
+
+#EndRegion
+
+#Region Private
+
+&AtServer
+Procedure UpdateRegisterDataAtServer(HasChanges)
+	
+	SetPrivilegedMode(True);
+	
+	InformationRegisters.AccessGroupsValues.UpdateRegisterData(, HasChanges);
+	
+	Items.List.Refresh();
+	
+EndProcedure
+
+&AtServer
+Procedure SetConditionalAppearance()
+	
+	List.SettingsComposer.Settings.ConditionalAppearance.Items.Clear();
+	AccessValuesTypes = Metadata.DefinedTypes.AccessValue.Type.Types();
+	
+	For Each Type In AccessValuesTypes Do
+		Types = New Array;
+		Types.Add(Type);
+		TypeDetails = New TypeDescription(Types);
+		TypeBlankRef = TypeDetails.AdjustValue(Undefined);
+		
+		// Conditional appearance.
+		AppearanceItem = List.SettingsComposer.Settings.ConditionalAppearance.Items.Add();
+		AppearanceItem.ViewMode = DataCompositionSettingsItemViewMode.Inaccessible;
+		
+		AppearanceItem.Appearance.SetParameterValue("Text", String(Type));
+		
+		FilterItem = AppearanceItem.Filter.Items.Add(Type("DataCompositionFilterItem"));
+		FilterItem.LeftValue  = New DataCompositionField("AccessValuesType");
+		FilterItem.ComparisonType   = DataCompositionComparisonType.Equal;
+		FilterItem.RightValue = TypeBlankRef;
+		FilterItem.Use  = True;
+		
+		FieldItem = AppearanceItem.Fields.Items.Add();
+		FieldItem.Field = New DataCompositionField("AccessValuesType");
+		FieldItem.Use = True;
+	EndDo;
+	
+EndProcedure
+
+#EndRegion

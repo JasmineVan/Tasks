@@ -1,0 +1,956 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="BeforeWriteAtServer">BeforeWriteAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupDescriptionOrder" id="239">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа: наименование и порядок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group: name and order</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа: наименование и порядок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group: name and order</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupDescriptionOrderExtendedTooltip" id="240"/>
+			<ChildItems>
+				<InputField name="Description" id="3">
+					<DataPath>Object.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="DescriptionContextMenu" id="4"/>
+					<ExtendedTooltip name="DescriptionExtendedTooltip" id="133"/>
+				</InputField>
+				<InputField name="Order" id="7">
+					<DataPath>Object.Order</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="OrderContextMenu" id="8"/>
+					<ExtendedTooltip name="OrderExtendedTooltip" id="238"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupStepTypeActive" id="241">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа: вид шага и отключить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group: step type and disable</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group step type active</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupStepTypeActiveExtendedTooltip" id="242"/>
+			<ChildItems>
+				<InputField name="StepType" id="9">
+					<DataPath>Object.StepType</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="StepTypeContextMenu" id="10"/>
+					<ExtendedTooltip name="StepTypeExtendedTooltip" id="135"/>
+					<Events>
+						<Event name="OnChange">StepTypeOnChange</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="Active" id="35">
+					<DataPath>Object.Active</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ActiveContextMenu" id="36"/>
+					<ExtendedTooltip name="ActiveExtendedTooltip" id="237"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="DistributionWhatHow" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределение что как</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Allocation that as</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределение что как</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Allocation that as</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="DistributionWhatHowExtendedTooltip" id="136"/>
+			<ChildItems>
+				<UsualGroup name="WhatDistribute" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Что распределяем</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>What to allocate</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Что распределяем</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>What to allocate</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="WhatDistributeExtendedTooltip" id="137"/>
+					<ChildItems>
+						<InputField name="BudgetSection" id="13">
+							<DataPath>Object.BudgetSection</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.fmBudgetFlowOperationTypes.EnumValue.Incomes</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.fmBudgetFlowOperationTypes.EnumValue.Expenses</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="BudgetSectionContextMenu" id="14"/>
+							<ExtendedTooltip name="BudgetSectionExtendedTooltip" id="138"/>
+						</InputField>
+						<InputField name="DepartmentTurnover" id="15">
+							<DataPath>Object.DepartmentTurnover</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Какого подразделения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Which department</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoChoiceIncomplete>false</AutoChoiceIncomplete>
+							<AutoMarkIncomplete>false</AutoMarkIncomplete>
+							<ContextMenu name="DepartmentTurnoverContextMenu" id="16"/>
+							<ExtendedTooltip name="DepartmentTurnoverExtendedTooltip" id="140"/>
+						</InputField>
+						<Table name="ItemsTurnover" id="25">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.ItemsTurnover</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ItemsTurnoverContextMenu" id="26"/>
+							<AutoCommandBar name="ItemsTurnoverCommandBar" id="27"/>
+							<ExtendedTooltip name="ItemsTurnoverExtendedTooltip" id="141"/>
+							<SearchStringAddition name="ItemsTurnoverSearchString" id="142">
+								<AdditionSource>
+									<Item>ItemsTurnover</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ItemsTurnoverSearchStringContextMenu" id="143"/>
+								<ExtendedTooltip name="ItemsTurnoverSearchStringExtendedTooltip" id="144"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ItemsTurnoverViewStatus" id="145">
+								<AdditionSource>
+									<Item>ItemsTurnover</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ItemsTurnoverViewStatusContextMenu" id="146"/>
+								<ExtendedTooltip name="ItemsTurnoverViewStatusExtendedTooltip" id="147"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ItemsTurnoverSearchControl" id="148">
+								<AdditionSource>
+									<Item>ItemsTurnover</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ItemsTurnoverSearchControlContextMenu" id="149"/>
+								<ExtendedTooltip name="ItemsTurnoverSearchControlExtendedTooltip" id="150"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ItemsTurnoverItemTurnover" id="28">
+									<DataPath>Object.ItemsTurnover.ItemTurnover</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ItemsTurnoverItemTurnoverContextMenu" id="29"/>
+									<ExtendedTooltip name="ItemsTurnoverItemTurnoverExtendedTooltip" id="151"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ProjectsTurnover" id="120">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.ProjectsTurnover</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ProjectsTurnoverContextMenu" id="121"/>
+							<AutoCommandBar name="ProjectsTurnoverCommandBar" id="122"/>
+							<ExtendedTooltip name="ProjectsTurnoverExtendedTooltip" id="152"/>
+							<SearchStringAddition name="ProjectsTurnoverSearchString" id="153">
+								<AdditionSource>
+									<Item>ProjectsTurnover</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ProjectsTurnoverSearchStringContextMenu" id="154"/>
+								<ExtendedTooltip name="ProjectsTurnoverSearchStringExtendedTooltip" id="155"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ProjectsTurnoverViewStatus" id="156">
+								<AdditionSource>
+									<Item>ProjectsTurnover</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ProjectsTurnoverViewStatusContextMenu" id="157"/>
+								<ExtendedTooltip name="ProjectsTurnoverViewStatusExtendedTooltip" id="158"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ProjectsTurnoverSearchControl" id="159">
+								<AdditionSource>
+									<Item>ProjectsTurnover</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ProjectsTurnoverSearchControlContextMenu" id="160"/>
+								<ExtendedTooltip name="ProjectsTurnoverSearchControlExtendedTooltip" id="161"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ProjectsTurnoverProjectTurnover" id="125">
+									<DataPath>Object.ProjectsTurnover.ProjectTurnover</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ProjectsTurnoverProjectTurnoverContextMenu" id="126"/>
+									<ExtendedTooltip name="ProjectsTurnoverProjectTurnoverExtendedTooltip" id="162"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="HowDistribute" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Как распределяем</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>How to allocate</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Как распределяем</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>How to allocate</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="HowDistributeExtendedTooltip" id="163"/>
+					<ChildItems>
+						<InputField name="DistributionBase" id="19">
+							<DataPath>Object.DistributionBase</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="DistributionBaseContextMenu" id="20"/>
+							<ExtendedTooltip name="DistributionBaseExtendedTooltip" id="164"/>
+						</InputField>
+						<InputField name="AggregationItem" id="23">
+							<DataPath>Object.AggregationItem</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="AggregationItemContextMenu" id="24"/>
+							<ExtendedTooltip name="AggregationItemExtendedTooltip" id="167"/>
+						</InputField>
+						<InputField name="RecipientDepartment" id="118">
+							<DataPath>Object.RecipientDepartment</DataPath>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="RecipientDepartmentContextMenu" id="119"/>
+							<ExtendedTooltip name="RecipientDepartmentExtendedTooltip" id="168"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="BaseAssemble" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбор базы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Gathering allocation base</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбор базы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Gathering allocation base</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="BaseAssembleExtendedTooltip" id="170"/>
+			<ChildItems>
+				<Page name="HowAssemble" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Как собираем</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>How to assemble/collect</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Как собираем</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>How to assemble/collect</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="HowAssembleExtendedTooltip" id="171"/>
+					<ChildItems>
+						<InputField name="DistributionBase1" id="39">
+							<DataPath>Object.DistributionBase</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="DistributionBase1ContextMenu" id="40"/>
+							<ExtendedTooltip name="DistributionBase1ExtendedTooltip" id="172"/>
+							<Events>
+								<Event name="OnChange">DistributionBase1OnChange</Event>
+							</Events>
+						</InputField>
+						<InputField name="DistributionBasePeriodicity" id="114">
+							<DataPath>Object.DistributionBasePeriodicity</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Периодичность базы. Отдельная база на</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Base frequency. Separate base as of</v8:content>
+								</v8:item>
+							</Title>
+							<ChoiceButton>false</ChoiceButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.fmAvailableReportPeriods.EnumValue.Month</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.fmAvailableReportPeriods.EnumValue.Quarter</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.fmAvailableReportPeriods.EnumValue.Year</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="DistributionBasePeriodicityContextMenu" id="115"/>
+							<ExtendedTooltip name="DistributionBasePeriodicityExtendedTooltip" id="173"/>
+						</InputField>
+						<Pages name="BaseAssembleAlgorithms" id="41">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Алгоритма сбора баз</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Base gathering algorithm</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Алгоритма сбора баз</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Base gathering algorithm</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="BaseAssembleAlgorithmsExtendedTooltip" id="174"/>
+							<ChildItems>
+								<Page name="BasesAssembleQuery" id="42">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запрос сбора</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Collection (gathering) query</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запрос сбора баз</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Base collection (gathering) query</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="BasesAssembleQueryExtendedTooltip" id="175"/>
+									<ChildItems>
+										<CommandBar name="QueryButtons" id="43">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кнопки запроса</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Inquiry buttons</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кнопки запроса</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Inquiry buttons</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="QueryButtonsExtendedTooltip" id="176"/>
+											<ChildItems>
+												<Button name="QueryWizard" id="44">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.QueryWizard</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Конструктор</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Builder</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="QueryWizardExtendedTooltip" id="177"/>
+												</Button>
+												<Button name="CheckQueryText" id="45">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.CheckQueryText</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Проверить</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Verify</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="CheckQueryTextExtendedTooltip" id="178"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+										<TextDocumentField name="BaseAssembleAlgorithm" id="46">
+											<DataPath>Object.BaseAssembleAlgorithm</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="BaseAssembleAlgorithmContextMenu" id="47"/>
+											<ExtendedTooltip name="BaseAssembleAlgorithmExtendedTooltip" id="179"/>
+										</TextDocumentField>
+										<LabelDecoration name="BaseQueryDescription" id="48">
+											<TextColor>style:NoteText</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пояснение к запросу базы</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Explanation to the base query</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="BaseQueryDescriptionContextMenu" id="49"/>
+											<ExtendedTooltip name="BaseQueryDescriptionExtendedTooltip" id="180"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="BasesAssembleQueryParameters" id="50">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Параметры</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Parameters</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Параметры запроса сбора баз</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Query parameters for gathering an allocation base</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="BasesAssembleQueryParametersExtendedTooltip" id="181"/>
+									<ChildItems>
+										<LabelDecoration name="ExplanationByPredefinedParameters" id="51">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Следующие параметры заполняются автоматически:</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>The following parameters are filled automatically:</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ExplanationByPredefinedParametersContextMenu" id="52"/>
+											<ExtendedTooltip name="ExplanationByPredefinedParametersExtendedTooltip" id="182"/>
+										</LabelDecoration>
+										<LabelDecoration name="ExplanationByPredefinedParameters2" id="53">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>НачалоПериода, ОкончаниеПериода, ДатаОстатка, Периметр, ВсеБалансоваяЕдиницаПериметра, НачалоПериодаБазы, ОкончаниеПериодаБазы.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>НачалоПериода, ОкончаниеПериода, ДатаОстатка, Периметр, ВсеБалансоваяЕдиницаПериметра, НачалоПериодаБазы, ОкончаниеПериодаБазы.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ExplanationByPredefinedParameters2ContextMenu" id="54"/>
+											<ExtendedTooltip name="ExplanationByPredefinedParameters2ExtendedTooltip" id="183"/>
+										</LabelDecoration>
+										<LabelDecoration name="ExplanationByPredefinedParameters3" id="55">
+											<HorizontalStretch>true</HorizontalStretch>
+											<TextColor>style:NoteText</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Если нужно явно переопределить параметр, он должен присутствовать в таблице ниже, если нет - удалите строку с ним из таблицы.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>If you need to override the parameter, it must be presented in the table below, if not, delete the row containing it from the table.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ExplanationByPredefinedParameters3ContextMenu" id="56"/>
+											<ExtendedTooltip name="ExplanationByPredefinedParameters3ExtendedTooltip" id="184"/>
+										</LabelDecoration>
+										<Table name="BaseAssembleQueryParameters" id="57">
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>Object.BaseAssembleQueryParameters</DataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="BaseAssembleQueryParametersContextMenu" id="58"/>
+											<AutoCommandBar name="BaseAssembleQueryParametersCommandBar" id="59">
+												<ChildItems>
+													<Button name="ЗаполнитьПараметрыЗапроса" id="68">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.FillQueryParameters</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Заполнить</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Fill in</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ЗаполнитьПараметрыЗапросаРасширеннаяПодсказка" id="185"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="BaseAssembleQueryParametersExtendedTooltip" id="186"/>
+											<SearchStringAddition name="BaseAssembleQueryParametersSearchString" id="187">
+												<AdditionSource>
+													<Item>BaseAssembleQueryParameters</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="BaseAssembleQueryParametersSearchStringContextMenu" id="188"/>
+												<ExtendedTooltip name="BaseAssembleQueryParametersSearchStringExtendedTooltip" id="189"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="BaseAssembleQueryParametersViewStatus" id="190">
+												<AdditionSource>
+													<Item>BaseAssembleQueryParameters</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="BaseAssembleQueryParametersViewStatusContextMenu" id="191"/>
+												<ExtendedTooltip name="BaseAssembleQueryParametersViewStatusExtendedTooltip" id="192"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="BaseAssembleQueryParametersSearchControl" id="193">
+												<AdditionSource>
+													<Item>BaseAssembleQueryParameters</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="BaseAssembleQueryParametersSearchControlContextMenu" id="194"/>
+												<ExtendedTooltip name="BaseAssembleQueryParametersSearchControlExtendedTooltip" id="195"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="BaseAssembleQueryParametersLineNumber" id="100">
+													<DataPath>Object.BaseAssembleQueryParameters.LineNumber</DataPath>
+													<Visible>false</Visible>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="BaseAssembleQueryParametersLineNumberContextMenu" id="101"/>
+													<ExtendedTooltip name="BaseAssembleQueryParametersLineNumberExtendedTooltip" id="196"/>
+												</LabelField>
+												<InputField name="BaseAssembleQueryParametersParameterName" id="102">
+													<DataPath>Object.BaseAssembleQueryParameters.ParameterName</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="BaseAssembleQueryParametersParameterNameContextMenu" id="103"/>
+													<ExtendedTooltip name="BaseAssembleQueryParametersParameterNameExtendedTooltip" id="197"/>
+												</InputField>
+												<CheckBoxField name="BaseAssembleQueryParametersValueList" id="104">
+													<DataPath>Object.BaseAssembleQueryParameters.ValueList</DataPath>
+													<Visible>false</Visible>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="BaseAssembleQueryParametersValueListContextMenu" id="105"/>
+													<ExtendedTooltip name="BaseAssembleQueryParametersValueListExtendedTooltip" id="198"/>
+												</CheckBoxField>
+												<InputField name="BaseAssembleQueryParametersParameterValue" id="106">
+													<DataPath>Object.BaseAssembleQueryParameters.ParameterValue</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Значение</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Value</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ChoiceFoldersAndItems>FoldersAndItems</ChoiceFoldersAndItems>
+													<ContextMenu name="BaseAssembleQueryParametersParameterValueContextMenu" id="107"/>
+													<ExtendedTooltip name="BaseAssembleQueryParametersParameterValueExtendedTooltip" id="199"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="HowUse" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Как используем</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>How to use</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Как используем</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>How to use</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="HowUseExtendedTooltip" id="200"/>
+					<ChildItems>
+						<InputField name="Department1" id="70">
+							<DataPath>Object.DepartmentTurnover</DataPath>
+							<ContextMenu name="Department1ContextMenu" id="71"/>
+							<ExtendedTooltip name="Department1ExtendedTooltip" id="201"/>
+						</InputField>
+						<InputField name="BudgetingScenario" id="116">
+							<DataPath>Object.BudgetingScenario</DataPath>
+							<ContextMenu name="BudgetingScenarioContextMenu" id="117"/>
+							<ExtendedTooltip name="BudgetingScenarioExtendedTooltip" id="202"/>
+						</InputField>
+						<LabelDecoration name="ExplanationHowUseAssembleBase" id="76">
+							<TextColor>style:NoteText</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ПояснениеКакИспользуемСобираемуюБазу</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>ExplanationHowToUseYet-To-Be-GatheredBase</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ExplanationHowUseAssembleBaseContextMenu" id="77"/>
+							<ExtendedTooltip name="ExplanationHowUseAssembleBaseExtendedTooltip" id="205"/>
+						</LabelDecoration>
+						<Table name="ItemsTurnover1" id="78">
+							<HeightInTableRows>3</HeightInTableRows>
+							<Header>false</Header>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Object.ItemsTurnover</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ItemsTurnover1ContextMenu" id="79"/>
+							<AutoCommandBar name="ItemsTurnover1CommandBar" id="80"/>
+							<ExtendedTooltip name="ItemsTurnover1ExtendedTooltip" id="206"/>
+							<SearchStringAddition name="ItemsTurnover1SearchString" id="207">
+								<AdditionSource>
+									<Item>ItemsTurnover1</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ItemsTurnover1SearchStringContextMenu" id="208"/>
+								<ExtendedTooltip name="ItemsTurnover1SearchStringExtendedTooltip" id="209"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ItemsTurnover1ViewStatus" id="210">
+								<AdditionSource>
+									<Item>ItemsTurnover1</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ItemsTurnover1ViewStatusContextMenu" id="211"/>
+								<ExtendedTooltip name="ItemsTurnover1ViewStatusExtendedTooltip" id="212"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ItemsTurnover1SearchControl" id="213">
+								<AdditionSource>
+									<Item>ItemsTurnover1</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ItemsTurnover1SearchControlContextMenu" id="214"/>
+								<ExtendedTooltip name="ItemsTurnover1SearchControlExtendedTooltip" id="215"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ItemsTurnover1LineNumber" id="108">
+									<DataPath>Object.ItemsTurnover.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ItemsTurnover1LineNumberContextMenu" id="109"/>
+									<ExtendedTooltip name="ItemsTurnover1LineNumberExtendedTooltip" id="216"/>
+								</LabelField>
+								<InputField name="ItemsTurnover1ItemTurnover" id="110">
+									<DataPath>Object.ItemsTurnover.ItemTurnover</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ItemsTurnover1ItemTurnoverContextMenu" id="111"/>
+									<ExtendedTooltip name="ItemsTurnover1ItemTurnoverExtendedTooltip" id="217"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="ExplanationAssembledBaseItems" id="87">
+							<TextColor>style:NoteText</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Будет создан отдельный документ с базой распределения для каждой статьи из списка. Если нужен документ по одной статье, укажите только её, если по пустой статье - список должен быть пуст.</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>A single document with an allocation base for each item from the list will be created. If you need a document for one item, you need to specify this item, if you need a document for a blank item, the list shall be empty.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ExplanationAssembledBaseItemsContextMenu" id="88"/>
+							<ExtendedTooltip name="ExplanationAssembledBaseItemsExtendedTooltip" id="218"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Comment" id="112">
+			<DataPath>Object.Comment</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>5</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="CommentContextMenu" id="113"/>
+			<ExtendedTooltip name="CommentExtendedTooltip" id="233"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Object</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogObject.fmBudgetDistributionSteps</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="QueryWizard" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор запроса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Query builder</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор запроса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Query builder</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.QueryWizard</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>QueryWizard</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="CheckQueryText" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить текст запроса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check a query text</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить текст запроса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check a query text</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckSyntax</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>CheckQueryText</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="FillQueryParameters" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить параметры запроса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Fill in query parameters</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить параметры запроса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Fill in query parameters</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionDataParameters</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>FillQueryParameters</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

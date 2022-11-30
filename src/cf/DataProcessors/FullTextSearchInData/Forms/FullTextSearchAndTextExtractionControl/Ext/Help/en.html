@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><style>TABLE {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; WIDTH: 98%; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; cellSpacing: 4; cellPadding: 0
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+</style><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>Use this form to enable and disable full-text search, update full-text search index, and set up extraction of text from file for using upon the search.</p>
+<p>Opened by the reference <strong>Set up</strong> <strong>Administration. Common settings. Data search</strong> section.</p><a name="СтандартныеПодсистемы.ПолнотекстовыйПоиск">
+<p>This application allows to perform f<a href="DataProcessor.FullTextSearchInData/Help">ull-text search</a> in all directories, documents and other objects, looking for a specified string in any object field. If any attached files containing text data are found, their contents will also be searched. Full-text search is used when searching data in the in application by the contents of directories, documents and other applied objects. </p>
+<p>The full-text search feature supports: latinization (conversion of non-Latin characters to Latin), substitution (using Latin characters instead of identically-looking non-Latin letters), and fuzzy search (finding strings approximately matching the search string).</p>
+<p>To start working with full-text search, select the <strong>Full-text data search</strong> check box. In this case, the commands that allow you to configure full-text data search in the application, manage the full-text search index, and update and clear it, become available. The check box is enabled by default.</p>
+<p>In the application file mode only commands that manage full-text index are available, texts are extracted automatically at importing file into the application.</p>
+<h3>Temporary disabling of full-text search</h3>
+<ul><li>
+<div>Check box <strong>Use full-text search</strong> is enabled by default. It is recommended that you disable the full-text search if it is necessary to improve application speed slightly and data search in application is not required to users. </div></li></ul><h3>Size of data being indexed</h3>
+<ul><li>Using according check box, you can <strong>Restrict max size of data being indexed</strong>. Restriction is 1 MB by default. It can be in demand if the computer resources, where the application is installed, are restricted.</li></ul></a>
+<h3>Update full-text search index</h3>
+<ul><li>In order to search by all the data entered into the application, it is necessary to regularly update the full-text search index. To automatically update the index, the <strong>Update full text search index</strong> and <strong>Merge full text search index</strong> scheduled jobs are used (executed once in 24 hours). 
+</li><li>If the index has already been updated, then the <strong>Index relevance date</strong> is displayed. It is the date of the index last update. 
+</li><li>If the application has data that has not been indexed, then the <strong>Update Index</strong> button becomes available and the "Update Required" <strong>index status</strong> is displayed.</li></ul><h3>Clear full-text search index</h3>
+<ul><li>If search operation is damaged for some reason, click <strong>Clear index</strong> to delete all files of the full-text index. After you delete the index, you need to build it again. To do it, click <strong>Update index</strong>.</li></ul><h3>Check full-text search index</h3>
+<ul><li>
+<div>You can check the status of the full-text search index at any time, clicking <strong>Check index</strong>.</div></li></ul><p>In the client/server mode, commands for setting up automatic text extraction are available.</p>
+<h3>Automatic text extraction</h3>
+<p>Text extraction from files is required for full-text search in the application.</p>
+<p>To configure, select the following using the switch:</p>
+<ul><a name="СтандартныеПодсистемы.РегламентныеЗадания">
+<li><strong>Servers under OS Windows in the cluster</strong>. In this case, the <strong>Configure schedule</strong> command becomes available, using which you can <a href="DataProcessor.ScheduledAndBackgroundJobs.Form.ScheduledJob/Help">configure scheduled job</a>. Specify <a href="v8help://mngbase/jobschedule.lf">schedule</a> and other parameters of scheduled job for text extraction from files.</li></a> <br>This option is suitable, when the following rule for server running under Microsoft Windows is specified in the Administration of 1C Enterprize servers : 
+<ul><li>Rule object: Client connection with the infobase. 
+</li><li>Rule type: Assign. 
+</li><li>infobase name: not specified. 
+</li><li>Additional parameter value: BackgroundJob.CommonModule.FullTextSearchServerUpdate.FullTextSearchIndexOnSchedule.</li></ul><li><strong>No servers under OS Windows in the cluster (all servers in the cluster are under OS Linux only)</strong>. In this case, using the <strong>Start text extraction</strong> command, you can start <a href="DataProcessor.AutoTextExtraction/Help">text extraction</a> in the thin client on a workstation under Windows.<br><ul><li>If in client/server mode one or more working processes run on a Linux server, and one or more client computers are connected via web client, the infobase can contain files that skipped text extraction procedure and therefore cannot be found by using full-text content search. In this case, you need to start thin or thick client on any client computer running under Microsoft Windows, and execute the <strong>Text extraction</strong> to extract text from files in the automatic mode. The default execution time interval is 60 seconds. </li></ul></li></ul><h3>See also:</h3>
+<li><a href="v8help://frame/form_common">Working with forms</a> </li></body></html>

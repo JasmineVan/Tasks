@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="BeforeWriteAtServer">BeforeWriteAtServer</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Group1" id="215">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Group1ExtendedTooltip" id="216"/>
+			<ChildItems>
+				<UsualGroup name="DogTrackingInformation" id="205">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dog Tracking Information</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Dog tracking information</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="DogTrackingInformationExtendedTooltip" id="206"/>
+					<ChildItems>
+						<UsualGroup name="VisitData" id="189">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Visit data</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Visit data</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="VisitDataExtendedTooltip" id="190"/>
+							<ChildItems>
+								<InputField name="StartTime" id="191">
+									<DataPath>Object.StartTime</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Check in</v8:content>
+										</v8:item>
+									</Title>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>DF='dd/MM/yyyy hh:mm:ss tt'</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="StartTimeContextMenu" id="192"/>
+									<ExtendedTooltip name="StartTimeExtendedTooltip" id="193"/>
+								</InputField>
+								<InputField name="EndTime" id="179">
+									<DataPath>Object.EndTime</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Check out</v8:content>
+										</v8:item>
+									</Title>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>DF='dd/MM/yyyy hh:mm:ss tt'</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="EndTimeContextMenu" id="180"/>
+									<ExtendedTooltip name="EndTimeExtendedTooltip" id="181"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Dog" id="10">
+							<DataPath>Object.Dog</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>30</MaxWidth>
+							<ContextMenu name="DogContextMenu" id="11"/>
+							<ExtendedTooltip name="DogExtendedTooltip" id="12"/>
+							<Events>
+								<Event name="OnChange">DogOnChange</Event>
+							</Events>
+						</InputField>
+						<InputField name="DogOwner" id="7">
+							<DataPath>Object.DogOwner</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Customer</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>30</MaxWidth>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="DogOwnerContextMenu" id="8"/>
+							<ExtendedTooltip name="DogOwnerExtendedTooltip" id="9"/>
+							<Events>
+								<Event name="StartChoice">DogOwnerStartChoice</Event>
+								<Event name="ChoiceProcessing">DogOwnerChoiceProcessing</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="DocInform" id="187">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Doc inform</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Doc inform</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="DocInformExtendedTooltip" id="188"/>
+							<ChildItems>
+								<InputField name="Number" id="1">
+									<DataPath>Object.Number</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="NumberContextMenu" id="2"/>
+									<ExtendedTooltip name="NumberExtendedTooltip" id="3"/>
+								</InputField>
+								<InputField name="Date" id="4">
+									<DataPath>Object.Date</DataPath>
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Date</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="DateContextMenu" id="5"/>
+									<ExtendedTooltip name="DateExtendedTooltip" id="6"/>
+								</InputField>
+								<InputField name="Purpose" id="194">
+									<DataPath>Object.Purpose</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>30</MaxWidth>
+									<ContextMenu name="PurposeContextMenu" id="195"/>
+									<ExtendedTooltip name="PurposeExtendedTooltip" id="196"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="WeightAndAge" id="182">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Weight and age</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="WeightAndAgeExtendedTooltip" id="183"/>
+							<ChildItems>
+								<InputField name="Weight" id="13">
+									<DataPath>Object.Weight</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="WeightContextMenu" id="14"/>
+									<ExtendedTooltip name="WeightExtendedTooltip" id="15"/>
+								</InputField>
+								<InputField name="DogAge" id="184">
+									<DataPath>Object.Dog.Age</DataPath>
+									<ContextMenu name="DogAgeContextMenu" id="185"/>
+									<ExtendedTooltip name="DogAgeExtendedTooltip" id="186"/>
+								</InputField>
+								<InputField name="Zone" id="209">
+									<DataPath>Object.Zone</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>10</MaxWidth>
+									<QuickChoice>true</QuickChoice>
+									<ContextMenu name="ZoneContextMenu" id="210"/>
+									<ExtendedTooltip name="ZoneExtendedTooltip" id="211"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<PictureField name="Picture" id="212">
+					<DataPath>Picture</DataPath>
+					<PictureSize>AutoSize</PictureSize>
+					<ContextMenu name="PictureContextMenu" id="213"/>
+					<ExtendedTooltip name="PictureExtendedTooltip" id="214"/>
+				</PictureField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="History" id="207">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Health, Injection, Louse History</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>History</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="HistoryExtendedTooltip" id="208"/>
+			<ChildItems>
+				<Pages name="Pages" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Pages</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="PagesExtendedTooltip" id="17"/>
+					<ChildItems>
+						<Page name="GroupHealthStatus" id="18">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Health status</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="GroupHealthStatusExtendedTooltip" id="19"/>
+							<ChildItems>
+								<Table name="HealthStatus" id="115">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Object.HealthStatus</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="HealthStatusContextMenu" id="116"/>
+									<AutoCommandBar name="HealthStatusCommandBar" id="117"/>
+									<ExtendedTooltip name="HealthStatusExtendedTooltip" id="118"/>
+									<SearchStringAddition name="HealthStatusSearchString" id="119">
+										<AdditionSource>
+											<Item>HealthStatus</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="HealthStatusSearchStringContextMenu" id="120"/>
+										<ExtendedTooltip name="HealthStatusSearchStringExtendedTooltip" id="121"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="HealthStatusViewStatus" id="122">
+										<AdditionSource>
+											<Item>HealthStatus</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="HealthStatusViewStatusContextMenu" id="123"/>
+										<ExtendedTooltip name="HealthStatusViewStatusExtendedTooltip" id="124"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="HealthStatusSearchControl" id="125">
+										<AdditionSource>
+											<Item>HealthStatus</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="HealthStatusSearchControlContextMenu" id="126"/>
+										<ExtendedTooltip name="HealthStatusSearchControlExtendedTooltip" id="127"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="HealthStatusLineNumber" id="128">
+											<DataPath>Object.HealthStatus.LineNumber</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="HealthStatusLineNumberContextMenu" id="129"/>
+											<ExtendedTooltip name="HealthStatusLineNumberExtendedTooltip" id="130"/>
+										</LabelField>
+										<InputField name="HealthStatusDateIn" id="131">
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="HealthStatusDateInContextMenu" id="132"/>
+											<ExtendedTooltip name="HealthStatusDateInExtendedTooltip" id="133"/>
+										</InputField>
+										<InputField name="HealthStatusOwner" id="134">
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="HealthStatusOwnerContextMenu" id="135"/>
+											<ExtendedTooltip name="HealthStatusOwnerExtendedTooltip" id="136"/>
+										</InputField>
+										<InputField name="HealthStatusDisease" id="137">
+											<DataPath>Object.HealthStatus.Disease</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="HealthStatusDiseaseContextMenu" id="138"/>
+											<ExtendedTooltip name="HealthStatusDiseaseExtendedTooltip" id="139"/>
+										</InputField>
+										<InputField name="HealthStatusDateOut" id="140">
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="HealthStatusDateOutContextMenu" id="141"/>
+											<ExtendedTooltip name="HealthStatusDateOutExtendedTooltip" id="142"/>
+										</InputField>
+										<InputField name="HealthStatusWieght" id="143">
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="HealthStatusWieghtContextMenu" id="144"/>
+											<ExtendedTooltip name="HealthStatusWieghtExtendedTooltip" id="145"/>
+										</InputField>
+										<InputField name="HealthStatusPurpose" id="197">
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="HealthStatusPurposeContextMenu" id="198"/>
+											<ExtendedTooltip name="HealthStatusPurposeExtendedTooltip" id="199"/>
+										</InputField>
+										<CheckBoxField name="HealthStatusIsCured" id="200">
+											<DataPath>Object.HealthStatus.IsCured</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="HealthStatusIsCuredContextMenu" id="201"/>
+											<ExtendedTooltip name="HealthStatusIsCuredExtendedTooltip" id="202"/>
+										</CheckBoxField>
+										<InputField name="HealthStatusVeterinarian" id="173">
+											<DataPath>Object.HealthStatus.Veterinarian</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="HealthStatusVeterinarianContextMenu" id="174"/>
+											<ExtendedTooltip name="HealthStatusVeterinarianExtendedTooltip" id="175"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="GroupInjectionHistory" id="51">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Injection history</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="GroupInjectionHistoryExtendedTooltip" id="52"/>
+							<ChildItems>
+								<Table name="InjectionHistory" id="53">
+									<Representation>List</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Object.InjectionHistory</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="InjectionHistoryContextMenu" id="54"/>
+									<AutoCommandBar name="InjectionHistoryCommandBar" id="55"/>
+									<ExtendedTooltip name="InjectionHistoryExtendedTooltip" id="56"/>
+									<SearchStringAddition name="InjectionHistorySearchString" id="57">
+										<AdditionSource>
+											<Item>InjectionHistory</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="InjectionHistorySearchStringContextMenu" id="58"/>
+										<ExtendedTooltip name="InjectionHistorySearchStringExtendedTooltip" id="59"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="InjectionHistoryViewStatus" id="60">
+										<AdditionSource>
+											<Item>InjectionHistory</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="InjectionHistoryViewStatusContextMenu" id="61"/>
+										<ExtendedTooltip name="InjectionHistoryViewStatusExtendedTooltip" id="62"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="InjectionHistorySearchControl" id="63">
+										<AdditionSource>
+											<Item>InjectionHistory</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="InjectionHistorySearchControlContextMenu" id="64"/>
+										<ExtendedTooltip name="InjectionHistorySearchControlExtendedTooltip" id="65"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="InjectionHistoryLineNumber" id="66">
+											<DataPath>Object.InjectionHistory.LineNumber</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="InjectionHistoryLineNumberContextMenu" id="67"/>
+											<ExtendedTooltip name="InjectionHistoryLineNumberExtendedTooltip" id="68"/>
+										</LabelField>
+										<InputField name="InjectionHistoryDate" id="69">
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="InjectionHistoryDateContextMenu" id="70"/>
+											<ExtendedTooltip name="InjectionHistoryDateExtendedTooltip" id="71"/>
+										</InputField>
+										<InputField name="InjectionHistoryVaccine" id="72">
+											<DataPath>Object.InjectionHistory.Vaccine</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Vaccine</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="InjectionHistoryVaccineContextMenu" id="73"/>
+											<ExtendedTooltip name="InjectionHistoryVaccineExtendedTooltip" id="74"/>
+										</InputField>
+										<InputField name="InjectionHistoryOwner" id="75">
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="InjectionHistoryOwnerContextMenu" id="76"/>
+											<ExtendedTooltip name="InjectionHistoryOwnerExtendedTooltip" id="77"/>
+										</InputField>
+										<InputField name="InjectionHistoryNextVaccination" id="78">
+											<DataPath>Object.InjectionHistory.NextVaccination</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="InjectionHistoryNextVaccinationContextMenu" id="79"/>
+											<ExtendedTooltip name="InjectionHistoryNextVaccinationExtendedTooltip" id="80"/>
+										</InputField>
+										<InputField name="InjectionHistoryWeight" id="81">
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="InjectionHistoryWeightContextMenu" id="82"/>
+											<ExtendedTooltip name="InjectionHistoryWeightExtendedTooltip" id="83"/>
+										</InputField>
+										<InputField name="InjectionHistoryDisease" id="84">
+											<DataPath>Object.InjectionHistory.Disease</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="InjectionHistoryDiseaseContextMenu" id="85"/>
+											<ExtendedTooltip name="InjectionHistoryDiseaseExtendedTooltip" id="86"/>
+										</InputField>
+										<InputField name="InjectionHistoryVeterinarian" id="176">
+											<DataPath>Object.InjectionHistory.Veterinarian</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="InjectionHistoryVeterinarianContextMenu" id="177"/>
+											<ExtendedTooltip name="InjectionHistoryVeterinarianExtendedTooltip" id="178"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="LouseDogTreatmentGroup" id="146">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Louse treatment</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Louse dog treatment group</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>HorizontalIfPossible</Group>
+							<ExtendedTooltip name="LouseDogTreatmentGroupExtendedTooltip" id="147"/>
+							<ChildItems>
+								<Table name="LouseDogTreatment" id="148">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Object.LouseDogTreatment</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="LouseDogTreatmentContextMenu" id="149"/>
+									<AutoCommandBar name="LouseDogTreatmentCommandBar" id="150"/>
+									<ExtendedTooltip name="LouseDogTreatmentExtendedTooltip" id="151"/>
+									<SearchStringAddition name="LouseDogTreatmentSearchString" id="152">
+										<AdditionSource>
+											<Item>LouseDogTreatment</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="LouseDogTreatmentSearchStringContextMenu" id="153"/>
+										<ExtendedTooltip name="LouseDogTreatmentSearchStringExtendedTooltip" id="154"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="LouseDogTreatmentViewStatus" id="155">
+										<AdditionSource>
+											<Item>LouseDogTreatment</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="LouseDogTreatmentViewStatusContextMenu" id="156"/>
+										<ExtendedTooltip name="LouseDogTreatmentViewStatusExtendedTooltip" id="157"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="LouseDogTreatmentSearchControl" id="158">
+										<AdditionSource>
+											<Item>LouseDogTreatment</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="LouseDogTreatmentSearchControlContextMenu" id="159"/>
+										<ExtendedTooltip name="LouseDogTreatmentSearchControlExtendedTooltip" id="160"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="LouseDogTreatment1LineNumber" id="161">
+											<DataPath>Object.LouseDogTreatment.LineNumber</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="LouseDogTreatment1LineNumberContextMenu" id="162"/>
+											<ExtendedTooltip name="LouseDogTreatment1LineNumberExtendedTooltip" id="163"/>
+										</LabelField>
+										<InputField name="LouseDogTreatment1Product" id="164">
+											<DataPath>Object.LouseDogTreatment.Product</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="LouseDogTreatment1ProductContextMenu" id="165"/>
+											<ExtendedTooltip name="LouseDogTreatment1ProductExtendedTooltip" id="166"/>
+										</InputField>
+										<InputField name="LouseDogTreatment1Quantity" id="167">
+											<DataPath>Object.LouseDogTreatment.Quantity</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="LouseDogTreatment1QuantityContextMenu" id="168"/>
+											<ExtendedTooltip name="LouseDogTreatment1QuantityExtendedTooltip" id="169"/>
+										</InputField>
+										<InputField name="LouseDogTreatment1Veterinarian" id="170">
+											<DataPath>Object.LouseDogTreatment.Veterinarian</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="LouseDogTreatment1VeterinarianContextMenu" id="171"/>
+											<ExtendedTooltip name="LouseDogTreatment1VeterinarianExtendedTooltip" id="172"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.DogTracking</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Object.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="Picture" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Picture</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>2:126b87c7-be5c-4231-b182-30aaf445c011</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.InjectionHistory.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.LouseDogTreatment.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>2:4c3ce748-aeb0-4786-83c7-a5e105c7ecf2</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.HealthStatuses.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.InformationDog.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.TrackingHistory.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

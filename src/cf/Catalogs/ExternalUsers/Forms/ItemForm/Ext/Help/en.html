@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>Specifying external user properties.</p>
+<p>To <a href="#1">enter or edit</a> external user details, you need administrator rights or <a href="Catalog.ExternalUsers/Help">external user</a> list manager rights. </p>
+<p>The <a href="#2">Allow authorization</a> right can be set by administrators only. </p>
+<p>An external user list manager can edit the <strong>External users</strong> list (to a limited degree), configure external users prior to their authorization approval by administrator, use the <strong>External access</strong> command, edit the <strong>External users</strong> list and the <strong>External user groups</strong> lists, and edit access rights of external users.</p>
+<p>Other users are only allowed to view their personal data, change their <strong>Password</strong> (if not restricted by administrator), edit their contact information, and select application interface language.</p>
+<p>In a distributed infobase, authorization is configured for each infobase separately.</p>
+<h3>Recommendations on creating passwords</h3>
+<p>A strong password:</p>
+<ul><li>Is not human-readable. 
+</li><li>Contains at least 8 characters. 
+</li><li>Includes: 
+<ul><li>Uppercase Latin letters. 
+</li><li>Lowercase Latin letters. 
+</li><li>numbers 
+</li><li>Special characters (such as underscore and parentheses). </li></ul></li></ul><p>Passwords that contain numbers only, human-readable words, or periodic character sequences, as well as passwords identical to usernames are not recommended. </p>
+<ul><li>Examples of strong passwords: <br>“nj7{jhjibq*Gfhjkm<br>F5”njnGhkmNj;t{HI 
+</li><li>Examples of weak passwords: <br>Smith <br>qwerty <br>12345678 <br>123123123</li></ul><h3><a name="1">Creating external users</a> (for users with sufficient rights)</h3>
+<p>After a user list manager creates an external user and specifies their username, a recommendation to approve their authorization settings is displayed to administrators in the external user profile. Once an administrator approves authorization for this user, the recommendation is hidden and the manager is no longer able to change the authorization settings in any way, with the exception of revoking the authorization approval. To view the list of external users that require approval, filter the external user list by the <strong>Requires approval</strong> field.</p>
+<ul><li>Each external user is linked to an application object (for instance, counterparty or employee) specified in the <strong>Object</strong> field. Click <img src="CommonPicture.UserState08"></img><strong>External access</strong> (recommended) to have the <strong>Object</strong> field filled in automatically. 
+</li><li>If you are creating a external user using the <strong>Create</strong> command in the <a href="Catalog.ExternalUsers/Help">external user list</a>, fill in the <strong>Object</strong> field manually. To perform this action, click <img src="StdPicture.InputFieldSelect"></img><strong>Select</strong>, select a list, and then select an object from the list. The <strong>Object</strong> field value will be displayed in application lists as a full name of an external user. 
+</li><li>The <strong>Invalid</strong> check box is cleared for all external users by default. If an external user no longer uses the application yet cannot be deleted due to being referenced by other objects, it is recommended that you select the <strong>Invalid</strong> check box for them. Invalid external users are not displayed in the external user list, and they cannot be selected. 
+</li><li>On the <strong>Main</strong> tab, fill in the main external user details: 
+<ul><li><strong>Username</strong>. A short name used to sign in to the application. 
+</li><li><strong>1C:Enterprise authentication</strong>. This is the default option. 
+<ul><li>1C:Enterprise authentication status is displayed under the check box.</li></ul></li><li>To set a password, click <strong>Set Password</strong> and <a href="CommonForm.ChangePassword/Help">enter</a> it. Never leave this field blank as it compromises security. 
+<ul><li>If the external user is not saved, you will be prompted to save it. Click <strong>Save</strong>. 
+</li><li>Once the password is set, the authentication status changes to <strong>The password is set</strong> and the button name changes to <strong>Change password</strong>.</li></ul></li><li><strong>Require to set a password upon authorization</strong>. Select this check box to require the user to set a password when they sign in for the first time. 
+</li><li><strong>User cannot change password</strong>. Select this check box to prohibit the external user from changing their password. 
+</li><li><strong>OpenID authentication</strong>. Select this check box to allow the external user to sign in using an OpenID account. If you select this check box, you can clear the <strong>1C:Enterprise authentication</strong> check box.</li></ul></li><li>Use the <strong>Comment</strong> tab to write down additional information about external users.</li></ul><h3>Adding external users to groups</h3>
+<ul><li>If the application supports user groups, you can add external users to one or several <a href="Catalog.ExternalUsersGroups/Help">groups</a> during the user creation procedure. 
+</li><li>Click <strong>Groups</strong> on the navigation panel, and select the check boxes for one or several <a href="CommonForm.UserGroups/Help">groups</a>. 
+</li><li>To clear all selections quickly, click <strong>Remove from all groups</strong>.</li></ul><h3>Access rights of external users </h3>
+<ul><li>Access rights can also be set up by the external user list manager, to a limited degree (excluding administrative rights). Use one of the following options, provided that it is available in the application: 
+<ul><li>Click <strong>Access rights </strong>on the navigation panel to add an external user to one or more <a href="CommonForm.AccessRights/Help">access groups</a>. Select the groups from the <a href="Catalog.AccessGroups/Help">list</a>. 
+</li><li>In the <strong>Allowed actions (roles)</strong> list, assign one or several roles to the external user, thus defining their personal <a href="CommonForm.AccessRightsSimplified/Help">access rights settings</a>. The roles can be linked to job duties of users or to smaller activities. Select the check boxes for the roles you want to assign.</li></ul></li></ul><h3><a name="2">Allowing authorization (for administrators only)</a></h3>
+<ul><li>To allow an external user to sign in to the application, select the <strong>Allow authorization</strong> check box. Then set the username, password, and other authentication parameters. 
+</li><li>
+<div>You can deny user access to the application manually by clearing the <strong>Allow authorization</strong> check box, or have the access denied automatically at the end of the specified period.</div>
+</li><li>
+<div>Open user sessions are closed automatically in up to 25 minutes after the user access is denied.</div></li></ul><h3>Authorization restrictions</h3>
+<p>Follow the link to <strong>edit authentication restriction</strong>. Select one of the following:</p>
+<ul><li>
+<div><strong>Apply general authorization settings</strong>. This is the default option.</div>
+</li><li>
+<div><strong>No time limit</strong>.</div>
+</li><li>
+<div><strong>Allow authorization till</strong>. Enter the date or click <img src="StdPicture.InputFieldCalendar"></img> to select it from the calendar. To prevent unauthorized access to the application, you can set an Expiration date. Upon reaching this date, the external user is denied access to the application.</div>
+</li><li><strong>Deny authorization if no activity for</strong> (specify the number of days). If an external user does not sign in for more than the specified number of days, they are denied access to the application. 
+<ul><li>
+<div>In this case the external user has to contact the administrator to restore access to the application. </div></li></ul></li><li>
+<div>Restrictions are listed in user profiles. Restrictions for all external users are also listed in the <a href="Report.UsersInfo/Help">External user details</a> report.</div></li></ul><h3>Managing external user settings</h3>
+<ul><li>The application stores individual <a href="DataProcessor.UsersSettings.Form.UsersSettings/Help">settings</a> of each user for further use. To view, copy, or clear settings of external users, click <strong>Settings</strong> on the navigation panel. Clearing might be required when invalid settings prevent normal operation of the application.</li></ul><h3>Application warnings</h3>
+<ul><li>If properties of an external user differ from the properties of the matching <a href="Catalog.Users.Form.InfobaseUsers/Help">infobase user</a>, the application displays a warning including a list of differences. Then it prompts you to save the data in order to resolve the differences.</li></ul><h3>See also:</h3>
+<ul><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

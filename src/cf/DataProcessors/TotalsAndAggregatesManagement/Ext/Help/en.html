@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>This form is designed to administer accumulation and accounting registers, and aggregates of turnover accumulation registers.</p>
+<p>Registers are designed to store and process information about the activities of the enterprise. Registers usually store information about changes in the objects state of the object domain (documents, catalogs) or other information not recorded directly in these objects. For example, registers can store information about currency rates.</p>
+<p>Aggregates are a mechanism available in turnover accumulation registers. You can create multiple aggregates for any register. Each aggregate is a dedicated storage that contains aggregated register data broken down by certain parameters. This streamlines report generation. Aggregators can significantly reduce the time of report generation. This is important for large infobases.</p>
+<p>To open it execute the matching command in the <strong>Administration - Service - Scheduled operations</strong> section.</p>
+<p>Totals and aggregates management includes the procedures related to the totals of accumulation and accounting registers and aggregates of turnover accumulation registers. Totals management is divided into two modes:</p>
+<ul><li><strong><a href="#Simple">Frequently used features</a></strong>. This mode provides simple tools to perform the most commonly used actions with register totals. This mode allows you to execute the most common actions in "one-click" that occur during maintenance of the application. 
+</li><li><strong><a href="#Full">Full functionality</a></strong>. This mode provides full access to the management of the totals and aggregates of the application. This mode allows you to execute all operations with one register as well as with an arbitrary list of registers.</li></ul><p>To switch modes, use the reference in the lower right corner of the window. The application stores window open mode.</p>
+<p>Some operations with registers and aggregates can be executed according to the specified schedule, using <a href="DataProcessor.ScheduledAndBackgroundJobs/Help">scheduled jobs</a>.</p>
+<h2><a name="#Simple">Frequently used features</a></h2>
+<h3>Totals operations</h3>
+<ul><li>
+<div><strong>Set calculated totals period</strong>. This operation sets calculated totals period for all accumulation and accounting registers with enabled totals, to accelerate the application operations. For accumulation registers it sets at the end of the previous month, for accounting registers it sets at the end of the current month. You can use the command at the beginning of each month to improve register performance.</div>
+</li><li>
+<div><strong>Enable totals use</strong>. This operation enables the use of totals for all registers that have this mode disabled (for example, as a result of the abnormal termination of a procedure that disables the use of totals).</div></li></ul><h3>Aggregates operations</h3>
+<ul><li>
+<div><strong>Rebuild and fill in</strong>. This operation rebuilds aggregate usage and fills in aggregates for all turnover accumulation registers which have aggregate mode and use enabled. Operation can take a long time. This operation, as a rule, must be executed periodically, for this you can use the scheduled job.</div>
+</li><li>
+<div><strong>Receive optimal aggregates</strong>. This operation receives the list of optimal aggregates for all turnover accumulation registers which have aggregates set in Designer. The directory will be requested where the XML files with the lists of optimal aggregates will be saved. Each file will be named with the name of matching register. For the <strong>Sales</strong> register, file will be named <strong>Sales.xml</strong>. Files are used to import and create optimal aggregates in Designer. When importing optimal aggregates, you can need to change list of optimal aggregates, and for this it is necessary to disable configuration support. The operation is not regular. This operation is the most resource-intensive and time-consuming, so it is recommended to execute it in cases when other users do not use the application. </div>
+<ul><li>
+<div>The calculation of optimal aggregates can be required in the following cases:</div>
+<ul><li>
+<div>Significant reduction in the report generation speed in the current list of aggregates.</div>
+</li><li>
+<div>Significant change in data stored in the application.</div>
+</li><li>
+<div>Significant change in the reports that users need.</div></li></ul></li></ul></li></ul><h2><a name="#Full">Full functionality</a></h2>
+<p>This mode allows you to get access to all administrative tools for register totals (<strong>Totals</strong> tab) and aggregates (<strong>Aggregates</strong> tab). In full functionality mode, multiple selection mode is available. Any action is applied to all selected objects, or to the one over which you hover the mouse pointer.</p>
+<p>The list shows the current state of the application registers.</p>
+<h3>Totals</h3>
+<p>The <strong>Totals</strong> tab contains a list of accumulation and accounting registers.</p>
+<p>The list includes only those registers that have the <strong>Totals management</strong> right for the current user.</p>
+<p>The list shows the current state of the application registers.</p>
+<p>The list includes the following columns:</p>
+<ul><li><strong>Totals</strong>. If the check box is selected in this column, totals are calculated for the register, and if the check box is not selected, the register totals are not calculated. 
+</li><li><strong>Register and use mode</strong>. This column displays description of the register and use mode of the register in the tooltip: <strong>Just total register</strong> (if the register has balance), <strong>Totals</strong> or <strong>Aggregates</strong> (if the register has only turnovers). 
+</li><li><strong>Period</strong>. Date until which the register totals are calculated (for accumulation registers it sets at the end of the previous month, for accounting registers it sets at the end of the current month). 
+</li><li><strong>Current</strong>. If the check box is selected, not only general totals for the specified date are calculated for the register, but also real-time totals for the date of the last record. If the check box is not selected, real time totals are not calculated for the register. It makes sense to use this mode for registers whose records are analyzed in real-time accounting before the documents posting. 
+</li><li><strong>Split</strong>. If the check box is selected, totals separation mechanism is used for register, which provides improved parallel writing to the register.</li></ul><p>Modes that cannot be changed with the current application state are marked in gray. You can switch modes on the <strong>Aggregates</strong> tab.</p>
+<p>You can execute the following operations on this tab:</p>
+<ul><li>
+<div>To update information about total state, click <strong>Update</strong>.</div>
+</li><li>
+<div>To enable or disable totals use, click <strong>Totals</strong>.</div>
+</li><li>
+<div>To enable or disable current totals use, click <strong>Current totals</strong>.</div>
+</li><li>
+<div>To enable or disable totals separation, click <strong>Totals separation</strong>.</div>
+</li><li>
+<div>To <strong>Set</strong> selected <strong>period</strong> of calculated <strong>totals</strong>, click Set calculated totals period.</div>
+</li><li>
+<div>To recalculate the totals, recalculate the current totals, and totals for the selected period, click <strong>Recalculate</strong>.</div></li></ul><h3>Aggregates</h3>
+<ul><li>The tab in the upper list contains a list of turnover accumulation registers, for which aggregates are specified in Designer, and the lower list contains the list of these aggregates. The list of aggregates contains the flag that shows whether aggregate is used and statistical information about it. 
+</li><li>In the <strong>Register</strong> column, in addition to register description, information about register use mode is displayed: <strong>Total data is used</strong> or <strong>Aggregate data is used</strong>. 
+</li><li>The list includes only those turnover accumulation registers, for which the current user has the <strong>Totals management</strong> right and aggregates are specified in Designer.</li></ul><p>You can execute the following operations on this tab:</p>
+<ul><li>
+<div>Set register <strong>Mode</strong>: totals or aggregates.</div>
+</li><li>
+<div>Enable or disable aggregates <strong>Use</strong>.</div>
+</li><li>
+<div>To rebuild aggregate usage, click <strong>Rebuild</strong>.</div>
+<ul><li>
+<div>Specify <a href="DataProcessor.TotalsAndAggregatesManagement.Form.RebuildParametersForm/Help">rebuild parameters</a>.</div></li></ul></li><li>
+<div>To fill in aggregates, click <strong>Update</strong>.</div>
+</li><li>
+<div>To <strong>Clear</strong> aggregates, click Clear aggregates.</div>
+</li><li>
+<div>To calculate list of optimal aggregates, use the <strong>Optimal</strong> command. Specify <a href="DataProcessor.TotalsAndAggregatesManagement.Form.RebuildParametersForm/Help">parameter of optimal aggregate calculation</a>. After that, the directory will be requested where the XML files with the lists of optimal aggregates will be saved. Each file will be named with the ID of matching register. For the <strong>Sales</strong> register, file will be named <strong>Sales.xml</strong>. After the operation is completed, in the registers list the registers for which it is necessary to update the list of aggregates to the calculated optimal aggregates will be marked in bold. The list must be updated in Designer.</div>
+<ul><li>
+<div>Specify <strong>parameter of optimal aggregate calculation</strong>.</div></li></ul></li><li>
+<div>To <strong>Update</strong> information about aggregates, click <img src="StdPicture.Refresh"></img> or <strong>F5</strong>.</div></li></ul><p>In the lower part of the window, a list of register aggregates is displayed, on which you hover the mouse pointer in the upper list.</p>
+<h3>See also:</h3>
+<ul><li><a href="v8help://frame/form_common">Working with forms</a></li></ul></body></html>

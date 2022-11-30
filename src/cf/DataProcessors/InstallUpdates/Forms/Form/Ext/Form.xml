@@ -1,0 +1,4190 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ChoiceProcessing</Event>
+		<Event name="NotificationProcessing">NotificationProcessing</Event>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnClose">OnClose</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ErrorInformationPanel" id="1166">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель информации об ошибках</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Error details panel</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Panel informacji o błędach</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Fehleranzeigetafel</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Panoul de informații despre erori</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Hata bilgisi paneli</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Barra de información de errores</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ErrorInformationPanelExtendedTooltip" id="1167"/>
+			<ChildItems>
+				<PictureDecoration name="ErrorsFoundPicture" id="1168">
+					<SkipOnInput>false</SkipOnInput>
+					<Picture>
+						<xr:Ref>CommonPicture.Warning32</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ErrorsFoundPictureContextMenu" id="1169"/>
+					<ExtendedTooltip name="ErrorsFoundPictureExtendedTooltip" id="1170"/>
+				</PictureDecoration>
+				<LabelDecoration name="ErrorsFoundLabel" id="1175">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<SkipOnInput>false</SkipOnInput>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В программе выявлены проблемы ведения учета, которые рекомендуется устранить до обновления.
+&lt;link Перейти к отчету по проблемам&gt;Перейти к отчету по проблемам&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Accounting issues are detected in the application. It is recommended that you resolve them before the update.
+&lt;link Перейти к отчету по проблемам&gt;View the accounting issues report&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>W programie wykryto problemy księgowania, które zaleca się usunąć przed aktualizacją.
+&lt;link Przejdź do raportu o problemach&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Im Programm wurden Probleme bei der Führung von Aufzeichnungen festgestellt, die vor der Aktualisierung zu lösen sind.
+&lt;linkZum Problembericht wechseln&gt; Zum Problembericht wechseln&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>În program sunt depistate probleme de ținere a evidenței care se recomandă să le înlăturați înainte de actualizare.
+&lt;link Salt la raportul despre probleme&gt;Salt la raportul despre probleme&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Program, güncellemeden önce giderilmesini öneren muhasebe sorunlarını tespit eder. 
+&lt;linkSorun raporuna git &gt; Sorun raporuna git&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>En el programa han aparecido los errores de contabilizar que se recomienda quitar antes de actualizar.
+&lt;link Pasar al informe de problemas&gt;Pasar al informe de problemas&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="ErrorsFoundLabelContextMenu" id="1176"/>
+					<ExtendedTooltip name="ErrorsFoundLabelExtendedTooltip" id="1177">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Одна из частых причин различных блокирующих ошибок при обновлении на новую версию программы - это проблемы ведения учета, такие как, битые ссылки на несуществующие объекты, незаполненные обязательные реквизиты документов и другие. В таком случае, рекомендуется устранять их перед началом обновления, для этого перейти к отчету и следовать приведенным в нем рекомендациям.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>One of the common reasons of data locks during the update is accounting issues, such as references to objects that do not exist and blank required document attributes. In this case, it is recommended that you fix the issues before the update. To fix the issues, open the report and follow the recommendations that is provides.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>pl</v8:lang>
+								<v8:content>Jedną z częstych przyczyn różnych blokujących błędów podczas aktualizacji do nowej wersji programu są problemy z księgowaniem, jak np. niedziałające łącza do nieistniejących obiektów, niewypełnione wymagane dane dokumentów i inne. W takim przypadku zalecane jest ich naprawienie przed rozpoczęciem aktualizacji. W tym celu przejdź do raportu i postępuj zgodnie z zawartymi w nim zaleceniami.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>de</v8:lang>
+								<v8:content>Eine der häufigsten Ursachen für verschiedene Sperrfehler bei der Aktualisierung auf eine neue Version des Programms sind Abrechnungsprobleme, wie z.B. fehlerhafte Verweise auf nicht existierende Objekte, leere Pflichtdokumentdetails und andere. In diesem Fall wird empfohlen, sie vor der Aktualisierung zu beseitigen, mit dem Bericht fortzufahren und seinen Empfehlungen zu folgen.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>ro</v8:lang>
+								<v8:content>Una din cauzele frecvente ale erorilor de blocare la actualizare cu versiunea nouă a programului sunt problemele de ținere a evidenței, cum ar fi referințe defecte la obiecte inexistente, atribute obligatorii necompletate ale documentelor etc. În asemenea caz recomandăm să le înlăturați înainte de începutul actualizării, pentru aceasta treceți la raport și urmați recomandările expuse în el.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>tr</v8:lang>
+								<v8:content>Programın yeni bir sürümüne yükselttiğinizde çeşitli engelleme hatalarının sık görülen nedenlerinden biri, varolmayan nesnelere, doldurulmamış zorunlu belge ayrıntılarına ve diğerlerine yapılan bağlantılar gibi muhasebe problemleridir. Bu durumda, güncellemeden önce bunları ortadan kaldırmanız, raporunuza gitmeniz ve bu yönergeleri izlemeniz önerilir.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>es_ES</v8:lang>
+								<v8:content>Una de las causas frecuentes de los errores diferentes que bloquean al actualizar hasta la versión nueva del programa - son problemas de contabilizar, por ejemplo, los enlaces rotos a los objetos inexistentes, requisitos obligatorios no rellenados de los documentos y otros. En este caso se recomienda quitarlos antes de empezar la actualización, para hacerlo hay que pasar al informe y seguir las recomendaciones en él.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="URLProcessing">DetectedIssuesLabelURLProcessing</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ExtensionsInformationPanel" id="1213">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель информации о расширениях</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Extensions information panel</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Panel informacji o rozszerzeniach</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Erweiterungs-Informationsleiste</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Panoul informațiilor despre extensii</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Uzantı bilgi paneli</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Barra de información de existencias</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ExtensionsInformationPanelExtendedTooltip" id="1214"/>
+			<ChildItems>
+				<PictureDecoration name="ExtensionsAvailablePicture" id="1215">
+					<SkipOnInput>false</SkipOnInput>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка есть расширения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Extensions available picture</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Obrazek istnieją rozszerzenia</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Das Bild ist eine Erweiterung</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Imaginea există extensii</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Resim uzantılar mevcut</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Imagen hay extensiones</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Warning32</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ExtensionsAvailablePictureContextMenu" id="1216"/>
+					<ExtendedTooltip name="ExtensionsAvailablePictureExtendedTooltip" id="1217"/>
+				</PictureDecoration>
+				<LabelDecoration name="ExtensionsAvailableLabel" id="1218">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<SkipOnInput>false</SkipOnInput>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед выполнением обновления убедитесь, что установленные расширения совместимы с новой версией конфигурации. 
+Рекомендуем предварительно выполнить обновление на резервной копии.
+&lt;link e1cib/app/ОбщаяФорма.Расширения&gt;Перейти к списку расширений&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Before updating, ensure that the installed extensions are compatible with the new configuration version. 
+It is recommended that you test the update on a backup.
+&lt;link e1cib/app/CommonForm.Extensions&gt;View extensions&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Przed rozpoczęciem aktualizacji upewnij się, że zainstalowane rozszerzenia są kompatybilne z nową wersją konfiguracji. 
+Warto wcześniej wykonać uaktualnienie w kopii zapasowej.
+&lt;link e1cib/app/ОбщаяФорма.Расширения&gt;Przejdź do listy rozszerzeń&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Stellen Sie vor dem Upgrade sicher, dass die installierten Erweiterungen mit der neuen Version der Konfiguration kompatibel sind. 
+Es wird empfohlen, zuerst ein Update der Sicherung durchzuführen. 
+&lt;linke1cib / app / AllgemeinesFormular.Erweiterungen&gt; Gehen Sie zur Liste der Erweiterungen&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Înainte de executarea actualizării convingeți-vă că extensiile instalate sunt compatibile cu versiunea nouă a configurației. 
+Recomandăm să executați preventiv actualizarea pe copia de rezervă.
+&lt;link e1cib/app/ОбщаяФорма.Расширения&gt;Salt la lista extensiilor&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Güncellemeden önce, yüklü uzantıların yeni yapılandırma sürümü ile uyumlu olduğundan emin olun. 
+Önce yedeği güncellemenizi öneririz. 
+&lt;linke1cib/app/OrtakForm.Uzantılar &gt; Uzantılar listesine git&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Antes de actualizar asegúrese de que las extensiones instaladas son compatibles con la versión nueva de la configuración. 
+Se recomienda actualizar previamente de la copia de respaldo.
+&lt;link e1cib/app/ОбщаяФорма.Расширения&gt;Pasar a la lista de extensiones&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ExtensionsAvailableLabelContextMenu" id="1219"/>
+					<ExtendedTooltip name="ExtensionsAvailableLabelExtendedTooltip" id="1220"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="WizardPages" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы помощника</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Wizard pages</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Strony pomocnika</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Assistentenseiten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Paginile asistentului</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sihirbaz sayfaları</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Asistente páginas</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="WizardPagesExtendedTooltip" id="657"/>
+			<ChildItems>
+				<Page name="UpdateFile" id="283">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл обновления</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Update file</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Plik aktualizacji</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Aktualisieren Datei</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Fișierul de actualizare</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Dosyayı güncelle</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Actualizar el Archivo</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="UpdateFileExtendedTooltip" id="745"/>
+					<ChildItems>
+						<UsualGroup name="UpdateFileGroup" id="1026">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбор файла поставки обновления</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Select update delivery file</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Wybór pliku instalacyjnego aktualizacji</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Auswahl einer Update-Lieferdatei</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Selectarea fișierului de livrare a actualizării</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Güncelleme teslim dosyası seç </v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Seleccionar el archivo de actualización</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="UpdateFileGroupExtendedTooltip" id="1027"/>
+							<ChildItems>
+								<RadioButtonField name="UpdateFileRequiredRadioButtons" id="286">
+									<DataPath>UpdateFileRequired</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>&amp;Файл обновления не требуется, так как он уже загружен в основную конфигурацию</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>&amp;Update file is not required as it is already imported into the main configuration</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>pl</v8:lang>
+														<v8:content>&amp;Plik aktualizacji nie jest wymagany, ponieważ jest już pobrany do podstawowej konfiguracji</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>de</v8:lang>
+														<v8:content>Update-Datei ist nicht erforderlich, da sie bereits in die Hauptkonfiguration importiert wurde</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>ro</v8:lang>
+														<v8:content>Fișierul de actualizare nu este necesar deoarece este deja importat în configurația principală</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>tr</v8:lang>
+														<v8:content>Ana yapılandırmaya önceden içe aktarıldığından güncelleme dosyası gerekli değildir</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>es_ES</v8:lang>
+														<v8:content>Archivo de actualización no se requiere porque se ha ya importado en la configuración principal</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>&amp;Укажите файл обновления или исправлений:</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>&amp;Specify an update or patch file:</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>pl</v8:lang>
+														<v8:content>&amp;Wybierz plik aktualizacji lub poprawek:</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>de</v8:lang>
+														<v8:content>&amp;Geben Sie eine Aktualisierungs- oder Korrekturdatei an:</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>ro</v8:lang>
+														<v8:content>&amp;Indicați fișierul de actualizare sau de corectare:</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>tr</v8:lang>
+														<v8:content>&amp;Güncelleme veya düzeltme dosyasını belirtin:</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>es_ES</v8:lang>
+														<v8:content>&amp;Indique el archivo de actualización o corrección:</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="UpdateFileRequiredRadioButtonsContextMenu" id="287"/>
+									<ExtendedTooltip name="UpdateFileRequiredRadioButtonsExtendedTooltip" id="747"/>
+									<Events>
+										<Event name="OnChange">UpdateFileRequiredRadioButtonsOnChange</Event>
+									</Events>
+								</RadioButtonField>
+								<UsualGroup name="Indent" id="393">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отступ</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Indent</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Odstęp</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Einrückung</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Grafic</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Girintile</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Pedido</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="IndentExtendedTooltip" id="748"/>
+									<ChildItems>
+										<InputField name="UpdateFileField" id="296">
+											<DataPath>SelectedFiles</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ChoiceButton>true</ChoiceButton>
+											<ContextMenu name="UpdateFileFieldContextMenu" id="297"/>
+											<ExtendedTooltip name="UpdateFileFieldExtendedTooltip" id="749"/>
+											<Events>
+												<Event name="StartChoice">UpdateFileFieldStartChoice</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="UpdateFromMainConfigurationPanel" id="288">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Панель обновление из основной конфигурации</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Update from main configuration panel</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Panel odnowa z głównej konfiguracji</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Paneel Aktualisierung von der Hauptkonfiguration</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Actualizarea panoului din configurația principală</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Ana yapılandırmadan panel güncellemesi</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Actualización de panel desde la configuración principal</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="UpdateFromMainConfigurationPanelExtendedTooltip" id="750"/>
+									<ChildItems>
+										<PictureDecoration name="Picture5" id="289">
+											<SkipOnInput>false</SkipOnInput>
+											<Picture>
+												<xr:Ref>CommonPicture.Information32</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Picture5ContextMenu" id="290"/>
+											<ExtendedTooltip name="Picture5ExtendedTooltip" id="751"/>
+										</PictureDecoration>
+										<Pages name="ModifiedConfigurationLabelsPages" id="477">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страницы надписи измененной конфигурации</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Configuration changed label pages</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Strony napisu zmienionej konfiguracji</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Geänderte Konfigurationstextseiten</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Pagini de text de configurare modificate</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Değiştirilmiş yapılandırma metin sayfaları</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Configuración cambiada páginas de texto</v8:content>
+												</v8:item>
+											</Title>
+											<PagesRepresentation>None</PagesRepresentation>
+											<ExtendedTooltip name="ModifiedConfigurationLabelsPagesExtendedTooltip" id="752"/>
+											<ChildItems>
+												<Page name="HasChanges" id="478">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Есть изменения</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>There are changes</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Są zmiany</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Da gibt es Änderungen</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Sunt schimbări</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Değişiklikler vardır</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Hay cambios</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ChangesFoundExtendedTooltip" id="753"/>
+													<ChildItems>
+														<LabelDecoration name="ConfigurationModifiedLabel" id="291">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Основная конфигурация отличается от конфигурации информационной базы данных.
+Рекомендуется провести обновление из основной конфигурации.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>The main configuration differs from the database configuration.
+It is recommended that you perform an update from the main configuration.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Konfiguracja główna różni się od konfiguracji informacyjnej bazy danych.
+Zaleca się wykonanie aktualizacji z konfiguracji głównej.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Die Grundkonfiguration unterscheidet sich von der Konfiguration der Informationsdatenbank.
+Es wird empfohlen, die Grundkonfiguration zu aktualisieren.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Configurația principală diferă de configurația bazei de date.
+Este recomandată actualizarea din configurația principală.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Ana yapılandırma bilgi veritabanı yapılandırmasından farklı değildir.
+Ana yapılandırmadan güncelleme önerilir.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es_ES</v8:lang>
+																	<v8:content>Configuración principal no se diferencia de la configuración de la infobase.
+Se recomienda actualizar desde la configuración principal.</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ConfigurationModifiedLabelContextMenu" id="292"/>
+															<ExtendedTooltip name="ConfigurationModifiedLabelExtendedTooltip" id="754"/>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+												<Page name="NoChanges" id="479">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Нет изменений</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>No changes</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Bez zmian</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Keine Änderungen</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Lipsesc modificările</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Değişiklik yok</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>No hay cambios</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="NoChangesExtendedTooltip" id="755"/>
+													<ChildItems>
+														<LabelDecoration name="NoChangesLabel" id="480">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<Height>2</Height>
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Обновление не требуется, т.к. конфигурация базы данных не отличается от основной конфигурации</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Update is not required as the infobase configuration is identical to the main configuration.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Aktualizacja nie jest wymagana, ponieważ konfiguracja bazy informacyjnej nie różni się od konfiguracji podstawowej</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Ein Update ist nicht erforderlich, da sich die Infobase-Konfiguration nicht von der Basiskonfiguration unterscheidet</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Actualizarea nu este necesară deoarece configurația bazei de date nu diferă de configurația de bază</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Veritabanı yapılandırması temel yapılandırmadan farklı olmadığından güncelleme gerekli değildir</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es_ES</v8:lang>
+																	<v8:content>Actualización no se requiere siempre y cuando la configuración de la infobase sea igual a la configuración principal</v8:content>
+																</v8:item>
+															</Title>
+															<VerticalAlign>Center</VerticalAlign>
+															<ContextMenu name="NoChangesLabelContextMenu" id="481"/>
+															<ExtendedTooltip name="NoChangesLabelExtendedTooltip" id="756"/>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="FindAndInstallUpdatesGroup" id="1154">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Поиск и установка обновлений</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Find and install updates</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Wyszukaj i zainstaluj aktualizacje</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Suchen und Installieren von Aktualisierung</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Căutați și instalați actualizările</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Güncelleme ara ve kur</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Buscar e instalar actualizaciones</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalStretch>true</VerticalStretch>
+							<VerticalAlign>Bottom</VerticalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="FindAndInstallUpdatesGroupExtendedTooltip" id="1155"/>
+							<ChildItems>
+								<Button name="FindAndInstallUpdates" id="1152">
+									<Type>Hyperlink</Type>
+									<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+									<CommandName>Form.Command.FindAndInstallUpdates</CommandName>
+									<ExtendedTooltip name="FindAndInstallUpdatesExtendedTooltip" id="1153"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="SelectUpdateModeFile" id="160">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбор режима обновления файл</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Select update mode file</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Wybór trybu aktualizacji plik</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Auswahl eines Dateiaktualisierungsmodus</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Selectarea regimului de actualizare fișier</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Güncelleme modunu seç dosya</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Selección del modo de actualización archivo</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="SelectUpdateModeFileExtendedTooltip" id="842"/>
+					<ChildItems>
+						<UsualGroup name="SelectUpdateModeFileGroup" id="1034">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все готово для установки обновления</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Ready to install</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Wszystko jest gotowe do instalacji aktualizacji</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Alle bereit, das Update zu installieren</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Totul este gata pentru instalarea actualizării</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Güncelleme için herşey hazır</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Todo está preparado para instalar la actualización</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="SelectUpdateModeFileGroupExtendedTooltip" id="1035"/>
+							<ChildItems>
+								<Pages name="UpdateMethodFilePages" id="1042">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы способ обновления файл</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Update method file pages</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strony sposób aktualizacji plik</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Seitenmethode zur Aktualisierung der Datei</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Pagini modul de actualizare fișier</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Sayfalar güncelleme yöntemi dosya</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Páginas modo de actualizar el archivo</v8:content>
+										</v8:item>
+									</Title>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="UpdateMethodFilePagesExtendedTooltip" id="1043"/>
+									<ChildItems>
+										<Page name="UpdateRadioButtonsFilePage" id="1044">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница переключатель обновления файл</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Update method selection file pages</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Strona przełącznik aktualizacji plik</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Update-Datei für Seitenwechsel</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Pagina comutatorul actualizării fișier</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Sayfa güncelleme anahtarı dosya</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Páginas cambiador de la actualización archivo</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="UpdateRadioButtonsFilePageExtendedTooltip" id="1045"/>
+											<ChildItems>
+												<RadioButtonField name="UpdateRadioButtonsFile" id="612">
+													<DataPath>Object.UpdateMode</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Выберите способ установки обновления программы</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Select update installation method</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Wybierz sposób instalacji aktualizacji programu</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Wählen Sie aus, wie das Update-Programm installiert werden soll</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Selectați modul de instalare a actualizării programului</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Program güncelleme kurulum yöntemini seç</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Seleccione el modo de instalar la actualizar el programa</v8:content>
+														</v8:item>
+													</Title>
+													<RadioButtonType>Auto</RadioButtonType>
+													<ColumnsCount>1</ColumnsCount>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Установить обновление прямо сейчас (потребуется перезапуск)</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Install the update now (requires restarting the application)</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>pl</v8:lang>
+																		<v8:content>Zainstaluj aktualizację teraz (wymagane jest ponowne uruchomienie)</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>de</v8:lang>
+																		<v8:content>Jetzt Aktualisierung installieren (erfordert Neustart)</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ro</v8:lang>
+																		<v8:content>Instalați actualizarea acum (este necesară repornirea)</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>tr</v8:lang>
+																		<v8:content>Şimdi güncellemeyi yükle (yeniden başlatma gerektirir)</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>es_ES</v8:lang>
+																		<v8:content>Instalar la actualización ahora (reinicio requerido)</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">0</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Напомнить при завершении работы</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Remind me when I exit the application</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>pl</v8:lang>
+																		<v8:content>Przypomnij przy zakończeniu pracy</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>de</v8:lang>
+																		<v8:content>Beim Beenden erinnern</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ro</v8:lang>
+																		<v8:content>Amintiți la ieșire</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>tr</v8:lang>
+																		<v8:content>Çıkış sırasında hatırlat</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>es_ES</v8:lang>
+																		<v8:content>Recordar al salir</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">1</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="UpdateRadioButtonsFileContextMenu" id="613"/>
+													<ExtendedTooltip name="UpdateRadioButtonsFileExtendedTooltip" id="853"/>
+													<Events>
+														<Event name="OnChange">UpdateRadioButtonsOnChange</Event>
+													</Events>
+												</RadioButtonField>
+												<LabelDecoration name="ClickNextLabel" id="1095">
+													<Visible>false</Visible>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Нажмите "Далее" для установки обновления.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Click "Next" to install the update.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Naciśnij "Dalej" aby zainstalować aktualizację.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Klicken Sie auf "Weiter", um das Update zu installieren.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Tastați "Înainte" pentru instalarea actualizării.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Güncelleme için "İleri" tıklayınız.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Pulse "Seguir" para instalar la actualización.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ClickNextLabelContextMenu" id="1096"/>
+													<ExtendedTooltip name="ClickNextLabelExtendedTooltip" id="1097"/>
+												</LabelDecoration>
+												<LabelDecoration name="UpdateCanTakeTimeLabel" id="177">
+													<SkipOnInput>false</SkipOnInput>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Процесс обновления может занять длительное время. Не выключайте питание компьютера до завершения процесса.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>The update might take a long time. Do not turn off your computer until the update is completed.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Aktualizacja może zająć dużo czasu. Nie wyłączaj komputera, dopóki proces nie zostanie zakończony.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Die Aktualisierung kann sehr lange dauern. Fahren Sie Ihren Computer erst herunter, wenn der Vorgang abgeschlossen ist.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Actualizarea poate dura mult timp. Nu opriți calculatorul până când procesul nu este finalizat.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Güncelleme uzun sürebilir. İşlem tamamlana kadar bilgisayarı kapatmayın.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Actualización puede llevar mucho tiempo. No apague su ordenador hasta que el proceso se haya finalizado.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="UpdateCanTakeTimeLabelContextMenu" id="178"/>
+													<ExtendedTooltip name="UpdateCanTakeTimeLabelExtendedTooltip" id="866"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="UpdateReceivedFromApplicationFilePage" id="1046">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница получено обновление из приложения файл</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Update received from application file page</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Strona otrzymano aktualizację z aplikacji plik</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Seite erhielt Update aus der Anwendungsdatei</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Pagina primită actualizarea din atașament fișier</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Sayfa güncelleme uygulamadan alındı dosya</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Página la actualización ha sido recibida de la aplicación archivo</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="UpdateReceivedFromApplicationFilePageExtendedTooltip" id="1047"/>
+											<ChildItems>
+												<LabelDecoration name="UpdateReceivedFromApplicationFileLabel" id="652">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Получено обновление из приложения в Интернете. Для установки потребуется
+перезапуск программы. Процесс обновления может занять длительное время.
+Не выключайте питание компьютера до завершения процесса установки.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>The update is received from the online application. To install it, restart the application. 
+The update might take a long time.
+Do not turn off your computer until the update is completed.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Otrzymano aktualizację z aplikacji w Internecie. Aby ją zainstalować, trzeba będzie
+zrestartować program. Proces aktualizacji może zająć dużo czasu.
+Nie odłączaj zasilania komputera do zakończenia procesu instalacji.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Ein Update wurde von einer Anwendung im Internet erhalten. Zur Installation müssen Sie das Programm neu starten
+. Der Update-Vorgang kann lange dauern.
+Schalten Sie den Computer nicht aus, bevor der Installationsvorgang abgeschlossen ist.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Actualizarea este descărcată din aplicația din Internet. Pentru instalare va fi necesară
+relansarea aplicației. Procesul de actualizare poate dura mult timp.
+Nu opriți calculatorul până la finalizarea procesului de instalare.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>İnternet uygulamasından güncelleme alındı. Uygulama yeniden başlatması
+ yükleme için gereklidir. Günceleme işlemi uzun sürebilir.
+  Yükleme süreci tamamlanana kadar bilgisayarı kapatmayın.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Actualización se ha descargado. Reinicio de la aplicación se requerirá
+para proceder. Proceso de actualización puede llevar mucho tiempo.
+No apague el ordenador hasta que el proceso de instalación se haya finalizado.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="UpdateReceivedFromApplicationFileLabelContextMenu" id="653"/>
+													<ExtendedTooltip name="UpdateReceivedFromApplicationFileLabelExtendedTooltip" id="852"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+								<UsualGroup name="ConnectionsGroup" id="179">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Соединений</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Connections</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Połączeń</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Verbindungen</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Conexiuni</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Bağlantılar</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Conexiones</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ConnectionsGroupExtendedTooltip" id="854"/>
+									<ChildItems>
+										<PictureDecoration name="Picture1" id="180">
+											<SkipOnInput>false</SkipOnInput>
+											<Picture>
+												<xr:Ref>CommonPicture.Warning32</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Pucture1ContextMenu" id="181"/>
+											<ExtendedTooltip name="Picture1ExtendedTooltip" id="855"/>
+										</PictureDecoration>
+										<Pages name="ActiveUsersPanel" id="187">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Панель активные пользователи</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Active users panel</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Panel aktywni użytkownicy</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Leiste aktive Benutzer</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Panoul utilizatori activi</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Aktif kullanıcılar paneli</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Barra usuarios activos</v8:content>
+												</v8:item>
+											</Title>
+											<PagesRepresentation>None</PagesRepresentation>
+											<ExtendedTooltip name="ActiveUsersPanelExtendedTooltip" id="856"/>
+											<ChildItems>
+												<Page name="ActiveUsers" id="188">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Активные пользователи</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Active users</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Aktualni użytkownicy</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Active Users</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Utilizatori activi</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Aktif kullanıcılar</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Usuarios activos</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ActiveUsersExtendedTooltip" id="857"/>
+													<ChildItems>
+														<LabelDecoration name="Label43" id="183">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>С программой сейчас работают другие пользователи. Для продолжения необходимо завершить их работу.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Other users are working with the application. Please close their sessions to continue.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Inni użytkownicy aktualnie pracują z aplikacją. Zamknij swoje sesje, aby kontynuować.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Andere Benutzer arbeiten mit der Anwendung. Schließen Sie ihre Sitzungen, um fortzufahren.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Alți utilizatori lucrează cu aplicația. Închideți sesiunile pentru a continua.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Diğer kullanıcılar şu an için uygulama ile çalışıyor. Devam etmek için oturumlarını kapatın.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es_ES</v8:lang>
+																	<v8:content>Otros usuarios están trabajando con la aplicación. Cerrar sus sesiones para continuar.</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Label43ContextMenu" id="184"/>
+															<ExtendedTooltip name="Label43ExtendedTooltip" id="858"/>
+														</LabelDecoration>
+														<LabelDecoration name="ActionsListLabel" id="185">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Посмотреть список активных пользователей</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>View the list of active users</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Popatrz spis aktywnych użytkowników</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Liste der aktiven Benutzer anzeigen</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Vizualizați lista utilizatorilor activi</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Aktif kullanıcılar listesini görüntüle</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es_ES</v8:lang>
+																	<v8:content>Ver la lista de usuarios activos</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="ActionsListLabelContextMenu" id="186"/>
+															<ExtendedTooltip name="ActionsListLabelExtendedTooltip" id="859"/>
+															<Events>
+																<Event name="Click">ActionsListLabelClick</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+												<Page name="ActiveConnections" id="189">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Активные соединения</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Active connections</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Aktywne połączenia</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Aktive Verbindungen</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Conexiuni active</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Akif bağlantılar</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Conexiones activas</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ActiveConnectionsExtendedTooltip" id="860"/>
+													<ChildItems>
+														<LabelDecoration name="Label42" id="190">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>С программой сейчас работают внешние приложения. Для продолжения необходимо завершить их работу.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>External applications are connected to the application. Please close their connections to continue.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Zewnętrzne aplikacje pracują obecnie z aplikacją. Zamknij je, aby kontynuować.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Zurzeit arbeiten externe Anwendungen mit der Anwendung. Schließen Sie sie, um fortzufahren.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Aplicațiile externe lucrează în prezent cu aplicația. Închideți-le pentru a continua.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Harici uygulamalar o an için uygulama ile çalışıyor. Devam etmek için bu uygulamaları kapatın.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es_ES</v8:lang>
+																	<v8:content>Aplicaciones externas están actualmente trabajando con la aplicación. Cerrarlas para continuar.</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Label42ContextMenu" id="191"/>
+															<ExtendedTooltip name="Label42ExtendedTooltip" id="861"/>
+														</LabelDecoration>
+														<LabelDecoration name="ActionsListLabel1" id="192">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Посмотреть список активных подключений</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>View the list of active connections</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Popatrz spis aktywnych połączeń</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Liste der aktiven Verbindungen anzeigen</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Vizualizare lista conexiunilor active</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Aktif bağlantılar listesini görüntüle</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es_ES</v8:lang>
+																	<v8:content>Ver la lista de conexiones activas</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="ActionsListLabel1ContextMenu" id="193"/>
+															<ExtendedTooltip name="ActionsListLabel1ExtendedTooltip" id="862"/>
+															<Events>
+																<Event name="Click">ActionsListLabel1Click</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+												<Page name="DesignerConnection" id="194">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Соединение конфигуратора</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Designer connection</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Połączenie konfiguratora</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Konfigurator-Verbindung</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Conexiunea designerului</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Yapılandırıcı bağlantısı</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Conexión del configurador</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="DesignerConnectionExtendedTooltip" id="863"/>
+													<ChildItems>
+														<LabelDecoration name="Label45" id="195">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Открыт Конфигуратор. Для продолжения необходимо завершить работу Конфигуратора.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Designer is running. Please close Designer to continue.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Konfigurator jest otwarty. Aby kontynuować, zamknij Konfigurator.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Die Designer-Anwendung wird ausgeführt. Schließen Sie sie, um fortzufahren.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Aplicația în Designer rulează, închideți-o pentru a continua.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Tasarlayıcı açıldı. Devam etmek için, Tasarlayıcıyı kapatın.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es_ES</v8:lang>
+																	<v8:content>La aplicación de Diseñador está en marcha, cerrarla para continuar.</v8:content>
+																</v8:item>
+															</Title>
+															<VerticalAlign>Top</VerticalAlign>
+															<ContextMenu name="Label45ContextMenu" id="196"/>
+															<ExtendedTooltip name="Label45ExtendedTooltip" id="864"/>
+														</LabelDecoration>
+														<LabelDecoration name="ActionsListLabel3" id="197">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Посмотреть список активных пользователей</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>View the list of active users</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Popatrz spis aktywnych użytkowników</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Liste der aktiven Benutzer anzeigen</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Vizualizați lista utilizatorilor activi</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Aktif kullanıcılar listesini görüntüle</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es_ES</v8:lang>
+																	<v8:content>Ver la lista de usuarios activos</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<VerticalAlign>Top</VerticalAlign>
+															<ContextMenu name="ActionsListLabel3ContextMenu" id="198"/>
+															<ExtendedTooltip name="ActionsListLabel3ExtendedTooltip" id="865"/>
+															<Events>
+																<Event name="Click">ActionsListLabel3Click</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="BackupGroup" id="204">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Резервная копия</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Backup</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Kopia zapasowa</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Sicherungskopie</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Copia de rezervă</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Yedek</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Copia de respaldo</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalStretch>true</VerticalStretch>
+									<VerticalAlign>Bottom</VerticalAlign>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="BackupGroupExtendedTooltip" id="868"/>
+									<ChildItems>
+										<LabelDecoration name="Label46" id="202">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<SkipOnInput>false</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Резервная копия:</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Backup:</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Kopia zapasowa:</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Backup:</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Copia de rezervă:</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Yedekleme:</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Copia de respaldo:</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Label46ContextMenu" id="203"/>
+											<ExtendedTooltip name="Label46ExtendedTooltip" id="869"/>
+										</LabelDecoration>
+										<LabelDecoration name="BackupFileLabel" id="205">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<SkipOnInput>false</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Создавать временную резервную копию ИБ и выполнять откат при нештатной ситуации</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Create a temporary infobase backup and roll back if any issues occur</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Tworzyć kopię zapasową BI i wykonywać powrót w przypadku wystąpienia nieoczekiwanej sytuacji</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Erstellen Sie eine temporäre Sicherung der IB und führen Sie im Notfall einen Rollback durch</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Creare copia de rezervă temporară a BI și revenire în caz de situații excepționale</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Geçici IP yedeklemesi oluşturun ve acil durumda başlangıca dönün.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Crear una copia de respaldo temporal de la infobase y retroceder en el caso de errores</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<VerticalAlign>Bottom</VerticalAlign>
+											<ContextMenu name="BackupFileLabelContextMenu" id="206"/>
+											<ExtendedTooltip name="BackupFileLabelExtendedTooltip" id="870"/>
+											<Events>
+												<Event name="Click">BackupLabelClick</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="UpdateModeSelectionServer" id="209">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбор режима обновления сервер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Select update mode server</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Wybór trybu aktualizacji serwer</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Auswahl des Server-Update-Modus</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Selectarea regimului de actualizare server</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Güncelleme modunu seç sunucu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Selección del modo de actualización servidor</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="UpdateModeSelectionServerExtendedTooltip" id="880"/>
+					<ChildItems>
+						<UsualGroup name="UpdateModeSelectionServerGroup" id="1036">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все готово для установки обновления</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Ready to install</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Wszystko jest gotowe do instalacji aktualizacji</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Alle bereit, das Update zu installieren</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Totul este gata pentru instalarea actualizării</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Güncelleme için herşey hazır</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Todo está preparado para instalar la actualización</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="UpdateModeSelectionServerGroupExtendedTooltip" id="1037"/>
+							<ChildItems>
+								<UsualGroup name="IndentFour" id="458">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отступ четыре</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Indent four</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Odstęp cztery</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Einzug vier</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Indent patru</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Kenar boşluğu dört</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Espacio cuatro</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="IndentFourExtendedTooltip" id="890"/>
+									<ChildItems>
+										<RadioButtonField name="UpdateRadioButtonsServer" id="214">
+											<DataPath>Object.UpdateMode</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выберите способ установки обновления программы</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Select update installation method</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Wybierz sposób instalacji aktualizacji programu</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Wählen Sie aus, wie das Update-Programm installiert werden soll</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Selectați modul de instalare a actualizării programului</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Program güncelleme kurulum yöntemini seç</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Seleccione el modo de instalar la actualizar el programa</v8:content>
+												</v8:item>
+											</Title>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ColumnsCount>1</ColumnsCount>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Установить обновление прямо сейчас (потребуется перезапуск)</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Install the update now (requires restarting the application)</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>pl</v8:lang>
+																<v8:content>Zainstaluj aktualizację teraz (wymagane jest ponowne uruchomienie)</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>de</v8:lang>
+																<v8:content>Jetzt Aktualisierung installieren (erfordert Neustart)</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ro</v8:lang>
+																<v8:content>Instalați actualizarea acum (este necesară repornirea)</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>tr</v8:lang>
+																<v8:content>Şimdi güncellemeyi yükle (yeniden başlatma gerektirir)</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>es_ES</v8:lang>
+																<v8:content>Instalar la actualización ahora (reinicio requerido)</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Напомнить при завершении работы</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Remind me when I exit the application</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>pl</v8:lang>
+																<v8:content>Przypomnij przy zakończeniu pracy</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>de</v8:lang>
+																<v8:content>Beim Beenden erinnern</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ro</v8:lang>
+																<v8:content>Amintiți la ieșire</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>tr</v8:lang>
+																<v8:content>Çıkış sırasında hatırlat</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>es_ES</v8:lang>
+																<v8:content>Recordar al salir</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Запланировать установку обновления на указанное время</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Schedule update installation</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>pl</v8:lang>
+																<v8:content>Zaplanuj instalację aktualizacji na określony czas</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>de</v8:lang>
+																<v8:content>Planen Sie die Update-Installation zum angegebenen Zeitpunkt</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ro</v8:lang>
+																<v8:content>Programați instalarea actualizării la ora specificată</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>tr</v8:lang>
+																<v8:content>Belirli bir zamanda güncelleme yüklemesi programla</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>es_ES</v8:lang>
+																<v8:content>Programar la instalación de la actualización en la hora especificada</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">2</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="UpdateRadioButtonsServerContextMenu" id="215"/>
+											<ExtendedTooltip name="UpdateRadioButtonsServerExtendedTooltip" id="891"/>
+											<Events>
+												<Event name="OnChange">UpdateRadioButtonsOnChange</Event>
+											</Events>
+										</RadioButtonField>
+										<InputField name="UpdateDateTimeField" id="242">
+											<DataPath>Object.UpdateDateTime</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата и время</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Date and time</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Data i czas</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Datum und Uhrzeit</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Data și ora</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Tarih ve saat</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Fecha y hora</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+											<ContextMenu name="UpdateDateTimeFieldContextMenu" id="243"/>
+											<ExtendedTooltip name="UpdateDateTimeFieldExtendedTooltip" id="894"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<Pages name="RestartInformationPages" id="216">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы информации перезагрузки</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Restart information pages</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Strony informacji uruchamiania ponownego</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Informationsseiten neu starten</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Reporniți paginile de informații</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Bilgi sayfalarını yeniden başlat</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Reiniciar las páginas de información</v8:content>
+										</v8:item>
+									</Title>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="RestartInformationPagesExtendedTooltip" id="892"/>
+									<ChildItems>
+										<Page name="ScheduledRestartPage" id="239">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница запланированной перезагрузки</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Scheduled restart page</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Strona zaplanowanego uruchamiania ponownego</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Seite von geplanten Neustart</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Programare repornire pagină</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Programlanmış sayfa yeni başlatması</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Página del reinicio programado</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ScheduledRestartPageExtendedTooltip" id="893"/>
+											<ChildItems>
+												<LabelDecoration name="Label51" id="240">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<SkipOnInput>false</SkipOnInput>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Установка обновления будет выполнена с этого компьютера в фоновом режиме.
+Питание компьютера должно быть включено в указанные дату и время.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>The update will be installed from this computer in background.
+Ensure that the computer will be turned on at the scheduled time.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Aktualizacja zostanie zainstalowana z tego komputera w tle.
+Komputer musi być włączony o określonej godzinie i dacie.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Das Update wird mit diesem Computer im Hintergrundmodus installiert.
+Der Computer muss zur angegebenen Zeit eingeschaltet sein.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Actualizarea va fi instalată utilizând acest calculator în modul de fundal.
+Calculatorul trebuie să fie pornit la ora specificată.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Güncelleme arka plan modunda bu bilgisayardan yüklenecektir.
+ Belirtilen saat ve tarihte bilgisayara güç verilmelidir.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>La actualización se instalará utilizando este ordenador en el modo de fondo.
+El ordenador tiene que encenderse en la hora especificada.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Top</VerticalAlign>
+													<ContextMenu name="Label51ContextMenu" id="241"/>
+													<ExtendedTooltip name="Label51ExtendedTooltip" id="895"/>
+												</LabelDecoration>
+												<UsualGroup name="EmailPanel" id="248">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Панель почта</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Email panel</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Panel poczta</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>E-Mail-Leiste</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Panoul poșta</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Posta paneli</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Barra correo</v8:content>
+														</v8:item>
+													</Title>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="EmailPanelExtendedTooltip" id="896"/>
+													<ChildItems>
+														<CheckBoxField name="EmailReport" id="244">
+															<DataPath>Object.EmailReport</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Выслать отчет на почту:</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Email report to:</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Wysłać sprawozdanie na maila:</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Update-Status per E-Mail senden:</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Trimiteți un raport prin e-mail:</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Raporu e-posta ile gönder:</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es_ES</v8:lang>
+																	<v8:content>Enviar el estado de la actualización por correo electrónico:</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="EmailReportContextMenu" id="245"/>
+															<ExtendedTooltip name="EmailReportExtendedTooltip" id="897"/>
+															<Events>
+																<Event name="OnChange">EmailReportOnChange</Event>
+															</Events>
+														</CheckBoxField>
+														<InputField name="EmailAddress" id="246">
+															<DataPath>Object.EmailAddress</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ContextMenu name="EmailAddressContextMenu" id="247"/>
+															<ExtendedTooltip name="EmailAddressExtendedTooltip" id="898"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
+										<Page name="RestartNowPage" id="217">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница перезагрузки сейчас</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Restart now page</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Strona uruchamiania ponownego teraz</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Seite neu starten</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Reporniți acum pagina</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Sayfayı şimdi yeniden başlat</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Reiniciar la página ahora</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="RestartNowPageExtendedTooltip" id="899"/>
+											<ChildItems>
+												<LabelDecoration name="UpdateWillBeInstalledServerLabel" id="218">
+													<SkipOnInput>false</SkipOnInput>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Процесс обновления может занять длительное время. Не выключайте питание компьютера до завершения процесса.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>The update might take a long time. Do not turn off your computer until the update is completed.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Aktualizacja może zająć dużo czasu. Nie wyłączaj komputera, dopóki proces nie zostanie zakończony.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Die Aktualisierung kann sehr lange dauern. Fahren Sie Ihren Computer erst herunter, wenn der Vorgang abgeschlossen ist.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Actualizarea poate dura mult timp. Nu opriți calculatorul până când procesul nu este finalizat.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Güncelleme uzun sürebilir. İşlem tamamlana kadar bilgisayarı kapatmayın.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Actualización puede llevar mucho tiempo. No apague su ordenador hasta que el proceso se haya finalizado.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Top</VerticalAlign>
+													<ContextMenu name="UpdateWillBeInstalledServerLabelContextMenu" id="219"/>
+													<ExtendedTooltip name="UpdateWillBeInstalledServerLabelExtendedTooltip" id="900"/>
+												</LabelDecoration>
+												<UsualGroup name="ConnectionsGroup1" id="220">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Соединений 1</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Connections 1</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Połączeń 1</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Verbindungen 1</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Conexiuni 1</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Bağlantı 1</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Conexiones 1</v8:content>
+														</v8:item>
+													</Title>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ConnectionsGroup1ExtendedTooltip" id="901"/>
+													<ChildItems>
+														<PictureDecoration name="Picture2" id="221">
+															<SkipOnInput>false</SkipOnInput>
+															<Picture>
+																<xr:Ref>CommonPicture.Warning32</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="Picture2ContextMenu" id="222"/>
+															<ExtendedTooltip name="Picture2ExtendedTooltip" id="902"/>
+														</PictureDecoration>
+														<Pages name="ActiveUsersPanel1" id="223">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Панель активные пользователи 1</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Active users panel 1</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Panel aktywni użytkownicy 1</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Leiste aktive Benutzer 1</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Panoul utilizatori activi 1</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Panel aktif kullanıcılar</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es_ES</v8:lang>
+																	<v8:content>Barra usuarios activos 1</v8:content>
+																</v8:item>
+															</Title>
+															<PagesRepresentation>None</PagesRepresentation>
+															<ExtendedTooltip name="ActiveUsersPanel1ExtendedTooltip" id="903"/>
+															<ChildItems>
+																<Page name="ActiveUsers1" id="224">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Активные пользователи</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Active users</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>pl</v8:lang>
+																			<v8:content>Aktywni użytkownicy</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>de</v8:lang>
+																			<v8:content>Active Users</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>ro</v8:lang>
+																			<v8:content>Utilizatori activi</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>tr</v8:lang>
+																			<v8:content>Aktif kullanıcılar</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>es_ES</v8:lang>
+																			<v8:content>Usuarios activos</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="ActiveUsers1ExtendedTooltip" id="904"/>
+																	<ChildItems>
+																		<LabelDecoration name="Label48" id="225">
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<SkipOnInput>false</SkipOnInput>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>С программой сейчас работают другие пользователи. Их работа будет завершена автоматически.</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Other users are working with the application. Their sessions will be terminated automatically.</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>pl</v8:lang>
+																					<v8:content>Inni użytkownicy pracują z bazą informacyjną. Ich sesje zostaną automatycznie zakończone.</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>de</v8:lang>
+																					<v8:content>Benutzer arbeiten mit der Infobase. Ihre Sitzungen werden automatisch beendet.</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>ro</v8:lang>
+																					<v8:content>Alți utilizatori lucrează cu baza de date. Sesiunile lor vor fi terminate automat.</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>tr</v8:lang>
+																					<v8:content>Diğer kullanıcılar veritabanı ile çalışıyor. Oturumları otomatik olarak sonlandırılacaktır.</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>es_ES</v8:lang>
+																					<v8:content>Usuarios están trabajando con la infobase. Sus sesiones tienen que finalizarse automáticamente.</v8:content>
+																				</v8:item>
+																			</Title>
+																			<VerticalAlign>Top</VerticalAlign>
+																			<ContextMenu name="Label48ContextMenu" id="226"/>
+																			<ExtendedTooltip name="Label48ExtendedTooltip" id="905"/>
+																		</LabelDecoration>
+																		<LabelDecoration name="ActionsListLabel2" id="227">
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<SkipOnInput>false</SkipOnInput>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Посмотреть список активных пользователей</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>View the list of active users</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>pl</v8:lang>
+																					<v8:content>Popatrz spis aktywnych użytkowników</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>de</v8:lang>
+																					<v8:content>Liste der aktiven Benutzer anzeigen</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>ro</v8:lang>
+																					<v8:content>Vizualizați lista utilizatorilor activi</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>tr</v8:lang>
+																					<v8:content>Aktif kullanıcılar listesini görüntüle</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>es_ES</v8:lang>
+																					<v8:content>Ver la lista de usuarios activos</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Hyperlink>true</Hyperlink>
+																			<ContextMenu name="ActionsListLabel2ContextMenu" id="228"/>
+																			<ExtendedTooltip name="ActionsListLabel2ExtendedTooltip" id="906"/>
+																			<Events>
+																				<Event name="Click">ActionsListLabelClick</Event>
+																			</Events>
+																		</LabelDecoration>
+																	</ChildItems>
+																</Page>
+																<Page name="ActiveConnections1" id="229">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Активные соединения</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Active connections</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>pl</v8:lang>
+																			<v8:content>Aktywne połączenia</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>de</v8:lang>
+																			<v8:content>Aktive Verbindungen</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>ro</v8:lang>
+																			<v8:content>Conexiuni active</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>tr</v8:lang>
+																			<v8:content>Akif bağlantılar</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>es_ES</v8:lang>
+																			<v8:content>Conexiones activas</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="ActiveConnections1ExtendedTooltip" id="907"/>
+																	<ChildItems>
+																		<LabelDecoration name="Label49" id="230">
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<SkipOnInput>false</SkipOnInput>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>С информационной базой сейчас работают другие пользователи, а также внешние приложения.
+Их работа будет завершена автоматически.</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Other users and external applications are connected to the infobase.
+Their sessions will be terminated automatically.</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>pl</v8:lang>
+																					<v8:content>Inni użytkownicy i aplikacje zewnętrzne pracują z bazą informacyjną.
+Ich praca zostanie  zakończona automatycznie.</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>de</v8:lang>
+																					<v8:content>Benutzer und externe Anwendungen arbeiten mit Infobase.
+Sitzungen werden automatisch beendet.</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>ro</v8:lang>
+																					<v8:content>Utilizatorii și aplicațiile externe lucrează cu baza de date.
+Sesiunile vor fi terminate automat.</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>tr</v8:lang>
+																					<v8:content>Diğer kullanıcılar ve harici uygulamalar veritabanıyla çalışıyor.
+ Çalışmalar otomatik olarak tamamlanacaktır.</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>es_ES</v8:lang>
+																					<v8:content>Usuarios y aplicaciones externas están trabajando con la infobase.
+Sesiones se finalizarán automáticamente.</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ContextMenu name="Label49ContextMenu" id="231"/>
+																			<ExtendedTooltip name="Label49ExtendedTooltip" id="908"/>
+																		</LabelDecoration>
+																		<LabelDecoration name="ActionsListLabel4" id="232">
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<SkipOnInput>false</SkipOnInput>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Посмотреть список активных подключений</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>View the list of active connections</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>pl</v8:lang>
+																					<v8:content>Popatrz spis aktywnych połączeń</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>de</v8:lang>
+																					<v8:content>Liste der aktiven Verbindungen anzeigen</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>ro</v8:lang>
+																					<v8:content>Vizualizare lista conexiunilor active</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>tr</v8:lang>
+																					<v8:content>Aktif bağlantılar listesini görüntüle</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>es_ES</v8:lang>
+																					<v8:content>Ver la lista de conexiones activas</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Hyperlink>true</Hyperlink>
+																			<ContextMenu name="ActionsListLabel4ContextMenu" id="233"/>
+																			<ExtendedTooltip name="ActionsListLabel4ExtendedTooltip" id="909"/>
+																			<Events>
+																				<Event name="Click">ActionsListLabel1Click</Event>
+																			</Events>
+																		</LabelDecoration>
+																	</ChildItems>
+																</Page>
+															</ChildItems>
+														</Pages>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+								<UsualGroup name="BackupServerGroup" id="539">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Резервная копия сервер</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Backup server</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Kopia zapasowa serwer</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Backup-Server</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Copia de rezervă server</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Yedek sunucu</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Servidor de la copia de respaldo</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="BackupServerGroupExtendedTooltip" id="911"/>
+									<ChildItems>
+										<PictureDecoration name="Decoration13" id="540">
+											<SkipOnInput>false</SkipOnInput>
+											<Picture>
+												<xr:Ref>CommonPicture.Information1</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Decoration13ContextMenu" id="541"/>
+											<ExtendedTooltip name="Decoration13ExtendedTooltip" id="912"/>
+										</PictureDecoration>
+										<UsualGroup name="AdditionalInformationGroup" id="1090">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дополнительная информация</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Additional information</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Komentarz</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Kommentar</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Informații suplimentare</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Yorum</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Información adicional</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="AdditionalInformationGroupExtendedTooltip" id="1091"/>
+											<ChildItems>
+												<LabelDecoration name="BackupServerLabel" id="537">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<SkipOnInput>false</SkipOnInput>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Перед установкой обновления рекомендуется выполнить резервное копирование информационной базы.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>It is recommended that you back up the infobase before installing an update.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Zaleca się wykonanie kopii zapasowej bazy informacyjnej przed zainstalowaniem aktualizacji.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Es wird empfohlen, vor der Installation eines Updates ein Infobase-Backup zu erstellen.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Se recomandă executarea unei copii de rezervă a bazei de date înainte de a instala o actualizare.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Bir güncellemeyi yüklemeden önce veritabanı yedeklemesinin yürütülmesi önerilir.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Se recomienda crear una copia de respaldo de la infobase antes de la instalación una actualización.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="BackupServerLabelContextMenu" id="538"/>
+													<ExtendedTooltip name="BackupServerLabelExtendedTooltip" id="913"/>
+												</LabelDecoration>
+												<LabelDecoration name="DeferredHandlersLabel" id="1092">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>В программе имеются &lt;link ОтложенныеОбработчики&gt;дополнительные процедуры обработки данных&lt;/&gt;, которые не были завершены
+при переходе с предыдущего релиза. Они будут автоматически выполнены в процессе обновления
+на новую версию. Это может существенно увеличить время обновления.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>There are &lt;link ОтложенныеОбработчики&gt;additional data processing procedures&lt;/&gt; that were not completed during the migration
+from the previous application version. They will be automatically completed during the update.
+This might significantly increase the update time.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>W programie istnieją &lt;link OdłożonePrzetwarzanie&gt;dodatkowe procedury przetwarzania danych&lt;/&gt;, które nie zostały zakończone
+przy przejściu z poprzedniej wersji. Będą one wykonane automatycznie w trakcie aktualizacji
+do nowej wersji. Może to znacznie wydłużyć czas aktualizacji.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Das Programm verfügt über &lt;linkVerzögerteHandler&gt;zusätzliche Datenverarbeitungsverfahren&lt;/&gt;, die beim Übergang vom vorherigen Release nicht abgeschlossen wurden
+. Sie werden im Zuge des Updates
+auf die neue Version automatisch ausgeführt. Dies kann die Aktualisierungszeit erheblich verlängern.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>În program există &lt;link HandleriiAmânați&gt;proceduri suplimentare de procesare a datelor&lt;/&gt;, care nu au fost finalizate
+la trecere de la release-ul precedent. Ele vor fi executate automat în procesul de actualizare
+cu versiunea nouă. Aceasta poate mări esențial timpul de actualizare.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Programda &lt;link önceki sürümden geçiş sırasında tamamlanmayan &lt;/&gt;Ertelenenİşlemciler &gt; Ek veri işleme yordamları
+ mevcuttur. Yeni sürüme yükseltme işlemi sırasında
+ otomatik olarak yürütülecektir. Bu önemli ölçüde güncelleme süresini artırabilir.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>En el programa hay &lt;linkОтложенныеОбработчики&gt;procedimientos adicionales del procesamiento de datos&lt;/&gt;, que no han sido terminados
+al pasar del comunicado anterior. Se realizarán automáticamente al actualizar
+hasta la versión nueva. Esto puede aumentar significativamente el tiempo de actualización.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="DeferredHandlersLabelContextMenu" id="1093"/>
+													<ExtendedTooltip name="DeferredHandlersLabelExtendedTooltip" id="1094"/>
+													<Events>
+														<Event name="URLProcessing">DeferredHandlersLabelURLProcessing</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="AfterInstallUpdates" id="1178">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>После установки исправлений</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>After patch installation</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Po instalacji poprawek</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Nach der Installation von Fixes</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>După instalarea corectărilor</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Düzeltmeler yapıldıktan sonra</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Campo de instalar las correcciones</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="AfterInstallPatchesExtendedTooltip" id="1179"/>
+					<ChildItems>
+						<UsualGroup name="PatchInstallationError" id="1200">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибка установки исправлений</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Patch installation error</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Błąd instalacji poprawek</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Patch-Installationsfehler</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Eroare de instalare a corectărilor</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Düzeltme yükleme hatası</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Error de instalar las correcciones</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="PatchInstallationErrorExtendedTooltip" id="1201"/>
+							<ChildItems>
+								<UsualGroup name="MessageGroup" id="1208">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сообщение</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Message</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Wiadomość</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Nachricht</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Mesaj</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Mesaj</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Mensaje</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="MessageGroupExtendedTooltip" id="1209"/>
+									<ChildItems>
+										<PictureDecoration name="PatchInstallationErrorDecoration" id="1202">
+											<Picture>
+												<xr:Ref>CommonPicture.Error32</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="PatchInstallationErrorDecorationContextMenu" id="1203"/>
+											<ExtendedTooltip name="PatchInstallationErrorDecorationExtendedTooltip" id="1204"/>
+										</PictureDecoration>
+										<LabelDecoration name="PatchInstallationErrorLabel" id="1205">
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При установке исправлений возникли ошибки.
+Подробнее см. в &lt;link ЖурналРегистрации&gt;Журнале регистрации&lt;/&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>An error occurred during the patch installation.
+See the &lt;link ЖурналРегистрации&gt;event log&lt;/&gt; for details.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Podczas poprawek wystąpiły błędy.
+Aby uzyskać więcej info, zob. &lt;link DziennikRrejestracji&gt;Dzienniku rejestracji&lt;/&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Beim Patchen sind Fehler aufgetreten.
+Weitere Informationen finden Sie unter &lt;linkEreignisProtokoll&gt;EreignisProtokoll&lt;/&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Erori la instalarea corectărilor.
+Fetalii vezi în &lt;link RegistrulLogare&gt;Registrul logare&lt;/&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Düzeltmeler yapıldığında hatalar oluştu. 
+Detaylı bilgi için bakınız &lt;linkKayıtGünlüğü&gt;Kayıt günlüğü&lt;/&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Al instalar las correcciones se han producido lo errores.
+Véase en &lt;link ЖурналРегистрации&gt;en el Registro de eventos&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="PatchInstallationErrorLabelContextMenu" id="1206"/>
+											<ExtendedTooltip name="PatchInstallationErrorLabelExtendedTooltip" id="1207"/>
+											<Events>
+												<Event name="URLProcessing">PatchInstallationErrorLabelURLProcessing</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="PatchesInstalledDecoration" id="1210">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Установлено исправлений: %1 из %2, изменения вступят в силу после перезапуска программы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Patches installed: %1 out of %2. The changes will be applied after you restart the application.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Zainstalowano korekt: %1 z %2, zmiany wejdą w życie po ponownym uruchomieniu programu</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Installierte Fixes: %1 von %2, Änderungen werden nach Neustart des Programms wirksam.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Au fost instalate corectările: %1 din %2, modificările vor intra în vigoare după relansarea programului</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Yapılan düzeltmeler: %1 'dan %2, değişiklikler program yeniden başladığında geçerli olacaklar</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Se ha instalado correcciones: %1 de %2, los cambios entrarán en vigor al reiniciar el programa</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="PatchesInstalledDecorationContextMenu" id="1211"/>
+									<ExtendedTooltip name="PatchesInstalledDecorationExtendedTooltip" id="1212"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="PatchesAreInstalled" id="1180">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исправления установлены</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Patches installed</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Poprawki zostały zainstalowane</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Fixes installiert</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Corectările sunt instalate</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Düzeltmeler yapıldı</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Correcciones instaladas</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="PatchesAreInstalledExtendedTooltip" id="1181"/>
+							<ChildItems>
+								<LabelDecoration name="PatchesAreInstalledDecoration" id="1182">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исправления установлены и вступят в силу после перезапуска программы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>The patches are installed. They will be applied after you restart the application.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Poprawki są zainstalowane i zadziałają po ponownym uruchomieniu programu</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Fixes werden installiert und werden nach dem Neustart des Programms wirksam.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Corectările sunt instalate și vor intra în vigoare după relansarea programului</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Düzeltmeler yapıldı ve program yeniden başladığında geçerli olacaklar</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Las correcciones han sido instaladas y entrarán en vigor al reiniciar el programa</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="PatchesAreInstalledDecorationContextMenu" id="1183"/>
+									<ExtendedTooltip name="PatchesAreInstalledDecorationExtendedTooltip" id="1184"/>
+								</LabelDecoration>
+								<UsualGroup name="RestartIndentGroup" id="1185">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перезапустить отступ</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Restart indent</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Uruchom odstęp ponownie</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Einzug neu starten</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Relansare indent</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Girintiyi yeniden başlatın</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Reiniciar el espacio</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="RestartIndentGroupExtendedTooltip" id="1186"/>
+									<ChildItems>
+										<LabelDecoration name="IndentDecoration" id="1187">
+											<ContextMenu name="IndentDecorationContextMenu" id="1188"/>
+											<ExtendedTooltip name="IndentDecorationExtendedTooltip" id="1189"/>
+										</LabelDecoration>
+										<CheckBoxField name="RestartApplication" id="1190">
+											<DataPath>RestartApplication</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перезапустить программу</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Restart application</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Zrestartuj aplikację</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Anwendung neu starten</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Relansare programul</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Uygulamayı yeniden başlat</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Reiniciar la aplicación</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="RestartApplicationContextMenu" id="1191"/>
+											<ExtendedTooltip name="RestartApplicationExtendedTooltip" id="1192"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ActiveUsersGroup" id="1193">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Активные пользователи</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Active users</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Aktualni użytkownicy</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Active Users</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Utilizatori activi</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Aktif kullanıcılar</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Usuarios activos</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ActiveUsersGroupExtendedTooltip" id="1194"/>
+									<ChildItems>
+										<LabelDecoration name="ActiveUsersDecoration" id="1195">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>71</MaxWidth>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Также с программой работают &lt;link 1&gt;другие пользователи&lt;/&gt;.
+Для них исправления вступят в силу при следующем входе в программу.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>&lt;link 1&gt;Other users&lt;/&gt; are working with the application.
+The patch will take effect for them next time they sign in to the application.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Ponadto pracują &lt;link 1&gt; z programem inni użytkownicy&lt;/&gt;.
+Dla nich poprawki zaczną obowiązywać przy następnym logowaniu się do programu.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Mit dem Programm arbeiten auch &lt;link 1&gt;andere Benutzer&lt;/&gt;.
+ Die Korrekturen werden bei der nächsten Anmeldung am Programm wirksam.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>De asemenea, cu programul lucrează &lt;link 1&gt;alți utilizatori&lt;/&gt;.
+Pentru ei corectările vor intra în vigoare la următoarea intrare în program.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Ayrıca &lt;link 1&gt;diğer kullanıcılar &lt;/&gt; program ile çalışıyorlar. 
+ Onlar için düzeltmeler programa bir sonraki girişinde geçerli olacaklar.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Además con el programa trabajan &lt;link 1&gt;otros usuarios &lt;/&gt;.
+Para ellos las correcciones entrarán en vigor al entrar en el programa la vez que viene.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ActiveUsersDecorationContextMenu" id="1196"/>
+											<ExtendedTooltip name="ActiveUsersDecorationExtendedTooltip" id="1197"/>
+											<Events>
+												<Event name="URLProcessing">ActiveUsersDecorationURLProcessing</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="NoUpdatesFound" id="1098">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновления не обнаружено</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Update is not found</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Aktualizacji nie znaleziono</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Kein Update gefunden</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Actualizarea nu a fost depistată</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Güncelleme bulunamadı</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Actualización no encontrada</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="NoUpdatesFoundExtendedTooltip" id="1099"/>
+					<ChildItems>
+						<UsualGroup name="NoUpdatesFoundGroup" id="1100">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обновление не требуется</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>No update required</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Aktualizacja nie jest potrzebna</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Update nicht erforderlich</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Nu este necesară actualizarea</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>Güncelleme gerekmiyor</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>No se requiere una actualización</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="NoUpdatesFoundGroupExtendedTooltip" id="1101"/>
+							<ChildItems>
+								<UsualGroup name="UpdateSearchResultGroup" id="1102">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Результат поиска обновления</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Update search result</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>pl</v8:lang>
+											<v8:content>Rezultat wyszukiwania aktualizacji</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>de</v8:lang>
+											<v8:content>Ergebnis der Update-Suche</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ro</v8:lang>
+											<v8:content>Rezultatul de căutare a actualizării</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>tr</v8:lang>
+											<v8:content>Güncelleme arama sonucu</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_ES</v8:lang>
+											<v8:content>Resultado de la búsqueda de actualización</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="UpdateSearchResultGroupExtendedTooltip" id="1103"/>
+									<ChildItems>
+										<UsualGroup name="UpdateInMainNode" id="1130">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обновление производится в главном узле</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Update in the main node</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Aktualizacja jest przeprowadzana w węźle głównym</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Der Update-Vorgang wird im Hauptknoten durchgeführt</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Actualizarea se face în nodul principal</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Güncelleme ana ünitede yapıldı</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>La actualización se realiza en el nodo principal</v8:content>
+												</v8:item>
+											</Title>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="UpdateInMainNodeExtendedTooltip" id="1131"/>
+											<ChildItems>
+												<PictureDecoration name="Picture27" id="1132">
+													<SkipOnInput>false</SkipOnInput>
+													<Picture>
+														<xr:Ref>CommonPicture.Information32</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="Picture27ContextMenu" id="1133"/>
+													<ExtendedTooltip name="Picture27ExtendedTooltip" id="1134"/>
+												</PictureDecoration>
+												<LabelDecoration name="ConfigurationIsUpdatedDuringDataExchangeWithMainNodeLabel" id="1135">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>2</Height>
+													<SkipOnInput>false</SkipOnInput>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Обновление программы выполняется при синхронизации данных с "%1".</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>The application is updated every time it synchronizes its data with "%1."</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Aplikacja jest aktualizowana podczas synchronizowania danych z "%1".</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Die Anwendung wird aktualisiert, während Daten mit "%1" synchronisiert werden.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Aplicația este actualizată în timpul sincronizării datelor cu "%1".</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Verileri  "%1" ile senkronize ederken uygulama güncellendi.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Aplicación está actualizada durante la sincronización de datos con "%1".</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="ConfigurationIsUpdatedDuringDataExchangeWithMainNodeLabelContextMenu" id="1136"/>
+													<ExtendedTooltip name="ConfigurationIsUpdatedDuringDataExchangeWithMainNodeLabelExtendedTooltip" id="1137"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="CurrentVersionGroup" id="1138">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Текущая версия</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Current version</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>Wersja bieżąca</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>Aktuelle Version</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>Versiunea curentă</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>Şimdiki versiyonu</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>Versión actual</v8:content>
+												</v8:item>
+											</Title>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="CurrentVersionGroupExtendedTooltip" id="1139"/>
+											<ChildItems>
+												<LabelDecoration name="Decoration30" id="1140">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<SkipOnInput>false</SkipOnInput>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Текущая версия программы:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Current application version:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Aktualna wersja aplikacji:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Aktuelle Anwendungsversion:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Versiunea curentă de program:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Mevcut uygulama sürümü:</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>Versión actual de la aplicación:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Decoration30ContextMenu" id="1141"/>
+													<ExtendedTooltip name="Decoration30ExtendedTooltip" id="1142"/>
+												</LabelDecoration>
+												<LabelDecoration name="CurrentConfigurationVersionLabel" id="1143">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<SkipOnInput>false</SkipOnInput>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;Версия текущей конфигурации&gt;</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>&lt;Version of current configuration&gt;</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>&lt;Wersja aktualnej konfiguracji&gt;</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>&lt;Version der aktuellen Konfiguration&gt;</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>&lt;Versiunea configurației curente&gt;</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>&lt;Mevcut yapılandırma sürümü&gt;</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_ES</v8:lang>
+															<v8:content>&lt;Versión de la configuración actual&gt;</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="CurrentConfigurationVersionLabelContextMenu" id="1144"/>
+													<ExtendedTooltip name="CurrentConfigurationVersionLabelExtendedTooltip" id="1145"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="CurrentConfigurationDetailsLabel" id="1149">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<SkipOnInput>false</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;Описание текущей конфигурации&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>&lt;Description of current configuration&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>pl</v8:lang>
+													<v8:content>&lt;Opis aktualnej konfiguracji&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>de</v8:lang>
+													<v8:content>&lt;Beschreibung der aktuellen Konfiguration&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ro</v8:lang>
+													<v8:content>&lt;Descrierea configurației curente&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>tr</v8:lang>
+													<v8:content>&lt;Mevcut yapılandırma açıklaması&gt;</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_ES</v8:lang>
+													<v8:content>&lt;Descripción de la configuración actual&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="CurrentConfigurationDetailsLabelContextMenu" id="1150"/>
+											<ExtendedTooltip name="CurrentConfigurationDetailsLabelExtendedTooltip" id="1151"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="CommandBar" id="1003">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command bar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Pasek poleceń</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Befehlsleiste</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Panoul de comenzi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Komut çubuğu</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Barra de comandos</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>true</VerticalStretch>
+			<VerticalAlign>Bottom</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="CommandBarExtendedTooltip" id="1004"/>
+			<ChildItems>
+				<CommandBar name="LeftCommandBar" id="1005">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель слева</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Left command bar</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Pasek poleceń z lewej strony</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Befehlsleiste links</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Panoul de comenzi stânga</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Sol Komut Çubuğu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Izquierda barra de comandos</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="LeftCommandBarExtendedTooltip" id="1006"/>
+					<ChildItems>
+						<Button name="BackButton" id="19">
+							<Type>CommandBarButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Command.Back</CommandName>
+							<ExtendedTooltip name="BackButtonExtendedTooltip" id="654"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<CommandBar name="RightCommandBar" id="1010">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель справа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Right command bar</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>pl</v8:lang>
+							<v8:content>Pasek poleceń z prawej strony</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>de</v8:lang>
+							<v8:content>Rechte Befehlsleiste</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ro</v8:lang>
+							<v8:content>Panoul de comenzi dreapta</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>tr</v8:lang>
+							<v8:content>Sağ Komut Çubuğu</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_ES</v8:lang>
+							<v8:content>Derecha barra de comandos</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<CommandSource>Form</CommandSource>
+					<ExtendedTooltip name="RightCommandBarExtendedTooltip" id="1011"/>
+					<ChildItems>
+						<Button name="NextButton" id="20">
+							<Type>CommandBarButton</Type>
+							<Representation>Text</Representation>
+							<DefaultButton>true</DefaultButton>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Command.Next</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ShieldIcon</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Далее &gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Next &gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Dalej &gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Weiter &gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Înainte &gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>İleri &gt;</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Siguiente &gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="NextButtonExtendedTooltip" id="655"/>
+						</Button>
+						<Button name="CloseButton" id="364">
+							<Type>CommandBarButton</Type>
+							<Representation>Text</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.StandardCommand.Close</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отмена</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Cancel</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>pl</v8:lang>
+									<v8:content>Anuluj</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>de</v8:lang>
+									<v8:content>Abbrechen</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>ro</v8:lang>
+									<v8:content>Revocare</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>tr</v8:lang>
+									<v8:content>İptal</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>es_ES</v8:lang>
+									<v8:content>Cancelar</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="CloseButtonExtendedTooltip" id="656"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.InstallUpdates</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>1/0:314ac8ca-8845-40c2-b844-91beb05fb601</Field>
+				<Field>1/0:37ae1946-9436-47ef-8b8c-17ed0a24971c</Field>
+				<Field>1/0:84796b00-79db-42ba-94d0-5bf543e09cd6</Field>
+				<Field>1/0:a792b3dc-ac80-492b-bd94-83eb0438ba9f</Field>
+				<Field>1/0:b1fbfbfe-766f-4018-9491-507748193808</Field>
+				<Field>1/0:c0688817-fd73-4ead-b9dd-ec966780a2c2</Field>
+				<Field>1/0:d844d861-fbe9-4391-89e3-00e505b33b33</Field>
+				<Field>1/0:e55dfadb-8e12-4808-ad90-e891a4644548</Field>
+				<Field>Object.CreateDataBackup</Field>
+				<Field>Object.EmailAddress</Field>
+				<Field>Object.EmailReport</Field>
+				<Field>Object.IBBackupDirectoryName</Field>
+				<Field>Object.NameOfUpdateFile</Field>
+				<Field>Object.SchedulerTaskCode</Field>
+				<Field>Object.UpdateDateTime</Field>
+				<Field>Object.UpdateMode</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ConfigurationChanged" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ScriptDirectory" id="15">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ExtensionsInstalled" id="26">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="IsFileInfobase" id="28">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UpdateFileRequired" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нужен файл обновления</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update file is required</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Jest potrzebny plik aktualizacji</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Dateiaktualisierung ist erfordelich</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Fișierul de actualizare este necesar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Güncelleme dosyası gerekli</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Archivo de actualización se requiere</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ExecuteDeferredHandlers" id="30">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="IsSubordinateDIBNode" id="31">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="RestartApplication" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезапустить программу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Restart application</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Zrestartuj aplikację</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Anwendung neu starten</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Relansare programul</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Uygulamayı yeniden başlat</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Reiniciar la aplicación</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SelectedFiles" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные файлы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Selected files</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wybrane pliki</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Ausgewählte Dateien</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Fișierele selectate</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Seçilen dosyalar</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Archivos seleccionador</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="IsBaseVersion" id="34">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="PatchesFilesAsString" id="35">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Back" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt; Назад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>&lt; Back</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>&lt; Wstecz</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>&lt;Zurück</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>&lt; Înapoi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>&lt; Geri</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>&lt; Atrás</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Back</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wstecz</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Zurück</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Înapoi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Geri</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Atrás</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>BackButtonClick</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Next" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее &gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Next &gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Dalej &gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Weiter &gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Următorul &gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sonraki &gt;</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Siguiente &gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Next</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Dalej</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Weiter</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Înainte</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Sonraki</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Seguir</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>NextButtonClick</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="FindAndInstallUpdates" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск и установка обновлений</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find and install updates</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wyszukaj i zainstaluj aktualizacje</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Suchen und Installieren von Aktualisierung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Căutați și instalați actualizările</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Güncelleme ara ve kur</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Buscar e instalar actualizaciones</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск и установка обновлений</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find and install updates</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Wyszukaj i zainstaluj aktualizacje</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Suchen und Installieren von Aktualisierung</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Căutați și instalați actualizările</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Güncelleme ara ve kur</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_ES</v8:lang>
+					<v8:content>Buscar e instalar actualizaciones</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>FindAndInstallUpdates</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Exit">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="RunUpdate">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ConfigurationUpdateReceived">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="SelectedFiles">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

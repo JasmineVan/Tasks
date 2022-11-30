@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="OK" id="30">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.CommandOK</CommandName>
+				<ExtendedTooltip name="OKExtendedTooltip" id="32"/>
+			</Button>
+			<Button name="Cancel" id="31">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="CancelExtendedTooltip" id="33"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="GroupPages" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pages</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pages Group</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="GroupPagesExtendedTooltip" id="34"/>
+			<ChildItems>
+				<Page name="GroupSelectionAvailableFields" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступные поля выбора</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group selection available fields</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доступные поля выбор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group selection available fields</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="GroupSelectionAvailableFieldsExtendedTooltip" id="35"/>
+					<ChildItems>
+						<Table name="SelectionAvailableFields" id="12">
+							<Representation>Tree</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<Autofill>true</Autofill>
+							<SkipOnInput>false</SkipOnInput>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<HeightInTableRows>15</HeightInTableRows>
+							<ChoiceMode>true</ChoiceMode>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>SettingsComposer.Settings.Selection.SelectionAvailableFields</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="SelectionAvailableFieldsContextMenu" id="13"/>
+							<AutoCommandBar name="SelectionAvailableFieldsCommandBar" id="14"/>
+							<ExtendedTooltip name="SelectionAvailableFieldsExtendedTooltip" id="36"/>
+							<SearchStringAddition name="SelectionAvailableFieldsSearchString" id="47">
+								<AdditionSource>
+									<Item>SelectionAvailableFields</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="SelectionAvailableFieldsSearchStringContextMenu" id="48"/>
+								<ExtendedTooltip name="SelectionAvailableFieldsSearchStringExtendedTooltip" id="49"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="SelectionAvailableFieldsViewStatus" id="50">
+								<AdditionSource>
+									<Item>SelectionAvailableFields</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="SelectionAvailableFieldsViewStatusContextMenu" id="51"/>
+								<ExtendedTooltip name="SelectionAvailableFieldsViewStatusExtendedTooltip" id="52"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="SelectionAvailableFieldsSearchControl" id="53">
+								<AdditionSource>
+									<Item>SelectionAvailableFields</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="SelectionAvailableFieldsSearchControlContextMenu" id="54"/>
+								<ExtendedTooltip name="SelectionAvailableFieldsSearchControlExtendedTooltip" id="55"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">SelectionAvailableFieldsChoice</Event>
+							</Events>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="GroupFilterAvailableFields" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступные поля отбора</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group filter available fields</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доступные поля отбор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group filter available fields</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="GroupFilterAvailableFieldsExtendedTooltip" id="37"/>
+					<ChildItems>
+						<Table name="FilterAvailableFields" id="18">
+							<Representation>Tree</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<Autofill>true</Autofill>
+							<SkipOnInput>false</SkipOnInput>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<HeightInTableRows>15</HeightInTableRows>
+							<ChoiceMode>true</ChoiceMode>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>SettingsComposer.Settings.Filter.FilterAvailableFields</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="FilterAvailableFieldsContextMenu" id="19"/>
+							<AutoCommandBar name="FilterAvailableFieldsCommandBar" id="20"/>
+							<ExtendedTooltip name="FilterAvailableFieldsExtendedTooltip" id="38"/>
+							<SearchStringAddition name="FilterAvailableFieldsSearchString" id="56">
+								<AdditionSource>
+									<Item>FilterAvailableFields</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="FilterAvailableFieldsSearchStringContextMenu" id="57"/>
+								<ExtendedTooltip name="FilterAvailableFieldsSearchStringExtendedTooltip" id="58"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="FilterAvailableFieldsViewStatus" id="59">
+								<AdditionSource>
+									<Item>FilterAvailableFields</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="FilterAvailableFieldsViewStatusContextMenu" id="60"/>
+								<ExtendedTooltip name="FilterAvailableFieldsViewStatusExtendedTooltip" id="61"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="FilterAvailableFieldsSearchControl" id="62">
+								<AdditionSource>
+									<Item>FilterAvailableFields</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="FilterAvailableFieldsSearchControlContextMenu" id="63"/>
+								<ExtendedTooltip name="FilterAvailableFieldsSearchControlExtendedTooltip" id="64"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">FilterAvailableFieldsChoice</Event>
+							</Events>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="GroupOrderAvailableFields" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступные поля сортировки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group order available fields</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доступные поля отбор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group order available fields</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="GroupOrderAvailableFieldsExtendedTooltip" id="39"/>
+					<ChildItems>
+						<Table name="OrderAvailableFields" id="15">
+							<Representation>Tree</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<Autofill>true</Autofill>
+							<SkipOnInput>false</SkipOnInput>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<HeightInTableRows>15</HeightInTableRows>
+							<ChoiceMode>true</ChoiceMode>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>SettingsComposer.Settings.Order.OrderAvailableFields</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="OrderAvailableFieldsContextMenu" id="16"/>
+							<AutoCommandBar name="OrderAvailableFieldsCommandBar" id="17"/>
+							<ExtendedTooltip name="OrderAvailableFieldsExtendedTooltip" id="40"/>
+							<SearchStringAddition name="OrderAvailableFieldsSearchString" id="65">
+								<AdditionSource>
+									<Item>OrderAvailableFields</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="OrderAvailableFieldsSearchStringContextMenu" id="66"/>
+								<ExtendedTooltip name="OrderAvailableFieldsSearchStringExtendedTooltip" id="67"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="OrderAvailableFieldsViewStatus" id="68">
+								<AdditionSource>
+									<Item>OrderAvailableFields</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="OrderAvailableFieldsViewStatusContextMenu" id="69"/>
+								<ExtendedTooltip name="OrderAvailableFieldsViewStatusExtendedTooltip" id="70"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="OrderAvailableFieldsSearchControl" id="71">
+								<AdditionSource>
+									<Item>OrderAvailableFields</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="OrderAvailableFieldsSearchControlContextMenu" id="72"/>
+								<ExtendedTooltip name="OrderAvailableFieldsSearchControlExtendedTooltip" id="73"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">OrderAvailableFieldsChoice</Event>
+							</Events>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="GroupGroupFieldsAvailableFields" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступные поля группировок</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group group fields available fields</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доступные поля отбор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group group fields available fields</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="GroupGroupFieldsAvailableFieldsExtendedTooltip" id="41"/>
+					<ChildItems>
+						<Pages name="GroupPagesGroup" id="21">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы доступных полей группировок</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group pages group</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа страницы группировка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group pages group</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="GroupPagesGroupExtendedTooltip" id="42"/>
+							<ChildItems>
+								<Page name="GroupStructureSettingsGroupAvailableFields" id="23">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доступные поля группировок</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group structure settings group available fields</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройка структуры доступные поля группировка</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group structure settings group available fields</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="GroupStructureSettingsGroupAvailableFieldsExtendedTooltip" id="43"/>
+									<ChildItems>
+										<Table name="GroupFieldsAvailableFields" id="27">
+											<Representation>Tree</Representation>
+											<CommandBarLocation>None</CommandBarLocation>
+											<Autofill>true</Autofill>
+											<SkipOnInput>false</SkipOnInput>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<HeightInTableRows>15</HeightInTableRows>
+											<ChoiceMode>true</ChoiceMode>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>Items.Settings.CurrentData.ItemGroupFields.GroupFieldsAvailableFields</DataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<ContextMenu name="GroupFieldsAvailableFieldsContextMenu" id="28"/>
+											<AutoCommandBar name="GroupFieldsAvailableFieldsCommandBar" id="29"/>
+											<ExtendedTooltip name="GroupFieldsAvailableFieldsExtendedTooltip" id="44"/>
+											<SearchStringAddition name="GroupFieldsAvailableFieldsSearchString" id="74">
+												<AdditionSource>
+													<Item>GroupFieldsAvailableFields</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="GroupFieldsAvailableFieldsSearchStringContextMenu" id="75"/>
+												<ExtendedTooltip name="GroupFieldsAvailableFieldsSearchStringExtendedTooltip" id="76"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="GroupFieldsAvailableFieldsViewStatus" id="77">
+												<AdditionSource>
+													<Item>GroupFieldsAvailableFields</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="GroupFieldsAvailableFieldsViewStatusContextMenu" id="78"/>
+												<ExtendedTooltip name="GroupFieldsAvailableFieldsViewStatusExtendedTooltip" id="79"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="GroupFieldsAvailableFieldsSearchControl" id="80">
+												<AdditionSource>
+													<Item>GroupFieldsAvailableFields</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="GroupFieldsAvailableFieldsSearchControlContextMenu" id="81"/>
+												<ExtendedTooltip name="GroupFieldsAvailableFieldsSearchControlExtendedTooltip" id="82"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="Selection">GroupFieldsAvailableFieldsChoice</Event>
+											</Events>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="GroupStructureSettings" id="22">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка структуры</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group structure settings</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройка структуры</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group structure settings</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="GroupStructureSettingsExtendedTooltip" id="45"/>
+									<ChildItems>
+										<Table name="Settings" id="1">
+											<Representation>Tree</Representation>
+											<CommandBarLocation>None</CommandBarLocation>
+											<Autofill>true</Autofill>
+											<SkipOnInput>false</SkipOnInput>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<HorizontalLines>false</HorizontalLines>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<InitialTreeView>ExpandAllLevels</InitialTreeView>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>SettingsComposer.Settings</DataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<ContextMenu name="SettingsContextMenu" id="2"/>
+											<AutoCommandBar name="SettingsCommandBar" id="3"/>
+											<ExtendedTooltip name="SettingsExtendedTooltip" id="46"/>
+											<SearchStringAddition name="SettingsSearchString" id="83">
+												<AdditionSource>
+													<Item>Settings</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="SettingsSearchStringContextMenu" id="84"/>
+												<ExtendedTooltip name="SettingsSearchStringExtendedTooltip" id="85"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="SettingsViewStatus" id="86">
+												<AdditionSource>
+													<Item>Settings</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="SettingsViewStatusContextMenu" id="87"/>
+												<ExtendedTooltip name="SettingsViewStatusExtendedTooltip" id="88"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="SettingsSearchControl" id="89">
+												<AdditionSource>
+													<Item>Settings</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="SettingsSearchControlContextMenu" id="90"/>
+												<ExtendedTooltip name="SettingsSearchControlExtendedTooltip" id="91"/>
+											</SearchControlAddition>
+										</Table>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="SettingsComposer" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компоновщик настроек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Settings composer</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>SettingsComposer.FixedSettings</Field>
+				<Field>SettingsComposer.UserSettings</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="DeniedFields" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключенные поля</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Denied fields</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Mode" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mode</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="CommandOK" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Command OK</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CommandOK</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

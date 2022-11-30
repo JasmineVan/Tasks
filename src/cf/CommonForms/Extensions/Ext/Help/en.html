@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html dir="ltr"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<p>Use this list to add configuration extensions to the application. Configuration extensions add new functionality without changing the application directly.</p>
+<p>For more information about extensions, see <a href="http://v8.1c.ru/o7/201410ext/index.htm">Configuration extensions</a>.</p>
+<p>To open this list, in section <strong>Administration—Print forms, reports, and data processors</strong>, click <strong>Extensions</strong>.</p>
+<p>The list includes the following columns: </p>
+<ul><li>The check box column. Select or clear the check box to attach or detach available extensions. 
+<ul><li>The application displays a warning before detaching an extension. Detaching an extension might make application data stored in the extension inaccessible. You will be unable to change such data after detaching the extension. To confirm the detachment, click <strong>Detach</strong>.</li></ul></li><li><strong>Description</strong>. This field is filled automatically when you attach an extension. It is specified by the extension developer. 
+</li><li><strong>Version</strong>. This field is filled automatically when you attach an extension. It is specified by the extension developer. 
+</li><li><strong>Purpose</strong>. This field is filled automatically when you attach an extension. It is specified by the extension developer. 
+</li><li><strong>Send to subordinate nodes of the distributed infobase</strong>. If this check box is selected, extensions are copied to the subordinate nodes of the distributed infobase. It is cleared by default. 
+</li><li><strong>Safe mode</strong>. When you attach an extension, this check box is selected. An administrator can clear it or specify the security profile name.</li></ul><p>The extensions status icons are also displayed in the list. The following icons are available:</p>
+<ul><li>
+<div>Attached (a green circle). For more information about attaching extensions, see <a href="http://its.1c.ru/db/v837doc#bookmark:dev:TI000001534">http://its.1c.ru/db/v837doc#bookmark:dev:TI000001534</a> (in Russian).</div>
+</li><li>
+<div>Not attached (a red circle).</div>
+</li><li>
+<div>Installed (a gray circle). Changes status to "attached" or "not attached" after restarting the application.</div></li></ul><h3>Adding extensions</h3>
+<ul><li>Click <strong>Add from file</strong>. 
+</li><li>The application displays a warning before installing the extension. If the extension is received from a secure source, click <strong>Continue</strong>. 
+</li><li>Specify the path to the extension file. 
+</li><li>Adding an extension will take some time. 
+</li><li>Once an extension is added, click <strong>restart</strong> for the change to take effect. This link is not available in internet applications as extensions are not attached when shared users (for example, service administrators) enter the data area. Instead, such users retain the set of extensions that was available before they entered the data area (since the session was started). 
+</li><li>After the restart, the extension becomes attached to the application and ready for use. </li></ul><h3>Deleting extensions</h3>
+<ul><li>
+<div>If you no longer need an extension, select it and click <strong>Delete</strong>.</div>
+</li><li>
+<div>Deleting an extension does not detach it. All sessions started after the extension is added and before it is deleted still use the deleted extension. </div>
+</li><li>
+<div>For new sessions, the deleted extension is not attached.</div></li></ul><h3>Restarting the application</h3>
+<ul><li>To apply the changes made to the extensions list, click <strong>restart</strong>. 
+</li><li>If an extension cannot be attached to the application at the startup, a warning is displayed.</li></ul><h3>Saving extensions to files</h3>
+<ul><li>
+<div>Right-click an extension, click <strong>Save as</strong>, and specify the file.</div></li></ul><h3>Updating extensions</h3>
+<ul><li>
+<div>Select an extension, click <strong>Update from file</strong>, and select a file.</div>
+</li><li>
+<div>Use this button to attach new extension versions.</div>
+</li><li>
+<div>You can also use this button to switch back to the previous version if the new version contains errors. However, it is not recommended as it can clear the settings.</div></li></ul></body></html>
